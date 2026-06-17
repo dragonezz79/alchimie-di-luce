@@ -16,8 +16,8 @@ export default function App() {
   const paypalAngelTherapy = 'https://paypal.me/AlchimieDiLuce/29';
 
   const whatsappText = encodeURIComponent(
-    'Ciao, vorrei informazioni su una sessione di guarigione angelica a distanza.'
-  );
+    'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, ansia, blocchi interiori o cambiamento.'
+);
 
   return (
     <main className="site">
@@ -524,41 +524,59 @@ export default function App() {
         }
       `}</style>
 
-      <section
-        className="hero"
-        style={{ backgroundImage: `url(${immagineArcangeli})` }}
+<section
+  className="hero"
+  style={{ backgroundImage: `url(${immagineArcangeli})` }}
+>
+  <div className="container">
+    <h1>
+      Alchimie di Luce
+      <span>Ritrova calma, protezione e leggerezza interiore</span>
+    </h1>
+
+    <p className="lead">
+      Messaggi angelici, letture personalizzate e sessioni energetiche a distanza
+      per chi sente stress, pesantezza emotiva, confusione o bisogno di ritrovare
+      pace e centratura.
+    </p>
+
+    <div className="buttons">
+      <a
+        className="btn btn-primary"
+        href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
+        target="_blank"
+        rel="noreferrer"
       >
-        <div className="container">
-          <h1>
-            Alchimie di Luce
-            <span>Guarigione Angelica a distanza</span>
-          </h1>
+        Scrivimi LUCE su WhatsApp
+      </a>
 
-          <p className="lead">
-            Uno spazio di luce, ascolto e riequilibrio energetico per ritrovare
-            calma, protezione interiore e connessione con il cuore.
-          </p>
+      <a className="btn btn-secondary" href="#come-funziona">
+        Scopri come funziona
+      </a>
+    </div>
 
-          <div className="buttons">
-            <a
-              className="btn btn-primary"
-              href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Prenota su WhatsApp
-            </a>
+    <div
+      className="important-note"
+      style={{
+        maxWidth: '760px',
+        margin: '32px auto 0',
+        background: 'rgba(8,8,20,0.58)',
+        border: '1px solid rgba(246,217,138,0.32)'
+      }}
+    >
+      <strong>Messaggio angelico iniziale gratuito</strong>
+      <br />
+      Scrivimi <strong>LUCE</strong> su WhatsApp e indicami il tema che senti più urgente:
+      amore, lavoro, casa, protezione, ansia, blocchi interiori o cambiamento.
+      Ti invierò un breve messaggio angelico iniziale gratuito.
+    </div>
 
-            <a className="btn btn-secondary" href="#come-funziona">
-              Scopri come funziona
-            </a>
-          </div>
-
-          <p className="small">
-            Sessione a distanza energetica. Durata indicativa: 45/60 minuti.
-          </p>
-        </div>
-      </section>
+    <p className="small">
+      Sessioni e letture a distanza. Le attività hanno finalità spirituale,
+      energetica e di benessere interiore.
+    </p>
+  </div>
+</section>
 
       <section className="dark-section">
         <div className="container grid-3">
