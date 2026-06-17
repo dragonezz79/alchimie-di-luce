@@ -17,7 +17,7 @@ export default function App() {
 
     const whatsappText = encodeURIComponent(
     'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, ansia, blocchi interiori o cambiamento.'
-  );
+    );
 
   return (
     <main className="site">
