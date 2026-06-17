@@ -15,9 +15,9 @@ export default function App() {
   const paypalRisposteAngeli = 'https://paypal.me/AlchimieDiLuce/19';
   const paypalAngelTherapy = 'https://paypal.me/AlchimieDiLuce/29';
 
-  const whatsappText = encodeURIComponent(
+    const whatsappText = encodeURIComponent(
     'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, ansia, blocchi interiori o cambiamento.'
-);
+  );
 
   return (
     <main className="site">
