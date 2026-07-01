@@ -5,10 +5,8 @@ export default function App() {
   const email = 'info@alchimiediluce.it';
 
   const fotoCarmelo = 'https://i.postimg.cc/DfCWHht9/carmelo-presentazione.png';
-  const certificatoGuarigione =
-    'https://i.postimg.cc/c4cGJ1cY/2026-05-17-130738.jpg';
-  const immagineArcangeli =
-    'https://i.postimg.cc/LsMPMv56/Chat-GPT-Image-18-mag-2026-12-48-22.png';
+  const certificatoGuarigione = 'https://i.postimg.cc/c4cGJ1cY/2026-05-17-130738.jpg';
+  const immagineArcangeli = 'https://i.postimg.cc/LsMPMv56/Chat-GPT-Image-18-mag-2026-12-48-22.png';
 
   const paypalSessione = 'https://paypal.me/AlchimieDiLuce/49';
   const paypalPercorso = 'https://paypal.me/AlchimieDiLuce/129';
@@ -23,11 +21,116 @@ export default function App() {
     'Ciao Carmelo, vorrei informazioni sulla Mappa di Luce Interattiva e sul Kit Completo di Attivazione Interiore.'
   );
 
+  const introCards = [
+    {
+      icon: '♡',
+      title: 'Per il cuore',
+      text: 'Un momento delicato per lasciare andare tensioni, pesi emotivi e pensieri ripetitivi.'
+    },
+    {
+      icon: '✦',
+      title: 'Protezione e radicamento',
+      text: 'La sessione viene preparata con protezione energetica, ascolto e connessione angelica.'
+    },
+    {
+      icon: '☾',
+      title: 'Anche da casa tua',
+      text: 'Ti siedi o ti sdrai in un luogo tranquillo. Io lavoro sul piano energetico, a distanza.'
+    }
+  ];
+
+  const sessionSteps = [
+    'Raccolta della tua richiesta e preparazione dello spazio sacro.',
+    'Apertura di un campo di luce e protezione dedicato a te.',
+    'Lavoro energetico a distanza in connessione con il mondo angelico.',
+    'Chiusura, radicamento e breve restituzione finale.'
+  ];
+
+  const services = [
+    'Stress e pesantezza emotiva',
+    'Momenti di cambiamento',
+    'Relazioni difficili',
+    'Casa o luogo da armonizzare',
+    'Protezione energetica',
+    'Chiarezza interiore',
+    'Stanchezza spirituale',
+    'Ritrovare pace e centratura'
+  ];
+
+  const angelReadings = [
+    {
+      title: 'Le Risposte degli Angeli',
+      price: '19 €',
+      href: paypalRisposteAngeli,
+      cta: 'Paga 19 € con PayPal',
+      description: 'Lettura angelica rapida e diretta con 3 carte.',
+      details:
+        'Riceverai un PDF personalizzato con le tre risposte e una sintesi finale di orientamento.'
+    },
+    {
+      title: 'Lettura Angel Therapy',
+      price: '29 €',
+      href: paypalAngelTherapy,
+      cta: 'Paga 29 € con PayPal',
+      description:
+        'Lettura angelica più profonda con 5 carte, orientata all’ascolto e alla trasformazione interiore.',
+      details:
+        'Riceverai un PDF personalizzato con messaggi, suggerimenti e sintesi conclusiva.'
+    }
+  ];
+
+  const kitItems = [
+    'Guida completa della Mappa di Luce Interattiva.',
+    'Tavola A4 stampabile con Numeri Sacri, Arcangeli, Chakra, Raggi e messaggi di orientamento.',
+    'Diario di Attivazione Interiore compilabile.',
+    'Bigliettini da ritagliare per accompagnare la consultazione.'
+  ];
+
+  const bookingOptions = [
+    {
+      title: 'Sessione singola',
+      price: '49 €',
+      href: paypalSessione,
+      cta: 'Paga 49 € con PayPal',
+      description:
+        'Sessione di Guarigione Angelica a distanza. Durata indicativa: 45/60 minuti.'
+    },
+    {
+      title: 'Percorso Luce',
+      price: '129 €',
+      href: paypalPercorso,
+      cta: 'Paga 129 € con PayPal',
+      description:
+        'Tre sessioni a distanza dedicate a pulizia energetica, protezione e riconnessione alla propria luce interiore.'
+    }
+  ];
+
+  const faqs = [
+    {
+      question: 'Devo essere collegato in video?',
+      answer:
+        'No. La sessione può svolgersi a distanza: all’orario concordato ti prepari in un luogo tranquillo.'
+    },
+    {
+      question: 'Quanto dura?',
+      answer: 'Indicativamente 45/60 minuti, compresa la restituzione finale.'
+    },
+    {
+      question: 'È una cura medica?',
+      answer:
+        'No. È una pratica spirituale ed energetica e non sostituisce medico, psicologo, farmaci o terapie specialistiche.'
+    }
+  ];
+
   return (
     <main className="site">
       <style>{`
         * {
           box-sizing: border-box;
+        }
+
+        html {
+          scroll-behavior: smooth;
         }
 
         body {
@@ -45,6 +148,47 @@ export default function App() {
             #080814;
         }
 
+        .topbar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 10;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 20px;
+          padding: 16px 28px;
+          background: rgba(8,8,20,0.76);
+          border-bottom: 1px solid rgba(255,255,255,0.09);
+          backdrop-filter: blur(16px);
+        }
+
+        .brand {
+          color: white;
+          text-decoration: none;
+          font-size: 22px;
+          white-space: nowrap;
+        }
+
+        .nav {
+          display: flex;
+          justify-content: flex-end;
+          gap: 16px;
+          flex-wrap: wrap;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+        }
+
+        .nav a {
+          color: rgba(255,255,255,0.78);
+          text-decoration: none;
+        }
+
+        .nav a:hover {
+          color: #f6d98a;
+        }
+
         section {
           padding: 90px 22px;
         }
@@ -60,6 +204,7 @@ export default function App() {
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
+          padding-top: 130px;
         }
 
         .hero::before {
@@ -118,10 +263,6 @@ export default function App() {
           color: rgba(255,255,255,0.82);
         }
 
-        .hero .lead {
-          text-shadow: 0 4px 18px rgba(0,0,0,0.7);
-        }
-
         .buttons {
           margin-top: 35px;
           display: flex;
@@ -137,17 +278,11 @@ export default function App() {
           text-decoration: none;
           font-family: Arial, sans-serif;
           font-weight: 600;
-          transition: 0.25s;
         }
 
         .btn-primary {
           background: #f6d98a;
           color: #111322;
-        }
-
-        .btn-primary:hover {
-          background: #ffe9ad;
-          transform: translateY(-2px);
         }
 
         .btn-secondary {
@@ -156,31 +291,10 @@ export default function App() {
           background: rgba(255,255,255,0.08);
         }
 
-        .btn-secondary:hover {
-          background: rgba(255,255,255,0.15);
-          transform: translateY(-2px);
-        }
-
         .btn-paypal {
           background: white;
           color: #111322;
           border: 1px solid rgba(246,217,138,0.35);
-        }
-
-        .btn-paypal:hover {
-          background: #f6d98a;
-          transform: translateY(-2px);
-        }
-
-        .small {
-          margin-top: 22px;
-          color: rgba(255,255,255,0.58);
-          font-size: 14px;
-          font-family: Arial, sans-serif;
-        }
-
-        .small strong {
-          color: #ffe9ad;
         }
 
         .important-note {
@@ -193,6 +307,13 @@ export default function App() {
           font-family: Arial, sans-serif;
           font-size: 15px;
           line-height: 1.6;
+        }
+
+        .hero-note {
+          max-width: 760px;
+          margin: 32px auto 0;
+          background: rgba(8,8,20,0.58);
+          border: 1px solid rgba(246,217,138,0.32);
         }
 
         .dark-section {
@@ -222,16 +343,21 @@ export default function App() {
           gap: 18px;
         }
 
-        .card {
+        .card,
+        .service,
+        details {
           background: rgba(255,255,255,0.06);
           border: 1px solid rgba(255,255,255,0.10);
-          border-radius: 28px;
-          padding: 32px;
-          box-shadow: 0 25px 80px rgba(0,0,0,0.25);
         }
 
-        .card p {
-          color: rgba(255,255,255,0.70);
+        .card {
+          border-radius: 28px;
+          padding: 32px;
+        }
+
+        .card p,
+        .text-block p {
+          color: rgba(255,255,255,0.76);
         }
 
         .icon {
@@ -250,7 +376,6 @@ export default function App() {
         }
 
         .text-block p {
-          color: rgba(255,255,255,0.76);
           font-size: 18px;
           margin: 0 0 18px;
         }
@@ -270,22 +395,22 @@ export default function App() {
           border-radius: 48px;
         }
 
-        .portrait {
+        .portrait,
+        .certificate {
           position: relative;
           width: 100%;
-          max-width: 350px;
-          border-radius: 42px;
           border: 1px solid rgba(246,217,138,0.25);
           box-shadow: 0 35px 90px rgba(0,0,0,0.45);
         }
 
+        .portrait {
+          max-width: 350px;
+          border-radius: 42px;
+        }
+
         .certificate {
-          position: relative;
-          width: 100%;
           max-width: 560px;
           border-radius: 28px;
-          border: 1px solid rgba(246,217,138,0.25);
-          box-shadow: 0 35px 90px rgba(0,0,0,0.45);
           background: white;
         }
 
@@ -315,11 +440,14 @@ export default function App() {
           text-align: center;
         }
 
+        .services-grid,
+        .price-grid {
+          margin-top: 50px;
+        }
+
         .service {
           text-align: center;
           padding: 26px;
-          background: rgba(255,255,255,0.05);
-          border: 1px solid rgba(255,255,255,0.10);
           border-radius: 26px;
           color: rgba(255,255,255,0.78);
           font-family: Arial, sans-serif;
@@ -350,9 +478,27 @@ export default function App() {
           margin: 12px 0;
         }
 
+        .small {
+          margin-top: 22px;
+          color: rgba(255,255,255,0.58);
+          font-size: 14px;
+          font-family: Arial, sans-serif;
+        }
+
+        .small strong {
+          color: #ffe9ad;
+        }
+
+        .kit-list {
+          margin-top: 28px;
+          text-align: left;
+        }
+
+        .faq-container {
+          max-width: 850px;
+        }
+
         details {
-          background: rgba(255,255,255,0.05);
-          border: 1px solid rgba(255,255,255,0.10);
           border-radius: 20px;
           padding: 20px;
           margin-bottom: 14px;
@@ -362,11 +508,6 @@ export default function App() {
           cursor: pointer;
           color: #ffe9ad;
           font-size: 19px;
-        }
-
-        details p {
-          color: rgba(255,255,255,0.68);
-          font-family: Arial, sans-serif;
         }
 
         footer {
@@ -391,6 +532,12 @@ export default function App() {
         }
 
         @media (max-width: 850px) {
+          .topbar {
+            position: absolute;
+            align-items: flex-start;
+            flex-direction: column;
+          }
+
           .grid-2,
           .grid-3,
           .grid-4 {
@@ -402,7 +549,7 @@ export default function App() {
           }
 
           .hero {
-            background-position: center top;
+            padding-top: 180px;
           }
 
           h1 {
@@ -417,14 +564,6 @@ export default function App() {
             font-size: 36px;
           }
 
-          .price-box {
-            padding: 30px 22px;
-          }
-
-          .price {
-            font-size: 44px;
-          }
-
           .buttons {
             flex-direction: column;
             align-items: center;
@@ -437,7 +576,22 @@ export default function App() {
         }
       `}</style>
 
+      <header className="topbar">
+        <a className="brand" href="#home">
+          Alchimie di Luce
+        </a>
+        <nav className="nav">
+          <a href="#chi-sono">Chi sono</a>
+          <a href="#servizi">Servizi</a>
+          <a href="#prezzi">Prezzi</a>
+          <a href="#kit-digitale">Kit digitale</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contatti">Contatti</a>
+        </nav>
+      </header>
+
       <section
+        id="home"
         className="hero"
         style={{ backgroundImage: `url(${immagineArcangeli})` }}
       >
@@ -462,85 +616,52 @@ export default function App() {
             >
               Scrivimi LUCE su WhatsApp
             </a>
-
             <a className="btn btn-secondary" href="#come-funziona">
               Scopri come funziona
             </a>
           </div>
 
-          <div
-            className="important-note"
-            style={{
-              maxWidth: '760px',
-              margin: '32px auto 0',
-              background: 'rgba(8,8,20,0.58)',
-              border: '1px solid rgba(246,217,138,0.32)'
-            }}
-          >
+          <div className="important-note hero-note">
             <strong>Messaggio angelico iniziale gratuito</strong>
             <br />
             Scrivimi <strong>LUCE</strong> su WhatsApp e indicami il tema che
-            senti più urgente: amore, lavoro, casa, protezione, ansia, blocchi
-            interiori o cambiamento.
+            senti più urgente.
           </div>
         </div>
       </section>
 
       <section className="dark-section">
         <div className="container grid-3">
-          <div className="card">
-            <div className="icon">♡</div>
-            <h3>Per il cuore</h3>
-            <p>
-              Un momento delicato per lasciare andare tensioni, pesi emotivi e
-              pensieri ripetitivi.
-            </p>
-          </div>
-
-          <div className="card">
-            <div className="icon">✦</div>
-            <h3>Protezione e radicamento</h3>
-            <p>
-              La sessione viene preparata con protezione energetica, ascolto e
-              connessione angelica.
-            </p>
-          </div>
-
-          <div className="card">
-            <div className="icon">☾</div>
-            <h3>Anche da casa tua</h3>
-            <p>
-              Ti siedi o ti sdrai in un luogo tranquillo. Io lavoro sul piano
-              energetico, a distanza.
-            </p>
-          </div>
+          {introCards.map((card) => (
+            <article className="card" key={card.title}>
+              <div className="icon">{card.icon}</div>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
-      <section className="blue-section">
+      <section id="chi-sono" className="blue-section">
         <div className="container grid-2">
           <div>
             <p className="section-label">Chi sono</p>
             <h2>Una vita al servizio della Luce</h2>
-
             <div className="text-block">
               <p>
                 Mi chiamo <strong>Carmelo Nicita</strong>. Piacere di fare la
                 tua conoscenza.
               </p>
-
               <p>
                 Il mio percorso spirituale nasce da bambino. Fin da piccolo ho
                 sentito una forte connessione con il mistero, con il mondo
                 invisibile e con il regno celeste e angelico.
               </p>
-
               <p>
                 Mi sono specializzato nella <strong>Guarigione Angelica</strong>,
-                una pratica spirituale ed energetica che lavora attraverso
-                luce, ascolto, protezione e intenzione del cuore.
+                una pratica spirituale ed energetica che lavora attraverso luce,
+                ascolto, protezione e intenzione del cuore.
               </p>
-
               <p>
                 La mia missione è accompagnare le persone a ritrovare maggiore
                 ascolto, centratura, fiducia e leggerezza interiore.
@@ -550,11 +671,7 @@ export default function App() {
 
           <div className="portrait-wrap">
             <div className="portrait-glow"></div>
-            <img
-              src={fotoCarmelo}
-              alt="Ritratto di Carmelo Nicita"
-              className="portrait"
-            />
+            <img src={fotoCarmelo} alt="Ritratto di Carmelo Nicita" className="portrait" />
           </div>
         </div>
       </section>
@@ -564,23 +681,18 @@ export default function App() {
           <div>
             <p className="section-label">Formazione</p>
             <h2>Attestato di Guarigione Angelica</h2>
-
             <div className="text-block">
               <p>
                 Ho completato il percorso formativo come
                 <strong> Operatore di Guarigione Angelica</strong>.
               </p>
-
               <p>
-                Il diploma è stato rilasciato da{' '}
-                <strong>The Academy.Global</strong>, realtà accreditata dalla{' '}
-                <strong>International Association of Therapists</strong>.
+                Il diploma è stato rilasciato da <strong>The Academy.Global</strong>,
+                realtà accreditata dalla <strong>International Association of Therapists</strong>.
               </p>
-
               <p>
                 <strong>Data di completamento:</strong> 18 febbraio 2026.
               </p>
-
               <p className="small">
                 La Guarigione Angelica è una pratica spirituale ed energetica.
                 Non sostituisce cure mediche, psicologiche o farmacologiche.
@@ -604,165 +716,92 @@ export default function App() {
           <div>
             <p className="section-label">Il percorso</p>
             <h2>Come si svolge la sessione</h2>
-
             <div className="steps">
-              <div className="step">
-                <span className="check">✓</span>
-                Raccolta della tua richiesta e preparazione dello spazio sacro.
-              </div>
-
-              <div className="step">
-                <span className="check">✓</span>
-                Apertura di un campo di luce e protezione dedicato a te.
-              </div>
-
-              <div className="step">
-                <span className="check">✓</span>
-                Lavoro energetico a distanza in connessione con il mondo angelico.
-              </div>
-
-              <div className="step">
-                <span className="check">✓</span>
-                Chiusura, radicamento e breve restituzione finale.
-              </div>
+              {sessionSteps.map((step) => (
+                <div className="step" key={step}>
+                  <span className="check">✓</span>
+                  {step}
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="card">
+          <article className="card">
             <div className="icon">✧</div>
             <h3>Cosa puoi aspettarti</h3>
             <p>
               Un momento di pace, leggerezza e ascolto. Dopo il trattamento
-              potresti sentirti più stanco o emotivo: è consigliabile bere
-              acqua, riposare e ascoltare il corpo.
+              potresti sentirti più stanco o emotivo: è consigliabile bere acqua,
+              riposare e ascoltare il corpo.
             </p>
-
             <p>
-              <strong>Nota importante:</strong> non vengono fatte diagnosi e
-              non vengono promesse guarigioni certe.
+              <strong>Nota importante:</strong> non vengono fatte diagnosi e non
+              vengono promesse guarigioni certe.
             </p>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section className="dark-section">
+      <section id="servizi" className="dark-section">
         <div className="container center">
           <p className="section-label">Servizi</p>
           <h2>Per cosa puoi richiedere una sessione</h2>
-
-          <div className="grid-4" style={{ marginTop: '45px' }}>
-            <div className="service">Stress e pesantezza emotiva</div>
-            <div className="service">Momenti di cambiamento</div>
-            <div className="service">Relazioni difficili</div>
-            <div className="service">Casa o luogo da armonizzare</div>
-            <div className="service">Protezione energetica</div>
-            <div className="service">Chiarezza interiore</div>
-            <div className="service">Stanchezza spirituale</div>
-            <div className="service">Ritrovare pace e centratura</div>
+          <div className="grid-4 services-grid">
+            {services.map((service) => (
+              <div className="service" key={service}>
+                {service}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="blue-section">
+      <section id="prezzi" className="blue-section">
         <div className="container center">
           <p className="section-label">Letture angeliche</p>
           <h2>Messaggi e orientamento dagli Angeli</h2>
-
-          <div className="grid-2" style={{ marginTop: '50px' }}>
-            <div className="price-box wide">
-              <h3>Le Risposte degli Angeli</h3>
-              <div className="price">19 €</div>
-
-              <p>
-                Lettura angelica rapida e diretta con <strong>3 carte</strong>.
-              </p>
-
-              <p>
-                Riceverai un PDF personalizzato con le tre risposte e una
-                sintesi finale di orientamento.
-              </p>
-
-              <div className="buttons">
-                <a
-                  className="btn btn-paypal"
-                  href={paypalRisposteAngeli}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Paga 19 € con PayPal
-                </a>
-              </div>
-            </div>
-
-            <div className="price-box wide">
-              <h3>Lettura Angel Therapy</h3>
-              <div className="price">29 €</div>
-
-              <p>
-                Lettura angelica più profonda con <strong>5 carte</strong>,
-                orientata all’ascolto e alla trasformazione interiore.
-              </p>
-
-              <p>
-                Riceverai un PDF personalizzato con messaggi, suggerimenti e
-                sintesi conclusiva.
-              </p>
-
-              <div className="buttons">
-                <a
-                  className="btn btn-paypal"
-                  href={paypalAngelTherapy}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Paga 29 € con PayPal
-                </a>
-              </div>
-            </div>
+          <div className="grid-2 price-grid">
+            {angelReadings.map((item) => (
+              <article className="price-box wide" key={item.title}>
+                <h3>{item.title}</h3>
+                <div className="price">{item.price}</div>
+                <p>{item.description}</p>
+                <p>{item.details}</p>
+                <div className="buttons">
+                  <a className="btn btn-paypal" href={item.href} target="_blank" rel="noreferrer">
+                    {item.cta}
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="dark-section">
+      <section id="kit-digitale" className="dark-section">
         <div className="container center">
           <p className="section-label">Nuovo prodotto digitale</p>
           <h2>Mappa di Luce Interattiva</h2>
-
           <p className="lead">
             Un percorso spirituale e simbolico per ascoltare, ricevere
             orientamento e trasformare l’intuizione in un passo concreto.
           </p>
 
-          <div className="price-box">
+          <article className="price-box">
             <h3>Kit Completo di Attivazione Interiore</h3>
             <div className="price">37 €</div>
-
             <p>
               Prezzo di lancio per un percorso digitale originale, creato per
               accompagnare ascolto, centratura e scelta consapevole.
             </p>
 
-            <div className="steps" style={{ marginTop: '28px', textAlign: 'left' }}>
-              <div className="step">
-                <span className="check">✓</span>
-                Guida completa della Mappa di Luce Interattiva.
-              </div>
-
-              <div className="step">
-                <span className="check">✓</span>
-                Tavola A4 stampabile con Numeri Sacri, Arcangeli, Chakra,
-                Raggi e messaggi di orientamento.
-              </div>
-
-              <div className="step">
-                <span className="check">✓</span>
-                Diario di Attivazione Interiore compilabile.
-              </div>
-
-              <div className="step">
-                <span className="check">✓</span>
-                Bigliettini da ritagliare per accompagnare la consultazione.
-              </div>
+            <div className="steps kit-list">
+              {kitItems.map((item) => (
+                <div className="step" key={item}>
+                  <span className="check">✓</span>
+                  {item}
+                </div>
+              ))}
             </div>
 
             <div className="important-note">
@@ -782,60 +821,30 @@ export default function App() {
             </div>
 
             <p className="small">
-              Dopo l’acquisto riceverai i file digitali da scaricare e usare
-              personalmente.
+              Dopo l’acquisto riceverai i file digitali da scaricare e usare personalmente.
             </p>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section>
+      <section id="contatti">
         <div className="container center">
           <p className="section-label">Prenotazione</p>
           <h2>Sessione a distanza</h2>
 
-          <div className="grid-2" style={{ marginTop: '50px' }}>
-            <div className="price-box wide">
-              <h3>Sessione singola</h3>
-              <div className="price">49 €</div>
-
-              <p>
-                Sessione di Guarigione Angelica a distanza. Durata indicativa:
-                45/60 minuti.
-              </p>
-
-              <div className="buttons">
-                <a
-                  className="btn btn-paypal"
-                  href={paypalSessione}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Paga 49 € con PayPal
-                </a>
-              </div>
-            </div>
-
-            <div className="price-box wide">
-              <h3>Percorso Luce</h3>
-              <div className="price">129 €</div>
-
-              <p>
-                Tre sessioni a distanza dedicate a pulizia energetica,
-                protezione e riconnessione alla propria luce interiore.
-              </p>
-
-              <div className="buttons">
-                <a
-                  className="btn btn-paypal"
-                  href={paypalPercorso}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Paga 129 € con PayPal
-                </a>
-              </div>
-            </div>
+          <div className="grid-2 price-grid">
+            {bookingOptions.map((item) => (
+              <article className="price-box wide" key={item.title}>
+                <h3>{item.title}</h3>
+                <div className="price">{item.price}</div>
+                <p>{item.description}</p>
+                <div className="buttons">
+                  <a className="btn btn-paypal" href={item.href} target="_blank" rel="noreferrer">
+                    {item.cta}
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
 
           <div className="buttons">
@@ -850,48 +859,25 @@ export default function App() {
         </div>
       </section>
 
-      <section className="dark-section">
-        <div className="container" style={{ maxWidth: '850px' }}>
+      <section id="faq" className="dark-section">
+        <div className="container faq-container">
           <h2 className="center">Domande frequenti</h2>
-
-          <details>
-            <summary>Devo essere collegato in video?</summary>
-            <p>
-              No. La sessione può svolgersi a distanza: all’orario concordato
-              ti prepari in un luogo tranquillo.
-            </p>
-          </details>
-
-          <details>
-            <summary>Quanto dura?</summary>
-            <p>
-              Indicativamente 45/60 minuti, compresa la restituzione finale.
-            </p>
-          </details>
-
-          <details>
-            <summary>È una cura medica?</summary>
-            <p>
-              No. È una pratica spirituale ed energetica e non sostituisce
-              medico, psicologo, farmaci o terapie specialistiche.
-            </p>
-          </details>
+          {faqs.map((faq) => (
+            <details key={faq.question}>
+              <summary>{faq.question}</summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
         </div>
       </section>
 
       <footer>
         <strong className="footer-title">Alchimie di Luce</strong>
-
         <p>Guarigione angelica a distanza · Luce · Ascolto · Protezione</p>
-
         <p>
           Email: <strong>{email}</strong>
         </p>
-
-        <p>
-          © 2026 Alchimie di Luce – Carmelo Nicita. Tutti i diritti riservati.
-        </p>
-
+        <p>© 2026 Alchimie di Luce – Carmelo Nicita. Tutti i diritti riservati.</p>
         <p>
           Informazioni di servizio: questa attività ha finalità spirituali e di
           benessere interiore. Non effettua diagnosi, prescrizioni o trattamenti
