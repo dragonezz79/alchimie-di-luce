@@ -225,6 +225,42 @@ export default function App() {
           padding: 90px 22px;
         }
 
+        @keyframes heroBreath {
+          0%, 100% {
+            background-size: 100%;
+            background-position: center;
+          }
+
+          50% {
+            background-size: 108%;
+            background-position: center 46%;
+          }
+        }
+
+        @keyframes goldenGlow {
+          0%, 100% {
+            opacity: 0.3;
+            transform: scale(1);
+          }
+
+          50% {
+            opacity: 0.56;
+            transform: scale(1.08);
+          }
+        }
+
+        @keyframes floatingStars {
+          0%, 100% {
+            transform: translateY(0);
+            opacity: 0.18;
+          }
+
+          50% {
+            transform: translateY(-18px);
+            opacity: 0.75;
+          }
+        }
+
         .hero {
           min-height: 100vh;
           display: flex;
@@ -237,6 +273,7 @@ export default function App() {
           background-position: center;
           background-repeat: no-repeat;
           padding-top: 130px;
+          animation: heroBreath 16s ease-in-out infinite;
         }
 
         .hero::before {
@@ -245,15 +282,33 @@ export default function App() {
           inset: 0;
           background:
             linear-gradient(rgba(8,8,20,0.48), rgba(8,8,20,0.82)),
-            radial-gradient(circle at center, rgba(246,217,138,0.22), transparent 48%);
+            radial-gradient(circle at center, rgba(246,217,138,0.30), transparent 50%);
           z-index: 0;
+          animation: goldenGlow 7s ease-in-out infinite;
+        }
+
+        .hero::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          z-index: 1;
+          background:
+            radial-gradient(circle at 18% 30%, rgba(246,217,138,0.92) 0 2px, transparent 3px),
+            radial-gradient(circle at 34% 18%, rgba(255,239,182,0.8) 0 1.5px, transparent 3px),
+            radial-gradient(circle at 72% 22%, rgba(246,217,138,0.85) 0 2px, transparent 3px),
+            radial-gradient(circle at 84% 50%, rgba(255,239,182,0.7) 0 1.5px, transparent 3px),
+            radial-gradient(circle at 77% 73%, rgba(246,217,138,0.75) 0 2px, transparent 3px),
+            radial-gradient(circle at 38% 76%, rgba(255,239,182,0.7) 0 1.5px, transparent 3px),
+            radial-gradient(circle at 12% 70%, rgba(246,217,138,0.72) 0 2px, transparent 3px);
+          animation: floatingStars 6s ease-in-out infinite;
         }
 
         .container {
           max-width: 1150px;
           margin: 0 auto;
           position: relative;
-          z-index: 1;
+          z-index: 2;
         }
 
         h1 {
@@ -644,6 +699,7 @@ export default function App() {
 
           .hero {
             padding-top: 180px;
+            animation-duration: 20s;
           }
 
           h1 {
@@ -666,6 +722,16 @@ export default function App() {
           .btn {
             width: 100%;
             max-width: 330px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          *,
+          *::before,
+          *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            scroll-behavior: auto !important;
           }
         }
       `}</style>
