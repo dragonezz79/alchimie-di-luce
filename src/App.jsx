@@ -4,27 +4,30 @@ export default function App() {
   const whatsappNumber = '393492304412';
   const email = 'info@alchimiediluce.it';
 
-  const fotoCarmelo = 'https://i.postimg.cc/DfCWHht9/carmelo-presentazione.png';
+  const fotoCarmelo =
+    'https://i.postimg.cc/DfCWHht9/carmelo-presentazione.png';
+
   const certificatoGuarigione =
     'https://i.postimg.cc/c4cGJ1cY/2026-05-17-130738.jpg';
+
   const immagineArcangeli =
     'https://i.postimg.cc/LsMPMv56/Chat-GPT-Image-18-mag-2026-12-48-22.png';
 
-  // Immagini letture angeliche: corrette e invertite rispetto alla versione precedente
+  // Letture angeliche
   const immagineRisposteAngeli =
     'https://i.postimg.cc/XJ95CMPB/Chat-GPT-Image-6-lug-2026-10-55-25.png';
 
   const immagineAngelTherapy =
     'https://i.postimg.cc/0QKfXHBq/Chat-GPT-Image-6-lug-2026-10-53-37.png';
 
-  // Immagini Kit digitale
-  const immagineKitCompleto =
+  // Kit digitale
+  const immagineGuidaCompleta =
     'https://i.postimg.cc/3NwJv755/Chat-GPT-Image-4-lug-2026-09-48-28-(1).png';
 
-  const immagineGuida =
+  const immagineDiario =
     'https://i.postimg.cc/15f3R9rD/Chat-GPT-Image-4-lug-2026-09-48-28-(2).png';
 
-  const immagineDiario =
+  const immagineMappa =
     'https://i.postimg.cc/HL4pvjdS/Chat-GPT-Image-4-lug-2026-09-48-29-(3).png';
 
   const immagineBigliettini =
@@ -36,7 +39,7 @@ export default function App() {
   const paypalAngelTherapy = 'https://paypal.me/AlchimieDiLuce/29';
 
   const whatsappText = encodeURIComponent(
-    'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, ansia, blocchi interiori o cambiamento.'
+    'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, blocchi interiori o cambiamento.'
   );
 
   const whatsappMappaLuce = encodeURIComponent(
@@ -57,14 +60,14 @@ export default function App() {
     {
       icon: '☾',
       title: 'Anche da casa tua',
-      text: 'Ti siedi o ti sdrai in un luogo tranquillo. Io lavoro sul piano energetico, a distanza.'
+      text: 'Ti siedi o ti sdrai in un luogo tranquillo. Io lavoro sul piano spirituale, a distanza.'
     }
   ];
 
   const sessionSteps = [
     'Raccolta della tua richiesta e definizione dell’intenzione personale.',
     'Preparazione di uno spazio simbolico di luce, protezione e ascolto.',
-    'Sessione energetica a distanza con preghiera, visualizzazione e connessione angelica.',
+    'Sessione a distanza con preghiera, visualizzazione e connessione angelica.',
     'Chiusura, radicamento e breve restituzione finale.'
   ];
 
@@ -106,13 +109,6 @@ export default function App() {
     }
   ];
 
-  const kitItems = [
-    'Guida completa della Mappa di Luce Interattiva.',
-    'Tavola A4 stampabile con Numeri Sacri, Arcangeli, Chakra, Raggi e messaggi di orientamento.',
-    'Diario di Attivazione Interiore compilabile.',
-    'Bigliettini da ritagliare per accompagnare la consultazione.'
-  ];
-
   const bookingOptions = [
     {
       title: 'Sessione singola',
@@ -128,7 +124,7 @@ export default function App() {
       href: paypalPercorso,
       cta: 'Paga 129 € con PayPal',
       description:
-        'Tre sessioni a distanza dedicate a pulizia energetica, protezione e riconnessione alla propria Luce interiore.'
+        'Tre sessioni a distanza dedicate a protezione, centratura e riconnessione alla propria Luce interiore.'
     }
   ];
 
@@ -151,7 +147,7 @@ export default function App() {
     {
       question: 'Come ricevo il Kit digitale?',
       answer:
-        'Dopo l’acquisto riceverai i file digitali da scaricare e usare personalmente sul tuo dispositivo oppure da stampare.'
+        'Dopo l’acquisto riceverai i file digitali da scaricare e usare sul tuo dispositivo oppure da stampare.'
     },
     {
       question: 'Il Kit prende decisioni al mio posto?',
@@ -295,7 +291,7 @@ export default function App() {
         }
 
         .lead {
-          max-width: 780px;
+          max-width: 820px;
           margin: 28px auto 0;
           font-size: clamp(18px, 2vw, 23px);
           color: rgba(255,255,255,0.82);
@@ -467,11 +463,13 @@ export default function App() {
           color: rgba(255,255,255,0.78);
           font-family: Arial, sans-serif;
           line-height: 1.5;
+          text-align: left;
         }
 
         .check {
           color: #f6d98a;
           font-weight: bold;
+          flex: 0 0 auto;
         }
 
         .center {
@@ -575,16 +573,20 @@ export default function App() {
           border: 1px solid rgba(246,217,138,0.20);
         }
 
+        .kit-gallery-card h3 {
+          margin: 16px 4px 8px;
+          font-size: 21px;
+        }
+
         .kit-gallery-card p {
-          margin: 12px 4px 2px;
-          color: rgba(255,255,255,0.80);
+          margin: 0 4px 8px;
+          color: rgba(255,255,255,0.78);
           font-size: 16px;
-          line-height: 1.4;
+          line-height: 1.55;
         }
 
         .kit-list {
           margin-top: 28px;
-          text-align: left;
         }
 
         .faq-container {
@@ -803,7 +805,7 @@ export default function App() {
               </p>
 
               <p className="small">
-                La Guarigione Angelica è una pratica spirituale ed
+                La Guarigione Angelica è una pratica spirituale e
                 introspettiva. Non sostituisce cure mediche, psicologiche o
                 farmacologiche.
               </p>
@@ -941,33 +943,44 @@ export default function App() {
           <h2>Mappa di Luce Interattiva</h2>
 
           <p className="lead">
-            Un percorso guidato per ascoltare la tua anima, risvegliare la tua
-            presenza interiore e trasformare ciò che senti in scelte più
+            Un percorso guidato di risveglio spirituale, pensato per aiutarti
+            ad ascoltare la tua anima, riconoscere ciò che stai vivendo e
+            trasformare intuizioni e messaggi simbolici in scelte più
             consapevoli.
           </p>
 
           <div className="kit-showcase">
             <img
-              src={immagineKitCompleto}
-              alt="Kit Completo di Attivazione Interiore"
+              src={immagineGuidaCompleta}
+              alt="Guida Completa della Mappa di Luce"
               className="kit-main-image"
             />
 
             <div className="kit-gallery">
               <article className="kit-gallery-card">
                 <img
-                  src={immagineGuida}
-                  alt="Guida della Mappa di Luce"
+                  src={immagineDiario}
+                  alt="Diario di Attivazione Interiore"
                 />
-                <p>Guida completa per comprendere simboli e percorsi.</p>
+                <h3>Diario di Attivazione Interiore</h3>
+                <p>
+                  Uno spazio guidato da compilare per annotare intuizioni,
+                  emozioni, messaggi ricevuti, sogni, sincronicità e piccoli
+                  passi da portare nella vita quotidiana.
+                </p>
               </article>
 
               <article className="kit-gallery-card">
                 <img
-                  src={immagineDiario}
-                  alt="Diario di Attivazione Interiore"
+                  src={immagineMappa}
+                  alt="Mappa di Luce Interattiva"
                 />
-                <p>Diario da compilare per osservare intuizioni e passaggi.</p>
+                <h3>Mappa di Luce Interattiva</h3>
+                <p>
+                  Una tavola simbolica da osservare e consultare, con
+                  Arcangeli, Chakra, Raggi, Numeri Sacri e messaggi di
+                  orientamento interiore.
+                </p>
               </article>
 
               <article className="kit-gallery-card">
@@ -975,7 +988,12 @@ export default function App() {
                   src={immagineBigliettini}
                   alt="Bigliettini di consultazione"
                 />
-                <p>Bigliettini da ritagliare per la consultazione simbolica.</p>
+                <h3>Bigliettini di consultazione</h3>
+                <p>
+                  Quattro messaggi da ritagliare e pescare durante la
+                  consultazione, per ricevere uno spunto simbolico su una
+                  domanda o una situazione.
+                </p>
               </article>
             </div>
           </div>
@@ -985,23 +1003,70 @@ export default function App() {
             <div className="price">37 €</div>
 
             <p>
-              Un percorso di risveglio spirituale e consapevolezza interiore,
-              creato per accompagnare ascolto, centratura e scelta consapevole.
+              Il Kit è pensato per accompagnarti in un momento personale di
+              ascolto, centratura e risveglio della presenza interiore.
+            </p>
+
+            <p>
+              La Mappa apre la consultazione simbolica, la Guida aiuta a
+              comprendere ciò che emerge, i Bigliettini offrono un ulteriore
+              messaggio e il Diario ti permette di trasformare ciò che senti in
+              consapevolezza e azione personale.
             </p>
 
             <div className="steps kit-list">
-              {kitItems.map((item) => (
-                <div className="step" key={item}>
-                  <span className="check">✓</span>
-                  {item}
+              <div className="step">
+                <span className="check">✓</span>
+                <div>
+                  <strong>Guida Completa della Mappa di Luce</strong>
+                  <br />
+                  Per comprendere i simboli, i Raggi, gli Arcangeli, i Chakra e
+                  le modalità di consultazione.
                 </div>
-              ))}
+              </div>
+
+              <div className="step">
+                <span className="check">✓</span>
+                <div>
+                  <strong>Mappa di Luce Interattiva in formato A4</strong>
+                  <br />
+                  Una tavola simbolica da stampare o consultare in digitale.
+                </div>
+              </div>
+
+              <div className="step">
+                <span className="check">✓</span>
+                <div>
+                  <strong>Diario di Attivazione Interiore</strong>
+                  <br />
+                  Un percorso di 31 giorni da compilare con pensieri,
+                  intuizioni e passaggi personali.
+                </div>
+              </div>
+
+              <div className="step">
+                <span className="check">✓</span>
+                <div>
+                  <strong>Bigliettini di consultazione stampabili</strong>
+                  <br />
+                  Quattro messaggi simbolici: Sì, Attendi, Rivedi il progetto e
+                  Agisci ora.
+                </div>
+              </div>
             </div>
 
             <div className="important-note">
-              Uno strumento spirituale, simbolico e introspettivo. Non
-              sostituisce consulenze mediche, psicologiche, legali o
-              finanziarie.
+              <strong>Per cosa è pensato il Kit:</strong>
+              <br />
+              Per chi sente il bisogno di fermarsi, ascoltarsi, ritrovare
+              chiarezza, coltivare una pratica spirituale personale e
+              riconnettersi con la propria Luce interiore.
+            </div>
+
+            <div className="important-note">
+              Il Kit ha finalità spirituale, simbolica e introspettiva. Non
+              fornisce diagnosi, terapie, indicazioni mediche, psicologiche,
+              legali o finanziarie. Ogni scelta resta personale.
             </div>
 
             <div className="buttons">
@@ -1016,8 +1081,8 @@ export default function App() {
             </div>
 
             <p className="small">
-              Dopo l’acquisto riceverai i file digitali da scaricare e usare
-              personalmente.
+              Dopo l’acquisto riceverai i file digitali da scaricare, stampare
+              o usare sul tuo dispositivo personale.
             </p>
           </article>
         </div>
