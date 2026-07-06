@@ -185,13 +185,13 @@ export default function App() {
           top: 0;
           left: 0;
           right: 0;
-          z-index: 10;
+          z-index: 20;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          gap: 20px;
-          padding: 16px 28px;
-          background: rgba(8,8,20,0.78);
+          gap: 18px;
+          padding: 15px 28px;
+          background: rgba(8,8,20,0.84);
           border-bottom: 1px solid rgba(255,255,255,0.09);
           backdrop-filter: blur(16px);
         }
@@ -201,20 +201,24 @@ export default function App() {
           text-decoration: none;
           font-size: 22px;
           white-space: nowrap;
+          flex: 0 0 auto;
         }
 
         .nav {
           display: flex;
           justify-content: flex-end;
-          gap: 16px;
+          align-items: center;
+          gap: 15px;
           flex-wrap: wrap;
           font-family: Arial, sans-serif;
           font-size: 14px;
         }
 
         .nav a {
-          color: rgba(255,255,255,0.78);
+          color: rgba(255,255,255,0.80);
           text-decoration: none;
+          white-space: nowrap;
+          transition: color 0.2s ease;
         }
 
         .nav a:hover {
@@ -223,6 +227,7 @@ export default function App() {
 
         section {
           padding: 90px 22px;
+          scroll-margin-top: 92px;
         }
 
         @keyframes heroBreath {
@@ -330,9 +335,9 @@ export default function App() {
           padding: 8px 22px 10px;
           border-radius: 22px;
           font-weight: 500;
-          background: rgba(8, 8, 20, 0.42);
-          box-shadow: 0 8px 28px rgba(0, 0, 0, 0.30);
-          text-shadow: 0 3px 12px rgba(0, 0, 0, 0.75);
+          background: rgba(8,8,20,0.42);
+          box-shadow: 0 8px 28px rgba(0,0,0,0.30);
+          text-shadow: 0 3px 12px rgba(0,0,0,0.75);
         }
 
         h2 {
@@ -696,13 +701,26 @@ export default function App() {
           font-weight: 500;
         }
 
-        @media (max-width: 850px) {
+        @media (max-width: 1220px) {
           .topbar {
-            position: absolute;
-            align-items: flex-start;
             flex-direction: column;
+            align-items: center;
+            padding: 12px 18px;
+            gap: 10px;
           }
 
+          .nav {
+            justify-content: center;
+            gap: 10px 15px;
+            font-size: 13px;
+          }
+
+          .hero {
+            padding-top: 170px;
+          }
+        }
+
+        @media (max-width: 850px) {
           .grid-2,
           .grid-3,
           .grid-4,
@@ -715,7 +733,7 @@ export default function App() {
           }
 
           .hero {
-            padding-top: 180px;
+            padding-top: 185px;
             animation-duration: 20s;
           }
 
@@ -761,9 +779,12 @@ export default function App() {
         </a>
 
         <nav className="nav">
+          <a href="#home">Home</a>
           <a href="#chi-sono">Chi sono</a>
+          <a href="#come-funziona">Come funziona</a>
           <a href="#servizi">Servizi</a>
-          <a href="#prezzi">Prezzi</a>
+          <a href="#contatti">Sessioni</a>
+          <a href="#prezzi">Letture</a>
           <a href="#kit-digitale">Kit digitale</a>
           <a href="#faq">FAQ</a>
           <a href="#contatti">Contatti</a>
