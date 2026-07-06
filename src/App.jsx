@@ -323,11 +323,16 @@ export default function App() {
         }
 
         h1 span {
-          display: block;
+          display: inline-block;
           color: #f6d98a;
           font-size: clamp(27px, 4vw, 46px);
           margin-top: 16px;
+          padding: 8px 22px 10px;
+          border-radius: 22px;
           font-weight: 500;
+          background: rgba(8, 8, 20, 0.42);
+          box-shadow: 0 8px 28px rgba(0, 0, 0, 0.30);
+          text-shadow: 0 3px 12px rgba(0, 0, 0, 0.75);
         }
 
         h2 {
@@ -356,7 +361,7 @@ export default function App() {
 
         .hero-mini-text {
           margin: 26px auto 0;
-          color: rgba(255,255,255,0.84);
+          color: rgba(255,255,255,0.90);
           font-size: 18px;
           text-shadow: 0 3px 15px rgba(0,0,0,0.8);
         }
@@ -720,6 +725,8 @@ export default function App() {
 
           h1 span {
             font-size: 28px;
+            padding: 7px 15px 9px;
+            border-radius: 18px;
           }
 
           h2 {
