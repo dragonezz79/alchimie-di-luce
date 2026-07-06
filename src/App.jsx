@@ -46,6 +46,11 @@ export default function App() {
   const payhipRisposteAngeli = 'https://payhip.com/b/OiY9Q';
   const payhipKit = 'https://payhip.com/b/3MyCg';
 
+  const paypalTarocchiBase = 'https://paypal.me/AlchimieDiLuce/19';
+  const paypalTarocchiChiarezza = 'https://paypal.me/AlchimieDiLuce/39';
+  const paypalTarocchiApprofondito =
+    'https://paypal.me/AlchimieDiLuce/59';
+
   const whatsappText = encodeURIComponent(
     'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, blocchi interiori o cambiamento.'
   );
@@ -53,11 +58,6 @@ export default function App() {
   const whatsappMappaLuce = encodeURIComponent(
     'Ciao Carmelo, vorrei informazioni sulla Mappa di Luce Interattiva e sul Kit Completo di Attivazione Interiore.'
   );
-
-  const whatsappTarocchi = (servizio) =>
-    encodeURIComponent(
-      `Ciao Carmelo, desidero richiedere la ${servizio}. Vorrei inviarti la mia domanda e ricevere le indicazioni per procedere.`
-    );
 
   const introCards = [
     {
@@ -126,6 +126,8 @@ export default function App() {
     {
       title: 'Domanda di Luce',
       price: '19 €',
+      href: paypalTarocchiBase,
+      cta: 'Paga 19 € con PayPal',
       cards: '1 domanda · 3 carte',
       delivery: 'Consegna entro 48 ore.',
       description:
@@ -136,7 +138,9 @@ export default function App() {
     {
       title: 'Lettura di Chiarezza',
       price: '39 €',
-      cards: 'Fino a 2 domande collegate · 7 carte',
+      href: paypalTarocchiChiarezza,
+      cta: 'Paga 39 € con PayPal',
+      cards: 'Fino a 2 domande · 7 carte',
       delivery: 'Consegna entro 72 ore.',
       description:
         'Per comprendere una situazione, un blocco, una relazione o una scelta che senti importante.',
@@ -146,7 +150,9 @@ export default function App() {
     {
       title: 'Percorso di Luce Approfondito',
       price: '59 €',
-      cards: 'Fino a 3 domande collegate allo stesso tema · 12 carte',
+      href: paypalTarocchiApprofondito,
+      cta: 'Paga 59 € con PayPal',
+      cards: 'Fino a 3 domande · 12 carte',
       delivery: 'Consegna entro 4 giorni.',
       description:
         'Per osservare con maggiore profondità un passaggio della tua vita, le dinamiche presenti e le direzioni interiori possibili.',
@@ -162,7 +168,7 @@ export default function App() {
       href: payhipGuarigioneAngelica,
       cta: 'Acquista con codice LUCE10',
       image: immagineGuarigioneAngelica,
-      imageAlt: 'Guarigione Angelica: armonizzazione, protezione e riequilibrio',
+      imageAlt: 'Guarigione Angelica',
       description:
         'Uno spazio individuale di ascolto, centratura e armonizzazione spirituale a distanza. Durata indicativa: 45/60 minuti.'
     },
@@ -172,7 +178,7 @@ export default function App() {
       href: payhipPercorsoLuce,
       cta: 'Acquista con codice LUCE10',
       image: immaginePercorsoLuce,
-      imageAlt: 'Percorso Luce: tre sessioni di centratura, armonia e riconnessione',
+      imageAlt: 'Percorso Luce',
       description:
         'Tre sessioni a distanza dedicate a protezione, centratura e riconnessione alla propria Luce interiore.'
     }
@@ -270,7 +276,6 @@ export default function App() {
           color: rgba(255,255,255,0.80);
           text-decoration: none;
           white-space: nowrap;
-          transition: color 0.2s ease;
         }
 
         .nav a:hover {
@@ -282,40 +287,11 @@ export default function App() {
           scroll-margin-top: 92px;
         }
 
-        @keyframes heroBreath {
-          0%, 100% {
-            background-size: 100%;
-            background-position: center;
-          }
-
-          50% {
-            background-size: 107%;
-            background-position: center 46%;
-          }
-        }
-
-        @keyframes goldenGlow {
-          0%, 100% {
-            opacity: 0.28;
-            transform: scale(1);
-          }
-
-          50% {
-            opacity: 0.52;
-            transform: scale(1.08);
-          }
-        }
-
-        @keyframes floatingStars {
-          0%, 100% {
-            transform: translateY(0);
-            opacity: 0.18;
-          }
-
-          50% {
-            transform: translateY(-18px);
-            opacity: 0.72;
-          }
+        .container {
+          max-width: 1150px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 2;
         }
 
         .hero {
@@ -330,7 +306,6 @@ export default function App() {
           background-position: center;
           background-repeat: no-repeat;
           padding-top: 125px;
-          animation: heroBreath 16s ease-in-out infinite;
         }
 
         .hero::before {
@@ -341,30 +316,6 @@ export default function App() {
             linear-gradient(rgba(8,8,20,0.24), rgba(8,8,20,0.60)),
             radial-gradient(circle at center, rgba(246,217,138,0.25), transparent 52%);
           z-index: 0;
-          animation: goldenGlow 7s ease-in-out infinite;
-        }
-
-        .hero::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          pointer-events: none;
-          z-index: 1;
-          background:
-            radial-gradient(circle at 18% 30%, rgba(246,217,138,0.92) 0 2px, transparent 3px),
-            radial-gradient(circle at 34% 18%, rgba(255,239,182,0.8) 0 1.5px, transparent 3px),
-            radial-gradient(circle at 72% 22%, rgba(246,217,138,0.85) 0 2px, transparent 3px),
-            radial-gradient(circle at 84% 50%, rgba(255,239,182,0.7) 0 1.5px, transparent 3px),
-            radial-gradient(circle at 77% 73%, rgba(246,217,138,0.75) 0 2px, transparent 3px),
-            radial-gradient(circle at 38% 76%, rgba(255,239,182,0.7) 0 1.5px, transparent 3px);
-          animation: floatingStars 6s ease-in-out infinite;
-        }
-
-        .container {
-          max-width: 1150px;
-          margin: 0 auto;
-          position: relative;
-          z-index: 2;
         }
 
         .hero-content {
@@ -386,10 +337,7 @@ export default function App() {
           margin-top: 16px;
           padding: 8px 22px 10px;
           border-radius: 22px;
-          font-weight: 500;
           background: rgba(8,8,20,0.42);
-          box-shadow: 0 8px 28px rgba(0,0,0,0.30);
-          text-shadow: 0 3px 12px rgba(0,0,0,0.75);
         }
 
         h2 {
@@ -420,7 +368,6 @@ export default function App() {
           margin: 26px auto 0;
           color: rgba(255,255,255,0.90);
           font-size: 18px;
-          text-shadow: 0 3px 15px rgba(0,0,0,0.8);
         }
 
         .buttons {
@@ -804,7 +751,6 @@ export default function App() {
 
           .hero {
             padding-top: 185px;
-            animation-duration: 20s;
           }
 
           h1 {
@@ -829,16 +775,6 @@ export default function App() {
           .btn {
             width: 100%;
             max-width: 330px;
-          }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          *,
-          *::before,
-          *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            scroll-behavior: auto !important;
           }
         }
       `}</style>
@@ -904,8 +840,9 @@ export default function App() {
             <strong>Promo di benvenuto</strong>
             <br />
             Usa il codice <strong>LUCE10</strong> al checkout Payhip e ricevi il
-            <strong> 10% di sconto</strong> su Guarigione Angelica, Percorso Luce,
-            Le Risposte degli Angeli e Lettura Angel Therapy fino al 31 luglio 2026.
+            <strong> 10% di sconto</strong> su Guarigione Angelica, Percorso
+            Luce, Le Risposte degli Angeli e Lettura Angel Therapy fino al 31
+            luglio 2026.
             <br /><br />
             <strong>Messaggio angelico iniziale gratuito</strong>
             <br />
@@ -1096,8 +1033,9 @@ export default function App() {
                 <p>{item.description}</p>
 
                 <p className="small">
-                  <strong>Promo:</strong> usa il codice <strong>LUCE10</strong> al checkout Payhip
-                  per ricevere il 10% di sconto fino al 31 luglio 2026.
+                  <strong>Promo:</strong> usa il codice <strong>LUCE10</strong>{' '}
+                  al checkout Payhip per ricevere il 10% di sconto fino al 31
+                  luglio 2026.
                 </p>
 
                 <div className="buttons">
@@ -1147,8 +1085,9 @@ export default function App() {
                 <p>{item.details}</p>
 
                 <p className="small">
-                  <strong>Promo:</strong> usa il codice <strong>LUCE10</strong> al checkout Payhip
-                  per ricevere il 10% di sconto fino al 31 luglio 2026.
+                  <strong>Promo:</strong> usa il codice <strong>LUCE10</strong>{' '}
+                  al checkout Payhip per ricevere il 10% di sconto fino al 31
+                  luglio 2026.
                 </p>
 
                 <div className="important-note reading-note">
@@ -1225,21 +1164,28 @@ export default function App() {
               <article className="price-box wide" key={item.title}>
                 <h3>{item.title}</h3>
                 <div className="price">{item.price}</div>
-                <p><strong>{item.cards}</strong></p>
+                <p>
+                  <strong>{item.cards}</strong>
+                </p>
                 <p>{item.description}</p>
                 <p>{item.details}</p>
                 <p className="small">{item.delivery}</p>
 
                 <div className="buttons">
                   <a
-                    className="btn btn-primary"
-                    href={`https://wa.me/${whatsappNumber}?text=${whatsappTarocchi(item.title)}`}
+                    className="btn btn-paypal"
+                    href={item.href}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Richiedi la lettura
+                    {item.cta}
                   </a>
                 </div>
+
+                <p className="small">
+                  Dopo il pagamento, scrivimi su WhatsApp per inviarmi la
+                  domanda o il tema della lettura.
+                </p>
               </article>
             ))}
           </div>
@@ -1447,6 +1393,37 @@ export default function App() {
               <p>{faq.answer}</p>
             </details>
           ))}
+        </div>
+      </section>
+
+      <section className="blue-section">
+        <div className="container center">
+          <p className="section-label">Contatti</p>
+          <h2>Hai bisogno di informazioni?</h2>
+
+          <p className="lead">
+            Scrivimi per ricevere chiarimenti sui percorsi, sulle letture o sui
+            prodotti digitali.
+          </p>
+
+          <div className="buttons">
+            <a className="btn btn-primary" href={`mailto:${email}`}>
+              Scrivi una email
+            </a>
+
+            <a
+              className="btn btn-secondary"
+              href={`https://wa.me/${whatsappNumber}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Scrivimi su WhatsApp
+            </a>
+          </div>
+
+          <p className="small">
+            Email: <strong>{email}</strong>
+          </p>
         </div>
       </section>
 
