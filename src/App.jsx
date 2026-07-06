@@ -46,19 +46,19 @@ export default function App() {
 
   const introCards = [
     {
-      icon: '♡',
-      title: 'Per il cuore',
-      text: 'Un momento delicato per lasciare andare tensioni, pesi emotivi e pensieri ripetitivi.'
+      icon: '✦',
+      title: 'Messaggi angelici',
+      text: 'Letture simboliche e personalizzate per ricevere un messaggio di orientamento su una domanda o un momento importante.'
     },
     {
-      icon: '✦',
-      title: 'Protezione e radicamento',
-      text: 'La sessione viene preparata con protezione energetica, ascolto e connessione angelica.'
+      icon: '♡',
+      title: 'Sessioni spirituali a distanza',
+      text: 'Uno spazio individuale di ascolto, centratura, intenzione e connessione con il mondo angelico.'
     },
     {
       icon: '☾',
-      title: 'Anche da casa tua',
-      text: 'Ti siedi o ti sdrai in un luogo tranquillo. Io lavoro sul piano spirituale, a distanza.'
+      title: 'Mappa di Luce Interattiva',
+      text: 'Un percorso digitale di risveglio spirituale, creato per ascoltare la tua anima e coltivare una pratica personale.'
     }
   ];
 
@@ -191,7 +191,7 @@ export default function App() {
           align-items: center;
           gap: 20px;
           padding: 16px 28px;
-          background: rgba(8,8,20,0.76);
+          background: rgba(8,8,20,0.78);
           border-bottom: 1px solid rgba(255,255,255,0.09);
           backdrop-filter: blur(16px);
         }
@@ -232,19 +232,19 @@ export default function App() {
           }
 
           50% {
-            background-size: 108%;
+            background-size: 107%;
             background-position: center 46%;
           }
         }
 
         @keyframes goldenGlow {
           0%, 100% {
-            opacity: 0.3;
+            opacity: 0.28;
             transform: scale(1);
           }
 
           50% {
-            opacity: 0.56;
+            opacity: 0.52;
             transform: scale(1.08);
           }
         }
@@ -257,7 +257,7 @@ export default function App() {
 
           50% {
             transform: translateY(-18px);
-            opacity: 0.75;
+            opacity: 0.72;
           }
         }
 
@@ -272,7 +272,7 @@ export default function App() {
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
-          padding-top: 130px;
+          padding-top: 125px;
           animation: heroBreath 16s ease-in-out infinite;
         }
 
@@ -281,8 +281,8 @@ export default function App() {
           position: absolute;
           inset: 0;
           background:
-            linear-gradient(rgba(8,8,20,0.48), rgba(8,8,20,0.82)),
-            radial-gradient(circle at center, rgba(246,217,138,0.30), transparent 50%);
+            linear-gradient(rgba(8,8,20,0.24), rgba(8,8,20,0.60)),
+            radial-gradient(circle at center, rgba(246,217,138,0.25), transparent 52%);
           z-index: 0;
           animation: goldenGlow 7s ease-in-out infinite;
         }
@@ -299,8 +299,7 @@ export default function App() {
             radial-gradient(circle at 72% 22%, rgba(246,217,138,0.85) 0 2px, transparent 3px),
             radial-gradient(circle at 84% 50%, rgba(255,239,182,0.7) 0 1.5px, transparent 3px),
             radial-gradient(circle at 77% 73%, rgba(246,217,138,0.75) 0 2px, transparent 3px),
-            radial-gradient(circle at 38% 76%, rgba(255,239,182,0.7) 0 1.5px, transparent 3px),
-            radial-gradient(circle at 12% 70%, rgba(246,217,138,0.72) 0 2px, transparent 3px);
+            radial-gradient(circle at 38% 76%, rgba(255,239,182,0.7) 0 1.5px, transparent 3px);
           animation: floatingStars 6s ease-in-out infinite;
         }
 
@@ -311,9 +310,13 @@ export default function App() {
           z-index: 2;
         }
 
+        .hero-content {
+          max-width: 940px;
+        }
+
         h1 {
-          font-size: clamp(42px, 6.2vw, 68px);
-          line-height: 1.05;
+          font-size: clamp(52px, 7vw, 84px);
+          line-height: 1.02;
           margin: 0;
           font-weight: 500;
           text-shadow: 0 8px 28px rgba(0,0,0,0.65);
@@ -322,8 +325,9 @@ export default function App() {
         h1 span {
           display: block;
           color: #f6d98a;
-          font-size: clamp(24px, 3.8vw, 42px);
-          margin-top: 12px;
+          font-size: clamp(27px, 4vw, 46px);
+          margin-top: 16px;
+          font-weight: 500;
         }
 
         h2 {
@@ -347,7 +351,14 @@ export default function App() {
           max-width: 820px;
           margin: 28px auto 0;
           font-size: clamp(18px, 2vw, 23px);
-          color: rgba(255,255,255,0.82);
+          color: rgba(255,255,255,0.84);
+        }
+
+        .hero-mini-text {
+          margin: 26px auto 0;
+          color: rgba(255,255,255,0.84);
+          font-size: 18px;
+          text-shadow: 0 3px 15px rgba(0,0,0,0.8);
         }
 
         .buttons {
@@ -396,11 +407,12 @@ export default function App() {
           line-height: 1.6;
         }
 
-        .hero-note {
-          max-width: 760px;
-          margin: 32px auto 0;
-          background: rgba(8,8,20,0.58);
-          border: 1px solid rgba(246,217,138,0.32);
+        .welcome-note {
+          max-width: 790px;
+          margin: 34px auto 0;
+          border-color: rgba(246,217,138,0.30);
+          background: rgba(246,217,138,0.10);
+          font-size: 16px;
         }
 
         .dark-section {
@@ -756,17 +768,46 @@ export default function App() {
         className="hero"
         style={{ backgroundImage: `url(${immagineArcangeli})` }}
       >
-        <div className="container">
+        <div className="container hero-content">
           <h1>
             Alchimie di Luce
             <span>Ritrova calma, protezione e leggerezza interiore</span>
           </h1>
 
-          <p className="lead">
-            Messaggi angelici, letture personalizzate e sessioni spirituali a
-            distanza per chi sente pesantezza emotiva, confusione o bisogno di
-            ritrovare pace e centratura.
+          <p className="hero-mini-text">
+            Messaggi angelici, letture e percorsi spirituali a distanza.
           </p>
+
+          <div className="buttons">
+            <a className="btn btn-primary" href="#servizi">
+              Inizia il tuo percorso
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="dark-section">
+        <div className="container center">
+          <p className="section-label">Alchimie di Luce</p>
+          <h2>Uno spazio per ascoltarti e ritrovare centratura</h2>
+
+          <div className="grid-3">
+            {introCards.map((card) => (
+              <article className="card" key={card.title}>
+                <div className="icon">{card.icon}</div>
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="important-note welcome-note">
+            <strong>Messaggio angelico iniziale gratuito</strong>
+            <br />
+            Scrivimi <strong>LUCE</strong> su WhatsApp e indicami il tema che
+            senti più urgente: riceverai un primo messaggio simbolico di
+            orientamento.
+          </div>
 
           <div className="buttons">
             <a
@@ -777,30 +818,7 @@ export default function App() {
             >
               Scrivimi LUCE su WhatsApp
             </a>
-
-            <a className="btn btn-secondary" href="#come-funziona">
-              Scopri come funziona
-            </a>
           </div>
-
-          <div className="important-note hero-note">
-            <strong>Messaggio angelico iniziale gratuito</strong>
-            <br />
-            Scrivimi <strong>LUCE</strong> su WhatsApp e indicami il tema che
-            senti più urgente.
-          </div>
-        </div>
-      </section>
-
-      <section className="dark-section">
-        <div className="container grid-3">
-          {introCards.map((card) => (
-            <article className="card" key={card.title}>
-              <div className="icon">{card.icon}</div>
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-            </article>
-          ))}
         </div>
       </section>
 
