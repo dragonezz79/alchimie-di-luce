@@ -7,6 +7,8 @@ export default function App() {
   const fotoCarmelo = 'https://i.postimg.cc/DfCWHht9/carmelo-presentazione.png';
   const certificatoGuarigione = 'https://i.postimg.cc/c4cGJ1cY/2026-05-17-130738.jpg';
   const immagineArcangeli = 'https://i.postimg.cc/LsMPMv56/Chat-GPT-Image-18-mag-2026-12-48-22.png';
+  const immagineRisposteAngeli = 'https://i.postimg.cc/0QKfXHBq/Chat-GPT-Image-6-lug-2026-10-53-37.png';
+  const immagineAngelTherapy = 'https://i.postimg.cc/XJ95CMPB/Chat-GPT-Image-6-lug-2026-10-55-25.png';
 
   const paypalSessione = 'https://paypal.me/AlchimieDiLuce/49';
   const paypalPercorso = 'https://paypal.me/AlchimieDiLuce/129';
@@ -40,14 +42,14 @@ export default function App() {
   ];
 
   const sessionSteps = [
-    'Raccolta della tua richiesta e preparazione dello spazio sacro.',
-    'Apertura di un campo di luce e protezione dedicato a te.',
-    'Lavoro energetico a distanza in connessione con il mondo angelico.',
+    'Raccolta della tua richiesta e definizione dell’intenzione personale.',
+    'Preparazione di uno spazio simbolico di luce, protezione e ascolto.',
+    'Sessione energetica a distanza con preghiera, visualizzazione e connessione angelica.',
     'Chiusura, radicamento e breve restituzione finale.'
   ];
 
   const services = [
-    'Stress e pesantezza emotiva',
+    'Momenti di sovraccarico e pesantezza emotiva',
     'Momenti di cambiamento',
     'Relazioni difficili',
     'Casa o luogo da armonizzare',
@@ -63,19 +65,24 @@ export default function App() {
       price: '19 €',
       href: paypalRisposteAngeli,
       cta: 'Paga 19 € con PayPal',
-      description: 'Lettura angelica rapida e diretta con 3 carte.',
+      image: immagineRisposteAngeli,
+      imageAlt: 'Le Risposte degli Angeli - lettura con tre carte',
+      description:
+        'Una lettura con 3 carte pensata per offrire un messaggio chiaro, diretto e incoraggiante su una situazione che senti importante.',
       details:
-        'Riceverai un PDF personalizzato con le tre risposte e una sintesi finale di orientamento.'
+        'Puoi porre fino a 3 domande semplici. Dopo il pagamento, inviamele su WhatsApp insieme al tuo nome. Riceverai entro 48 ore un PDF personale con le 3 carte estratte, il messaggio per ogni domanda e una sintesi finale di orientamento.'
     },
     {
       title: 'Lettura Angel Therapy',
       price: '29 €',
       href: paypalAngelTherapy,
       cta: 'Paga 29 € con PayPal',
+      image: immagineAngelTherapy,
+      imageAlt: 'Lettura Angel Therapy - lettura con cinque carte',
       description:
-        'Lettura angelica più profonda con 5 carte, orientata all’ascolto e alla trasformazione interiore.',
+        'Una lettura con 5 carte ispirata ai messaggi angelici, pensata per accompagnare riflessione, ascolto interiore e orientamento spirituale.',
       details:
-        'Riceverai un PDF personalizzato con messaggi, suggerimenti e sintesi conclusiva.'
+        'Dopo il pagamento, inviami su WhatsApp il tuo nome e il tema che desideri esplorare. Riceverai entro 48 ore un PDF personale con le 5 carte estratte, il messaggio simbolico di ciascuna e una sintesi finale di orientamento.'
     }
   ];
 
@@ -93,7 +100,7 @@ export default function App() {
       href: paypalSessione,
       cta: 'Paga 49 € con PayPal',
       description:
-        'Sessione di Guarigione Angelica a distanza. Durata indicativa: 45/60 minuti.'
+        'Un incontro individuale di ascolto e armonizzazione spirituale a distanza. Durata indicativa: 45/60 minuti.'
     },
     {
       title: 'Percorso Luce',
@@ -472,6 +479,20 @@ export default function App() {
           height: 100%;
         }
 
+        .reading-image {
+          width: 100%;
+          display: block;
+          border-radius: 20px;
+          margin: 0 0 26px;
+          border: 1px solid rgba(246,217,138,0.30);
+          box-shadow: 0 20px 45px rgba(0,0,0,0.24);
+        }
+
+        .reading-note {
+          margin-top: 20px;
+          text-align: left;
+        }
+
         .price {
           font-size: 58px;
           color: #f6d98a;
@@ -580,6 +601,7 @@ export default function App() {
         <a className="brand" href="#home">
           Alchimie di Luce
         </a>
+
         <nav className="nav">
           <a href="#chi-sono">Chi sono</a>
           <a href="#servizi">Servizi</a>
@@ -616,6 +638,7 @@ export default function App() {
             >
               Scrivimi LUCE su WhatsApp
             </a>
+
             <a className="btn btn-secondary" href="#come-funziona">
               Scopri come funziona
             </a>
@@ -647,21 +670,26 @@ export default function App() {
           <div>
             <p className="section-label">Chi sono</p>
             <h2>Una vita al servizio della Luce</h2>
+
             <div className="text-block">
               <p>
                 Mi chiamo <strong>Carmelo Nicita</strong>. Piacere di fare la
                 tua conoscenza.
               </p>
+
               <p>
                 Il mio percorso spirituale nasce da bambino. Fin da piccolo ho
                 sentito una forte connessione con il mistero, con il mondo
                 invisibile e con il regno celeste e angelico.
               </p>
+
               <p>
-                Mi sono specializzato nella <strong>Guarigione Angelica</strong>,
-                una pratica spirituale ed energetica che lavora attraverso luce,
-                ascolto, protezione e intenzione del cuore.
+                Mi sono specializzato nella{' '}
+                <strong>Guarigione Angelica</strong>, una pratica spirituale ed
+                energetica che lavora attraverso luce, ascolto, protezione e
+                intenzione del cuore.
               </p>
+
               <p>
                 La mia missione è accompagnare le persone a ritrovare maggiore
                 ascolto, centratura, fiducia e leggerezza interiore.
@@ -671,7 +699,11 @@ export default function App() {
 
           <div className="portrait-wrap">
             <div className="portrait-glow"></div>
-            <img src={fotoCarmelo} alt="Ritratto di Carmelo Nicita" className="portrait" />
+            <img
+              src={fotoCarmelo}
+              alt="Ritratto di Carmelo Nicita"
+              className="portrait"
+            />
           </div>
         </div>
       </section>
@@ -681,18 +713,23 @@ export default function App() {
           <div>
             <p className="section-label">Formazione</p>
             <h2>Attestato di Guarigione Angelica</h2>
+
             <div className="text-block">
               <p>
-                Ho completato il percorso formativo come
-                <strong> Operatore di Guarigione Angelica</strong>.
+                Ho completato il percorso formativo come{' '}
+                <strong>Operatore di Guarigione Angelica</strong>.
               </p>
+
               <p>
-                Il diploma è stato rilasciato da <strong>The Academy.Global</strong>,
-                realtà accreditata dalla <strong>International Association of Therapists</strong>.
+                Il diploma è stato rilasciato da{' '}
+                <strong>The Academy.Global</strong>, realtà accreditata dalla{' '}
+                <strong>International Association of Therapists</strong>.
               </p>
+
               <p>
                 <strong>Data di completamento:</strong> 18 febbraio 2026.
               </p>
+
               <p className="small">
                 La Guarigione Angelica è una pratica spirituale ed energetica.
                 Non sostituisce cure mediche, psicologiche o farmacologiche.
@@ -716,6 +753,7 @@ export default function App() {
           <div>
             <p className="section-label">Il percorso</p>
             <h2>Come si svolge la sessione</h2>
+
             <div className="steps">
               {sessionSteps.map((step) => (
                 <div className="step" key={step}>
@@ -729,14 +767,31 @@ export default function App() {
           <article className="card">
             <div className="icon">✧</div>
             <h3>Cosa puoi aspettarti</h3>
+
             <p>
-              Un momento di pace, leggerezza e ascolto. Dopo il trattamento
-              potresti sentirti più stanco o emotivo: è consigliabile bere acqua,
-              riposare e ascoltare il corpo.
+              La sessione è uno spazio individuale dedicato all’ascolto, alla
+              centratura e all’armonizzazione spirituale.
             </p>
+
             <p>
-              <strong>Nota importante:</strong> non vengono fatte diagnosi e non
-              vengono promesse guarigioni certe.
+              Partendo dalla tua richiesta, viene aperto un momento di
+              raccoglimento con intenzione, preghiera, visualizzazione e
+              invocazione degli Arcangeli. L’obiettivo è accompagnarti a
+              ritrovare maggiore presenza, chiarezza e connessione con la tua
+              Luce interiore.
+            </p>
+
+            <p>
+              Al termine riceverai una breve restituzione su ciò che è emerso
+              durante la sessione, con eventuali spunti personali da portare
+              nel quotidiano.
+            </p>
+
+            <p>
+              <strong>Nota importante:</strong> il servizio ha finalità
+              spirituale e introspettiva. Non sostituisce medici, psicologi o
+              psicoterapeuti e non riguarda diagnosi, malattie, farmaci o
+              terapie.
             </p>
           </article>
         </div>
@@ -746,6 +801,7 @@ export default function App() {
         <div className="container center">
           <p className="section-label">Servizi</p>
           <h2>Per cosa puoi richiedere una sessione</h2>
+
           <div className="grid-4 services-grid">
             {services.map((service) => (
               <div className="service" key={service}>
@@ -760,15 +816,40 @@ export default function App() {
         <div className="container center">
           <p className="section-label">Letture angeliche</p>
           <h2>Messaggi e orientamento dagli Angeli</h2>
+
           <div className="grid-2 price-grid">
             {angelReadings.map((item) => (
               <article className="price-box wide" key={item.title}>
+                <img
+                  className="reading-image"
+                  src={item.image}
+                  alt={item.imageAlt}
+                />
+
                 <h3>{item.title}</h3>
                 <div className="price">{item.price}</div>
+
                 <p>{item.description}</p>
                 <p>{item.details}</p>
+
+                <div className="important-note reading-note">
+                  <strong>Nota importante:</strong> la lettura ha finalità
+                  spirituale, simbolica e introspettiva. Non tratta salute,
+                  diagnosi, terapie, farmaci o indicazioni mediche.
+                </div>
+
+                <p className="small">
+                  Dopo il pagamento, scrivimi su WhatsApp per inviarmi le
+                  domande o il tema della lettura.
+                </p>
+
                 <div className="buttons">
-                  <a className="btn btn-paypal" href={item.href} target="_blank" rel="noreferrer">
+                  <a
+                    className="btn btn-paypal"
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {item.cta}
                   </a>
                 </div>
@@ -782,17 +863,20 @@ export default function App() {
         <div className="container center">
           <p className="section-label">Nuovo prodotto digitale</p>
           <h2>Mappa di Luce Interattiva</h2>
+
           <p className="lead">
-            Un percorso spirituale e simbolico per ascoltare, ricevere
-            orientamento e trasformare l’intuizione in un passo concreto.
+            Un percorso guidato per ascoltare la tua anima, risvegliare la tua
+            presenza interiore e trasformare ciò che senti in scelte più
+            consapevoli.
           </p>
 
           <article className="price-box">
             <h3>Kit Completo di Attivazione Interiore</h3>
             <div className="price">37 €</div>
+
             <p>
-              Prezzo di lancio per un percorso digitale originale, creato per
-              accompagnare ascolto, centratura e scelta consapevole.
+              Un percorso di risveglio spirituale e consapevolezza interiore,
+              creato per accompagnare ascolto, centratura e scelta consapevole.
             </p>
 
             <div className="steps kit-list">
@@ -806,7 +890,8 @@ export default function App() {
 
             <div className="important-note">
               Uno strumento spirituale, simbolico e introspettivo. Non
-              sostituisce consulenze mediche, psicologiche, legali o finanziarie.
+              sostituisce consulenze mediche, psicologiche, legali o
+              finanziarie.
             </div>
 
             <div className="buttons">
@@ -821,7 +906,8 @@ export default function App() {
             </div>
 
             <p className="small">
-              Dopo l’acquisto riceverai i file digitali da scaricare e usare personalmente.
+              Dopo l’acquisto riceverai i file digitali da scaricare e usare
+              personalmente.
             </p>
           </article>
         </div>
@@ -838,8 +924,14 @@ export default function App() {
                 <h3>{item.title}</h3>
                 <div className="price">{item.price}</div>
                 <p>{item.description}</p>
+
                 <div className="buttons">
-                  <a className="btn btn-paypal" href={item.href} target="_blank" rel="noreferrer">
+                  <a
+                    className="btn btn-paypal"
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {item.cta}
                   </a>
                 </div>
@@ -862,6 +954,7 @@ export default function App() {
       <section id="faq" className="dark-section">
         <div className="container faq-container">
           <h2 className="center">Domande frequenti</h2>
+
           {faqs.map((faq) => (
             <details key={faq.question}>
               <summary>{faq.question}</summary>
@@ -874,10 +967,15 @@ export default function App() {
       <footer>
         <strong className="footer-title">Alchimie di Luce</strong>
         <p>Guarigione angelica a distanza · Luce · Ascolto · Protezione</p>
+
         <p>
           Email: <strong>{email}</strong>
         </p>
-        <p>© 2026 Alchimie di Luce – Carmelo Nicita. Tutti i diritti riservati.</p>
+
+        <p>
+          © 2026 Alchimie di Luce – Carmelo Nicita. Tutti i diritti riservati.
+        </p>
+
         <p>
           Informazioni di servizio: questa attività ha finalità spirituali e di
           benessere interiore. Non effettua diagnosi, prescrizioni o trattamenti
