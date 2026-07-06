@@ -13,14 +13,12 @@ export default function App() {
   const immagineArcangeli =
     'https://i.postimg.cc/LsMPMv56/Chat-GPT-Image-18-mag-2026-12-48-22.png';
 
-  // Letture angeliche
   const immagineRisposteAngeli =
     'https://i.postimg.cc/XJ95CMPB/Chat-GPT-Image-6-lug-2026-10-55-25.png';
 
   const immagineAngelTherapy =
     'https://i.postimg.cc/0QKfXHBq/Chat-GPT-Image-6-lug-2026-10-53-37.png';
 
-  // Kit digitale
   const immagineGuidaCompleta =
     'https://i.postimg.cc/3NwJv755/Chat-GPT-Image-4-lug-2026-09-48-28-(1).png';
 
@@ -890,7 +888,45 @@ export default function App() {
         </div>
       </section>
 
-      <section id="prezzi" className="blue-section">
+      <section id="contatti" className="blue-section">
+        <div className="container center">
+          <p className="section-label">Prenotazione</p>
+          <h2>Sessione a distanza</h2>
+
+          <div className="grid-2 price-grid">
+            {bookingOptions.map((item) => (
+              <article className="price-box wide" key={item.title}>
+                <h3>{item.title}</h3>
+                <div className="price">{item.price}</div>
+                <p>{item.description}</p>
+
+                <div className="buttons">
+                  <a
+                    className="btn btn-paypal"
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {item.cta}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="buttons">
+            <a className="btn btn-secondary" href={`mailto:${email}`}>
+              Scrivi una email
+            </a>
+          </div>
+
+          <p className="small">
+            Oppure scrivi direttamente a: <strong>{email}</strong>
+          </p>
+        </div>
+      </section>
+
+      <section id="prezzi" className="dark-section">
         <div className="container center">
           <p className="section-label">Letture angeliche</p>
           <h2>Messaggi e orientamento dagli Angeli</h2>
@@ -937,7 +973,7 @@ export default function App() {
         </div>
       </section>
 
-      <section id="kit-digitale" className="dark-section">
+      <section id="kit-digitale" className="blue-section">
         <div className="container center">
           <p className="section-label">Nuovo prodotto digitale</p>
           <h2>Mappa di Luce Interattiva</h2>
@@ -1020,8 +1056,10 @@ export default function App() {
                 <div>
                   <strong>Guida Completa della Mappa di Luce</strong>
                   <br />
-                  Per comprendere i simboli, i Raggi, gli Arcangeli, i Chakra e
-                  le modalità di consultazione.
+                  Un manuale pratico che spiega come consultare la Mappa,
+                  comprendere Arcangeli, Chakra, Raggi, Numeri Sacri e simboli
+                  presenti nella tavola, oltre a usare Diario e Bigliettini nel
+                  tuo percorso personale.
                 </div>
               </div>
 
@@ -1085,44 +1123,6 @@ export default function App() {
               o usare sul tuo dispositivo personale.
             </p>
           </article>
-        </div>
-      </section>
-
-      <section id="contatti">
-        <div className="container center">
-          <p className="section-label">Prenotazione</p>
-          <h2>Sessione a distanza</h2>
-
-          <div className="grid-2 price-grid">
-            {bookingOptions.map((item) => (
-              <article className="price-box wide" key={item.title}>
-                <h3>{item.title}</h3>
-                <div className="price">{item.price}</div>
-                <p>{item.description}</p>
-
-                <div className="buttons">
-                  <a
-                    className="btn btn-paypal"
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {item.cta}
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="buttons">
-            <a className="btn btn-secondary" href={`mailto:${email}`}>
-              Scrivi una email
-            </a>
-          </div>
-
-          <p className="small">
-            Oppure scrivi direttamente a: <strong>{email}</strong>
-          </p>
         </div>
       </section>
 
