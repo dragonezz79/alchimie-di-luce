@@ -31,10 +31,20 @@ export default function App() {
   const immagineBigliettini =
     'https://i.postimg.cc/vB0GMj1p/Chat-GPT-Image-4-lug-2026-09-48-49.png';
 
-  const paypalSessione = 'https://paypal.me/AlchimieDiLuce/49';
-  const paypalPercorso = 'https://paypal.me/AlchimieDiLuce/129';
-  const paypalRisposteAngeli = 'https://paypal.me/AlchimieDiLuce/19';
-  const paypalAngelTherapy = 'https://paypal.me/AlchimieDiLuce/29';
+  const immagineTarocchi =
+    'https://i.postimg.cc/SR3yhBJf/Chat-GPT-Image-6-lug-2026-16-42-14.png';
+
+  const immagineGuarigioneAngelica =
+    'https://i.postimg.cc/nLdL1v5W/Chat-GPT-Image-6-lug-2026-20-05-40.png';
+
+  const immaginePercorsoLuce =
+    'https://i.postimg.cc/yYq8n6QD/Chat-GPT-Image-6-lug-2026-20-16-50.png';
+
+  const payhipPercorsoLuce = 'https://payhip.com/b/PmRnd';
+  const payhipGuarigioneAngelica = 'https://payhip.com/b/fEOX3';
+  const payhipAngelTherapy = 'https://payhip.com/b/xjFgk';
+  const payhipRisposteAngeli = 'https://payhip.com/b/OiY9Q';
+  const payhipKit = 'https://payhip.com/b/3MyCg';
 
   const whatsappText = encodeURIComponent(
     'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, blocchi interiori o cambiamento.'
@@ -43,6 +53,11 @@ export default function App() {
   const whatsappMappaLuce = encodeURIComponent(
     'Ciao Carmelo, vorrei informazioni sulla Mappa di Luce Interattiva e sul Kit Completo di Attivazione Interiore.'
   );
+
+  const whatsappTarocchi = (servizio) =>
+    encodeURIComponent(
+      `Ciao Carmelo, desidero richiedere la ${servizio}. Vorrei inviarti la mia domanda e ricevere le indicazioni per procedere.`
+    );
 
   const introCards = [
     {
@@ -84,8 +99,8 @@ export default function App() {
     {
       title: 'Le Risposte degli Angeli',
       price: '19 €',
-      href: paypalRisposteAngeli,
-      cta: 'Paga 19 € con PayPal',
+      href: payhipRisposteAngeli,
+      cta: 'Acquista con codice LUCE10',
       image: immagineRisposteAngeli,
       imageAlt: 'Le Risposte degli Angeli con tre carte',
       description:
@@ -96,8 +111,8 @@ export default function App() {
     {
       title: 'Lettura Angel Therapy',
       price: '29 €',
-      href: paypalAngelTherapy,
-      cta: 'Paga 29 € con PayPal',
+      href: payhipAngelTherapy,
+      cta: 'Acquista con codice LUCE10',
       image: immagineAngelTherapy,
       imageAlt: 'Lettura Angel Therapy con cinque carte',
       description:
@@ -107,20 +122,57 @@ export default function App() {
     }
   ];
 
+  const tarotReadings = [
+    {
+      title: 'Domanda di Luce',
+      price: '19 €',
+      cards: '1 domanda · 3 carte',
+      delivery: 'Consegna entro 48 ore.',
+      description:
+        'Per ricevere orientamento su una domanda chiara e specifica.',
+      details:
+        'Riceverai una lettura scritta personalizzata con l’interpretazione delle 3 carte estratte e un messaggio conclusivo di centratura.'
+    },
+    {
+      title: 'Lettura di Chiarezza',
+      price: '39 €',
+      cards: 'Fino a 2 domande collegate · 7 carte',
+      delivery: 'Consegna entro 72 ore.',
+      description:
+        'Per comprendere una situazione, un blocco, una relazione o una scelta che senti importante.',
+      details:
+        'Riceverai una lettura scritta personalizzata con stesa di 7 carte, messaggio intuitivo conclusivo e indicazione pratica o decreto di centratura.'
+    },
+    {
+      title: 'Percorso di Luce Approfondito',
+      price: '59 €',
+      cards: 'Fino a 3 domande collegate allo stesso tema · 12 carte',
+      delivery: 'Consegna entro 4 giorni.',
+      description:
+        'Per osservare con maggiore profondità un passaggio della tua vita, le dinamiche presenti e le direzioni interiori possibili.',
+      details:
+        'Riceverai una restituzione scritta personalizzata in PDF con stesa approfondita di 12 carte, messaggio intuitivo finale, decreto di centratura e indicazione concreta da integrare nella quotidianità.'
+    }
+  ];
+
   const bookingOptions = [
     {
-      title: 'Sessione singola',
+      title: 'Guarigione Angelica',
       price: '49 €',
-      href: paypalSessione,
-      cta: 'Paga 49 € con PayPal',
+      href: payhipGuarigioneAngelica,
+      cta: 'Acquista con codice LUCE10',
+      image: immagineGuarigioneAngelica,
+      imageAlt: 'Guarigione Angelica: armonizzazione, protezione e riequilibrio',
       description:
-        'Un incontro individuale di ascolto e armonizzazione spirituale a distanza. Durata indicativa: 45/60 minuti.'
+        'Uno spazio individuale di ascolto, centratura e armonizzazione spirituale a distanza. Durata indicativa: 45/60 minuti.'
     },
     {
       title: 'Percorso Luce',
       price: '129 €',
-      href: paypalPercorso,
-      cta: 'Paga 129 € con PayPal',
+      href: payhipPercorsoLuce,
+      cta: 'Acquista con codice LUCE10',
+      image: immaginePercorsoLuce,
+      imageAlt: 'Percorso Luce: tre sessioni di centratura, armonia e riconnessione',
       description:
         'Tre sessioni a distanza dedicate a protezione, centratura e riconnessione alla propria Luce interiore.'
     }
@@ -603,6 +655,24 @@ export default function App() {
           margin: 12px 0;
         }
 
+        .launch-offer {
+          margin: 0 auto 24px;
+          padding: 13px 16px;
+          max-width: 440px;
+          border-radius: 16px;
+          border: 1px solid rgba(246,217,138,0.38);
+          background: rgba(246,217,138,0.11);
+          color: rgba(255,255,255,0.92);
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
+        .launch-offer strong {
+          color: #ffe9ad;
+          letter-spacing: 0.04em;
+        }
+
         .small {
           margin-top: 22px;
           color: rgba(255,255,255,0.58);
@@ -784,7 +854,8 @@ export default function App() {
           <a href="#come-funziona">Come funziona</a>
           <a href="#servizi">Servizi</a>
           <a href="#contatti">Sessioni</a>
-          <a href="#prezzi">Letture</a>
+          <a href="#prezzi">Letture Angeliche</a>
+          <a href="#tarocchi">Tarocchi</a>
           <a href="#kit-digitale">Kit digitale</a>
           <a href="#faq">FAQ</a>
           <a href="#contatti">Contatti</a>
@@ -830,6 +901,12 @@ export default function App() {
           </div>
 
           <div className="important-note welcome-note">
+            <strong>Promo di benvenuto</strong>
+            <br />
+            Usa il codice <strong>LUCE10</strong> al checkout Payhip e ricevi il
+            <strong> 10% di sconto</strong> su Guarigione Angelica, Percorso Luce,
+            Le Risposte degli Angeli e Lettura Angel Therapy fino al 31 luglio 2026.
+            <br /><br />
             <strong>Messaggio angelico iniziale gratuito</strong>
             <br />
             Scrivimi <strong>LUCE</strong> su WhatsApp e indicami il tema che
@@ -1008,9 +1085,20 @@ export default function App() {
           <div className="grid-2 price-grid">
             {bookingOptions.map((item) => (
               <article className="price-box wide" key={item.title}>
+                <img
+                  className="reading-image"
+                  src={item.image}
+                  alt={item.imageAlt}
+                />
+
                 <h3>{item.title}</h3>
                 <div className="price">{item.price}</div>
                 <p>{item.description}</p>
+
+                <p className="small">
+                  <strong>Promo:</strong> usa il codice <strong>LUCE10</strong> al checkout Payhip
+                  per ricevere il 10% di sconto fino al 31 luglio 2026.
+                </p>
 
                 <div className="buttons">
                   <a
@@ -1058,6 +1146,11 @@ export default function App() {
                 <p>{item.description}</p>
                 <p>{item.details}</p>
 
+                <p className="small">
+                  <strong>Promo:</strong> usa il codice <strong>LUCE10</strong> al checkout Payhip
+                  per ricevere il 10% di sconto fino al 31 luglio 2026.
+                </p>
+
                 <div className="important-note reading-note">
                   <strong>Nota importante:</strong> la lettura ha finalità
                   spirituale, simbolica e introspettiva. Non tratta salute,
@@ -1077,6 +1170,74 @@ export default function App() {
                     rel="noreferrer"
                   >
                     {item.cta}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="tarocchi" className="blue-section">
+        <div className="container center">
+          <p className="section-label">Letture dei Tarocchi</p>
+          <h2>Risposte di Luce</h2>
+
+          <div className="grid-2">
+            <div className="text-block">
+              <p>
+                Una lettura simbolica e intuitiva per osservare con maggiore
+                chiarezza una situazione, un blocco, una scelta o un passaggio
+                che stai vivendo.
+              </p>
+
+              <p>
+                Attraverso i Tarocchi riceverai uno spazio personale di
+                ascolto, orientamento e riflessione sulle energie del presente
+                e sui possibili aspetti interiori da riconoscere.
+              </p>
+
+              <p>
+                Puoi scegliere tra tre livelli di approfondimento, in base al
+                numero di domande e di carte estratte.
+              </p>
+
+              <div className="important-note">
+                La lettura dei Tarocchi è proposta come strumento spirituale e
+                simbolico di riflessione e ascolto interiore. Non sostituisce
+                decisioni personali, consulenze mediche, psicologiche, legali,
+                finanziarie o professionali.
+              </div>
+            </div>
+
+            <div className="portrait-wrap">
+              <div className="portrait-glow"></div>
+              <img
+                src={immagineTarocchi}
+                alt="Lettura dei Tarocchi simbolica e spirituale"
+                className="certificate"
+              />
+            </div>
+          </div>
+
+          <div className="grid-3 price-grid">
+            {tarotReadings.map((item) => (
+              <article className="price-box wide" key={item.title}>
+                <h3>{item.title}</h3>
+                <div className="price">{item.price}</div>
+                <p><strong>{item.cards}</strong></p>
+                <p>{item.description}</p>
+                <p>{item.details}</p>
+                <p className="small">{item.delivery}</p>
+
+                <div className="buttons">
+                  <a
+                    className="btn btn-primary"
+                    href={`https://wa.me/${whatsappNumber}?text=${whatsappTarocchi(item.title)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Richiedi la lettura
                   </a>
                 </div>
               </article>
@@ -1148,7 +1309,15 @@ export default function App() {
 
           <article className="price-box">
             <h3>Kit Completo di Attivazione Interiore</h3>
-            <div className="price">37 €</div>
+            <div className="price">27 €</div>
+
+            <div className="launch-offer">
+              <strong>✦ PREZZO SPECIALE DI LANCIO ✦</strong>
+              <br />
+              Fino al 31 luglio 2026.
+              <br />
+              Dal 1° agosto 2026: 37 €.
+            </div>
 
             <p>
               Il Kit è pensato per accompagnarti in un momento personale di
@@ -1206,6 +1375,27 @@ export default function App() {
             </div>
 
             <div className="important-note">
+              <strong>Un dono ricevuto in visione</strong>
+              <br />
+              La Mappa di Luce Interattiva nasce da un’esperienza interiore
+              unica, accolta e trasformata in un percorso di ascolto,
+              consapevolezza e Luce.
+              <br /><br />
+              Al suo centro custodisce alcuni Numeri Sacri ricevuti in dono
+              durante un’esperienza interiore e poi accolti, compresi e
+              organizzati in questo percorso come chiavi simboliche di ascolto,
+              trasformazione e radicamento.
+              <br /><br />
+              Ogni numero è pensato per essere incontrato nel momento giusto,
+              all’interno della Mappa e della Guida.
+              <br /><br />
+              Attraverso simboli, geometrie, decreti e pratiche di centratura,
+              questi codici accompagnano un percorso personale di
+              consapevolezza: ascoltare ciò che emerge, riconoscere il
+              messaggio e trasformarlo in una scelta concreta.
+            </div>
+
+            <div className="important-note">
               <strong>Per cosa è pensato il Kit:</strong>
               <br />
               Per chi sente il bisogno di fermarsi, ascoltarsi, ritrovare
@@ -1222,17 +1412,26 @@ export default function App() {
             <div className="buttons">
               <a
                 className="btn btn-primary"
+                href={payhipKit}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Acquista il Kit a 27 €
+              </a>
+
+              <a
+                className="btn btn-secondary"
                 href={`https://wa.me/${whatsappNumber}?text=${whatsappMappaLuce}`}
                 target="_blank"
                 rel="noreferrer"
               >
-                Richiedi il Kit su WhatsApp
+                Chiedi informazioni
               </a>
             </div>
 
             <p className="small">
-              Dopo l’acquisto riceverai i file digitali da scaricare, stampare
-              o usare sul tuo dispositivo personale.
+              Dopo l’acquisto riceverai immediatamente i file digitali da
+              scaricare, stampare o usare sul tuo dispositivo personale.
             </p>
           </article>
         </div>
