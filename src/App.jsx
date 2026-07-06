@@ -5,10 +5,30 @@ export default function App() {
   const email = 'info@alchimiediluce.it';
 
   const fotoCarmelo = 'https://i.postimg.cc/DfCWHht9/carmelo-presentazione.png';
-  const certificatoGuarigione = 'https://i.postimg.cc/c4cGJ1cY/2026-05-17-130738.jpg';
-  const immagineArcangeli = 'https://i.postimg.cc/LsMPMv56/Chat-GPT-Image-18-mag-2026-12-48-22.png';
-  const immagineRisposteAngeli = 'https://i.postimg.cc/0QKfXHBq/Chat-GPT-Image-6-lug-2026-10-53-37.png';
-  const immagineAngelTherapy = 'https://i.postimg.cc/XJ95CMPB/Chat-GPT-Image-6-lug-2026-10-55-25.png';
+  const certificatoGuarigione =
+    'https://i.postimg.cc/c4cGJ1cY/2026-05-17-130738.jpg';
+  const immagineArcangeli =
+    'https://i.postimg.cc/LsMPMv56/Chat-GPT-Image-18-mag-2026-12-48-22.png';
+
+  // Immagini letture angeliche: corrette e invertite rispetto alla versione precedente
+  const immagineRisposteAngeli =
+    'https://i.postimg.cc/XJ95CMPB/Chat-GPT-Image-6-lug-2026-10-55-25.png';
+
+  const immagineAngelTherapy =
+    'https://i.postimg.cc/0QKfXHBq/Chat-GPT-Image-6-lug-2026-10-53-37.png';
+
+  // Immagini Kit digitale
+  const immagineKitCompleto =
+    'https://i.postimg.cc/3NwJv755/Chat-GPT-Image-4-lug-2026-09-48-28-(1).png';
+
+  const immagineGuida =
+    'https://i.postimg.cc/15f3R9rD/Chat-GPT-Image-4-lug-2026-09-48-28-(2).png';
+
+  const immagineDiario =
+    'https://i.postimg.cc/HL4pvjdS/Chat-GPT-Image-4-lug-2026-09-48-29-(3).png';
+
+  const immagineBigliettini =
+    'https://i.postimg.cc/vB0GMj1p/Chat-GPT-Image-4-lug-2026-09-48-49.png';
 
   const paypalSessione = 'https://paypal.me/AlchimieDiLuce/49';
   const paypalPercorso = 'https://paypal.me/AlchimieDiLuce/129';
@@ -66,7 +86,7 @@ export default function App() {
       href: paypalRisposteAngeli,
       cta: 'Paga 19 € con PayPal',
       image: immagineRisposteAngeli,
-      imageAlt: 'Le Risposte degli Angeli - lettura con tre carte',
+      imageAlt: 'Le Risposte degli Angeli con tre carte',
       description:
         'Una lettura con 3 carte pensata per offrire un messaggio chiaro, diretto e incoraggiante su una situazione che senti importante.',
       details:
@@ -78,7 +98,7 @@ export default function App() {
       href: paypalAngelTherapy,
       cta: 'Paga 29 € con PayPal',
       image: immagineAngelTherapy,
-      imageAlt: 'Lettura Angel Therapy - lettura con cinque carte',
+      imageAlt: 'Lettura Angel Therapy con cinque carte',
       description:
         'Una lettura con 5 carte ispirata ai messaggi angelici, pensata per accompagnare riflessione, ascolto interiore e orientamento spirituale.',
       details:
@@ -108,7 +128,7 @@ export default function App() {
       href: paypalPercorso,
       cta: 'Paga 129 € con PayPal',
       description:
-        'Tre sessioni a distanza dedicate a pulizia energetica, protezione e riconnessione alla propria luce interiore.'
+        'Tre sessioni a distanza dedicate a pulizia energetica, protezione e riconnessione alla propria Luce interiore.'
     }
   ];
 
@@ -119,13 +139,24 @@ export default function App() {
         'No. La sessione può svolgersi a distanza: all’orario concordato ti prepari in un luogo tranquillo.'
     },
     {
-      question: 'Quanto dura?',
-      answer: 'Indicativamente 45/60 minuti, compresa la restituzione finale.'
+      question: 'Quanto dura una sessione?',
+      answer:
+        'Indicativamente 45/60 minuti, compresa la breve restituzione finale.'
     },
     {
       question: 'È una cura medica?',
       answer:
-        'No. È una pratica spirituale ed energetica e non sostituisce medico, psicologo, farmaci o terapie specialistiche.'
+        'No. È una pratica spirituale e introspettiva. Non sostituisce medico, psicologo, psicoterapeuta, farmaci o terapie specialistiche.'
+    },
+    {
+      question: 'Come ricevo il Kit digitale?',
+      answer:
+        'Dopo l’acquisto riceverai i file digitali da scaricare e usare personalmente sul tuo dispositivo oppure da stampare.'
+    },
+    {
+      question: 'Il Kit prende decisioni al mio posto?',
+      answer:
+        'No. Il Kit propone simboli, spunti e strumenti di riflessione. Ogni scelta resta personale e legata al tuo libero arbitrio.'
     }
   ];
 
@@ -510,6 +541,47 @@ export default function App() {
           color: #ffe9ad;
         }
 
+        .kit-showcase {
+          max-width: 950px;
+          margin: 38px auto 10px;
+        }
+
+        .kit-main-image {
+          width: 100%;
+          display: block;
+          border-radius: 30px;
+          border: 1px solid rgba(246,217,138,0.28);
+          box-shadow: 0 28px 70px rgba(0,0,0,0.34);
+        }
+
+        .kit-gallery {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          margin-top: 22px;
+        }
+
+        .kit-gallery-card {
+          padding: 14px;
+          border-radius: 24px;
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(255,255,255,0.11);
+        }
+
+        .kit-gallery-card img {
+          width: 100%;
+          display: block;
+          border-radius: 16px;
+          border: 1px solid rgba(246,217,138,0.20);
+        }
+
+        .kit-gallery-card p {
+          margin: 12px 4px 2px;
+          color: rgba(255,255,255,0.80);
+          font-size: 16px;
+          line-height: 1.4;
+        }
+
         .kit-list {
           margin-top: 28px;
           text-align: left;
@@ -561,7 +633,8 @@ export default function App() {
 
           .grid-2,
           .grid-3,
-          .grid-4 {
+          .grid-4,
+          .kit-gallery {
             grid-template-columns: 1fr;
           }
 
@@ -624,9 +697,9 @@ export default function App() {
           </h1>
 
           <p className="lead">
-            Messaggi angelici, letture personalizzate e sessioni energetiche a
-            distanza per chi sente stress, pesantezza emotiva, confusione o
-            bisogno di ritrovare pace e centratura.
+            Messaggi angelici, letture personalizzate e sessioni spirituali a
+            distanza per chi sente pesantezza emotiva, confusione o bisogno di
+            ritrovare pace e centratura.
           </p>
 
           <div className="buttons">
@@ -685,9 +758,8 @@ export default function App() {
 
               <p>
                 Mi sono specializzato nella{' '}
-                <strong>Guarigione Angelica</strong>, una pratica spirituale ed
-                energetica che lavora attraverso luce, ascolto, protezione e
-                intenzione del cuore.
+                <strong>Guarigione Angelica</strong>, una pratica spirituale
+                orientata a luce, ascolto, protezione e intenzione del cuore.
               </p>
 
               <p>
@@ -731,8 +803,9 @@ export default function App() {
               </p>
 
               <p className="small">
-                La Guarigione Angelica è una pratica spirituale ed energetica.
-                Non sostituisce cure mediche, psicologiche o farmacologiche.
+                La Guarigione Angelica è una pratica spirituale ed
+                introspettiva. Non sostituisce cure mediche, psicologiche o
+                farmacologiche.
               </p>
             </div>
           </div>
@@ -774,11 +847,14 @@ export default function App() {
             </p>
 
             <p>
-              Partendo dalla tua richiesta, viene aperto un momento di
-              raccoglimento con intenzione, preghiera, visualizzazione e
-              invocazione degli Arcangeli. L’obiettivo è accompagnarti a
-              ritrovare maggiore presenza, chiarezza e connessione con la tua
-              Luce interiore.
+              Partendo dalla tua richiesta, viene creato un momento di
+              raccoglimento attraverso intenzione, preghiera, visualizzazione e
+              invocazione degli Arcangeli.
+            </p>
+
+            <p>
+              L’obiettivo è accompagnarti a ritrovare maggiore presenza,
+              chiarezza e connessione con la tua Luce interiore.
             </p>
 
             <p>
@@ -869,6 +945,40 @@ export default function App() {
             presenza interiore e trasformare ciò che senti in scelte più
             consapevoli.
           </p>
+
+          <div className="kit-showcase">
+            <img
+              src={immagineKitCompleto}
+              alt="Kit Completo di Attivazione Interiore"
+              className="kit-main-image"
+            />
+
+            <div className="kit-gallery">
+              <article className="kit-gallery-card">
+                <img
+                  src={immagineGuida}
+                  alt="Guida della Mappa di Luce"
+                />
+                <p>Guida completa per comprendere simboli e percorsi.</p>
+              </article>
+
+              <article className="kit-gallery-card">
+                <img
+                  src={immagineDiario}
+                  alt="Diario di Attivazione Interiore"
+                />
+                <p>Diario da compilare per osservare intuizioni e passaggi.</p>
+              </article>
+
+              <article className="kit-gallery-card">
+                <img
+                  src={immagineBigliettini}
+                  alt="Bigliettini di consultazione"
+                />
+                <p>Bigliettini da ritagliare per la consultazione simbolica.</p>
+              </article>
+            </div>
+          </div>
 
           <article className="price-box">
             <h3>Kit Completo di Attivazione Interiore</h3>
