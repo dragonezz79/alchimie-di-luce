@@ -77,13 +77,6 @@ export default function App() {
     }
   ];
 
-  const sessionSteps = [
-    'Raccolta della tua richiesta e definizione dell’intenzione personale.',
-    'Preparazione di uno spazio simbolico di luce, protezione e ascolto.',
-    'Sessione a distanza con preghiera, visualizzazione e connessione angelica.',
-    'Chiusura, radicamento e breve restituzione finale.'
-  ];
-
   const services = [
     'Momenti di sovraccarico e pesantezza emotiva',
     'Momenti di cambiamento',
@@ -93,6 +86,36 @@ export default function App() {
     'Chiarezza interiore',
     'Stanchezza spirituale',
     'Ritrovare pace e centratura'
+  ];
+
+  const sessionSteps = [
+    'Raccolta della tua richiesta e definizione dell’intenzione personale.',
+    'Preparazione di uno spazio simbolico di luce, protezione e ascolto.',
+    'Sessione a distanza con preghiera, visualizzazione e connessione angelica.',
+    'Chiusura, radicamento e breve restituzione finale.'
+  ];
+
+  const bookingOptions = [
+    {
+      title: 'Guarigione Angelica',
+      price: '49 €',
+      href: payhipGuarigioneAngelica,
+      cta: 'Acquista con codice LUCE10',
+      image: immagineGuarigioneAngelica,
+      imageAlt: 'Guarigione Angelica',
+      description:
+        'Uno spazio individuale di ascolto, centratura e armonizzazione spirituale a distanza. Durata indicativa: 45/60 minuti.'
+    },
+    {
+      title: 'Percorso Luce',
+      price: '129 €',
+      href: payhipPercorsoLuce,
+      cta: 'Acquista con codice LUCE10',
+      image: immaginePercorsoLuce,
+      imageAlt: 'Percorso Luce',
+      description:
+        'Tre sessioni a distanza dedicate a protezione, centratura e riconnessione alla propria Luce interiore.'
+    }
   ];
 
   const angelReadings = [
@@ -158,29 +181,6 @@ export default function App() {
         'Per osservare con maggiore profondità un passaggio della tua vita, le dinamiche presenti e le direzioni interiori possibili.',
       details:
         'Riceverai una restituzione scritta personalizzata in PDF con stesa approfondita di 12 carte, messaggio intuitivo finale, decreto di centratura e indicazione concreta da integrare nella quotidianità.'
-    }
-  ];
-
-  const bookingOptions = [
-    {
-      title: 'Guarigione Angelica',
-      price: '49 €',
-      href: payhipGuarigioneAngelica,
-      cta: 'Acquista con codice LUCE10',
-      image: immagineGuarigioneAngelica,
-      imageAlt: 'Guarigione Angelica',
-      description:
-        'Uno spazio individuale di ascolto, centratura e armonizzazione spirituale a distanza. Durata indicativa: 45/60 minuti.'
-    },
-    {
-      title: 'Percorso Luce',
-      price: '129 €',
-      href: payhipPercorsoLuce,
-      cta: 'Acquista con codice LUCE10',
-      image: immaginePercorsoLuce,
-      imageAlt: 'Percorso Luce',
-      description:
-        'Tre sessioni a distanza dedicate a protezione, centratura e riconnessione alla propria Luce interiore.'
     }
   ];
 
@@ -917,7 +917,7 @@ export default function App() {
             Usa il codice
             <span className="promo-code">LUCE10</span>
             al checkout Payhip e ricevi il
-            <strong> 10% di sconto</strong>
+            <strong> 10% di sconto </strong>
             su <strong>Guarigione Angelica</strong>, <strong>Percorso Luce</strong>,
             <strong> Le Risposte degli Angeli</strong> e
             <strong> Lettura Angel Therapy</strong>.
@@ -1315,8 +1315,7 @@ export default function App() {
                 <h3>Mappa di Luce Interattiva</h3>
                 <p>
                   Una tavola simbolica da osservare e consultare, con
-                  Arcangeli, Chakra, Raggi, Numeri Sacri e messaggi di
-                  orientamento interiore.
+                  Arcangeli, Chakra, Raggi e messaggi di orientamento interiore.
                 </p>
               </article>
 
@@ -1327,9 +1326,9 @@ export default function App() {
                 />
                 <h3>Bigliettini di consultazione</h3>
                 <p>
-                  Quattro messaggi da ritagliare e pescare durante la
-                  consultazione, per ricevere uno spunto simbolico su una
-                  domanda o una situazione.
+                  Bigliettini simbolici da ritagliare e consultare: messaggi,
+                  Numeri Sacri, Arcangeli e chiavi di Luce pensati per
+                  accompagnare la lettura personale della Mappa.
                 </p>
               </article>
             </div>
@@ -1392,8 +1391,8 @@ export default function App() {
                 <span className="check">✓</span>
                 <div>
                   <strong>Bigliettini di consultazione stampabili</strong>
-                  Quattro messaggi simbolici: Sì, Attendi, Rivedi il progetto e
-                  Agisci ora.
+                  Una raccolta di messaggi simbolici, Numeri Sacri, Arcangeli
+                  e chiavi di Luce da pescare durante la consultazione della Mappa.
                 </div>
               </div>
             </div>
