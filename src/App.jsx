@@ -47,9 +47,9 @@ export default function App() {
   const payhipKit = 'https://payhip.com/b/3MyCg';
 
   const paypalTarocchiBase = 'https://paypal.me/AlchimieDiLuce/19';
-  const paypalTarocchiChiarezza = 'https://paypal.me/AlchimieDiLuce/39';
+  const paypalTarocchiChiarezza = 'https://paypal.me/AlchimieDiLuce/35';
   const paypalTarocchiApprofondito =
-    'https://paypal.me/AlchimieDiLuce/59';
+    'https://paypal.me/AlchimieDiLuce/49';
 
   const whatsappText = encodeURIComponent(
     'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, blocchi interiori o cambiamento.'
@@ -151,36 +151,36 @@ export default function App() {
       price: '19 €',
       href: paypalTarocchiBase,
       cta: 'Paga 19 € con PayPal',
-      cards: '1 domanda · 3 carte',
+      cards: '1 domanda · Lettura essenziale',
       delivery: 'Consegna entro 48 ore.',
       description:
         'Per ricevere orientamento su una domanda chiara e specifica.',
       details:
-        'Riceverai una lettura scritta personalizzata con l’interpretazione delle 3 carte estratte e un messaggio conclusivo di centratura.'
+        'Riceverai una lettura scritta personalizzata con l’interpretazione delle energie emerse e un messaggio conclusivo di centratura.'
     },
     {
       title: 'Lettura di Chiarezza',
-      price: '39 €',
+      price: '35 €',
       href: paypalTarocchiChiarezza,
-      cta: 'Paga 39 € con PayPal',
-      cards: 'Fino a 2 domande · 7 carte',
+      cta: 'Paga 35 € con PayPal',
+      cards: 'Fino a 2 domande collegate · Lettura approfondita',
       delivery: 'Consegna entro 72 ore.',
       description:
-        'Per comprendere una situazione, un blocco, una relazione o una scelta che senti importante.',
+        'Per comprendere meglio una situazione, una relazione, un blocco o una scelta che senti importante.',
       details:
-        'Riceverai una lettura scritta personalizzata con stesa di 7 carte, messaggio intuitivo conclusivo e indicazione pratica o decreto di centratura.'
+        'Riceverai una lettura scritta personalizzata e approfondita, con analisi delle dinamiche emerse, messaggio intuitivo conclusivo e indicazione pratica di centratura.'
     },
     {
-      title: 'Percorso di Luce Approfondito',
-      price: '59 €',
+      title: 'Percorso di Luce',
+      price: '49 €',
       href: paypalTarocchiApprofondito,
-      cta: 'Paga 59 € con PayPal',
-      cards: 'Fino a 3 domande · 12 carte',
+      cta: 'Paga 49 € con PayPal',
+      cards: 'Fino a 3 domande collegate · Percorso completo',
       delivery: 'Consegna entro 4 giorni.',
       description:
-        'Per osservare con maggiore profondità un passaggio della tua vita, le dinamiche presenti e le direzioni interiori possibili.',
+        'Per osservare con maggiore profondità una fase della tua vita e le possibili direzioni interiori.',
       details:
-        'Riceverai una restituzione scritta personalizzata in PDF con stesa approfondita di 12 carte, messaggio intuitivo finale, decreto di centratura e indicazione concreta da integrare nella quotidianità.'
+        'Riceverai una restituzione personalizzata in PDF, con analisi completa delle dinamiche emerse, messaggio intuitivo finale, decreto di centratura e un’indicazione concreta da integrare nella quotidianità.'
     }
   ];
 
@@ -1198,8 +1198,7 @@ export default function App() {
           </div>
         </div>
       </section>
-
-      <section id="tarocchi" className="blue-section">
+            <section id="tarocchi" className="blue-section">
         <div className="container center">
           <p className="section-label">Letture dei Tarocchi</p>
           <h2>Risposte di Luce</h2>
@@ -1219,8 +1218,9 @@ export default function App() {
               </p>
 
               <p>
-                Puoi scegliere tra tre livelli di approfondimento, in base al
-                numero di domande e di carte estratte.
+                Puoi scegliere tra tre livelli di approfondimento, in base alla
+                complessità della situazione e al tipo di orientamento che
+                desideri ricevere.
               </p>
 
               <div className="important-note">
@@ -1246,9 +1246,11 @@ export default function App() {
               <article className="price-box wide" key={item.title}>
                 <h3>{item.title}</h3>
                 <div className="price">{item.price}</div>
+
                 <p>
                   <strong>{item.cards}</strong>
                 </p>
+
                 <p>{item.description}</p>
                 <p>{item.details}</p>
                 <p className="small">{item.delivery}</p>
@@ -1299,7 +1301,9 @@ export default function App() {
                   src={immagineDiario}
                   alt="Diario di Attivazione Interiore"
                 />
+
                 <h3>Diario di Attivazione Interiore</h3>
+
                 <p>
                   Uno spazio guidato da compilare per annotare intuizioni,
                   emozioni, messaggi ricevuti, sogni, sincronicità e piccoli
@@ -1312,7 +1316,9 @@ export default function App() {
                   src={immagineMappa}
                   alt="Mappa di Luce Interattiva"
                 />
+
                 <h3>Mappa di Luce Interattiva</h3>
+
                 <p>
                   Una tavola simbolica da osservare e consultare, con
                   Arcangeli, Chakra, Raggi e messaggi di orientamento interiore.
@@ -1324,7 +1330,9 @@ export default function App() {
                   src={immagineBigliettini}
                   alt="Bigliettini di consultazione"
                 />
+
                 <h3>Bigliettini di consultazione</h3>
+
                 <p>
                   Bigliettini simbolici da ritagliare e consultare: messaggi,
                   Numeri Sacri, Arcangeli e chiavi di Luce pensati per
@@ -1361,6 +1369,7 @@ export default function App() {
             <div className="steps kit-list">
               <div className="step">
                 <span className="check">✓</span>
+
                 <div>
                   <strong>Guida Completa della Mappa di Luce</strong>
                   Un manuale pratico che spiega come consultare la Mappa,
@@ -1372,6 +1381,7 @@ export default function App() {
 
               <div className="step">
                 <span className="check">✓</span>
+
                 <div>
                   <strong>Mappa di Luce Interattiva in formato A4</strong>
                   Una tavola simbolica da stampare o consultare in digitale.
@@ -1380,6 +1390,7 @@ export default function App() {
 
               <div className="step">
                 <span className="check">✓</span>
+
                 <div>
                   <strong>Diario di Attivazione Interiore</strong>
                   Un percorso di 31 giorni da compilare con pensieri,
@@ -1389,29 +1400,42 @@ export default function App() {
 
               <div className="step">
                 <span className="check">✓</span>
+
                 <div>
                   <strong>Bigliettini di consultazione stampabili</strong>
                   Una raccolta di messaggi simbolici, Numeri Sacri, Arcangeli
-                  e chiavi di Luce da pescare durante la consultazione della Mappa.
+                  e chiavi di Luce da pescare durante la consultazione della
+                  Mappa.
                 </div>
               </div>
             </div>
 
             <div className="important-note">
               <strong>Un dono ricevuto in visione</strong>
-              <br /><br />
+              <br />
+              <br />
+
               La Mappa di Luce Interattiva nasce da un’esperienza interiore
               unica, accolta e trasformata in un percorso di ascolto,
               consapevolezza e Luce.
-              <br /><br />
+
+              <br />
+              <br />
+
               Al suo centro custodisce alcuni Numeri Sacri ricevuti in dono
               durante un’esperienza interiore e poi accolti, compresi e
               organizzati in questo percorso come chiavi simboliche di ascolto,
               trasformazione e radicamento.
-              <br /><br />
+
+              <br />
+              <br />
+
               Ogni numero è pensato per essere incontrato nel momento giusto,
               all’interno della Mappa e della Guida.
-              <br /><br />
+
+              <br />
+              <br />
+
               Attraverso simboli, geometrie, decreti e pratiche di centratura,
               questi codici accompagnano un percorso personale di
               consapevolezza: ascoltare ciò che emerge, riconoscere il
@@ -1420,7 +1444,9 @@ export default function App() {
 
             <div className="important-note">
               <strong>Per cosa è pensato il Kit:</strong>
-              <br /><br />
+              <br />
+              <br />
+
               Per chi sente il bisogno di fermarsi, ascoltarsi, ritrovare
               chiarezza, coltivare una pratica spirituale personale e
               riconnettersi con la propria Luce interiore.
@@ -1506,7 +1532,10 @@ export default function App() {
 
       <footer>
         <strong className="footer-title">Alchimie di Luce</strong>
-        <p>Guarigione angelica a distanza · Luce · Ascolto · Protezione</p>
+
+        <p>
+          Guarigione angelica a distanza · Luce · Ascolto · Protezione
+        </p>
 
         <p>
           Email: <strong>{email}</strong>
