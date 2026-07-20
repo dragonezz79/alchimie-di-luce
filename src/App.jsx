@@ -1,4 +1,5 @@
 import React from 'react';
+import immagineGuidaSerenita from './assets/guida-serenita.png';
 
 export default function App() {
   const whatsappNumber = '393492304412';
@@ -45,6 +46,7 @@ export default function App() {
   const payhipAngelTherapy = 'https://payhip.com/b/xjFgk';
   const payhipRisposteAngeli = 'https://payhip.com/b/OiY9Q';
   const payhipKit = 'https://payhip.com/b/3MyCg';
+  const payhipGuidaSerenita = 'https://payhip.com/b/Ez8xs';
 
   const paypalTarocchiBase = 'https://paypal.me/AlchimieDiLuce/19';
   const paypalTarocchiChiarezza = 'https://paypal.me/AlchimieDiLuce/35';
@@ -201,6 +203,11 @@ export default function App() {
         'No. È una pratica spirituale e introspettiva. Non sostituisce medico, psicologo, psicoterapeuta, farmaci o terapie specialistiche.'
     },
     {
+      question: 'Come ricevo gratuitamente la Guida alla Serenità?',
+      answer:
+        'Puoi scrivere SERENITÀ nei commenti dei contenuti dedicati sui social. Riceverai le indicazioni per scaricare gratuitamente la guida da Payhip.'
+    },
+    {
       question: 'Come ricevo il Kit digitale?',
       answer:
         'Dopo l’acquisto riceverai i file digitali da scaricare e usare sul tuo dispositivo oppure da stampare.'
@@ -211,6 +218,10 @@ export default function App() {
         'No. Il Kit propone simboli, spunti e strumenti di riflessione. Ogni scelta resta personale e legata al tuo libero arbitrio.'
     }
   ];
+
+  // Inserisci qui le recensioni reali quando saranno disponibili.
+  // La sezione resta automaticamente nascosta finché l’elenco è vuoto.
+  const reviews = [];
 
   return (
     <main className="site">
@@ -718,6 +729,22 @@ export default function App() {
           box-shadow: 0 28px 70px rgba(0,0,0,0.34);
         }
 
+        .serenity-image {
+          width: 100%;
+          display: block;
+          border-radius: 28px;
+          border: 1px solid rgba(246,217,138,0.30);
+          box-shadow: 0 28px 70px rgba(0,0,0,0.34);
+        }
+
+        .serenity-copy {
+          text-align: left;
+        }
+
+        .serenity-copy .buttons {
+          justify-content: flex-start;
+        }
+
         .kit-gallery {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -867,7 +894,9 @@ export default function App() {
           <a href="#contatti">Sessioni</a>
           <a href="#prezzi">Letture Angeliche</a>
           <a href="#tarocchi">Tarocchi</a>
+          <a href="#guida-serenita">Guida gratuita</a>
           <a href="#kit-digitale">Kit digitale</a>
+          {reviews.length > 0 && <a href="#recensioni">Recensioni</a>}
           <a href="#faq">FAQ</a>
           <a href="#contatti-finali">Contatti</a>
         </nav>
@@ -1276,6 +1305,92 @@ export default function App() {
         </div>
       </section>
 
+      <section id="guida-serenita" className="dark-section">
+        <div className="container">
+          <div className="grid-2">
+            <div>
+              <img
+                src={immagineGuidaSerenita}
+                alt="5 minuti al giorno per ritrovare serenità"
+                className="serenity-image"
+              />
+            </div>
+
+            <div className="serenity-copy">
+              <p className="section-label">Guida digitale gratuita</p>
+              <h2>5 minuti al giorno per ritrovare serenità</h2>
+
+              <p className="lead">
+                Una piccola pratica quotidiana può cambiare il modo in cui vivi
+                le tue giornate.
+              </p>
+
+              <p>
+                Ti senti spesso di corsa, distratto o in attesa che qualcosa
+                cambi prima di poterti sentire finalmente sereno?
+              </p>
+
+              <p>
+                Ho creato questa mini guida gratuita per aiutarti a fermarti,
+                ascoltarti e iniziare a prenderti cura del tuo benessere
+                attraverso piccoli gesti quotidiani.
+              </p>
+
+              <div className="steps">
+                <div className="step">
+                  <span className="check">✨</span>
+                  <div>La regola dei 5 minuti al giorno</div>
+                </div>
+                <div className="step">
+                  <span className="check">✨</span>
+                  <div>Esercizi semplici di consapevolezza</div>
+                </div>
+                <div className="step">
+                  <span className="check">✨</span>
+                  <div>Una routine dedicata a mattino, giorno e sera</div>
+                </div>
+                <div className="step">
+                  <span className="check">✨</span>
+                  <div>Una sfida pratica di 7 giorni</div>
+                </div>
+                <div className="step">
+                  <span className="check">✨</span>
+                  <div>Un diario dei piccoli gesti quotidiani</div>
+                </div>
+                <div className="step">
+                  <span className="check">✨</span>
+                  <div>Domande finali per osservare ciò che sta cambiando</div>
+                </div>
+              </div>
+
+              <div className="important-note">
+                Non devi cambiare tutto in una volta. Puoi iniziare da cinque
+                minuti.
+                <br />
+                <br />
+                <strong>Formato digitale PDF · Download immediato e gratuito</strong>
+              </div>
+
+              <div className="buttons">
+                <a
+                  className="btn btn-primary"
+                  href={payhipGuidaSerenita}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Scarica gratuitamente su Payhip
+                </a>
+              </div>
+
+              <p className="small">
+                Hai scoperto la guida sui social? Scrivi <strong>SERENITÀ</strong>{' '}
+                nei commenti per ricevere le indicazioni in privato.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="kit-digitale" className="blue-section">
         <div className="container center">
           <p className="section-label">Nuovo prodotto digitale</p>
@@ -1485,6 +1600,26 @@ export default function App() {
           </article>
         </div>
       </section>
+
+      {reviews.length > 0 && (
+        <section id="recensioni" className="dark-section">
+          <div className="container center">
+            <p className="section-label">Testimonianze</p>
+            <h2>Le esperienze di chi mi ha scelto</h2>
+
+            <div className="grid-3 services-grid">
+              {reviews.map((review) => (
+                <article className="card" key={`${review.name}-${review.service}`}>
+                  <div className="icon">✦</div>
+                  <p>“{review.text}”</p>
+                  <strong>{review.name}</strong>
+                  <p className="small">{review.service}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section id="faq" className="dark-section">
         <div className="container faq-container">
