@@ -1,5 +1,5 @@
 import React from 'react';
-import immagineGuidaSerenita from './assets/guida-serenita.png';
+import immagineGuidaSerenita from './guida-serenita.png';
 
 export default function App() {
   const whatsappNumber = '393492304412';
