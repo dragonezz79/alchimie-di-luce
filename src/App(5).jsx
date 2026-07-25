@@ -69,7 +69,7 @@ export default function App() {
       icon: '✦',
       label: 'Percorso autonomo',
       title: 'Mappa di Luce',
-      text: 'Guida, Mappa, Diario e pratiche spirituali in un unico Kit digitale da seguire con i tuoi tempi.',
+      text: 'Un percorso guidato per meditare, fare ordine nei pensieri e ritrovare contatto con te stesso e con il mondo spirituale.',
       href: '#kit-digitale',
       cta: 'Scopri la Mappa'
     },
@@ -77,7 +77,7 @@ export default function App() {
       icon: '♡',
       label: 'Risposta personalizzata',
       title: 'Letture',
-      text: 'Un messaggio angelico o una lettura dei Tarocchi per fare chiarezza su una domanda o un momento importante.',
+      text: 'Carte degli Angeli e Tarocchi per ricevere una lettura scritta e fare chiarezza su domande e situazioni concrete.',
       href: '#prezzi',
       cta: 'Scegli una lettura'
     },
@@ -85,7 +85,7 @@ export default function App() {
       icon: '☾',
       label: 'Accompagnamento',
       title: 'Sessioni individuali',
-      text: 'Uno spazio personale a distanza dedicato ad ascolto, centratura, protezione e riconnessione interiore.',
+      text: 'Un incontro spirituale a distanza per rallentare, sentirti più centrato e dedicare attenzione a ciò che stai vivendo.',
       href: '#contatti',
       cta: 'Scopri le sessioni'
     }
@@ -103,10 +103,10 @@ export default function App() {
   ];
 
   const sessionSteps = [
-    'Raccolta della tua richiesta e definizione dell’intenzione personale.',
-    'Preparazione di uno spazio simbolico di luce, protezione e ascolto.',
-    'Sessione a distanza con preghiera, visualizzazione e connessione angelica.',
-    'Chiusura, radicamento e breve restituzione finale.'
+    'Mi racconti brevemente cosa stai vivendo e quale aspetto desideri affrontare.',
+    'Concordiamo il momento della sessione e ricevi indicazioni semplici per prepararti.',
+    'Svolgo a distanza una pratica spirituale con preghiera, visualizzazione e invocazione degli Arcangeli.',
+    'Al termine ricevi una breve restituzione con ciò che è emerso e uno spunto da usare nella vita quotidiana.'
   ];
 
   const bookingOptions = [
@@ -119,7 +119,7 @@ export default function App() {
       image: immagineGuarigioneAngelica,
       imageAlt: 'Guarigione Angelica',
       description:
-        'Uno spazio individuale di ascolto, centratura e armonizzazione spirituale a distanza. Durata indicativa: 45/60 minuti.'
+        'Una sessione spirituale individuale a distanza, indicata quando ti senti appesantito, confuso o hai bisogno di fermarti e ritrovare calma e centratura. Durata indicativa: 45/60 minuti.'
     },
     {
       title: 'Percorso Luce',
@@ -130,7 +130,7 @@ export default function App() {
       image: immaginePercorsoLuce,
       imageAlt: 'Percorso Luce',
       description:
-        'Tre sessioni a distanza dedicate a protezione, centratura e riconnessione alla propria Luce interiore.'
+        'Tre sessioni a distanza per lavorare con continuità su un momento di cambiamento, sulla centratura e sulla tua pratica spirituale personale.'
     }
   ];
 
@@ -144,9 +144,9 @@ export default function App() {
       image: immagineRisposteAngeli,
       imageAlt: 'Le Risposte degli Angeli con tre carte',
       description:
-        'Una lettura con 3 carte pensata per offrire un messaggio chiaro, diretto e incoraggiante su una situazione che senti importante.',
+        'Una lettura scritta con 3 Carte degli Angeli per ricevere un messaggio semplice su una situazione o su domande che ti stanno a cuore.',
       details:
-        'Puoi porre fino a 3 domande semplici. Dopo il pagamento, inviamele su WhatsApp insieme al tuo nome. Riceverai entro 48 ore un PDF personale con le 3 carte estratte, il messaggio per ogni domanda e una sintesi finale di orientamento.'
+        'Puoi porre fino a 3 domande, collegate oppure diverse. Dopo il pagamento, inviamele su WhatsApp insieme al tuo nome. Entro 48 ore riceverai un PDF con le carte estratte, una spiegazione chiara e un messaggio finale.'
     },
     {
       title: 'Lettura Angel Therapy',
@@ -157,25 +157,25 @@ export default function App() {
       image: immagineAngelTherapy,
       imageAlt: 'Lettura Angel Therapy con cinque carte',
       description:
-        'Una lettura con 5 carte ispirata ai messaggi angelici, pensata per accompagnare riflessione, ascolto interiore e orientamento spirituale.',
+        'Una lettura scritta con 5 Carte degli Angeli per approfondire un tema, osservare ciò che lo influenza e ricevere un orientamento spirituale.',
       details:
-        'Dopo il pagamento, inviami su WhatsApp il tuo nome e il tema che desideri esplorare. Riceverai entro 48 ore un PDF personale con le 5 carte estratte, il messaggio simbolico di ciascuna e una sintesi finale di orientamento.'
+        'Dopo il pagamento, inviami su WhatsApp il tuo nome e il tema da esplorare. Entro 48 ore riceverai un PDF con le 5 carte, la spiegazione di ogni carta e una sintesi conclusiva.'
     }
   ];
 
   const tarotReadings = [
     {
-      title: 'Domanda di Luce',
+      title: 'Lettura Express',
       price: '19 €',
       href: paypalTarocchiBase,
       eventName: 'click_tarocchi_19',
       cta: 'Paga 19 € con PayPal',
-      cards: '1 domanda · Lettura essenziale',
+      cards: '1 domanda · Risposta diretta',
       delivery: 'Consegna entro 48 ore.',
       description:
-        'Per ricevere orientamento su una domanda chiara e specifica.',
+        'Una lettura dei Tarocchi per osservare una domanda precisa da un nuovo punto di vista.',
       details:
-        'Riceverai una lettura scritta personalizzata con l’interpretazione delle energie emerse e un messaggio conclusivo di centratura.'
+        'Riceverai una risposta scritta personalizzata, con la spiegazione delle carte e una sintesi finale.'
     },
     {
       title: 'Lettura di Chiarezza',
@@ -183,25 +183,25 @@ export default function App() {
       href: paypalTarocchiChiarezza,
       eventName: 'click_tarocchi_35',
       cta: 'Paga 35 € con PayPal',
-      cards: 'Fino a 2 domande collegate · Lettura approfondita',
+      cards: 'Fino a 3 domande · Collegate oppure diverse',
       delivery: 'Consegna entro 72 ore.',
       description:
-        'Per comprendere meglio una situazione, una relazione, un blocco o una scelta che senti importante.',
+        'Una lettura dei Tarocchi per fare chiarezza su più aspetti di una situazione o su tre temi diversi.',
       details:
-        'Riceverai una lettura scritta personalizzata e approfondita, con analisi delle dinamiche emerse, messaggio intuitivo conclusivo e indicazione pratica di centratura.'
+        'Riceverai una risposta scritta per ogni domanda, la spiegazione delle carte e una sintesi conclusiva.'
     },
     {
-      title: 'Percorso di Luce',
+      title: 'Lettura Completa',
       price: '49 €',
       href: paypalTarocchiApprofondito,
       eventName: 'click_tarocchi_49',
       cta: 'Paga 49 € con PayPal',
-      cards: 'Fino a 3 domande collegate · Percorso completo',
+      cards: 'Fino a 5 domande · Collegate oppure diverse',
       delivery: 'Consegna entro 4 giorni.',
       description:
-        'Per osservare con maggiore profondità una fase della tua vita e le possibili direzioni interiori.',
+        'Una lettura completa dei Tarocchi per affrontare fino a cinque domande e avere una visione più ampia del momento che stai vivendo.',
       details:
-        'Riceverai una restituzione personalizzata in PDF, con analisi completa delle dinamiche emerse, messaggio intuitivo finale, decreto di centratura e un’indicazione concreta da integrare nella quotidianità.'
+        'Riceverai un PDF personalizzato con la risposta a ogni domanda, la spiegazione delle carte, una sintesi generale e uno spunto pratico finale.'
     }
   ];
 
@@ -816,6 +816,8 @@ export default function App() {
 
         .kit-main-image {
           width: 100%;
+          max-width: 560px;
+          margin: 0 auto;
           display: block;
           border-radius: 30px;
           border: 1px solid rgba(246,217,138,0.28);
@@ -832,6 +834,20 @@ export default function App() {
 
         .serenity-copy {
           text-align: left;
+        }
+
+        .free-badge {
+          display: inline-block;
+          margin: 12px 0 4px;
+          padding: 9px 18px;
+          border: 1px solid rgba(246,217,138,0.65);
+          border-radius: 999px;
+          background: linear-gradient(135deg, #f6d98a, #d8a93f);
+          color: #101225;
+          font-family: Arial, sans-serif;
+          font-size: clamp(20px, 3vw, 30px);
+          font-weight: 900;
+          letter-spacing: 0.08em;
         }
 
         .serenity-copy .buttons {
@@ -1042,9 +1058,8 @@ export default function App() {
             <h2>Mappa di Luce Interattiva</h2>
 
             <p className="lead">
-              Uno strumento spirituale da usare con i tuoi tempi per ascoltarti,
-              riconoscere ciò che stai vivendo e trasformare le intuizioni in
-              passi più consapevoli.
+              Un percorso da seguire con i tuoi tempi per calmare la mente,
+              concentrarti, meditare e ascoltare meglio ciò che senti.
             </p>
 
             <div className="steps">
@@ -1052,8 +1067,8 @@ export default function App() {
                 <span className="check">✓</span>
                 <div>
                   <strong>Tutto in un unico Kit</strong>
-                  Guida completa, Mappa stampabile, Diario di 31 giorni e
-                  Bigliettini di consultazione.
+                  La Guida spiega ogni passaggio; Mappa, Diario e Bigliettini
+                  ti aiutano a trasformarlo in una pratica quotidiana.
                 </div>
               </div>
 
@@ -1226,7 +1241,7 @@ export default function App() {
         <div className="container grid-2">
           <div>
             <p className="section-label">Il percorso</p>
-            <h2>Come si svolge la sessione</h2>
+            <h2>Guarigione Angelica a distanza: come funziona</h2>
 
             <div className="steps">
               {sessionSteps.map((step) => (
@@ -1243,19 +1258,21 @@ export default function App() {
             <h3>Cosa puoi aspettarti</h3>
 
             <p>
-              La sessione è uno spazio individuale dedicato all’ascolto, alla
-              centratura e all’armonizzazione spirituale.
+              È una pratica spirituale individuale da scegliere quando senti
+              pesantezza, confusione o il bisogno di fermarti e ritrovare un
+              momento di calma.
             </p>
 
             <p>
-              Partendo dalla tua richiesta, viene creato un momento di
-              raccoglimento attraverso intenzione, preghiera, visualizzazione e
-              invocazione degli Arcangeli.
+              Tu mi spieghi brevemente cosa stai vivendo. Durante la sessione
+              lavoro a distanza con preghiera, visualizzazione e invocazione
+              degli Arcangeli, dedicando la pratica alla tua intenzione.
             </p>
 
             <p>
-              L’obiettivo è accompagnarti a ritrovare maggiore presenza,
-              chiarezza e connessione con la tua Luce interiore.
+              Lo scopo è offrirti uno spazio di raccoglimento che possa aiutarti
+              a sentirti più centrato, presente e in contatto con la tua parte
+              spirituale.
             </p>
 
             <p>
@@ -1265,10 +1282,9 @@ export default function App() {
             </p>
 
             <p>
-              <strong>Nota importante:</strong> il servizio ha finalità
-              spirituale e introspettiva. Non sostituisce medici, psicologi o
-              psicoterapeuti e non riguarda diagnosi, malattie, farmaci o
-              terapie.
+              <strong>Nota importante:</strong> la parola “guarigione” è usata
+              in senso spirituale, non medico. La sessione non cura malattie e
+              non sostituisce medici, psicologi, farmaci o terapie.
             </p>
           </article>
         </div>
@@ -1404,33 +1420,32 @@ export default function App() {
             <section id="tarocchi" className="blue-section">
         <div className="container center">
           <p className="section-label">Letture dei Tarocchi</p>
-          <h2>Risposte di Luce</h2>
+          <h2>Scegli la lettura adatta alle tue domande</h2>
 
           <div className="grid-2">
             <div className="text-block">
               <p>
-                Una lettura simbolica e intuitiva per osservare con maggiore
-                chiarezza una situazione, un blocco, una scelta o un passaggio
-                che stai vivendo.
+                Queste sono letture personalizzate dei Tarocchi. Puoi usarle
+                per riflettere su relazioni, lavoro, scelte, cambiamenti o
+                situazioni che vuoi comprendere meglio.
               </p>
 
               <p>
-                Attraverso i Tarocchi riceverai uno spazio personale di
-                ascolto, orientamento e riflessione sulle energie del presente
-                e sui possibili aspetti interiori da riconoscere.
+                Puoi fare domande collegate tra loro oppure domande su temi
+                diversi. Riceverai una lettura scritta, con parole semplici e
+                la spiegazione delle carte estratte.
               </p>
 
               <p>
-                Puoi scegliere tra tre livelli di approfondimento, in base alla
-                complessità della situazione e al tipo di orientamento che
-                desideri ricevere.
+                Scegli Express per 1 domanda, Chiarezza per 3 domande o
+                Completa per 5 domande.
               </p>
 
               <div className="important-note">
-                La lettura dei Tarocchi è proposta come strumento spirituale e
-                simbolico di riflessione e ascolto interiore. Non sostituisce
-                decisioni personali, consulenze mediche, psicologiche, legali,
-                finanziarie o professionali.
+                <strong>Importante:</strong> non tratto domande su salute,
+                diagnosi, farmaci o terapie. Le letture non sostituiscono
+                consulenze mediche, psicologiche, legali o finanziarie e non
+                decidono al posto tuo.
               </div>
             </div>
 
@@ -1498,6 +1513,7 @@ export default function App() {
             <div className="serenity-copy">
               <p className="section-label">Guida digitale gratuita</p>
               <h2>5 minuti al giorno per ritrovare serenità</h2>
+              <div className="free-badge">GRATUITA</div>
 
               <p className="lead">
                 Una piccola pratica quotidiana può cambiare il modo in cui vivi
@@ -1577,10 +1593,9 @@ export default function App() {
           <h2>Tutto ciò che riceverai</h2>
 
           <p className="lead">
-            Un percorso guidato di risveglio spirituale, pensato per aiutarti
-            ad ascoltare la tua anima, riconoscere ciò che stai vivendo e
-            trasformare intuizioni e messaggi simbolici in scelte più
-            consapevoli.
+            Un percorso spirituale pratico per dedicarti un momento ogni
+            giorno, calmare i pensieri, meditare e ritrovare un contatto più
+            profondo con te stesso.
           </p>
 
           <div className="kit-showcase">
@@ -1604,9 +1619,9 @@ export default function App() {
                 <h3>Diario di Attivazione Interiore</h3>
 
                 <p>
-                  Uno spazio guidato da compilare per annotare intuizioni,
-                  emozioni, messaggi ricevuti, sogni, sincronicità e piccoli
-                  passi da portare nella vita quotidiana.
+                  Ti aiuta a mettere per iscritto pensieri, emozioni e
+                  intuizioni. Serve a osservare ciò che cambia giorno dopo
+                  giorno e a dare continuità alla pratica.
                 </p>
               </article>
 
@@ -1621,8 +1636,9 @@ export default function App() {
                 <h3>Mappa di Luce Interattiva</h3>
 
                 <p>
-                  Una tavola simbolica da osservare e consultare, con
-                  Arcangeli, Chakra, Raggi e messaggi di orientamento interiore.
+                  Ti guida nella scelta del tema su cui meditare. Riunisce
+                  Arcangeli, Chakra, Raggi Sacri e altri simboli spirituali in
+                  una tavola semplice da consultare.
                 </p>
               </article>
 
@@ -1637,9 +1653,9 @@ export default function App() {
                 <h3>Bigliettini di consultazione</h3>
 
                 <p>
-                  Bigliettini simbolici da ritagliare e consultare: messaggi,
-                  Numeri Sacri, Arcangeli e chiavi di Luce pensati per
-                  accompagnare la lettura personale della Mappa.
+                  Li ritagli e ne scegli uno quando desideri uno spunto per la
+                  giornata. Ogni bigliettino propone un messaggio o un simbolo
+                  da approfondire con la Guida.
                 </p>
               </article>
             </div>
@@ -1658,15 +1674,15 @@ export default function App() {
             </div>
 
             <p>
-              Il Kit è pensato per accompagnarti in un momento personale di
-              ascolto, centratura e risveglio della presenza interiore.
+              Il Kit serve a creare una pratica spirituale personale anche se
+              non sai da dove iniziare. Puoi usarlo per meditare, fare ordine
+              nei pensieri e dedicare attenzione alla tua vita interiore.
             </p>
 
             <p>
-              La Mappa apre la consultazione simbolica, la Guida aiuta a
-              comprendere ciò che emerge, i Bigliettini offrono un ulteriore
-              messaggio e il Diario ti permette di trasformare ciò che senti in
-              consapevolezza e azione personale.
+              La Mappa indica da dove partire, la Guida spiega il significato,
+              i Bigliettini offrono uno spunto e il Diario ti aiuta a mettere in
+              pratica ciò che hai compreso.
             </p>
 
             <div className="steps kit-list">
@@ -1675,10 +1691,9 @@ export default function App() {
 
                 <div>
                   <strong>Guida Completa della Mappa di Luce</strong>
-                  Un manuale pratico che spiega come consultare la Mappa,
-                  comprendere Arcangeli, Chakra, Raggi, Numeri Sacri e simboli
-                  presenti nella tavola, oltre a usare Diario e Bigliettini nel
-                  tuo percorso personale.
+                  Spiega con ordine come usare tutto il Kit e come avvicinarti
+                  ad Arcangeli, Maestri Ascesi, Esseri di Luce, Chakra, Raggi e
+                  Numeri Sacri.
                 </div>
               </div>
 
@@ -1687,7 +1702,8 @@ export default function App() {
 
                 <div>
                   <strong>Mappa di Luce Interattiva in formato A4</strong>
-                  Una tavola simbolica da stampare o consultare in digitale.
+                  Una tavola da stampare o usare in digitale per scegliere il
+                  punto di partenza della meditazione.
                 </div>
               </div>
 
@@ -1696,8 +1712,8 @@ export default function App() {
 
                 <div>
                   <strong>Diario di Attivazione Interiore</strong>
-                  Un percorso di 31 giorni da compilare con pensieri,
-                  intuizioni e passaggi personali.
+                  Un percorso di 31 giorni per annotare pensieri, emozioni,
+                  intuizioni e piccoli passi concreti.
                 </div>
               </div>
 
@@ -1706,43 +1722,37 @@ export default function App() {
 
                 <div>
                   <strong>Bigliettini di consultazione stampabili</strong>
-                  Una raccolta di messaggi simbolici, Numeri Sacri, Arcangeli
-                  e chiavi di Luce da pescare durante la consultazione della
-                  Mappa.
+                  Messaggi e simboli da scegliere quando desideri un tema su
+                  cui riflettere durante la giornata.
                 </div>
               </div>
             </div>
 
             <div className="important-note">
-              <strong>Un dono ricevuto in visione</strong>
+              <strong>A cosa può servirti</strong>
               <br />
               <br />
 
-              La Mappa di Luce Interattiva nasce da un’esperienza interiore
-              unica, accolta e trasformata in un percorso di ascolto,
-              consapevolezza e Luce.
-
-              <br />
-              <br />
-
-              Al suo centro custodisce alcuni Numeri Sacri ricevuti in dono
-              durante un’esperienza interiore e poi accolti, compresi e
-              organizzati in questo percorso come chiavi simboliche di ascolto,
-              trasformazione e radicamento.
+              A coltivare il risveglio spirituale e il contatto con la tua
+              anima, con gli Angeli, i Maestri Ascesi e gli Esseri di Luce.
 
               <br />
               <br />
 
-              Ogni numero è pensato per essere incontrato nel momento giusto,
-              all’interno della Mappa e della Guida.
+              A dedicarti momenti di meditazione, favorire calma e
+              concentrazione e aprire la mente a nuovi punti di vista.
 
               <br />
               <br />
 
-              Attraverso simboli, geometrie, decreti e pratiche di centratura,
-              questi codici accompagnano un percorso personale di
-              consapevolezza: ascoltare ciò che emerge, riconoscere il
-              messaggio e trasformarlo in una scelta concreta.
+              A lasciare andare, in modo simbolico e spirituale, la sensazione
+              di pesantezza e le energie negative che percepisci.
+
+              <br />
+              <br />
+
+              A conoscere meglio te stesso e trasformare ciò che emerge in un
+              piccolo gesto concreto nella vita quotidiana.
             </div>
 
             <div className="important-note">
@@ -1750,9 +1760,8 @@ export default function App() {
               <br />
               <br />
 
-              Per chi sente il bisogno di fermarsi, ascoltarsi, ritrovare
-              chiarezza, coltivare una pratica spirituale personale e
-              riconnettersi con la propria Luce interiore.
+              Per chi desidera avvicinarsi alla spiritualità con una guida
+              chiara, oppure rendere più regolare una pratica già iniziata.
             </div>
 
             <div className="important-note">
