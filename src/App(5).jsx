@@ -303,9 +303,10 @@ export default function App() {
         }
 
         .nav a {
-          color: rgba(255,255,255,0.80);
+          color: rgba(255,255,255,0.92);
           text-decoration: none;
           white-space: nowrap;
+          transition: color 0.2s ease;
         }
 
         .nav a:hover {
@@ -391,7 +392,7 @@ export default function App() {
           max-width: 820px;
           margin: 28px auto 0;
           font-size: clamp(18px, 2vw, 23px);
-          color: rgba(255,255,255,0.84);
+          color: rgba(255,255,255,0.94);
         }
 
         .hero-mini-text {
@@ -423,17 +424,42 @@ export default function App() {
           text-decoration: none;
           font-family: Arial, sans-serif;
           font-weight: 600;
+          transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease,
+            border-color 0.2s ease;
+        }
+
+        .btn:hover {
+          transform: translateY(-2px);
+        }
+
+        .btn:focus-visible {
+          outline: 3px solid #ffffff;
+          outline-offset: 4px;
         }
 
         .btn-primary {
           background: #f6d98a;
           color: #111322;
+          box-shadow: 0 12px 28px rgba(246,217,138,0.20);
+        }
+
+        .btn-primary:hover {
+          background: #ffe7a6;
+          box-shadow: 0 16px 34px rgba(246,217,138,0.32);
         }
 
         .btn-secondary {
-          border: 1px solid rgba(255,255,255,0.25);
+          border: 1px solid rgba(255,255,255,0.48);
           color: white;
-          background: rgba(255,255,255,0.08);
+          background: rgba(255,255,255,0.12);
+        }
+
+        .btn-secondary:hover {
+          border-color: rgba(246,217,138,0.80);
+          background: rgba(246,217,138,0.13);
         }
 
         .btn-paypal {
@@ -447,8 +473,8 @@ export default function App() {
           padding: 18px;
           border-radius: 20px;
           background: rgba(255,255,255,0.07);
-          border: 1px solid rgba(255,255,255,0.12);
-          color: rgba(255,255,255,0.84);
+          border: 1px solid rgba(255,255,255,0.22);
+          color: rgba(255,255,255,0.94);
           font-family: Arial, sans-serif;
           font-size: 15px;
           line-height: 1.7;
@@ -539,7 +565,7 @@ export default function App() {
         .service,
         details {
           background: rgba(255,255,255,0.06);
-          border: 1px solid rgba(255,255,255,0.10);
+          border: 1px solid rgba(255,255,255,0.18);
         }
 
         .card {
@@ -571,7 +597,7 @@ export default function App() {
 
         .card p,
         .text-block p {
-          color: rgba(255,255,255,0.76);
+          color: rgba(255,255,255,0.92);
         }
 
         .icon {
@@ -639,9 +665,9 @@ export default function App() {
           align-items: flex-start;
           padding: 18px;
           background: rgba(255,255,255,0.05);
-          border: 1px solid rgba(255,255,255,0.10);
+          border: 1px solid rgba(255,255,255,0.18);
           border-radius: 18px;
-          color: rgba(255,255,255,0.82);
+          color: rgba(255,255,255,0.94);
           font-family: Arial, sans-serif;
           line-height: 1.6;
           text-align: left;
@@ -681,7 +707,7 @@ export default function App() {
           text-align: center;
           padding: 26px;
           border-radius: 26px;
-          color: rgba(255,255,255,0.78);
+          color: rgba(255,255,255,0.92);
           font-family: Arial, sans-serif;
           min-height: 120px;
           display: flex;
@@ -756,9 +782,10 @@ export default function App() {
 
         .small {
           margin-top: 22px;
-          color: rgba(255,255,255,0.58);
+          color: rgba(255,255,255,0.80);
           font-size: 14px;
           font-family: Arial, sans-serif;
+          line-height: 1.65;
         }
 
         .small strong {
@@ -804,7 +831,7 @@ export default function App() {
         }
 
         .spotlight-offer {
-          color: rgba(255,255,255,0.72);
+          color: rgba(255,255,255,0.88);
           font-family: Arial, sans-serif;
           font-size: 15px;
         }
@@ -865,7 +892,7 @@ export default function App() {
           padding: 14px;
           border-radius: 24px;
           background: rgba(255,255,255,0.06);
-          border: 1px solid rgba(255,255,255,0.11);
+          border: 1px solid rgba(255,255,255,0.18);
         }
 
         .kit-gallery-card img {
@@ -882,7 +909,7 @@ export default function App() {
 
         .kit-gallery-card p {
           margin: 0 4px 8px;
-          color: rgba(255,255,255,0.78);
+          color: rgba(255,255,255,0.92);
           font-size: 16px;
           line-height: 1.55;
         }
@@ -911,7 +938,7 @@ export default function App() {
         footer {
           text-align: center;
           padding: 45px 20px;
-          color: rgba(255,255,255,0.45);
+          color: rgba(255,255,255,0.76);
           font-family: Arial, sans-serif;
           font-size: 14px;
         }
