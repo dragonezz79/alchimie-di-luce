@@ -17,6 +17,27 @@ export default function App() {
   const whatsappNumber = '393492304412';
   const email = 'info@alchimiediluce.it';
 
+  React.useEffect(() => {
+    const scrollToHash = () => {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+
+      if (!id) return;
+
+      const target = document.getElementById(id);
+
+      if (target) {
+        window.requestAnimationFrame(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+    };
+
+    scrollToHash();
+    window.addEventListener('hashchange', scrollToHash);
+
+    return () => window.removeEventListener('hashchange', scrollToHash);
+  }, []);
+
   const trackEvent = (eventName) => {
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
       window.gtag('event', eventName);
@@ -46,18 +67,27 @@ export default function App() {
   const introCards = [
     {
       icon: '✦',
-      title: 'Messaggi angelici',
-      text: 'Letture simboliche e personalizzate per ricevere un messaggio di orientamento su una domanda o un momento importante.'
+      label: 'Percorso autonomo',
+      title: 'Mappa di Luce',
+      text: 'Guida, Mappa, Diario e pratiche spirituali in un unico Kit digitale da seguire con i tuoi tempi.',
+      href: '#kit-digitale',
+      cta: 'Scopri la Mappa'
     },
     {
       icon: '♡',
-      title: 'Sessioni spirituali a distanza',
-      text: 'Uno spazio individuale di ascolto, centratura, intenzione e connessione con il mondo angelico.'
+      label: 'Risposta personalizzata',
+      title: 'Letture',
+      text: 'Un messaggio angelico o una lettura dei Tarocchi per fare chiarezza su una domanda o un momento importante.',
+      href: '#prezzi',
+      cta: 'Scegli una lettura'
     },
     {
       icon: '☾',
-      title: 'Mappa di Luce Interattiva',
-      text: 'Un percorso digitale di risveglio spirituale, creato per ascoltare la tua anima e coltivare una pratica personale.'
+      label: 'Accompagnamento',
+      title: 'Sessioni individuali',
+      text: 'Uno spazio personale a distanza dedicato ad ascolto, centratura, protezione e riconnessione interiore.',
+      href: '#contatti',
+      cta: 'Scopri le sessioni'
     }
   ];
 
@@ -370,6 +400,14 @@ export default function App() {
           font-size: 18px;
         }
 
+        .hero .buttons {
+          margin-top: 28px;
+        }
+
+        .hero .btn-primary {
+          box-shadow: 0 16px 38px rgba(246,217,138,0.25);
+        }
+
         .buttons {
           margin-top: 35px;
           display: flex;
@@ -507,6 +545,28 @@ export default function App() {
         .card {
           border-radius: 28px;
           padding: 32px;
+        }
+
+        .path-card {
+          display: flex;
+          min-height: 335px;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .path-card .section-label {
+          margin: 0 0 12px;
+          letter-spacing: 0.16em;
+        }
+
+        .path-card p {
+          flex: 1;
+        }
+
+        .path-card .btn {
+          width: 100%;
+          margin-top: 12px;
+          padding: 14px 18px;
         }
 
         .card p,
@@ -705,6 +765,50 @@ export default function App() {
           color: #ffe9ad;
         }
 
+        .product-spotlight {
+          padding-top: 80px;
+          padding-bottom: 80px;
+        }
+
+        .product-spotlight-image {
+          width: 100%;
+          display: block;
+          border-radius: 30px;
+          border: 1px solid rgba(246,217,138,0.30);
+          box-shadow: 0 28px 70px rgba(0,0,0,0.34);
+        }
+
+        .product-spotlight-copy {
+          text-align: left;
+        }
+
+        .product-spotlight-copy .lead {
+          margin: 0 0 24px;
+          font-size: 19px;
+        }
+
+        .product-spotlight-copy .steps {
+          margin: 25px 0;
+        }
+
+        .product-spotlight-copy .buttons {
+          justify-content: flex-start;
+          margin-top: 26px;
+        }
+
+        .spotlight-price {
+          margin: 20px 0 5px;
+          color: #f6d98a;
+          font-size: 46px;
+          line-height: 1;
+        }
+
+        .spotlight-offer {
+          color: rgba(255,255,255,0.72);
+          font-family: Arial, sans-serif;
+          font-size: 15px;
+        }
+
         .kit-showcase {
           max-width: 950px;
           margin: 38px auto 10px;
@@ -836,6 +940,10 @@ export default function App() {
             grid-template-columns: 1fr;
           }
 
+          .path-card {
+            min-height: 0;
+          }
+
           section {
             padding: 55px 18px;
           }
@@ -875,18 +983,12 @@ export default function App() {
           Alchimie di Luce
         </a>
 
-        <nav className="nav">
+        <nav className="nav" aria-label="Navigazione principale">
           <a href="#home">Home</a>
-          <a href="#chi-sono">Chi sono</a>
-          <a href="#come-funziona">Come funziona</a>
-          <a href="#servizi">Servizi</a>
+          <a href="#kit-digitale">Mappa di Luce</a>
+          <a href="#prezzi">Letture</a>
           <a href="#contatti">Sessioni</a>
-          <a href="#prezzi">Letture Angeliche</a>
-          <a href="#tarocchi">Tarocchi</a>
-          <a href="#guida-serenita">Guida gratuita</a>
-          <a href="#kit-digitale">Kit digitale</a>
-          {reviews.length > 0 && <a href="#recensioni">Recensioni</a>}
-          <a href="#faq">FAQ</a>
+          <a href="#chi-sono">Chi sono</a>
           <a href="#contatti-finali">Contatti</a>
         </nav>
       </header>
@@ -899,56 +1001,124 @@ export default function App() {
         <div className="container hero-content">
           <h1>
             Alchimie di Luce
-            <span>Ritrova calma, protezione e leggerezza interiore</span>
+            <span>Ritrova una direzione quando dentro senti confusione</span>
           </h1>
 
           <p className="hero-mini-text">
-            Messaggi angelici, letture e percorsi spirituali a distanza.
+            Inizia dalla Mappa di Luce: un percorso digitale con Guida, Mappa,
+            Diario e pratiche spirituali.
           </p>
 
           <div className="buttons">
-            <a className="btn btn-primary" href="#servizi">
-              Inizia il tuo percorso
+            <a
+              className="btn btn-primary"
+              href={payhipKit}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => trackEvent('click_mappa_di_luce_hero')}
+            >
+              Scopri la Mappa di Luce · 27 €
+            </a>
+
+            <a className="btn btn-secondary" href="#percorsi">
+              Vedi gli altri percorsi
             </a>
           </div>
         </div>
       </section>
 
-      <section className="dark-section">
+      <section id="kit-digitale" className="blue-section product-spotlight">
+        <div className="container grid-2">
+          <img
+            src={immagineGuidaCompleta}
+            alt="Kit digitale Mappa di Luce con Guida completa"
+            className="product-spotlight-image"
+            loading="eager"
+            decoding="async"
+          />
+
+          <div className="product-spotlight-copy">
+            <p className="section-label">Il percorso principale</p>
+            <h2>Mappa di Luce Interattiva</h2>
+
+            <p className="lead">
+              Uno strumento spirituale da usare con i tuoi tempi per ascoltarti,
+              riconoscere ciò che stai vivendo e trasformare le intuizioni in
+              passi più consapevoli.
+            </p>
+
+            <div className="steps">
+              <div className="step">
+                <span className="check">✓</span>
+                <div>
+                  <strong>Tutto in un unico Kit</strong>
+                  Guida completa, Mappa stampabile, Diario di 31 giorni e
+                  Bigliettini di consultazione.
+                </div>
+              </div>
+
+              <div className="step">
+                <span className="check">✓</span>
+                <div>
+                  <strong>Download immediato</strong>
+                  Ricevi subito i file digitali da usare sul tuo dispositivo o
+                  da stampare.
+                </div>
+              </div>
+            </div>
+
+            <div className="spotlight-price">27 €</div>
+            <div className="spotlight-offer">
+              Prezzo di lancio fino al 31 luglio 2026 · Dal 1° agosto 37 €
+            </div>
+
+            <div className="buttons">
+              <a
+                className="btn btn-primary"
+                href={payhipKit}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => trackEvent('click_mappa_di_luce_spotlight')}
+              >
+                Acquista il Kit
+              </a>
+
+              <a className="btn btn-secondary" href="#kit-dettagli">
+                Guarda cosa contiene
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="percorsi" className="dark-section">
         <div className="container center">
-          <p className="section-label">Alchimie di Luce</p>
-          <h2>Uno spazio per ascoltarti e ritrovare centratura</h2>
+          <p className="section-label">Tre modi per iniziare</p>
+          <h2>Scegli ciò di cui hai bisogno adesso</h2>
+          <p className="lead">
+            Non devi orientarti tra tutte le proposte: parti dal percorso che
+            senti più vicino al tuo momento.
+          </p>
 
           <div className="grid-3">
             {introCards.map((card) => (
-              <article className="card" key={card.title}>
+              <article className="card path-card" key={card.title}>
                 <div className="icon">{card.icon}</div>
+                <p className="section-label">{card.label}</p>
                 <h3>{card.title}</h3>
                 <p>{card.text}</p>
+                <a className="btn btn-secondary" href={card.href}>
+                  {card.cta}
+                </a>
               </article>
             ))}
           </div>
 
           <div className="important-note welcome-note">
-            <span className="promo-title">✨ Promo di benvenuto ✨</span>
-
-            Usa il codice
-            <span className="promo-code">LUCE10</span>
-            al checkout Payhip e ricevi il
-            <strong> 10% di sconto </strong>
-            su <strong>Guarigione Angelica</strong>, <strong>Percorso Luce</strong>,
-            <strong> Le Risposte degli Angeli</strong> e
-            <strong> Lettura Angel Therapy</strong>.
-            <br />
-            <span className="promo-deadline">Valido fino al 31 luglio 2026</span>
-
-            <span className="promo-free">Messaggio angelico iniziale gratuito</span>
-            Scrivimi <strong>LUCE</strong> su WhatsApp e indicami il tema che senti più urgente:
-            riceverai un primo messaggio simbolico di orientamento.
-
-            <br /><br />
-            <strong>Novità:</strong> il Kit Mappa di Luce è disponibile al
-            prezzo speciale di lancio di <strong>27 € fino al 31 luglio 2026</strong>.
+            <span className="promo-title">Vuoi iniziare gratuitamente?</span>
+            Scrivimi <strong>LUCE</strong> su WhatsApp e indicami il tema che
+            senti più urgente. Riceverai un primo messaggio simbolico di
+            orientamento.
           </div>
 
           <div className="buttons">
@@ -1401,10 +1571,10 @@ export default function App() {
         </div>
       </section>
 
-      <section id="kit-digitale" className="blue-section">
+      <section id="kit-dettagli" className="blue-section">
         <div className="container center">
-          <p className="section-label">Nuovo prodotto digitale</p>
-          <h2>Mappa di Luce Interattiva</h2>
+          <p className="section-label">Contenuto del Kit</p>
+          <h2>Tutto ciò che riceverai</h2>
 
           <p className="lead">
             Un percorso guidato di risveglio spirituale, pensato per aiutarti
