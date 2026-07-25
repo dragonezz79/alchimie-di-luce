@@ -1,0 +1,17 @@
+AGGIORNAMENTO GRAFICO — ALCHIMIE DI LUCE
+
+1. Apri su GitHub la cartella src.
+2. Apri il file App(5).jsx.
+3. Sostituiscilo con il file App(5).jsx contenuto in questa cartella.
+4. Conferma con “Commit changes”.
+5. Attendi che Netlify mostri “Published”.
+
+Non modificare main.jsx: il nome del file resta App(5).jsx.
+
+Modifiche incluse:
+- sezione Guida Serenità più compatta;
+- etichetta GRATUITA più evidente;
+- contenuti della guida disposti in due colonne su computer;
+- disposizione a colonna ottimizzata per cellulare;
+- riquadri più luminosi in blu, celeste, viola e oro;
+- testi, prezzi, immagini e collegamenti invariati.

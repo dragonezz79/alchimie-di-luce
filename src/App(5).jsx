@@ -7,7 +7,7 @@ import immagineRisposteAngeli from './risposte-angeli.webp';
 import immagineAngelTherapy from './angel-therapy.webp';
 import immagineGuidaCompleta from './guida-completa.webp';
 import immagineDiario from './diario.webp';
-import immagineMappa from './mappa-anteprima-protetta.webp';
+import immagineMappa from './mappa.webp';
 import immagineBigliettini from './bigliettini.webp';
 import immagineTarocchi from './tarocchi.webp';
 import immagineGuarigioneAngelica from './guarigione-angelica.webp';
@@ -103,21 +103,10 @@ export default function App() {
   ];
 
   const sessionSteps = [
-    {
-      number: '01',
-      title: 'Mi racconti cosa stai vivendo',
-      text: 'Definiamo insieme la tua intenzione e concordiamo il momento della sessione.'
-    },
-    {
-      number: '02',
-      title: 'Svolgo la pratica a distanza',
-      text: 'Dedico alla tua intenzione un momento di preghiera, visualizzazione e invocazione degli Arcangeli.'
-    },
-    {
-      number: '03',
-      title: 'Ricevi la restituzione',
-      text: 'Al termine ti invio ciò che è emerso e un semplice spunto da portare nella vita quotidiana.'
-    }
+    'Mi racconti brevemente cosa stai vivendo e quale aspetto desideri affrontare.',
+    'Concordiamo il momento della sessione e ricevi indicazioni semplici per prepararti.',
+    'Svolgo a distanza una pratica spirituale con preghiera, visualizzazione e invocazione degli Arcangeli.',
+    'Al termine ricevi una breve restituzione con ciò che è emerso e uno spunto da usare nella vita quotidiana.'
   ];
 
   const bookingOptions = [
@@ -148,43 +137,29 @@ export default function App() {
   const angelReadings = [
     {
       title: 'Le Risposte degli Angeli',
-      badge: 'Risposta rapida',
-      symbol: '✦',
-      tone: 'reading-quick',
       price: '19 €',
       href: payhipRisposteAngeli,
       eventName: 'click_risposte_angeli',
-      cta: 'Scegli la risposta rapida',
+      cta: 'Acquista con codice LUCE10',
       image: immagineRisposteAngeli,
       imageAlt: 'Le Risposte degli Angeli con tre carte',
       description:
-        'Per quando desideri un’indicazione breve, diretta e facile da capire su una scelta o una situazione.',
-      bestFor:
-        'Domande con risposta sì/no, tempi indicativi, dubbi quotidiani o scelta tra più possibilità.',
-      receive:
-        '3 carte, risposta a un massimo di 3 domande collegate oppure diverse e messaggio finale di incoraggiamento.',
+        'Una lettura scritta con 3 Carte degli Angeli per ricevere un messaggio semplice su una situazione o su domande che ti stanno a cuore.',
       details:
-        'Entro 48 ore riceverai un PDF scritto e personalizzato.'
+        'Puoi porre fino a 3 domande, collegate oppure diverse. Dopo il pagamento, inviamele su WhatsApp insieme al tuo nome. Entro 48 ore riceverai un PDF con le carte estratte, una spiegazione chiara e un messaggio finale.'
     },
     {
       title: 'Lettura Angel Therapy',
-      badge: 'Percorso approfondito',
-      symbol: '✧',
-      tone: 'reading-deep',
       price: '29 €',
       href: payhipAngelTherapy,
       eventName: 'click_angel_therapy',
-      cta: 'Scegli Angel Therapy',
+      cta: 'Acquista con codice LUCE10',
       image: immagineAngelTherapy,
       imageAlt: 'Lettura Angel Therapy con cinque carte',
       description:
-        'Per esplorare più a fondo un tema e comprendere quali emozioni, paure o blocchi possono influenzarlo.',
-      bestFor:
-        'Relazioni, lavoro, obiettivi, cambiamenti, paure, difficoltà a lasciare andare o percorso spirituale.',
-      receive:
-        '5 carte, spiegazione dei messaggi, collegamento tra le carte e un suggerimento spirituale pratico.',
+        'Una lettura scritta con 5 Carte degli Angeli per approfondire un tema, osservare ciò che lo influenza e ricevere un orientamento spirituale.',
       details:
-        'Entro 48 ore riceverai un PDF scritto e personalizzato.'
+        'Dopo il pagamento, inviami su WhatsApp il tuo nome e il tema da esplorare. Entro 48 ore riceverai un PDF con le 5 carte, la spiegazione di ogni carta e una sintesi conclusiva.'
     }
   ];
 
@@ -596,6 +571,7 @@ export default function App() {
         .card {
           border-radius: 28px;
           padding: 32px;
+          box-shadow: 0 18px 42px rgba(0,0,0,0.18);
         }
 
         .path-card {
@@ -603,6 +579,27 @@ export default function App() {
           min-height: 335px;
           flex-direction: column;
           align-items: center;
+        }
+
+        .path-card:nth-child(1) {
+          background:
+            radial-gradient(circle at top left, rgba(73,145,255,0.24), transparent 52%),
+            linear-gradient(145deg, rgba(31,66,126,0.46), rgba(255,255,255,0.055));
+          border-color: rgba(112,170,255,0.34);
+        }
+
+        .path-card:nth-child(2) {
+          background:
+            radial-gradient(circle at top left, rgba(142,105,255,0.23), transparent 52%),
+            linear-gradient(145deg, rgba(79,53,137,0.43), rgba(255,255,255,0.055));
+          border-color: rgba(177,144,255,0.32);
+        }
+
+        .path-card:nth-child(3) {
+          background:
+            radial-gradient(circle at top left, rgba(41,183,178,0.20), transparent 52%),
+            linear-gradient(145deg, rgba(28,91,94,0.40), rgba(255,255,255,0.055));
+          border-color: rgba(99,211,201,0.28);
         }
 
         .path-card .section-label {
@@ -719,50 +716,6 @@ export default function App() {
           flex: 0 0 auto;
         }
 
-        .session-intro {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        .session-compact-grid {
-          margin-top: 38px;
-          align-items: stretch;
-        }
-
-        .session-step-card {
-          position: relative;
-          padding: 28px 26px;
-          text-align: left;
-          background:
-            linear-gradient(145deg, rgba(246,217,138,0.11), rgba(255,255,255,0.05));
-        }
-
-        .session-number {
-          display: inline-block;
-          margin-bottom: 18px;
-          color: #f6d98a;
-          font-family: Arial, sans-serif;
-          font-size: 14px;
-          font-weight: 800;
-          letter-spacing: 0.18em;
-        }
-
-        .session-step-card h3 {
-          margin-bottom: 10px;
-          font-size: 24px;
-        }
-
-        .session-step-card p {
-          margin: 0;
-          line-height: 1.65;
-        }
-
-        .session-note {
-          max-width: 940px;
-          margin: 24px auto 0;
-          text-align: left;
-        }
-
         .center {
           text-align: center;
         }
@@ -784,14 +737,37 @@ export default function App() {
           justify-content: center;
         }
 
+        .service:nth-child(4n + 1) {
+          background: linear-gradient(145deg, rgba(37,94,164,0.42), rgba(255,255,255,0.055));
+          border-color: rgba(104,169,255,0.28);
+        }
+
+        .service:nth-child(4n + 2) {
+          background: linear-gradient(145deg, rgba(83,59,148,0.42), rgba(255,255,255,0.055));
+          border-color: rgba(177,144,255,0.27);
+        }
+
+        .service:nth-child(4n + 3) {
+          background: linear-gradient(145deg, rgba(26,100,106,0.40), rgba(255,255,255,0.055));
+          border-color: rgba(93,205,195,0.25);
+        }
+
+        .service:nth-child(4n + 4) {
+          background: linear-gradient(145deg, rgba(126,83,45,0.40), rgba(255,255,255,0.055));
+          border-color: rgba(246,217,138,0.28);
+        }
+
         .price-box {
           max-width: 760px;
           margin: 42px auto 0;
           padding: 40px 38px;
           border-radius: 32px;
           border: 1px solid rgba(246,217,138,0.25);
-          background: rgba(246,217,138,0.10);
+          background:
+            radial-gradient(circle at top, rgba(76,129,218,0.18), transparent 48%),
+            linear-gradient(145deg, rgba(35,48,91,0.60), rgba(246,217,138,0.08));
           text-align: center;
+          box-shadow: 0 22px 55px rgba(0,0,0,0.22);
         }
 
         .price-box p {
@@ -817,81 +793,6 @@ export default function App() {
         .reading-note {
           margin-top: 20px;
           text-align: left;
-        }
-
-        .angel-reading-card {
-          position: relative;
-          overflow: hidden;
-          text-align: left;
-        }
-
-        .angel-reading-card::before {
-          content: '';
-          position: absolute;
-          inset: 0 0 auto;
-          height: 5px;
-          background: linear-gradient(90deg, #f6d98a, #fff0bd);
-        }
-
-        .angel-reading-card.reading-deep {
-          background:
-            radial-gradient(circle at 100% 0, rgba(136, 118, 255, 0.22), transparent 36%),
-            rgba(88, 74, 132, 0.18);
-          border-color: rgba(178, 165, 255, 0.48);
-        }
-
-        .angel-reading-card.reading-deep::before {
-          background: linear-gradient(90deg, #a997ff, #f6d98a);
-        }
-
-        .reading-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          margin: 0 0 18px;
-          padding: 8px 13px;
-          border-radius: 999px;
-          background: rgba(246,217,138,0.16);
-          border: 1px solid rgba(246,217,138,0.50);
-          color: #ffe9ad;
-          font-family: Arial, sans-serif;
-          font-size: 13px;
-          font-weight: 800;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-        }
-
-        .reading-deep .reading-badge {
-          background: rgba(169,151,255,0.16);
-          border-color: rgba(178,165,255,0.55);
-          color: #ded7ff;
-        }
-
-        .angel-reading-card h3,
-        .angel-reading-card .price {
-          text-align: center;
-        }
-
-        .reading-summary {
-          min-height: 92px;
-          font-size: 17px;
-        }
-
-        .reading-feature {
-          margin: 14px 0;
-          padding: 16px;
-          border-radius: 18px;
-          background: rgba(7,9,24,0.42);
-          border: 1px solid rgba(255,255,255,0.16);
-          color: rgba(255,255,255,0.94);
-          font-family: Arial, sans-serif;
-          line-height: 1.6;
-        }
-
-        .reading-feature strong {
-          display: block;
-          margin-bottom: 5px;
-          color: #f6d98a;
         }
 
         .price {
@@ -997,19 +898,81 @@ export default function App() {
 
         .serenity-image {
           width: 100%;
+          max-width: 455px;
+          margin: 0 auto;
           display: block;
           border-radius: 28px;
           border: 1px solid rgba(246,217,138,0.30);
           box-shadow: 0 28px 70px rgba(0,0,0,0.34);
         }
 
+        .serenity-section {
+          padding-top: 64px;
+          padding-bottom: 64px;
+          background:
+            radial-gradient(circle at 18% 40%, rgba(83,160,255,0.28), transparent 34%),
+            radial-gradient(circle at 82% 24%, rgba(154,116,255,0.20), transparent 32%),
+            linear-gradient(145deg, #0b1731, #15132d 56%, #0b2031);
+          border-top: 1px solid rgba(115,177,255,0.18);
+          border-bottom: 1px solid rgba(246,217,138,0.16);
+        }
+
+        .serenity-grid {
+          gap: 38px;
+          padding: 34px;
+          border-radius: 34px;
+          background:
+            linear-gradient(145deg, rgba(47,97,161,0.34), rgba(91,61,145,0.25)),
+            rgba(255,255,255,0.055);
+          border: 1px solid rgba(154,196,255,0.30);
+          box-shadow:
+            0 30px 70px rgba(0,0,0,0.28),
+            inset 0 1px 0 rgba(255,255,255,0.08);
+        }
+
         .serenity-copy {
           text-align: left;
         }
 
+        .serenity-copy h2 {
+          margin-bottom: 10px;
+        }
+
+        .serenity-copy .lead {
+          margin: 18px 0 12px;
+          font-size: 19px;
+        }
+
+        .serenity-copy > p:not(.section-label):not(.lead):not(.small) {
+          margin: 10px 0;
+          line-height: 1.62;
+        }
+
+        .serenity-copy .steps {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 10px;
+          margin-top: 18px;
+        }
+
+        .serenity-copy .step {
+          min-height: 74px;
+          padding: 12px 13px;
+          background: rgba(8,18,43,0.48);
+          border-color: rgba(157,199,255,0.24);
+          font-size: 14px;
+          align-items: center;
+        }
+
+        .serenity-copy .important-note {
+          margin-top: 14px;
+          padding: 14px 16px;
+          background: linear-gradient(135deg, rgba(246,217,138,0.14), rgba(104,169,255,0.13));
+          border-color: rgba(246,217,138,0.30);
+        }
+
         .free-badge {
           display: inline-block;
-          margin: 12px 0 4px;
+          margin: 6px 0 2px;
           padding: 9px 18px;
           border: 1px solid rgba(246,217,138,0.65);
           border-radius: 999px;
@@ -1023,6 +986,7 @@ export default function App() {
 
         .serenity-copy .buttons {
           justify-content: flex-start;
+          margin-top: 18px;
         }
 
         .kit-gallery {
@@ -1035,8 +999,23 @@ export default function App() {
         .kit-gallery-card {
           padding: 14px;
           border-radius: 24px;
-          background: rgba(255,255,255,0.06);
+          background:
+            radial-gradient(circle at top, rgba(73,145,255,0.14), transparent 50%),
+            rgba(255,255,255,0.06);
           border: 1px solid rgba(255,255,255,0.18);
+          box-shadow: 0 18px 38px rgba(0,0,0,0.16);
+        }
+
+        .kit-gallery-card:nth-child(2) {
+          background:
+            radial-gradient(circle at top, rgba(151,112,255,0.16), transparent 50%),
+            rgba(255,255,255,0.06);
+        }
+
+        .kit-gallery-card:nth-child(3) {
+          background:
+            radial-gradient(circle at top, rgba(48,184,174,0.14), transparent 50%),
+            rgba(255,255,255,0.06);
         }
 
         .kit-gallery-card img {
@@ -1044,26 +1023,6 @@ export default function App() {
           display: block;
           border-radius: 16px;
           border: 1px solid rgba(246,217,138,0.20);
-        }
-
-        .protected-preview {
-          position: relative;
-          overflow: hidden;
-        }
-
-        .protected-preview::after {
-          content: 'ANTEPRIMA PROTETTA';
-          position: absolute;
-          right: 14px;
-          bottom: 14px;
-          padding: 7px 10px;
-          border-radius: 999px;
-          background: rgba(8,13,32,0.88);
-          color: #f6d98a;
-          font-family: Arial, sans-serif;
-          font-size: 11px;
-          font-weight: 800;
-          letter-spacing: 0.08em;
         }
 
         .kit-gallery-card h3 {
@@ -1081,72 +1040,6 @@ export default function App() {
         .kit-list {
           margin-top: 28px;
           text-align: left;
-        }
-
-        .kit-purchase-card {
-          max-width: 1080px;
-          text-align: left;
-          background:
-            radial-gradient(circle at 8% 0, rgba(246,217,138,0.17), transparent 34%),
-            linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.045));
-        }
-
-        .kit-purchase-top {
-          display: grid;
-          grid-template-columns: 0.9fr 1.1fr;
-          gap: 32px;
-          align-items: center;
-        }
-
-        .kit-purchase-title {
-          text-align: center;
-        }
-
-        .kit-purchase-title .price {
-          margin-bottom: 18px;
-        }
-
-        .kit-purchase-copy h3 {
-          margin-bottom: 14px;
-          font-size: 30px;
-        }
-
-        .kit-benefits {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 14px;
-          margin: 28px 0;
-        }
-
-        .kit-benefit {
-          padding: 18px;
-          border-radius: 18px;
-          background: rgba(7,9,24,0.40);
-          border: 1px solid rgba(255,255,255,0.16);
-          color: rgba(255,255,255,0.94);
-          font-family: Arial, sans-serif;
-          line-height: 1.55;
-        }
-
-        .kit-benefit strong {
-          display: block;
-          margin-bottom: 5px;
-          color: #ffe9ad;
-        }
-
-        .kit-includes {
-          margin: 22px 0;
-          padding: 18px 20px;
-          border-left: 4px solid #f6d98a;
-          border-radius: 0 18px 18px 0;
-          background: rgba(246,217,138,0.09);
-          color: rgba(255,255,255,0.94);
-          font-family: Arial, sans-serif;
-          line-height: 1.7;
-        }
-
-        .kit-purchase-card .buttons {
-          justify-content: flex-start;
         }
 
         .faq-container {
@@ -1209,17 +1102,30 @@ export default function App() {
           .grid-2,
           .grid-3,
           .grid-4,
-          .kit-gallery,
-          .kit-purchase-top,
-          .kit-benefits {
+          .kit-gallery {
             grid-template-columns: 1fr;
           }
 
-          .reading-summary {
+          .path-card {
             min-height: 0;
           }
 
-          .path-card {
+          .serenity-section {
+            padding-top: 42px;
+            padding-bottom: 42px;
+          }
+
+          .serenity-grid {
+            padding: 20px;
+            gap: 26px;
+            border-radius: 26px;
+          }
+
+          .serenity-copy .steps {
+            grid-template-columns: 1fr;
+          }
+
+          .serenity-copy .step {
             min-height: 0;
           }
 
@@ -1501,35 +1407,55 @@ export default function App() {
       </section>
 
       <section id="come-funziona">
-        <div className="container center">
-          <div className="session-intro">
+        <div className="container grid-2">
+          <div>
             <p className="section-label">Il percorso</p>
             <h2>Guarigione Angelica a distanza: come funziona</h2>
-            <p className="lead">
-              Uno spazio spirituale individuale per fermarti, raccoglierti e
-              dedicare attenzione a ciò che stai vivendo.
+
+            <div className="steps">
+              {sessionSteps.map((step) => (
+                <div className="step" key={step}>
+                  <span className="check">✓</span>
+                  {step}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <article className="card">
+            <div className="icon">✧</div>
+            <h3>Cosa puoi aspettarti</h3>
+
+            <p>
+              È una pratica spirituale individuale da scegliere quando senti
+              pesantezza, confusione o il bisogno di fermarti e ritrovare un
+              momento di calma.
             </p>
-          </div>
 
-          <div className="grid-3 session-compact-grid">
-            {sessionSteps.map((step) => (
-              <article className="card session-step-card" key={step.number}>
-                <span className="session-number">{step.number}</span>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </article>
-            ))}
-          </div>
+            <p>
+              Tu mi spieghi brevemente cosa stai vivendo. Durante la sessione
+              lavoro a distanza con preghiera, visualizzazione e invocazione
+              degli Arcangeli, dedicando la pratica alla tua intenzione.
+            </p>
 
-          <div className="important-note session-note">
-            <strong>Quando può esserti utile:</strong> quando senti pesantezza,
-            confusione o il bisogno di ritrovare calma, presenza e contatto con
-            la tua parte spirituale.
-            <br />
-            <strong>Nota:</strong> “guarigione” è usato in senso spirituale,
-            non medico. La sessione non cura malattie e non sostituisce medici,
-            psicologi, farmaci o terapie.
-          </div>
+            <p>
+              Lo scopo è offrirti uno spazio di raccoglimento che possa aiutarti
+              a sentirti più centrato, presente e in contatto con la tua parte
+              spirituale.
+            </p>
+
+            <p>
+              Al termine riceverai una breve restituzione su ciò che è emerso
+              durante la sessione, con eventuali spunti personali da portare
+              nel quotidiano.
+            </p>
+
+            <p>
+              <strong>Nota importante:</strong> la parola “guarigione” è usata
+              in senso spirituale, non medico. La sessione non cura malattie e
+              non sostituisce medici, psicologi, farmaci o terapie.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -1612,10 +1538,7 @@ export default function App() {
 
           <div className="grid-2 price-grid">
             {angelReadings.map((item) => (
-              <article
-                className={`price-box wide angel-reading-card ${item.tone}`}
-                key={item.title}
-              >
+              <article className="price-box wide" key={item.title}>
                 <img
                   className="reading-image"
                   src={item.image}
@@ -1624,26 +1547,11 @@ export default function App() {
                   decoding="async"
                 />
 
-                <div className="reading-badge">
-                  <span>{item.symbol}</span>
-                  {item.badge}
-                </div>
                 <h3>{item.title}</h3>
                 <div className="price">{item.price}</div>
 
-                <p className="reading-summary">{item.description}</p>
-
-                <div className="reading-feature">
-                  <strong>Ideale per</strong>
-                  {item.bestFor}
-                </div>
-
-                <div className="reading-feature">
-                  <strong>Cosa ricevi</strong>
-                  {item.receive}
-                </div>
-
-                <p className="small">{item.details}</p>
+                <p>{item.description}</p>
+                <p>{item.details}</p>
 
                 <p className="small">
                   <strong>Promo:</strong> usa il codice <strong>LUCE10</strong>{' '}
@@ -1758,9 +1666,9 @@ export default function App() {
         </div>
       </section>
 
-      <section id="guida-serenita" className="dark-section">
+      <section id="guida-serenita" className="dark-section serenity-section">
         <div className="container">
-          <div className="grid-2">
+          <div className="grid-2 serenity-grid">
             <div>
               <img
                 src={immagineGuidaSerenita}
@@ -1886,7 +1794,7 @@ export default function App() {
                 </p>
               </article>
 
-              <article className="kit-gallery-card protected-preview">
+              <article className="kit-gallery-card">
                 <img
                   src={immagineMappa}
                   alt="Mappa di Luce Interattiva"
@@ -1897,9 +1805,9 @@ export default function App() {
                 <h3>Mappa di Luce Interattiva</h3>
 
                 <p>
-                  È il punto di partenza del percorso: scegli il simbolo che
-                  richiama la tua attenzione e trovi nella Guida la pratica
-                  collegata. L’immagine mostrata è solo un’anteprima protetta.
+                  Ti guida nella scelta del tema su cui meditare. Riunisce
+                  Arcangeli, Chakra, Raggi Sacri e altri simboli spirituali in
+                  una tavola semplice da consultare.
                 </p>
               </article>
 
@@ -1922,60 +1830,107 @@ export default function App() {
             </div>
           </div>
 
-          <article className="price-box kit-purchase-card">
-            <div className="kit-purchase-top">
-              <div className="kit-purchase-title">
-                <h3>Kit Completo di Attivazione Interiore</h3>
-                <div className="price">27 €</div>
+          <article className="price-box">
+            <h3>Kit Completo di Attivazione Interiore</h3>
+            <div className="price">27 €</div>
 
-                <div className="launch-offer">
-                  <strong>✦ PREZZO SPECIALE DI LANCIO ✦</strong>
-                  <br />
-                  Disponibile fino al <strong>31 luglio 2026</strong>
-                  <br />
-                  <strong>Dal 1° agosto 2026: 37 €</strong>
+            <div className="launch-offer">
+              <strong>✦ PREZZO SPECIALE DI LANCIO ✦</strong>
+              <br />
+              Disponibile fino al <strong>31 luglio 2026</strong>
+              <br />
+              <strong>Dal 1° agosto 2026: 37 €</strong>
+            </div>
+
+            <p>
+              Il Kit serve a creare una pratica spirituale personale anche se
+              non sai da dove iniziare. Puoi usarlo per meditare, fare ordine
+              nei pensieri e dedicare attenzione alla tua vita interiore.
+            </p>
+
+            <p>
+              La Mappa indica da dove partire, la Guida spiega il significato,
+              i Bigliettini offrono uno spunto e il Diario ti aiuta a mettere in
+              pratica ciò che hai compreso.
+            </p>
+
+            <div className="steps kit-list">
+              <div className="step">
+                <span className="check">✓</span>
+
+                <div>
+                  <strong>Guida Completa della Mappa di Luce</strong>
+                  Spiega con ordine come usare tutto il Kit e come avvicinarti
+                  ad Arcangeli, Maestri Ascesi, Esseri di Luce, Chakra, Raggi e
+                  Numeri Sacri.
                 </div>
               </div>
 
-              <div className="kit-purchase-copy">
-                <p className="section-label">In parole semplici</p>
-                <h3>A cosa serve la Mappa di Luce?</h3>
-                <p>
-                  Ti offre un punto da cui partire quando vuoi meditare,
-                  ascoltarti o dare più continuità alla tua pratica spirituale.
-                  Scegli un simbolo sulla Mappa, trovi la spiegazione nella
-                  Guida e trasformi il messaggio in un piccolo gesto concreto.
-                </p>
+              <div className="step">
+                <span className="check">✓</span>
+
+                <div>
+                  <strong>Mappa di Luce Interattiva in formato A4</strong>
+                  Una tavola da stampare o usare in digitale per scegliere il
+                  punto di partenza della meditazione.
+                </div>
+              </div>
+
+              <div className="step">
+                <span className="check">✓</span>
+
+                <div>
+                  <strong>Diario di Attivazione Interiore</strong>
+                  Un percorso di 31 giorni per annotare pensieri, emozioni,
+                  intuizioni e piccoli passi concreti.
+                </div>
+              </div>
+
+              <div className="step">
+                <span className="check">✓</span>
+
+                <div>
+                  <strong>Bigliettini di consultazione stampabili</strong>
+                  Messaggi e simboli da scegliere quando desideri un tema su
+                  cui riflettere durante la giornata.
+                </div>
               </div>
             </div>
 
-            <div className="kit-benefits">
-              <div className="kit-benefit">
-                <strong>Ritrovare calma</strong>
-                Crei uno spazio quotidiano per rallentare e fare ordine nei
-                pensieri.
-              </div>
-              <div className="kit-benefit">
-                <strong>Conoscere meglio te stesso</strong>
-                Osservi emozioni, intuizioni e ciò che senti importante in
-                questo momento.
-              </div>
-              <div className="kit-benefit">
-                <strong>Coltivare la spiritualità</strong>
-                Approfondisci Angeli, Maestri Ascesi, Chakra, Raggi e Numeri
-                Sacri con un percorso guidato.
-              </div>
-              <div className="kit-benefit">
-                <strong>Passare alla pratica</strong>
-                Usi Diario e Bigliettini per portare il messaggio nella vita di
-                ogni giorno.
-              </div>
+            <div className="important-note">
+              <strong>A cosa può servirti</strong>
+              <br />
+              <br />
+
+              A coltivare il risveglio spirituale e il contatto con la tua
+              anima, con gli Angeli, i Maestri Ascesi e gli Esseri di Luce.
+
+              <br />
+              <br />
+
+              A dedicarti momenti di meditazione, favorire calma e
+              concentrazione e aprire la mente a nuovi punti di vista.
+
+              <br />
+              <br />
+
+              A lasciare andare, in modo simbolico e spirituale, la sensazione
+              di pesantezza e le energie negative che percepisci.
+
+              <br />
+              <br />
+
+              A conoscere meglio te stesso e trasformare ciò che emerge in un
+              piccolo gesto concreto nella vita quotidiana.
             </div>
 
-            <div className="kit-includes">
-              <strong>Ricevi 4 strumenti digitali:</strong> Guida completa,
-              Mappa A4 stampabile, Diario di 31 giorni e Bigliettini di
-              consultazione.
+            <div className="important-note">
+              <strong>Per cosa è pensato il Kit:</strong>
+              <br />
+              <br />
+
+              Per chi desidera avvicinarsi alla spiritualità con una guida
+              chiara, oppure rendere più regolare una pratica già iniziata.
             </div>
 
             <div className="important-note">
