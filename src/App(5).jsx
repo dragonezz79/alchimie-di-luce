@@ -1,5 +1,5 @@
 import React from 'react';
-import immagineGuidaSerenita from './guida-serenita.png';
+import immagineGuidaSerenita from './guida-serenita.webp';
 import immagineArcangeli from './hero-arcangeli.webp';
 import fotoCarmelo from './foto-carmelo.webp';
 import certificatoGuarigione from './certificato-guarigione.webp';
@@ -16,6 +16,7 @@ import immaginePercorsoLuce from './percorso-luce.webp';
 export default function App() {
   const whatsappNumber = '393492304412';
   const email = 'info@alchimiediluce.it';
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   React.useEffect(() => {
     const scrollToHash = () => {
@@ -27,7 +28,14 @@ export default function App() {
 
       if (target) {
         window.requestAnimationFrame(() => {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const reduceMotion = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+          ).matches;
+
+          target.scrollIntoView({
+            behavior: reduceMotion ? 'auto' : 'smooth',
+            block: 'start'
+          });
         });
       }
     };
@@ -43,6 +51,8 @@ export default function App() {
       window.gtag('event', eventName);
     }
   };
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   const payhipPercorsoLuce = 'https://payhip.com/b/PmRnd';
   const payhipGuarigioneAngelica = 'https://payhip.com/b/fEOX3';
@@ -242,6 +252,13 @@ export default function App() {
   // La sezione resta automaticamente nascosta finché l’elenco è vuoto.
   const reviews = [];
 
+  const trustItems = [
+    'Pagamenti protetti con Payhip o PayPal',
+    'Tempi di consegna indicati prima dell’acquisto',
+    'Assistenza diretta via WhatsApp ed email',
+    'Finalità spirituali e introspettive sempre dichiarate'
+  ];
+
   return (
     <main className="site">
       <style>{`
@@ -268,6 +285,26 @@ export default function App() {
             #080814;
         }
 
+        .skip-link {
+          position: fixed;
+          top: 10px;
+          left: 12px;
+          z-index: 100;
+          padding: 10px 14px;
+          border-radius: 10px;
+          color: #080814;
+          background: #f6d98a;
+          font-family: Arial, sans-serif;
+          font-weight: 700;
+          text-decoration: none;
+          transform: translateY(-160%);
+          transition: transform 0.2s ease;
+        }
+
+        .skip-link:focus {
+          transform: translateY(0);
+        }
+
         .topbar {
           position: fixed;
           top: 0;
@@ -292,6 +329,26 @@ export default function App() {
           flex: 0 0 auto;
         }
 
+        .menu-toggle {
+          display: none;
+          width: 46px;
+          height: 42px;
+          padding: 9px 10px;
+          border: 1px solid rgba(246,217,138,0.45);
+          border-radius: 12px;
+          background: rgba(255,255,255,0.04);
+          cursor: pointer;
+        }
+
+        .menu-toggle span {
+          display: block;
+          width: 100%;
+          height: 2px;
+          margin: 5px 0;
+          border-radius: 999px;
+          background: #f6d98a;
+        }
+
         .nav {
           display: flex;
           justify-content: flex-end;
@@ -311,6 +368,14 @@ export default function App() {
 
         .nav a:hover {
           color: #f6d98a;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        summary:focus-visible {
+          outline: 3px solid #f6d98a;
+          outline-offset: 4px;
+          border-radius: 8px;
         }
 
         section {
@@ -351,6 +416,91 @@ export default function App() {
 
         .hero-content {
           max-width: 940px;
+        }
+
+        .trust-strip {
+          padding: 24px 22px;
+          background: rgba(19,19,39,0.96);
+          border-top: 1px solid rgba(246,217,138,0.18);
+          border-bottom: 1px solid rgba(246,217,138,0.18);
+        }
+
+        .trust-grid {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 12px;
+        }
+
+        .trust-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          min-height: 62px;
+          padding: 12px 14px;
+          border-radius: 15px;
+          background: rgba(255,255,255,0.04);
+          color: rgba(255,255,255,0.9);
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          line-height: 1.4;
+        }
+
+        .trust-item span {
+          color: #f6d98a;
+          font-size: 20px;
+        }
+
+        .after-purchase-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 18px;
+          margin-top: 34px;
+        }
+
+        .after-purchase-card {
+          padding: 24px;
+          border: 1px solid rgba(246,217,138,0.25);
+          border-radius: 22px;
+          background: rgba(255,255,255,0.05);
+          text-align: left;
+        }
+
+        .after-purchase-card h3 {
+          margin: 12px 0 10px;
+        }
+
+        .after-purchase-card p {
+          margin: 0;
+          color: rgba(255,255,255,0.86);
+        }
+
+        .step-number {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 38px;
+          height: 38px;
+          border-radius: 50%;
+          color: #080814;
+          background: #f6d98a;
+          font-family: Arial, sans-serif;
+          font-weight: 800;
+        }
+
+        .footer-links {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 10px 20px;
+          margin: 18px 0;
+        }
+
+        .footer-links a {
+          color: #f6d98a;
+        }
+
+        .mobile-contact-cta {
+          display: none;
         }
 
         h1 {
@@ -571,7 +721,6 @@ export default function App() {
         .card {
           border-radius: 28px;
           padding: 32px;
-          box-shadow: 0 18px 42px rgba(0,0,0,0.18);
         }
 
         .path-card {
@@ -579,6 +728,7 @@ export default function App() {
           min-height: 335px;
           flex-direction: column;
           align-items: center;
+          box-shadow: 0 18px 42px rgba(0,0,0,0.18);
         }
 
         .path-card:nth-child(1) {
@@ -1079,30 +1229,55 @@ export default function App() {
           font-weight: 500;
         }
 
-        @media (max-width: 1220px) {
+        @media (max-width: 850px) {
           .topbar {
-            flex-direction: column;
-            align-items: center;
-            padding: 12px 18px;
-            gap: 10px;
+            padding: 12px 16px;
+          }
+
+          .brand {
+            font-size: 20px;
+          }
+
+          .menu-toggle {
+            display: block;
           }
 
           .nav {
-            justify-content: center;
-            gap: 10px 15px;
-            font-size: 13px;
+            position: absolute;
+            top: calc(100% + 1px);
+            left: 12px;
+            right: 12px;
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+            padding: 10px;
+            border: 1px solid rgba(246,217,138,0.30);
+            border-radius: 0 0 18px 18px;
+            background: rgba(8,8,20,0.98);
+            box-shadow: 0 22px 45px rgba(0,0,0,0.35);
           }
 
-          .hero {
-            padding-top: 170px;
+          .nav.nav-open {
+            display: flex;
           }
-        }
 
-        @media (max-width: 850px) {
+          .nav a {
+            padding: 14px 12px;
+            border-radius: 10px;
+            text-align: left;
+          }
+
+          .nav a:hover {
+            background: rgba(246,217,138,0.10);
+          }
+
           .grid-2,
           .grid-3,
           .grid-4,
-          .kit-gallery {
+          .kit-gallery,
+          .trust-grid,
+          .after-purchase-grid {
             grid-template-columns: 1fr;
           }
 
@@ -1134,7 +1309,8 @@ export default function App() {
           }
 
           .hero {
-            padding-top: 185px;
+            padding-top: 92px;
+            min-height: 92vh;
           }
 
           h1 {
@@ -1160,21 +1336,80 @@ export default function App() {
             width: 100%;
             max-width: 330px;
           }
+
+          .mobile-contact-cta {
+            position: fixed;
+            right: 16px;
+            bottom: 16px;
+            z-index: 30;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 13px 19px;
+            border: 1px solid rgba(246,217,138,0.75);
+            border-radius: 999px;
+            background: #f6d98a;
+            box-shadow: 0 14px 35px rgba(0,0,0,0.38);
+            color: #101225;
+            font-family: Arial, sans-serif;
+            font-weight: 800;
+            text-decoration: none;
+          }
+
+          footer {
+            padding-bottom: 100px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          html {
+            scroll-behavior: auto;
+          }
+
+          *,
+          *::before,
+          *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
         }
       `}</style>
 
+      <a className="skip-link" href="#home">
+        Salta al contenuto
+      </a>
+
       <header className="topbar">
-        <a className="brand" href="#home">
+        <a className="brand" href="#home" onClick={closeMobileMenu}>
           Alchimie di Luce
         </a>
 
-        <nav className="nav" aria-label="Navigazione principale">
-          <a href="#home">Home</a>
-          <a href="#kit-digitale">Mappa di Luce</a>
-          <a href="#prezzi">Letture</a>
-          <a href="#contatti">Sessioni</a>
-          <a href="#chi-sono">Chi sono</a>
-          <a href="#contatti-finali">Contatti</a>
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="main-navigation"
+          aria-label={mobileMenuOpen ? 'Chiudi il menu' : 'Apri il menu'}
+          onClick={() => setMobileMenuOpen((open) => !open)}
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav
+          id="main-navigation"
+          className={`nav ${mobileMenuOpen ? 'nav-open' : ''}`}
+          aria-label="Navigazione principale"
+        >
+          <a href="#home" onClick={closeMobileMenu}>Home</a>
+          <a href="#kit-digitale" onClick={closeMobileMenu}>Mappa di Luce</a>
+          <a href="#prezzi" onClick={closeMobileMenu}>Letture</a>
+          <a href="#contatti" onClick={closeMobileMenu}>Sessioni</a>
+          <a href="#chi-sono" onClick={closeMobileMenu}>Chi sono</a>
+          <a href="#contatti-finali" onClick={closeMobileMenu}>Contatti</a>
         </nav>
       </header>
 
@@ -1209,6 +1444,17 @@ export default function App() {
               Vedi gli altri percorsi
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="trust-strip" aria-label="Informazioni utili">
+        <div className="container trust-grid">
+          {trustItems.map((item) => (
+            <div className="trust-item" key={item}>
+              <span aria-hidden="true">✓</span>
+              <strong>{item}</strong>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -1989,6 +2235,46 @@ export default function App() {
         </section>
       )}
 
+      <section id="dopo-la-scelta" className="blue-section">
+        <div className="container center">
+          <p className="section-label">Passaggi chiari</p>
+          <h2>Cosa succede dopo la scelta</h2>
+          <p className="lead">
+            Prima di acquistare sai sempre cosa fare, cosa riceverai e in
+            quanto tempo.
+          </p>
+
+          <div className="after-purchase-grid">
+            <article className="after-purchase-card">
+              <span className="step-number" aria-hidden="true">1</span>
+              <h3>Ricevi la conferma</h3>
+              <p>
+                Payhip o PayPal confermano il pagamento. Per il Kit e la guida
+                gratuita trovi subito il collegamento per scaricare i file.
+              </p>
+            </article>
+
+            <article className="after-purchase-card">
+              <span className="step-number" aria-hidden="true">2</span>
+              <h3>Mi scrivi il tuo tema</h3>
+              <p>
+                Per letture e sessioni mi invii su WhatsApp il tuo nome, le
+                domande o l’argomento che desideri affrontare.
+              </p>
+            </article>
+
+            <article className="after-purchase-card">
+              <span className="step-number" aria-hidden="true">3</span>
+              <h3>Ricevi ciò che hai scelto</h3>
+              <p>
+                Le letture arrivano entro i tempi indicati nella scheda. Per le
+                sessioni concordiamo insieme il giorno e l’orario.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="faq" className="dark-section">
         <div className="container faq-container">
           <h2 className="center">Domande frequenti</h2>
@@ -2049,6 +2335,31 @@ export default function App() {
           Email: <strong>{email}</strong>
         </p>
 
+        <nav className="footer-links" aria-label="Canali social e contatti">
+          <a
+            href="https://www.instagram.com/alchimie_di_luce/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+          <a
+            href="https://www.tiktok.com/@alchimiediluce"
+            target="_blank"
+            rel="noreferrer"
+          >
+            TikTok
+          </a>
+          <a
+            href={`https://wa.me/${whatsappNumber}`}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => trackEvent('click_whatsapp_footer')}
+          >
+            WhatsApp
+          </a>
+        </nav>
+
         <p>
           © 2026 Alchimie di Luce – Carmelo Nicita. Tutti i diritti riservati.
         </p>
@@ -2059,6 +2370,16 @@ export default function App() {
           sanitari.
         </p>
       </footer>
+
+      <a
+        className="mobile-contact-cta"
+        href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
+        target="_blank"
+        rel="noreferrer"
+        onClick={() => trackEvent('click_whatsapp_mobile_fixed')}
+      >
+        Scrivimi su WhatsApp
+      </a>
     </main>
   );
 }
