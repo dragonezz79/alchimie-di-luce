@@ -61,10 +61,31 @@ export default function App() {
   const payhipKit = 'https://payhip.com/b/3MyCg';
   const payhipGuidaSerenita = 'https://payhip.com/b/Ez8xs';
 
-  const paypalTarocchiBase = 'https://paypal.me/AlchimieDiLuce/19';
-  const paypalTarocchiChiarezza = 'https://paypal.me/AlchimieDiLuce/35';
+  const promoStart = new Date('2026-08-01T00:00:00+02:00');
+  const promoEnd = new Date('2026-09-01T00:00:00+02:00');
+  const currentDate = new Date();
+  const isPromoUpcoming = currentDate < promoStart;
+  const isAugustPromo =
+    currentDate >= promoStart && currentDate < promoEnd;
+  const showAugustPromo = currentDate < promoEnd;
+  const augustPromoCode = 'AGOSTOLUCE10';
+
+  const mappaPrice = isPromoUpcoming
+    ? '27 €'
+    : isAugustPromo
+      ? '33,30 €'
+      : '37 €';
+
+  const paypalTarocchiBase = `https://paypal.me/AlchimieDiLuce/${
+    isAugustPromo ? '17.10' : '19'
+  }`;
+  const paypalTarocchiChiarezza = `https://paypal.me/AlchimieDiLuce/${
+    isAugustPromo ? '31.50' : '35'
+  }`;
   const paypalTarocchiApprofondito =
-    'https://paypal.me/AlchimieDiLuce/49';
+    `https://paypal.me/AlchimieDiLuce/${
+      isAugustPromo ? '44.10' : '49'
+    }`;
 
   const whatsappText = encodeURIComponent(
     'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, blocchi interiori o cambiamento.'
@@ -125,7 +146,7 @@ export default function App() {
       price: '49 €',
       href: payhipGuarigioneAngelica,
       eventName: 'click_guarigione_angelica',
-      cta: 'Acquista con codice LUCE10',
+      cta: 'Acquista su Payhip',
       image: immagineGuarigioneAngelica,
       imageAlt: 'Guarigione Angelica',
       description:
@@ -136,7 +157,7 @@ export default function App() {
       price: '129 €',
       href: payhipPercorsoLuce,
       eventName: 'click_percorso_luce',
-      cta: 'Acquista con codice LUCE10',
+      cta: 'Acquista su Payhip',
       image: immaginePercorsoLuce,
       imageAlt: 'Percorso Luce',
       description:
@@ -150,7 +171,9 @@ export default function App() {
       price: '19 €',
       href: payhipRisposteAngeli,
       eventName: 'click_risposte_angeli',
-      cta: 'Acquista con codice LUCE10',
+      cta: isAugustPromo
+        ? `Acquista con codice ${augustPromoCode}`
+        : 'Acquista su Payhip',
       image: immagineRisposteAngeli,
       imageAlt: 'Le Risposte degli Angeli con tre carte',
       description:
@@ -163,7 +186,9 @@ export default function App() {
       price: '29 €',
       href: payhipAngelTherapy,
       eventName: 'click_angel_therapy',
-      cta: 'Acquista con codice LUCE10',
+      cta: isAugustPromo
+        ? `Acquista con codice ${augustPromoCode}`
+        : 'Acquista su Payhip',
       image: immagineAngelTherapy,
       imageAlt: 'Lettura Angel Therapy con cinque carte',
       description:
@@ -176,10 +201,12 @@ export default function App() {
   const tarotReadings = [
     {
       title: 'Lettura Express',
-      price: '19 €',
+      price: isAugustPromo ? '17,10 €' : '19 €',
       href: paypalTarocchiBase,
       eventName: 'click_tarocchi_19',
-      cta: 'Paga 19 € con PayPal',
+      cta: isAugustPromo
+        ? 'Paga 17,10 € con PayPal'
+        : 'Paga 19 € con PayPal',
       cards: '1 domanda · Risposta diretta',
       delivery: 'Consegna entro 48 ore.',
       description:
@@ -189,10 +216,12 @@ export default function App() {
     },
     {
       title: 'Lettura di Chiarezza',
-      price: '35 €',
+      price: isAugustPromo ? '31,50 €' : '35 €',
       href: paypalTarocchiChiarezza,
       eventName: 'click_tarocchi_35',
-      cta: 'Paga 35 € con PayPal',
+      cta: isAugustPromo
+        ? 'Paga 31,50 € con PayPal'
+        : 'Paga 35 € con PayPal',
       cards: 'Fino a 3 domande · Collegate oppure diverse',
       delivery: 'Consegna entro 72 ore.',
       description:
@@ -202,10 +231,12 @@ export default function App() {
     },
     {
       title: 'Lettura Completa',
-      price: '49 €',
+      price: isAugustPromo ? '44,10 €' : '49 €',
       href: paypalTarocchiApprofondito,
       eventName: 'click_tarocchi_49',
-      cta: 'Paga 49 € con PayPal',
+      cta: isAugustPromo
+        ? 'Paga 44,10 € con PayPal'
+        : 'Paga 49 € con PayPal',
       cards: 'Fino a 5 domande · Collegate oppure diverse',
       delivery: 'Consegna entro 4 giorni.',
       description:
@@ -549,6 +580,35 @@ export default function App() {
           margin: 26px auto 0;
           color: rgba(255,255,255,0.90);
           font-size: 18px;
+        }
+
+        .promo-banner {
+          max-width: 820px;
+          margin: 0 auto 28px;
+          padding: 15px 20px;
+          border: 1px solid rgba(246,217,138,0.72);
+          border-radius: 18px;
+          background:
+            linear-gradient(135deg, rgba(92,58,120,0.88), rgba(112,72,34,0.88));
+          box-shadow: 0 14px 36px rgba(0,0,0,0.28);
+          color: rgba(255,255,255,0.96);
+          font-family: Arial, sans-serif;
+          font-size: 15px;
+          line-height: 1.55;
+        }
+
+        .promo-banner strong {
+          display: block;
+          margin-bottom: 3px;
+          color: #ffe7a6;
+          font-size: 18px;
+        }
+
+        .promo-detail {
+          padding: 12px 14px;
+          border: 1px solid rgba(246,217,138,0.38);
+          border-radius: 14px;
+          background: rgba(246,217,138,0.09);
         }
 
         .hero .buttons {
@@ -1419,6 +1479,21 @@ export default function App() {
         style={{ backgroundImage: `url(${immagineArcangeli})` }}
       >
         <div className="container hero-content">
+          {showAugustPromo && (
+            <div className="promo-banner" role="note">
+              <strong>
+                {isPromoUpcoming
+                  ? 'Dal 1° al 31 agosto · 10% di sconto'
+                  : 'Agosto di Luce · 10% di sconto'}
+              </strong>
+              Mappa di Luce e letture in promozione. Su Payhip usa il codice{' '}
+              <b>{augustPromoCode}</b>.{' '}
+              Per i Tarocchi lo sconto viene applicato direttamente al
+              pulsante PayPal. Promozione non cumulabile. Sono esclusi
+              Guarigione Angelica e Percorso Luce.
+            </div>
+          )}
+
           <h1>
             Alchimie di Luce
             <span>Ritrova una direzione quando dentro senti confusione</span>
@@ -1437,7 +1512,7 @@ export default function App() {
               rel="noreferrer"
               onClick={() => trackEvent('click_mappa_di_luce_hero')}
             >
-              Scopri la Mappa di Luce · 27 €
+              Scopri la Mappa di Luce · {mappaPrice}
             </a>
 
             <a className="btn btn-secondary" href="#percorsi">
@@ -1497,9 +1572,23 @@ export default function App() {
               </div>
             </div>
 
-            <div className="spotlight-price">27 €</div>
+            <div className="spotlight-price">{mappaPrice}</div>
             <div className="spotlight-offer">
-              Prezzo di lancio fino al 31 luglio 2026 · Dal 1° agosto 37 €
+              {isPromoUpcoming && (
+                <>
+                  Prezzo di lancio fino al 31 luglio 2026 · Dal 1° agosto
+                  prezzo regolare 37 € e 10% di sconto con il codice{' '}
+                  <strong>{augustPromoCode}</strong>
+                </>
+              )}
+              {isAugustPromo && (
+                <>
+                  Prezzo regolare 37 € · Con il codice{' '}
+                  <strong>{augustPromoCode}</strong> paghi 33,30 € fino al 31
+                  agosto 2026.
+                </>
+              )}
+              {!showAugustPromo && <>Prezzo regolare 37 €</>}
             </div>
 
             <div className="buttons">
@@ -1510,7 +1599,9 @@ export default function App() {
                 rel="noreferrer"
                 onClick={() => trackEvent('click_mappa_di_luce_spotlight')}
               >
-                Acquista il Kit
+                {isAugustPromo
+                  ? `Acquista con codice ${augustPromoCode}`
+                  : 'Acquista il Kit'}
               </a>
 
               <a className="btn btn-secondary" href="#kit-dettagli">
@@ -1740,12 +1831,6 @@ export default function App() {
                 <div className="price">{item.price}</div>
                 <p>{item.description}</p>
 
-                <p className="small">
-                  <strong>Promo:</strong> usa il codice <strong>LUCE10</strong>{' '}
-                  al checkout Payhip per ricevere il 10% di sconto fino al 31
-                  luglio 2026.
-                </p>
-
                 <div className="buttons">
                   <a
                     className="btn btn-paypal"
@@ -1799,11 +1884,18 @@ export default function App() {
                 <p>{item.description}</p>
                 <p>{item.details}</p>
 
-                <p className="small">
-                  <strong>Promo:</strong> usa il codice <strong>LUCE10</strong>{' '}
-                  al checkout Payhip per ricevere il 10% di sconto fino al 31
-                  luglio 2026.
-                </p>
+                {showAugustPromo && (
+                  <p className="small promo-detail">
+                    <strong>
+                      {isPromoUpcoming
+                        ? 'Promo dal 1° al 31 agosto:'
+                        : 'Promo Agosto:'}
+                    </strong>{' '}
+                    usa il codice <strong>{augustPromoCode}</strong> al checkout
+                    Payhip per ricevere il 10% di sconto. Promozione non
+                    cumulabile.
+                  </p>
+                )}
 
                 <div className="important-note reading-note">
                   <strong>Nota importante:</strong> la lettura ha finalità
@@ -1875,6 +1967,20 @@ export default function App() {
               />
             </div>
           </div>
+
+          {showAugustPromo && (
+            <div className="important-note promo-detail">
+              <strong>
+                {isPromoUpcoming
+                  ? 'Dal 1° al 31 agosto: 10% di sconto'
+                  : 'Promo Agosto: 10% di sconto'}
+              </strong>
+              <br />
+              Nei pulsanti PayPal qui sotto il prezzo scontato viene applicato
+              automaticamente. Non serve inserire un codice. Promozione non
+              cumulabile.
+            </div>
+          )}
 
           <div className="grid-3 price-grid">
             {tarotReadings.map((item) => (
@@ -2078,14 +2184,34 @@ export default function App() {
 
           <article className="price-box">
             <h3>Kit Completo di Attivazione Interiore</h3>
-            <div className="price">27 €</div>
+            <div className="price">{mappaPrice}</div>
 
             <div className="launch-offer">
-              <strong>✦ PREZZO SPECIALE DI LANCIO ✦</strong>
-              <br />
-              Disponibile fino al <strong>31 luglio 2026</strong>
-              <br />
-              <strong>Dal 1° agosto 2026: 37 €</strong>
+              {isPromoUpcoming && (
+                <>
+                  <strong>✦ PREZZO SPECIALE DI LANCIO ✦</strong>
+                  <br />
+                  Disponibile fino al <strong>31 luglio 2026</strong>
+                  <br />
+                  Dal 1° agosto: prezzo regolare 37 € e 10% di sconto con il
+                  codice <strong>{augustPromoCode}</strong>
+                </>
+              )}
+              {isAugustPromo && (
+                <>
+                  <strong>✦ AGOSTO DI LUCE · -10% ✦</strong>
+                  <br />
+                  Prezzo regolare 37 € · Con il codice{' '}
+                  <strong>{augustPromoCode}</strong> paghi 33,30 €
+                  <br />
+                  Promozione valida fino al 31 agosto 2026 e non cumulabile.
+                </>
+              )}
+              {!showAugustPromo && (
+                <>
+                  <strong>Prezzo regolare: 37 €</strong>
+                </>
+              )}
             </div>
 
             <p>
@@ -2193,7 +2319,9 @@ export default function App() {
                 rel="noreferrer"
                 onClick={() => trackEvent('click_mappa_di_luce')}
               >
-                Acquista il Kit a 27 €
+                {isAugustPromo
+                  ? `Acquista a 33,30 € con ${augustPromoCode}`
+                  : `Acquista il Kit a ${mappaPrice}`}
               </a>
 
               <a
