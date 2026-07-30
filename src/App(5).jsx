@@ -80,10 +80,23 @@ export default function App() {
   const payhipKit = 'https://payhip.com/b/3MyCg';
   const payhipGuidaSerenita = 'https://payhip.com/b/Ez8xs';
 
-  const paypalTarocchiBase = 'https://paypal.me/AlchimieDiLuce/19';
-  const paypalTarocchiChiarezza = 'https://paypal.me/AlchimieDiLuce/35';
+  const tarotExpressAmount = isAugustPromo ? '15.20' : '19';
+  const tarotChiarezzaAmount = isAugustPromo ? '28' : '35';
+  const tarotCompletaAmount = isAugustPromo ? '39.20' : '49';
+  const tarotExpressPrice = isAugustPromo ? '15,20 €' : '19 €';
+  const tarotChiarezzaPrice = isAugustPromo ? '28 €' : '35 €';
+  const tarotCompletaPrice = isAugustPromo ? '39,20 €' : '49 €';
+  const paypalTarocchiBase =
+    `https://paypal.me/AlchimieDiLuce/${tarotExpressAmount}`;
+  const paypalTarocchiChiarezza =
+    `https://paypal.me/AlchimieDiLuce/${tarotChiarezzaAmount}`;
   const paypalTarocchiApprofondito =
-    'https://paypal.me/AlchimieDiLuce/49';
+    `https://paypal.me/AlchimieDiLuce/${tarotCompletaAmount}`;
+  const tarotPromoMessage = isBeforeAugustPromo
+    ? 'Dal 1° al 31 agosto 2026: 20% di sconto, applicato automaticamente nei pulsanti PayPal.'
+    : isAugustPromo
+      ? 'Promo agosto: 20% di sconto già applicato nei pulsanti PayPal.'
+      : null;
 
   const whatsappText = encodeURIComponent(
     'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, blocchi interiori o cambiamento.'
@@ -199,10 +212,10 @@ export default function App() {
   const tarotReadings = [
     {
       title: 'Lettura Express',
-      price: '19 €',
+      price: tarotExpressPrice,
       href: paypalTarocchiBase,
       eventName: 'click_tarocchi_19',
-      cta: 'Paga 19 € con PayPal',
+      cta: `Paga ${tarotExpressPrice} con PayPal`,
       cards: '1 domanda · Risposta diretta',
       delivery: 'Consegna entro 48 ore.',
       description:
@@ -212,10 +225,10 @@ export default function App() {
     },
     {
       title: 'Lettura di Chiarezza',
-      price: '35 €',
+      price: tarotChiarezzaPrice,
       href: paypalTarocchiChiarezza,
       eventName: 'click_tarocchi_35',
-      cta: 'Paga 35 € con PayPal',
+      cta: `Paga ${tarotChiarezzaPrice} con PayPal`,
       cards: 'Fino a 3 domande · Collegate oppure diverse',
       delivery: 'Consegna entro 72 ore.',
       description:
@@ -225,10 +238,10 @@ export default function App() {
     },
     {
       title: 'Lettura Completa',
-      price: '49 €',
+      price: tarotCompletaPrice,
       href: paypalTarocchiApprofondito,
       eventName: 'click_tarocchi_49',
-      cta: 'Paga 49 € con PayPal',
+      cta: `Paga ${tarotCompletaPrice} con PayPal`,
       cards: 'Fino a 5 domande · Collegate oppure diverse',
       delivery: 'Consegna entro 4 giorni.',
       description:
@@ -1490,8 +1503,9 @@ export default function App() {
               Usa il codice
               <b className="august-promo-code">LUCE20</b>
               su Payhip per Mappa di Luce, Percorso Luce e letture angeliche.
-              Non si applica a Guarigione Angelica; la Guida Serenità resta
-              gratuita.
+              Per i Tarocchi lo sconto viene applicato direttamente ai pulsanti
+              PayPal. Non si applica a Guarigione Angelica; la Guida Serenità
+              resta gratuita.
             </span>
           </div>
         </aside>
@@ -1974,6 +1988,11 @@ export default function App() {
                 <p>{item.description}</p>
                 <p>{item.details}</p>
                 <p className="small">{item.delivery}</p>
+                {tarotPromoMessage && (
+                  <p className="promo-line">
+                    <strong>Promo:</strong> {tarotPromoMessage}
+                  </p>
+                )}
 
                 <div className="buttons">
                   <a
