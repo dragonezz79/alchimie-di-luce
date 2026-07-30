@@ -169,8 +169,8 @@ export default function App() {
       price: '129 €',
       href: payhipPercorsoLuce,
       eventName: 'click_percorso_luce',
-      cta: payhipCta,
-      promoEligible: true,
+      cta: 'Acquista su Payhip',
+      promoEligible: false,
       image: immaginePercorsoLuce,
       imageAlt: 'Percorso Luce',
       description:
@@ -1502,10 +1502,10 @@ export default function App() {
             <span>
               Usa il codice
               <b className="august-promo-code">LUCE20</b>
-              su Payhip per Mappa di Luce, Percorso Luce e letture angeliche.
+              su Payhip per Mappa di Luce e letture angeliche.
               Per i Tarocchi lo sconto viene applicato direttamente ai pulsanti
-              PayPal. Non si applica a Guarigione Angelica; la Guida Serenità
-              resta gratuita.
+              PayPal. Non si applica a Guarigione Angelica né a Percorso Luce;
+              la Guida Serenità resta gratuita.
             </span>
           </div>
         </aside>
