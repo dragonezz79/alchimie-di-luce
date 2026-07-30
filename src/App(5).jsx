@@ -144,7 +144,8 @@ export default function App() {
       price: '49 €',
       href: payhipGuarigioneAngelica,
       eventName: 'click_guarigione_angelica',
-      cta: payhipCta,
+      cta: 'Acquista su Payhip',
+      promoEligible: false,
       image: immagineGuarigioneAngelica,
       imageAlt: 'Guarigione Angelica',
       description:
@@ -156,6 +157,7 @@ export default function App() {
       href: payhipPercorsoLuce,
       eventName: 'click_percorso_luce',
       cta: payhipCta,
+      promoEligible: true,
       image: immaginePercorsoLuce,
       imageAlt: 'Percorso Luce',
       description:
@@ -170,6 +172,7 @@ export default function App() {
       href: payhipRisposteAngeli,
       eventName: 'click_risposte_angeli',
       cta: payhipCta,
+      promoEligible: true,
       image: immagineRisposteAngeli,
       imageAlt: 'Le Risposte degli Angeli con tre carte',
       description:
@@ -183,6 +186,7 @@ export default function App() {
       href: payhipAngelTherapy,
       eventName: 'click_angel_therapy',
       cta: payhipCta,
+      promoEligible: true,
       image: immagineAngelTherapy,
       imageAlt: 'Lettura Angel Therapy con cinque carte',
       description:
@@ -387,6 +391,48 @@ export default function App() {
 
         .nav a:hover {
           color: #f6d98a;
+        }
+
+        .august-promo-banner {
+          margin-top: 72px;
+          padding: 0;
+          background:
+            linear-gradient(90deg, #b77a18 0%, #f6d98a 48%, #c58b2a 100%);
+          color: #101225;
+          border-bottom: 1px solid rgba(255,255,255,0.24);
+          box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        .august-promo-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px 24px;
+          flex-wrap: wrap;
+          padding: 14px 22px;
+          text-align: center;
+          font-family: Arial, sans-serif;
+        }
+
+        .august-promo-content > strong {
+          font-size: clamp(18px, 2.2vw, 25px);
+          letter-spacing: 0.04em;
+        }
+
+        .august-promo-content span {
+          font-size: 15px;
+          line-height: 1.45;
+        }
+
+        .august-promo-code {
+          display: inline-block;
+          margin: 0 5px;
+          padding: 3px 10px;
+          border-radius: 999px;
+          background: #101225;
+          color: #f6d98a;
+          font-weight: 800;
+          letter-spacing: 0.06em;
         }
 
         a:focus-visible,
@@ -1432,6 +1478,26 @@ export default function App() {
         </nav>
       </header>
 
+      {payhipPromoMessage && (
+        <aside className="august-promo-banner" aria-label="Promozione agosto">
+          <div className="container august-promo-content">
+            <strong>
+              {isBeforeAugustPromo
+                ? 'DAL 1° AGOSTO · 20% DI SCONTO'
+                : 'PROMO AGOSTO · 20% DI SCONTO'}
+            </strong>
+            <span>
+              Usa il codice
+              <b className="august-promo-code">LUCE20</b>
+              su Payhip per Mappa di Luce, Percorso Luce e letture angeliche.
+              Non si applica a Guarigione Angelica; la Guida Serenità resta
+              gratuita.
+            </span>
+          </div>
+        </aside>
+      )}
+
+
       <section
         id="home"
         className="hero"
@@ -1759,7 +1825,7 @@ export default function App() {
                 <div className="price">{item.price}</div>
                 <p>{item.description}</p>
 
-                {payhipPromoMessage && (
+                {item.promoEligible && payhipPromoMessage && (
                   <p className="small">
                     <strong>Promo:</strong> {payhipPromoMessage}
                   </p>
@@ -1818,7 +1884,7 @@ export default function App() {
                 <p>{item.description}</p>
                 <p>{item.details}</p>
 
-                {payhipPromoMessage && (
+                {item.promoEligible && payhipPromoMessage && (
                   <p className="small">
                     <strong>Promo:</strong> {payhipPromoMessage}
                   </p>
