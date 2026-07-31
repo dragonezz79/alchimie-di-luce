@@ -22,7 +22,7 @@ export default function App() {
   const augustPromoEnd = new Date('2026-09-01T00:00:00+02:00');
   const isBeforeAugustPromo = now < augustPromoStart;
   const isAugustPromo = now >= augustPromoStart && now < augustPromoEnd;
-  const mappaPrice = isBeforeAugustPromo ? '27 €' : '37 €';
+  const mappaPrice = '37 €';
   const payhipCta = isAugustPromo
     ? 'Acquista con codice LUCE20'
     : 'Acquista su Payhip';
@@ -32,7 +32,7 @@ export default function App() {
       ? 'Per tutto agosto usa il codice LUCE20 al checkout Payhip per ricevere il 20% di sconto.'
       : null;
   const mappaOfferMessage = isBeforeAugustPromo
-    ? 'Prezzo di lancio fino al 31 luglio 2026 · Dal 1° agosto 37 € con il 20% di sconto usando LUCE20'
+    ? 'Kit digitale completo: 37 € · Dal 1° agosto usa LUCE20 e paghi 29,60 €'
     : isAugustPromo
       ? 'Promo agosto: usa LUCE20 e paghi 29,60 € anziché 37 €'
       : 'Kit digitale completo: 37 €';
@@ -2187,7 +2187,7 @@ export default function App() {
             <div className="launch-offer">
               <strong>
                 {isBeforeAugustPromo
-                  ? '✦ PREZZO SPECIALE DI LANCIO ✦'
+                  ? '✦ KIT COMPLETO DIGITALE ✦'
                   : isAugustPromo
                     ? '✦ PROMO AGOSTO · 20% ✦'
                     : '✦ KIT COMPLETO DIGITALE ✦'}
@@ -2195,10 +2195,10 @@ export default function App() {
               <br />
               {isBeforeAugustPromo ? (
                 <>
-                  Disponibile fino al <strong>31 luglio 2026</strong>
+                  Prezzo del Kit: <strong>37 €</strong>.
                   <br />
-                  Dal 1° agosto: <strong>37 €</strong>. Con il codice{' '}
-                  <strong>LUCE20</strong> paghi <strong>29,60 €</strong>.
+                  Dal 1° agosto usa il codice <strong>LUCE20</strong> e paghi{' '}
+                  <strong>29,60 €</strong>.
                 </>
               ) : isAugustPromo ? (
                 <>
