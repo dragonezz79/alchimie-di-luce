@@ -212,6 +212,9 @@ export default function App() {
   const tarotReadings = [
     {
       title: 'Lettura Express',
+      image: immagineTarocchi,
+      imageAlt: 'Lettura Express dei Tarocchi',
+      imagePosition: 'left center',
       price: tarotExpressPrice,
       href: paypalTarocchiBase,
       eventName: 'click_tarocchi_19',
@@ -225,6 +228,9 @@ export default function App() {
     },
     {
       title: 'Lettura di Chiarezza',
+      image: immagineTarocchi,
+      imageAlt: 'Lettura di Chiarezza dei Tarocchi',
+      imagePosition: 'center center',
       price: tarotChiarezzaPrice,
       href: paypalTarocchiChiarezza,
       eventName: 'click_tarocchi_35',
@@ -238,6 +244,9 @@ export default function App() {
     },
     {
       title: 'Lettura Completa',
+      image: immagineTarocchi,
+      imageAlt: 'Lettura Completa dei Tarocchi',
+      imagePosition: 'right center',
       price: tarotCompletaPrice,
       href: paypalTarocchiApprofondito,
       eventName: 'click_tarocchi_49',
@@ -1016,6 +1025,17 @@ export default function App() {
           margin: 0 0 26px;
           border: 1px solid rgba(246,217,138,0.30);
           box-shadow: 0 20px 45px rgba(0,0,0,0.24);
+        }
+
+        .tarot-card-image {
+          width: 100%;
+          height: 220px;
+          display: block;
+          object-fit: cover;
+          border-radius: 22px;
+          margin: 0 0 24px;
+          border: 1px solid rgba(246,217,138,0.38);
+          box-shadow: 0 18px 42px rgba(0,0,0,0.28);
         }
 
         .reading-note {
@@ -1978,8 +1998,15 @@ export default function App() {
           <div className="grid-3 price-grid">
             {tarotReadings.map((item) => (
               <article className="price-box wide" key={item.title}>
+                <img
+                  src={item.image}
+                  alt={item.imageAlt}
+                  className="tarot-card-image"
+                  style={{ objectPosition: item.imagePosition }}
+                  loading="lazy"
+                  decoding="async"
+                />
                 <h3>{item.title}</h3>
-                <div className="price">{item.price}</div>
 
                 <p>
                   <strong>{item.cards}</strong>
