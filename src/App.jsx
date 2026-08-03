@@ -48,9 +48,10 @@ export default function App() {
   const payhipKit = 'https://payhip.com/b/3MyCg';
   const payhipGuidaSerenita = 'https://payhip.com/b/Ez8xs';
 
-  const payhipTarocchiBase = 'https://payhip.com/buy?link=ZRHod';
-  const payhipTarocchiChiarezza = 'https://payhip.com/buy?link=KLaN8';
-  const payhipTarocchiCompleta = 'https://payhip.com/buy?link=LchV1';
+  const paypalTarocchiBase = 'https://paypal.me/AlchimieDiLuce/19';
+  const paypalTarocchiChiarezza = 'https://paypal.me/AlchimieDiLuce/35';
+  const paypalTarocchiApprofondito =
+    'https://paypal.me/AlchimieDiLuce/49';
 
   const whatsappText = encodeURIComponent(
     'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, blocchi interiori o cambiamento.'
@@ -101,7 +102,7 @@ export default function App() {
       title: 'Guarigione Angelica',
       price: '49 €',
       href: payhipGuarigioneAngelica,
-      cta: 'Prenota su Payhip',
+      cta: 'Acquista con codice LUCE10',
       image: immagineGuarigioneAngelica,
       imageAlt: 'Guarigione Angelica',
       description:
@@ -111,7 +112,7 @@ export default function App() {
       title: 'Percorso Luce',
       price: '129 €',
       href: payhipPercorsoLuce,
-      cta: 'Prenota su Payhip',
+      cta: 'Acquista con codice LUCE10',
       image: immaginePercorsoLuce,
       imageAlt: 'Percorso Luce',
       description:
@@ -124,7 +125,7 @@ export default function App() {
       title: 'Le Risposte degli Angeli',
       price: '19 €',
       href: payhipRisposteAngeli,
-      cta: 'Acquista con codice LUCE20',
+      cta: 'Acquista con codice LUCE10',
       image: immagineRisposteAngeli,
       imageAlt: 'Le Risposte degli Angeli con tre carte',
       description:
@@ -136,7 +137,7 @@ export default function App() {
       title: 'Lettura Angel Therapy',
       price: '29 €',
       href: payhipAngelTherapy,
-      cta: 'Acquista con codice LUCE20',
+      cta: 'Acquista con codice LUCE10',
       image: immagineAngelTherapy,
       imageAlt: 'Lettura Angel Therapy con cinque carte',
       description:
@@ -150,9 +151,8 @@ export default function App() {
     {
       title: 'Domanda di Luce',
       price: '19 €',
-      href: payhipTarocchiBase,
-      cta: 'Prenota la lettura · 19 €',
-      eventName: 'click_tarocchi_19',
+      href: paypalTarocchiBase,
+      cta: 'Paga 19 € con PayPal',
       cards: '1 domanda · Lettura essenziale',
       delivery: 'Consegna entro 48 ore.',
       description:
@@ -163,9 +163,8 @@ export default function App() {
     {
       title: 'Lettura di Chiarezza',
       price: '35 €',
-      href: payhipTarocchiChiarezza,
-      cta: 'Prenota la lettura · 35 €',
-      eventName: 'click_tarocchi_35',
+      href: paypalTarocchiChiarezza,
+      cta: 'Paga 35 € con PayPal',
       cards: 'Fino a 2 domande collegate · Lettura approfondita',
       delivery: 'Consegna entro 72 ore.',
       description:
@@ -174,12 +173,11 @@ export default function App() {
         'Riceverai una lettura scritta personalizzata e approfondita, con analisi delle dinamiche emerse, messaggio intuitivo conclusivo e indicazione pratica di centratura.'
     },
     {
-      title: 'Lettura Completa',
+      title: 'Percorso di Luce',
       price: '49 €',
-      href: payhipTarocchiCompleta,
-      cta: 'Prenota la lettura completa · 49 €',
-      eventName: 'click_tarocchi_49',
-      cards: 'Fino a 3 domande collegate · Lettura completa',
+      href: paypalTarocchiApprofondito,
+      cta: 'Paga 49 € con PayPal',
+      cards: 'Fino a 3 domande collegate · Percorso completo',
       delivery: 'Consegna entro 4 giorni.',
       description:
         'Per osservare con maggiore profondità una fase della tua vita e le possibili direzioni interiori.',
@@ -411,7 +409,7 @@ export default function App() {
           background: rgba(255,255,255,0.08);
         }
 
-        .btn-checkout {
+        .btn-paypal {
           background: white;
           color: #111322;
           border: 1px solid rgba(246,217,138,0.35);
@@ -943,22 +941,25 @@ export default function App() {
           </div>
 
           <div className="important-note welcome-note">
-            <span className="promo-title">✨ Promo agosto · 20% di sconto ✨</span>
+            <span className="promo-title">✨ Promo di benvenuto ✨</span>
 
             Usa il codice
-            <span className="promo-code">LUCE20</span>
-            al checkout Payhip per la <strong>Mappa di Luce</strong>, le
-            <strong> letture angeliche</strong> e le
-            <strong> letture dei Tarocchi</strong>.
+            <span className="promo-code">LUCE10</span>
+            al checkout Payhip e ricevi il
+            <strong> 10% di sconto </strong>
+            su <strong>Guarigione Angelica</strong>, <strong>Percorso Luce</strong>,
+            <strong> Le Risposte degli Angeli</strong> e
+            <strong> Lettura Angel Therapy</strong>.
             <br />
-            <span className="promo-deadline">Valido fino al 31 agosto 2026</span>
-            <br /><br />
-            La promozione non si applica alla <strong>Guarigione Angelica</strong>
-            né al <strong>Percorso Luce</strong>. La Guida Serenità resta gratuita.
+            <span className="promo-deadline">Valido fino al 31 luglio 2026</span>
 
             <span className="promo-free">Messaggio angelico iniziale gratuito</span>
             Scrivimi <strong>LUCE</strong> su WhatsApp e indicami il tema che senti più urgente:
             riceverai un primo messaggio simbolico di orientamento.
+
+            <br /><br />
+            <strong>Novità:</strong> il Kit Mappa di Luce è disponibile al
+            prezzo speciale di lancio di <strong>27 € fino al 31 luglio 2026</strong>.
           </div>
 
           <div className="buttons">
@@ -1143,13 +1144,14 @@ export default function App() {
                 <p>{item.description}</p>
 
                 <p className="small">
-                  Guarigione Angelica e Percorso Luce non rientrano nella
-                  promozione di agosto.
+                  <strong>Promo:</strong> usa il codice <strong>LUCE10</strong>{' '}
+                  al checkout Payhip per ricevere il 10% di sconto fino al 31
+                  luglio 2026.
                 </p>
 
                 <div className="buttons">
                   <a
-                    className="btn btn-checkout"
+                    className="btn btn-paypal"
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
@@ -1194,9 +1196,9 @@ export default function App() {
                 <p>{item.details}</p>
 
                 <p className="small">
-                  <strong>Promo agosto:</strong> usa il codice <strong>LUCE20</strong>{' '}
-                  al checkout Payhip per ricevere il 20% di sconto fino al 31
-                  agosto 2026.
+                  <strong>Promo:</strong> usa il codice <strong>LUCE10</strong>{' '}
+                  al checkout Payhip per ricevere il 10% di sconto fino al 31
+                  luglio 2026.
                 </p>
 
                 <div className="important-note reading-note">
@@ -1212,7 +1214,7 @@ export default function App() {
 
                 <div className="buttons">
                   <a
-                    className="btn btn-checkout"
+                    className="btn btn-paypal"
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
@@ -1282,19 +1284,12 @@ export default function App() {
                 <p>{item.details}</p>
                 <p className="small">{item.delivery}</p>
 
-                <p className="small">
-                  <strong>Promo agosto:</strong> usa il codice <strong>LUCE20</strong>{' '}
-                  al checkout Payhip per ricevere il 20% di sconto fino al 31
-                  agosto 2026.
-                </p>
-
                 <div className="buttons">
                   <a
-                    className="btn btn-checkout"
+                    className="btn btn-paypal"
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    onClick={() => window.gtag?.('event', item.eventName)}
                   >
                     {item.cta}
                   </a>
@@ -1464,14 +1459,14 @@ export default function App() {
 
           <article className="price-box">
             <h3>Kit Completo di Attivazione Interiore</h3>
-            <div className="price">37 €</div>
+            <div className="price">27 €</div>
 
             <div className="launch-offer">
-              <strong>✦ PROMO AGOSTO · 20% DI SCONTO ✦</strong>
+              <strong>✦ PREZZO SPECIALE DI LANCIO ✦</strong>
               <br />
-              Usa il codice <strong>LUCE20</strong> al checkout Payhip
+              Disponibile fino al <strong>31 luglio 2026</strong>
               <br />
-              Valido fino al <strong>31 agosto 2026</strong>
+              <strong>Dal 1° agosto 2026: 37 €</strong>
             </div>
 
             <p>
@@ -1585,7 +1580,7 @@ export default function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Acquista il Kit a 37 €
+                Acquista il Kit a 27 €
               </a>
 
               <a
