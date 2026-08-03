@@ -80,22 +80,13 @@ export default function App() {
   const payhipKit = 'https://payhip.com/b/3MyCg';
   const payhipGuidaSerenita = 'https://payhip.com/b/Ez8xs';
 
-  const tarotExpressAmount = isAugustPromo ? '15.20' : '19';
-  const tarotChiarezzaAmount = isAugustPromo ? '28' : '35';
-  const tarotCompletaAmount = isAugustPromo ? '39.20' : '49';
-  const tarotExpressPrice = isAugustPromo ? '15,20 €' : '19 €';
-  const tarotChiarezzaPrice = isAugustPromo ? '28 €' : '35 €';
-  const tarotCompletaPrice = isAugustPromo ? '39,20 €' : '49 €';
-  const paypalTarocchiBase =
-    `https://paypal.me/AlchimieDiLuce/${tarotExpressAmount}`;
-  const paypalTarocchiChiarezza =
-    `https://paypal.me/AlchimieDiLuce/${tarotChiarezzaAmount}`;
-  const paypalTarocchiApprofondito =
-    `https://paypal.me/AlchimieDiLuce/${tarotCompletaAmount}`;
+  const payhipTarocchiBase = 'https://payhip.com/buy?link=ZRHod';
+  const payhipTarocchiChiarezza = 'https://payhip.com/buy?link=KLaN8';
+  const payhipTarocchiCompleta = 'https://payhip.com/buy?link=LchV1';
   const tarotPromoMessage = isBeforeAugustPromo
-    ? 'Dal 1° al 31 agosto 2026: 20% di sconto, applicato automaticamente nei pulsanti PayPal.'
+    ? 'Dal 1° al 31 agosto 2026 usa il codice LUCE20 al checkout Payhip per ricevere il 20% di sconto.'
     : isAugustPromo
-      ? 'Promo agosto: 20% di sconto già applicato nei pulsanti PayPal.'
+      ? 'Promo agosto: usa il codice LUCE20 al checkout Payhip per ricevere il 20% di sconto.'
       : null;
 
   const whatsappText = encodeURIComponent(
@@ -211,15 +202,15 @@ export default function App() {
 
   const tarotReadings = [
     {
-      title: 'Lettura Express',
+      title: 'Domanda di Luce',
       image: immagineTarocchi,
-      imageAlt: 'Lettura Express dei Tarocchi',
+      imageAlt: 'Domanda di Luce con i Tarocchi',
       imagePosition: 'left center',
-      price: tarotExpressPrice,
-      href: paypalTarocchiBase,
+      price: '19 €',
+      href: payhipTarocchiBase,
       eventName: 'click_tarocchi_19',
-      cta: `Paga ${tarotExpressPrice} con PayPal`,
-      cards: '1 domanda · Risposta diretta',
+      cta: 'Prenota la lettura · 19 €',
+      cards: '1 domanda · Lettura essenziale',
       delivery: 'Consegna entro 48 ore.',
       description:
         'Una lettura dei Tarocchi per osservare una domanda precisa da un nuovo punto di vista.',
@@ -231,14 +222,14 @@ export default function App() {
       image: immagineTarocchi,
       imageAlt: 'Lettura di Chiarezza dei Tarocchi',
       imagePosition: 'center center',
-      price: tarotChiarezzaPrice,
-      href: paypalTarocchiChiarezza,
+      price: '35 €',
+      href: payhipTarocchiChiarezza,
       eventName: 'click_tarocchi_35',
-      cta: `Paga ${tarotChiarezzaPrice} con PayPal`,
-      cards: 'Fino a 3 domande · Collegate oppure diverse',
+      cta: 'Prenota la lettura · 35 €',
+      cards: 'Fino a 2 domande collegate · Lettura approfondita',
       delivery: 'Consegna entro 72 ore.',
       description:
-        'Una lettura dei Tarocchi per fare chiarezza su più aspetti di una situazione o su tre temi diversi.',
+        'Una lettura dei Tarocchi per fare chiarezza su più aspetti di una situazione.',
       details:
         'Riceverai una risposta scritta per ogni domanda, la spiegazione delle carte e una sintesi conclusiva.'
     },
@@ -247,14 +238,14 @@ export default function App() {
       image: immagineTarocchi,
       imageAlt: 'Lettura Completa dei Tarocchi',
       imagePosition: 'right center',
-      price: tarotCompletaPrice,
-      href: paypalTarocchiApprofondito,
+      price: '49 €',
+      href: payhipTarocchiCompleta,
       eventName: 'click_tarocchi_49',
-      cta: `Paga ${tarotCompletaPrice} con PayPal`,
-      cards: 'Fino a 5 domande · Collegate oppure diverse',
+      cta: 'Prenota la lettura completa · 49 €',
+      cards: 'Fino a 3 domande collegate · Lettura completa',
       delivery: 'Consegna entro 4 giorni.',
       description:
-        'Una lettura completa dei Tarocchi per affrontare fino a cinque domande e avere una visione più ampia del momento che stai vivendo.',
+        'Una lettura completa dei Tarocchi per affrontare fino a tre domande e avere una visione più ampia del momento che stai vivendo.',
       details:
         'Riceverai un PDF personalizzato con la risposta a ogni domanda, la spiegazione delle carte, una sintesi generale e uno spunto pratico finale.'
     }
@@ -298,7 +289,7 @@ export default function App() {
   const reviews = [];
 
   const trustItems = [
-    'Pagamenti protetti con Payhip o PayPal',
+    'Pagamenti protetti con Payhip',
     'Tempi di consegna indicati prima dell’acquisto',
     'Assistenza diretta via WhatsApp ed email',
     'Finalità spirituali e introspettive sempre dichiarate'
@@ -1522,10 +1513,9 @@ export default function App() {
             <span>
               Usa il codice
               <b className="august-promo-code">LUCE20</b>
-              su Payhip per Mappa di Luce e letture angeliche.
-              Per i Tarocchi lo sconto viene applicato direttamente ai pulsanti
-              PayPal. Non si applica alla Guarigione Angelica né al Percorso
-              Luce; la Guida Serenità resta gratuita.
+              su Payhip per Mappa di Luce, letture angeliche e Tarocchi.
+              Non si applica alla Guarigione Angelica né al Percorso Luce;
+              la Guida Serenità resta gratuita.
             </span>
           </div>
         </aside>
@@ -1971,8 +1961,9 @@ export default function App() {
               </p>
 
               <p>
-                Scegli Express per 1 domanda, Chiarezza per 3 domande o
-                Completa per 5 domande.
+                Scegli Domanda di Luce per 1 domanda, Chiarezza per un massimo
+                di 2 domande collegate o Completa per un massimo di 3 domande
+                collegate.
               </p>
 
               <div className="important-note">
@@ -2007,6 +1998,7 @@ export default function App() {
                   decoding="async"
                 />
                 <h3>{item.title}</h3>
+                <div className="price">{item.price}</div>
 
                 <p>
                   <strong>{item.cards}</strong>
@@ -2399,7 +2391,7 @@ export default function App() {
               <span className="step-number" aria-hidden="true">1</span>
               <h3>Ricevi la conferma</h3>
               <p>
-                Payhip o PayPal confermano il pagamento. Per il Kit e la guida
+                Payhip conferma il pagamento. Per il Kit e la guida
                 gratuita trovi subito il collegamento per scaricare i file.
               </p>
             </article>
