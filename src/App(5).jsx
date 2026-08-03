@@ -90,7 +90,7 @@ export default function App() {
       : null;
 
   const whatsappText = encodeURIComponent(
-    'Ciao Carmelo, ho visitato Alchimie di Luce e scrivo LUCE per ricevere la prima lettura gratuita.\n\nNome:\nData di nascita:\nDomanda:'
+    'Ciao Carmelo, ho visitato Alchimie di Luce e scrivo LUCE per ricevere la prima lettura gratuita.\n\nNome:\nData di nascita:\n1 domanda specifica:'
   );
 
   const whatsappMappaLuce = encodeURIComponent(
