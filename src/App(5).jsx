@@ -90,7 +90,7 @@ export default function App() {
       : null;
 
   const whatsappText = encodeURIComponent(
-    'Ciao Carmelo, ho visitato Alchimie di Luce. Scrivo LUCE perché vorrei ricevere un messaggio angelico iniziale gratuito. Il tema che sento più urgente è: amore, lavoro, casa, protezione, blocchi interiori o cambiamento.'
+    'Ciao Carmelo, ho visitato Alchimie di Luce e scrivo LUCE per ricevere la prima lettura gratuita.\n\nNome:\nData di nascita:\nDomanda:'
   );
 
   const whatsappMappaLuce = encodeURIComponent(
