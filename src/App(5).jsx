@@ -679,6 +679,17 @@ export default function App() {
           box-shadow: 0 16px 34px rgba(246,217,138,0.32);
         }
 
+        .btn-whatsapp {
+          background: #25d366;
+          color: #07140c;
+          box-shadow: 0 12px 28px rgba(37,211,102,0.28);
+        }
+
+        .btn-whatsapp:hover {
+          background: #46df7e;
+          box-shadow: 0 16px 34px rgba(37,211,102,0.38);
+        }
+
         .btn-secondary {
           border: 1px solid rgba(255,255,255,0.48);
           color: white;
@@ -1547,6 +1558,16 @@ export default function App() {
               onClick={() => trackEvent('click_mappa_di_luce_hero')}
             >
               Scopri la Mappa di Luce · {mappaPrice}
+            </a>
+
+            <a
+              className="btn btn-whatsapp"
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => trackEvent('click_whatsapp_luce_hero')}
+            >
+              Prima lettura gratuita · Scrivi LUCE
             </a>
 
             <a className="btn btn-secondary" href="#percorsi">
