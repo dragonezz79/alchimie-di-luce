@@ -17,25 +17,8 @@ export default function App() {
   const whatsappNumber = '393492304412';
   const email = 'info@alchimiediluce.it';
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const now = new Date();
-  const augustPromoStart = new Date('2026-08-01T00:00:00+02:00');
-  const augustPromoEnd = new Date('2026-09-01T00:00:00+02:00');
-  const isBeforeAugustPromo = now < augustPromoStart;
-  const isAugustPromo = now >= augustPromoStart && now < augustPromoEnd;
   const mappaPrice = '37 €';
-  const payhipCta = isAugustPromo
-    ? 'Acquista con codice LUCE20'
-    : 'Acquista su Payhip';
-  const payhipPromoMessage = isBeforeAugustPromo
-    ? 'Dal 1° al 31 agosto 2026 usa il codice LUCE20 al checkout Payhip per ricevere il 20% di sconto.'
-    : isAugustPromo
-      ? 'Per tutto agosto usa il codice LUCE20 al checkout Payhip per ricevere il 20% di sconto.'
-      : null;
-  const mappaOfferMessage = isBeforeAugustPromo
-    ? 'Kit digitale completo: 37 € · Dal 1° agosto usa LUCE20 e paghi 29,60 €'
-    : isAugustPromo
-      ? 'Promo agosto: usa LUCE20 e paghi 29,60 € anziché 37 €'
-      : 'Kit digitale completo: 37 €';
+  const mappaOfferMessage = 'Kit digitale completo con download immediato';
 
   React.useEffect(() => {
     const scrollToHash = () => {
@@ -73,24 +56,22 @@ export default function App() {
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
-  const payhipPercorsoLuce = 'https://payhip.com/b/PmRnd';
-  const payhipGuarigioneAngelica = 'https://payhip.com/b/fEOX3';
-  const payhipAngelTherapy = 'https://payhip.com/b/xjFgk';
-  const payhipRisposteAngeli = 'https://payhip.com/b/OiY9Q';
   const payhipKit = 'https://payhip.com/b/3MyCg';
   const payhipGuidaSerenita = 'https://payhip.com/b/Ez8xs';
 
-  const payhipTarocchiBase = 'https://payhip.com/buy?link=ZRHod';
-  const payhipTarocchiChiarezza = 'https://payhip.com/buy?link=KLaN8';
-  const payhipTarocchiCompleta = 'https://payhip.com/buy?link=LchV1';
-  const tarotPromoMessage = isBeforeAugustPromo
-    ? 'Dal 1° al 31 agosto 2026 usa il codice LUCE20 al checkout Payhip per ricevere il 20% di sconto.'
-    : isAugustPromo
-      ? 'Promo agosto: usa il codice LUCE20 al checkout Payhip per ricevere il 20% di sconto.'
-      : null;
+  const paypalTarocchiPdf = 'https://paypal.me/AlchimieDiLuce/25';
+  const paypalTarocchiTelefono = 'https://paypal.me/AlchimieDiLuce/30';
+  const paypalRisposteAngeli = 'https://paypal.me/AlchimieDiLuce/20';
+  const paypalAngelTherapy = 'https://paypal.me/AlchimieDiLuce/25';
+  const paypalGuarigioneAngelica = 'https://paypal.me/AlchimieDiLuce/49';
+  const paypalPercorsoLuce = 'https://paypal.me/AlchimieDiLuce/129';
 
   const whatsappText = encodeURIComponent(
-    'Ciao Carmelo, ho visitato Alchimie di Luce e scrivo LUCE per ricevere la prima lettura gratuita.\n\nNome:\nData di nascita:\n1 domanda specifica:'
+    'Ciao Carmelo, ho visitato Alchimie di Luce e vorrei informazioni su un servizio. Mi interessa:'
+  );
+
+  const whatsappAfterPayment = encodeURIComponent(
+    'Ciao Carmelo, ho effettuato il pagamento.\n\nNome:\nData di nascita:\nServizio scelto:\nArgomento o domande:'
   );
 
   const whatsappMappaLuce = encodeURIComponent(
@@ -146,10 +127,9 @@ export default function App() {
     {
       title: 'Guarigione Angelica',
       price: '49 €',
-      href: payhipGuarigioneAngelica,
+      href: paypalGuarigioneAngelica,
       eventName: 'click_guarigione_angelica',
-      cta: 'Acquista su Payhip',
-      promoEligible: false,
+      cta: 'Paga 49 € con PayPal',
       image: immagineGuarigioneAngelica,
       imageAlt: 'Guarigione Angelica',
       description:
@@ -158,10 +138,9 @@ export default function App() {
     {
       title: 'Percorso Luce',
       price: '129 €',
-      href: payhipPercorsoLuce,
+      href: paypalPercorsoLuce,
       eventName: 'click_percorso_luce',
-      cta: 'Acquista su Payhip',
-      promoEligible: false,
+      cta: 'Paga 129 € con PayPal',
       image: immaginePercorsoLuce,
       imageAlt: 'Percorso Luce',
       description:
@@ -172,82 +151,68 @@ export default function App() {
   const angelReadings = [
     {
       title: 'Le Risposte degli Angeli',
-      price: '19 €',
-      href: payhipRisposteAngeli,
+      valuePrice: '40 €',
+      price: '20 €',
+      href: paypalRisposteAngeli,
       eventName: 'click_risposte_angeli',
-      cta: payhipCta,
-      promoEligible: true,
+      cta: 'Paga 20 € con PayPal',
       image: immagineRisposteAngeli,
-      imageAlt: 'Le Risposte degli Angeli con tre carte',
+      imageAlt: 'Le Risposte degli Angeli',
       description:
-        'Una lettura scritta con 3 Carte degli Angeli per ricevere un messaggio semplice su una situazione o su domande che ti stanno a cuore.',
+        'Puoi porre 5 domande, anche su argomenti diversi, e ricevere risposte brevi, chiare e personalizzate.',
       details:
-        'Puoi porre fino a 3 domande, collegate oppure diverse. Dopo il pagamento, inviamele su WhatsApp insieme al tuo nome. Entro 48 ore riceverai un PDF con le carte estratte, una spiegazione chiara e un messaggio finale.'
+        'Dopo il pagamento, inviami su WhatsApp il tuo nome, la data di nascita e le 5 domande. Entro 48 ore riceverai il PDF da salvare e rileggere quando vuoi.'
     },
     {
       title: 'Lettura Angel Therapy',
-      price: '29 €',
-      href: payhipAngelTherapy,
+      valuePrice: '50 €',
+      price: '25 €',
+      href: paypalAngelTherapy,
       eventName: 'click_angel_therapy',
-      cta: payhipCta,
-      promoEligible: true,
+      cta: 'Paga 25 € con PayPal',
       image: immagineAngelTherapy,
-      imageAlt: 'Lettura Angel Therapy con cinque carte',
+      imageAlt: 'Lettura Angel Therapy',
       description:
-        'Una lettura scritta con 5 Carte degli Angeli per approfondire un tema, osservare ciò che lo influenza e ricevere un orientamento spirituale.',
+        'Una lettura scritta e personalizzata per ricevere consigli e linee guida spirituali sul momento che stai vivendo.',
       details:
-        'Dopo il pagamento, inviami su WhatsApp il tuo nome e il tema da esplorare. Entro 48 ore riceverai un PDF con le 5 carte, la spiegazione di ogni carta e una sintesi conclusiva.'
+        'In base alle carte emerse, la lettura può includere messaggi degli Angeli e degli Arcangeli, pratiche quotidiane, indicazioni per sbloccare una situazione, armonizzare i chakra, proteggere la tua energia e coltivare abitudini più consapevoli. Entro 48 ore riceverai il PDF.'
     }
   ];
 
   const tarotReadings = [
     {
-      title: 'Domanda di Luce',
+      title: 'Tarocchi in PDF',
       image: immagineTarocchi,
-      imageAlt: 'Domanda di Luce con i Tarocchi',
+      imageAlt: 'Lettura dei Tarocchi in PDF',
       imagePosition: 'left center',
-      price: '19 €',
-      href: payhipTarocchiBase,
-      eventName: 'click_tarocchi_19',
-      cta: 'Prenota la lettura · 19 €',
-      cards: '1 domanda · Lettura essenziale',
+      valuePrice: '50 €',
+      price: '25 €',
+      href: paypalTarocchiPdf,
+      eventName: 'click_tarocchi_pdf_25',
+      cta: 'Paga 25 € con PayPal',
+      format: 'Lettura scritta e personalizzata',
       delivery: 'Consegna entro 48 ore.',
       description:
-        'Una lettura dei Tarocchi per osservare una domanda precisa da un nuovo punto di vista.',
+        'Scegli una situazione che vuoi chiarire meglio e ti preparo una lettura scritta, completa e su misura.',
       details:
-        'Riceverai una risposta scritta personalizzata, con la spiegazione delle carte e una sintesi finale.'
+        'Puoi chiedere, ad esempio, come potrebbe andare una relazione, cosa capire della tua situazione lavorativa, quali ostacoli ti stanno rallentando o come affrontare una scelta importante. Il PDF sarà fatto proprio sulla tua situazione e potrai rileggerlo quando vuoi.'
     },
     {
-      title: 'Lettura di Chiarezza',
+      title: 'Tarocchi al telefono · 30 minuti',
       image: immagineTarocchi,
-      imageAlt: 'Lettura di Chiarezza dei Tarocchi',
-      imagePosition: 'center center',
-      price: '35 €',
-      href: payhipTarocchiChiarezza,
-      eventName: 'click_tarocchi_35',
-      cta: 'Prenota la lettura · 35 €',
-      cards: 'Fino a 2 domande collegate · Lettura approfondita',
-      delivery: 'Consegna entro 72 ore.',
-      description:
-        'Una lettura dei Tarocchi per fare chiarezza su più aspetti di una situazione.',
-      details:
-        'Riceverai una risposta scritta per ogni domanda, la spiegazione delle carte e una sintesi conclusiva.'
-    },
-    {
-      title: 'Lettura Completa',
-      image: immagineTarocchi,
-      imageAlt: 'Lettura Completa dei Tarocchi',
+      imageAlt: 'Consulto telefonico con i Tarocchi',
       imagePosition: 'right center',
-      price: '49 €',
-      href: payhipTarocchiCompleta,
-      eventName: 'click_tarocchi_49',
-      cta: 'Prenota la lettura completa · 49 €',
-      cards: 'Fino a 3 domande collegate · Lettura completa',
-      delivery: 'Consegna entro 4 giorni.',
+      valuePrice: '60 €',
+      price: '30 €',
+      href: paypalTarocchiTelefono,
+      eventName: 'click_tarocchi_telefono_30',
+      cta: 'Paga 30 € con PayPal',
+      format: 'Chiamata telefonica normale di 30 minuti',
+      delivery: 'Dopo il pagamento concordiamo il giorno e l’orario.',
       description:
-        'Una lettura completa dei Tarocchi per affrontare fino a tre domande e avere una visione più ampia del momento che stai vivendo.',
+        'Durante la chiamata puoi fare tutte le domande che desideri sugli argomenti che scegli, rimanendo nei 30 minuti disponibili.',
       details:
-        'Riceverai un PDF personalizzato con la risposta a ogni domanda, la spiegazione delle carte, una sintesi generale e uno spunto pratico finale.'
+        'La consultazione avviene con una chiamata normale, non in video e non tramite una chiamata WhatsApp.'
     }
   ];
 
@@ -275,7 +240,17 @@ export default function App() {
     {
       question: 'Come ricevo il Kit digitale?',
       answer:
-        'Dopo l’acquisto riceverai i file digitali da scaricare e usare sul tuo dispositivo oppure da stampare.'
+        'Il Kit si acquista su Payhip. Dopo l’acquisto riceverai subito i file digitali da scaricare, usare sul tuo dispositivo oppure stampare.'
+    },
+    {
+      question: 'Come ricevo una lettura in PDF?',
+      answer:
+        'Dopo il pagamento con PayPal mi scrivi su WhatsApp indicando nome, data di nascita, servizio scelto e argomento o domande. Riceverai il PDF entro il tempo indicato.'
+    },
+    {
+      question: 'Come funziona il consulto telefonico dei Tarocchi?',
+      answer:
+        'Dopo il pagamento concordiamo giorno e orario. Il consulto dura 30 minuti e si svolge con una normale chiamata telefonica.'
     },
     {
       question: 'Il Kit prende decisioni al mio posto?',
@@ -289,10 +264,10 @@ export default function App() {
   const reviews = [];
 
   const trustItems = [
-    'Pagamenti protetti con Payhip',
+    'PayPal per i servizi personalizzati',
+    'Payhip per i prodotti digitali',
     'Tempi di consegna indicati prima dell’acquisto',
-    'Assistenza diretta via WhatsApp ed email',
-    'Finalità spirituali e introspettive sempre dichiarate'
+    'Assistenza diretta via WhatsApp ed email'
   ];
 
   return (
@@ -1051,6 +1026,44 @@ export default function App() {
           margin: 12px 0;
         }
 
+        .value-price {
+          margin: 10px auto 4px !important;
+          color: rgba(255,255,255,0.72);
+          font-family: Arial, sans-serif;
+          font-size: 17px;
+          text-decoration: line-through;
+          text-decoration-thickness: 1px;
+        }
+
+        .limited-price {
+          margin: 8px auto 24px;
+          padding: 14px 18px;
+          border: 1px solid rgba(246,217,138,0.42);
+          border-radius: 18px;
+          background: rgba(246,217,138,0.09);
+          color: #fff3c8;
+          font-family: Arial, sans-serif;
+          font-weight: 700;
+        }
+
+        .limited-price span {
+          display: block;
+          margin-top: 4px;
+          color: #f6d98a;
+          font-family: Georgia, 'Times New Roman', serif;
+          font-size: 48px;
+          line-height: 1.1;
+        }
+
+        .inline-whatsapp-link {
+          display: inline-block;
+          margin: 4px auto 16px;
+          color: #8df0b1;
+          font-family: Arial, sans-serif;
+          font-weight: 700;
+          text-underline-offset: 4px;
+        }
+
         .launch-offer {
           margin: 8px auto 28px;
           padding: 16px 18px;
@@ -1513,26 +1526,6 @@ export default function App() {
         </nav>
       </header>
 
-      {payhipPromoMessage && (
-        <aside className="august-promo-banner" aria-label="Promozione agosto">
-          <div className="container august-promo-content">
-            <strong>
-              {isBeforeAugustPromo
-                ? 'DAL 1° AGOSTO · 20% DI SCONTO'
-                : 'PROMO AGOSTO · 20% DI SCONTO'}
-            </strong>
-            <span>
-              Usa il codice
-              <b className="august-promo-code">LUCE20</b>
-              su Payhip per Mappa di Luce, letture angeliche e Tarocchi.
-              Non si applica alla Guarigione Angelica né al Percorso Luce;
-              la Guida Serenità resta gratuita.
-            </span>
-          </div>
-        </aside>
-      )}
-
-
       <section
         id="home"
         className="hero"
@@ -1560,17 +1553,11 @@ export default function App() {
               Scopri la Mappa di Luce · {mappaPrice}
             </a>
 
-            <a
-              className="btn btn-whatsapp"
-              href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => trackEvent('click_whatsapp_luce_hero')}
-            >
-              Prima lettura gratuita · Scrivi LUCE
+            <a className="btn btn-secondary" href="#prezzi">
+              Scopri le letture
             </a>
 
-            <a className="btn btn-secondary" href="#percorsi">
+            <a className="btn btn-secondary" href="#contatti">
               Vedi gli altri percorsi
             </a>
           </div>
@@ -1675,21 +1662,21 @@ export default function App() {
           </div>
 
           <div className="important-note welcome-note">
-            <span className="promo-title">Vuoi iniziare gratuitamente?</span>
-            Scrivimi <strong>LUCE</strong> su WhatsApp e indicami il tema che
-            senti più urgente. Riceverai un primo messaggio simbolico di
-            orientamento.
+            <span className="promo-title">Acquisti semplici e sicuri</span>
+            I servizi personalizzati si pagano con <strong>PayPal</strong>.
+            La Mappa di Luce e gli altri prodotti digitali si acquistano e si
+            scaricano su <strong>Payhip</strong>.
           </div>
 
           <div className="buttons">
             <a
-              className="btn btn-primary"
+              className="btn btn-whatsapp"
               href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
               target="_blank"
               rel="noreferrer"
-              onClick={() => trackEvent('click_whatsapp_luce')}
+              onClick={() => trackEvent('click_whatsapp_informazioni')}
             >
-              Scrivimi LUCE su WhatsApp
+              Chiedi informazioni su WhatsApp
             </a>
           </div>
         </div>
@@ -1870,12 +1857,6 @@ export default function App() {
                 <div className="price">{item.price}</div>
                 <p>{item.description}</p>
 
-                {item.promoEligible && payhipPromoMessage && (
-                  <p className="small">
-                    <strong>Promo:</strong> {payhipPromoMessage}
-                  </p>
-                )}
-
                 <div className="buttons">
                   <a
                     className="btn btn-paypal"
@@ -1924,16 +1905,14 @@ export default function App() {
                 />
 
                 <h3>{item.title}</h3>
-                <div className="price">{item.price}</div>
+                <p className="value-price">Valore della lettura: {item.valuePrice}</p>
+                <div className="limited-price">
+                  Solo per un periodo limitato
+                  <span>{item.price}</span>
+                </div>
 
                 <p>{item.description}</p>
                 <p>{item.details}</p>
-
-                {item.promoEligible && payhipPromoMessage && (
-                  <p className="small">
-                    <strong>Promo:</strong> {payhipPromoMessage}
-                  </p>
-                )}
 
                 <div className="important-note reading-note">
                   <strong>Nota importante:</strong> la lettura ha finalità
@@ -1945,6 +1924,16 @@ export default function App() {
                   Dopo il pagamento, scrivimi su WhatsApp per inviarmi le
                   domande o il tema della lettura.
                 </p>
+
+                <a
+                  className="inline-whatsapp-link"
+                  href={`https://wa.me/${whatsappNumber}?text=${whatsappAfterPayment}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => trackEvent('click_whatsapp_dopo_pagamento_angeli')}
+                >
+                  Ho già pagato: invia i dati su WhatsApp
+                </a>
 
                 <div className="buttons">
                   <a
@@ -1965,7 +1954,7 @@ export default function App() {
             <section id="tarocchi" className="blue-section">
         <div className="container center">
           <p className="section-label">Letture dei Tarocchi</p>
-          <h2>Scegli la lettura adatta alle tue domande</h2>
+          <h2>Scegli tra lettura in PDF e consulto telefonico</h2>
 
           <div className="grid-2">
             <div className="text-block">
@@ -1976,15 +1965,15 @@ export default function App() {
               </p>
 
               <p>
-                Puoi fare domande collegate tra loro oppure domande su temi
-                diversi. Riceverai una lettura scritta, con parole semplici e
-                la spiegazione delle carte estratte.
+                Puoi scegliere una lettura scritta da conservare oppure un
+                consulto telefonico di 30 minuti per affrontare gli argomenti
+                che desideri.
               </p>
 
               <p>
-                Scegli Domanda di Luce per 1 domanda, Chiarezza per un massimo
-                di 2 domande collegate o Completa per un massimo di 3 domande
-                collegate.
+                Il consulto si svolge con una normale chiamata telefonica. Non
+                occorre collegarsi in video e non si tratta di una chiamata
+                WhatsApp.
               </p>
 
               <div className="important-note">
@@ -2007,7 +1996,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="grid-3 price-grid">
+          <div className="grid-2 price-grid">
             {tarotReadings.map((item) => (
               <article className="price-box wide" key={item.title}>
                 <img
@@ -2019,20 +2008,19 @@ export default function App() {
                   decoding="async"
                 />
                 <h3>{item.title}</h3>
-                <div className="price">{item.price}</div>
+                <p className="value-price">Valore della lettura: {item.valuePrice}</p>
+                <div className="limited-price">
+                  Solo per un periodo limitato
+                  <span>{item.price}</span>
+                </div>
 
                 <p>
-                  <strong>{item.cards}</strong>
+                  <strong>{item.format}</strong>
                 </p>
 
                 <p>{item.description}</p>
                 <p>{item.details}</p>
                 <p className="small">{item.delivery}</p>
-                {tarotPromoMessage && (
-                  <p className="promo-line">
-                    <strong>Promo:</strong> {tarotPromoMessage}
-                  </p>
-                )}
 
                 <div className="buttons">
                   <a
@@ -2047,9 +2035,19 @@ export default function App() {
                 </div>
 
                 <p className="small">
-                  Dopo il pagamento, scrivimi su WhatsApp per inviarmi la
-                  domanda o il tema della lettura.
+                  Dopo il pagamento, scrivimi su WhatsApp per inviarmi i dati
+                  richiesti o concordare l’appuntamento telefonico.
                 </p>
+
+                <a
+                  className="inline-whatsapp-link"
+                  href={`https://wa.me/${whatsappNumber}?text=${whatsappAfterPayment}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => trackEvent('click_whatsapp_dopo_pagamento_tarocchi')}
+                >
+                  Ho già pagato: continua su WhatsApp
+                </a>
               </article>
             ))}
           </div>
@@ -2225,30 +2223,9 @@ export default function App() {
             <div className="price">{mappaPrice}</div>
 
             <div className="launch-offer">
-              <strong>
-                {isBeforeAugustPromo
-                  ? '✦ KIT COMPLETO DIGITALE ✦'
-                  : isAugustPromo
-                    ? '✦ PROMO AGOSTO · 20% ✦'
-                    : '✦ KIT COMPLETO DIGITALE ✦'}
-              </strong>
+              <strong>✦ KIT COMPLETO DIGITALE ✦</strong>
               <br />
-              {isBeforeAugustPromo ? (
-                <>
-                  Prezzo del Kit: <strong>37 €</strong>.
-                  <br />
-                  Dal 1° agosto usa il codice <strong>LUCE20</strong> e paghi{' '}
-                  <strong>29,60 €</strong>.
-                </>
-              ) : isAugustPromo ? (
-                <>
-                  Usa il codice <strong>LUCE20</strong> al checkout Payhip:
-                  paghi <strong>29,60 €</strong> anziché 37 € fino al 31 agosto
-                  2026.
-                </>
-              ) : (
-                <>Prezzo del Kit: <strong>37 €</strong></>
-              )}
+              Prezzo del Kit: <strong>37 €</strong>
             </div>
 
             <p>
@@ -2412,8 +2389,9 @@ export default function App() {
               <span className="step-number" aria-hidden="true">1</span>
               <h3>Ricevi la conferma</h3>
               <p>
-                Payhip conferma il pagamento. Per il Kit e la guida
-                gratuita trovi subito il collegamento per scaricare i file.
+                PayPal conferma il pagamento dei servizi personalizzati.
+                Per il Kit e la guida gratuita, Payhip fornisce subito il
+                collegamento per scaricare i file.
               </p>
             </article>
 
@@ -2422,7 +2400,8 @@ export default function App() {
               <h3>Mi scrivi il tuo tema</h3>
               <p>
                 Per letture e sessioni mi invii su WhatsApp il tuo nome, le
-                domande o l’argomento che desideri affrontare.
+                domande o l’argomento che desideri affrontare. Per il consulto
+                telefonico concordiamo anche l’appuntamento.
               </p>
             </article>
 
@@ -2431,7 +2410,8 @@ export default function App() {
               <h3>Ricevi ciò che hai scelto</h3>
               <p>
                 Le letture arrivano entro i tempi indicati nella scheda. Per le
-                sessioni concordiamo insieme il giorno e l’orario.
+                sessioni e il consulto telefonico concordiamo insieme il
+                giorno e l’orario.
               </p>
             </article>
           </div>
