@@ -101,9 +101,93 @@
         ]
       }
     </script>
+
+    <style>
+      .calendly-after-payment {
+        display: block;
+        width: min(100%, 420px);
+        margin: 14px auto 0;
+        padding: 15px 20px;
+        border: 1px solid rgba(246, 217, 138, 0.72);
+        border-radius: 999px;
+        background: transparent;
+        color: #ffe9ad;
+        font-family: Arial, sans-serif;
+        font-weight: 800;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .calendly-after-payment:hover,
+      .calendly-after-payment:focus-visible {
+        background: rgba(246, 217, 138, 0.12);
+      }
+
+      .calendly-after-payment-note {
+        margin: 12px auto 0;
+        color: rgba(255, 255, 255, 0.82);
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.55;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      (() => {
+        const calendlyUrl =
+          'https://calendly.com/gogeta7921/consulto-telefonico-con-i-tarocchi';
+
+        const addCalendlyButton = () => {
+          const paypalButton = document.querySelector(
+            'a[href="https://paypal.me/AlchimieDiLuce/30"]'
+          );
+
+          if (!paypalButton) return false;
+
+          const card = paypalButton.closest('article');
+          if (!card || card.querySelector('.calendly-after-payment')) return true;
+
+          const link = document.createElement('a');
+          link.className = 'calendly-after-payment';
+          link.href = calendlyUrl;
+          link.target = '_blank';
+          link.rel = 'noreferrer';
+          link.textContent = 'Hai già pagato? Scegli giorno e orario';
+          link.addEventListener('click', () => {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'click_calendly_tarocchi_telefono');
+            }
+          });
+
+          const note = document.createElement('p');
+          note.className = 'calendly-after-payment-note';
+          note.textContent =
+            'La prenotazione è riservata a chi ha già effettuato il pagamento di 30 €.';
+
+          const buttonArea = paypalButton.closest('.buttons');
+          if (buttonArea) {
+            buttonArea.insertAdjacentElement('afterend', link);
+          } else {
+            paypalButton.insertAdjacentElement('afterend', link);
+          }
+          link.insertAdjacentElement('afterend', note);
+          return true;
+        };
+
+        if (!addCalendlyButton()) {
+          const observer = new MutationObserver(() => {
+            if (addCalendlyButton()) observer.disconnect();
+          });
+          observer.observe(document.documentElement, {
+            childList: true,
+            subtree: true
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
