@@ -454,7 +454,13 @@ p { color: var(--muted); line-height: 1.72; }
   .path-card { min-height: 0; }
   .split-grid, .about-preview, .certificate-grid { grid-template-columns: 1fr; }
   .product-card { grid-template-columns: 1fr; }
-  .product-card > img { max-height: 560px; }
+  .product-card > img {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
   .asset-grid, .feature-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -470,11 +476,21 @@ p { color: var(--muted); line-height: 1.72; }
   .hero-actions, .button-row, .card-actions { flex-direction: column; }
   .btn { width: 100%; }
   .orientation-help { align-items: stretch; flex-direction: column; padding: 22px; }
-  .product-card > img { min-height: 0; aspect-ratio: 1 / 1; }
   .service-grid, .steps-grid, .asset-grid, .feature-grid { grid-template-columns: 1fr; }
   .service-card > img { height: auto; aspect-ratio: 1 / 1; }
   .footer-grid { grid-template-columns: 1fr; }
-  .whatsapp-float { right: 14px; bottom: 14px; }
+  .whatsapp-float {
+    right: 12px;
+    bottom: 16px;
+    display: grid;
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    place-items: center;
+    border: 2px solid rgba(255,255,255,0.22);
+    font-size: 0;
+  }
+  .whatsapp-float::before { content: 'WA'; font-size: 13px; letter-spacing: 0.02em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
