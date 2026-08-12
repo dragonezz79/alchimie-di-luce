@@ -19,7 +19,7 @@ import ritualiCover from './kit-7-rituali-cover.webp';
 const links = {
   rituali: 'https://payhip.com/b/DbHjv',
   mappa: 'https://payhip.com/b/3MyCg',
-  serenita: 'https://payhip.com/b/Ez8xs',
+  serenita: 'https://payhip.com/buy?link=Ez8xs',
   risposteAngeli: 'https://paypal.me/AlchimieDiLuce/20',
   angelTherapy: 'https://paypal.me/AlchimieDiLuce/25',
   tarocchiPdf: 'https://paypal.me/AlchimieDiLuce/25',
