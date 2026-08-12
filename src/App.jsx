@@ -27,7 +27,8 @@ const links = {
   calendlyTarocchi: 'https://calendly.com/gogeta7921/consulto-telefonico-con-i-tarocchi',
   guarigione: 'https://paypal.me/AlchimieDiLuce/49',
   calendlyGuarigione: 'https://calendly.com/gogeta7921/guarigione-angelica-a-distanza',
-  percorso: 'https://paypal.me/AlchimieDiLuce/129'
+  percorso: 'https://paypal.me/AlchimieDiLuce/129',
+  calendlyPercorso: 'https://calendly.com/gogeta7921/percorso-luce-prima-sessione'
 };
 
 const whatsappNumber = '393492304412';
@@ -486,7 +487,21 @@ function SessionsPage() {
             bookingNote="Scegli ora giorno e orario su Calendly. La prenotazione è riservata a chi ha già effettuato il pagamento di 49 €."
             bookingEventName="click_calendly_guarigione_angelica"
           />
-          <ServiceCard image={percorsoLuce} title="Percorso Luce" price="129 €" badge="3 sessioni" description="Tre incontri per accompagnare con continuità un momento di cambiamento o una pratica personale." details="Il percorso consente di non fermarsi a un solo incontro e di osservare con più continuità ciò che emerge." href={links.percorso} cta="Paga 129 € con PayPal" eventName="click_sessioni_percorso" />
+          <ServiceCard
+            image={percorsoLuce}
+            title="Percorso Luce"
+            price="129 €"
+            badge="3 sessioni"
+            description="Tre incontri per accompagnare con continuità un momento di cambiamento o una pratica personale."
+            details="Prima effettui il pagamento, poi scegli su Calendly il giorno e l’orario della prima sessione. Le altre due date saranno concordate insieme durante il percorso."
+            href={links.percorso}
+            cta="Paga 129 € con PayPal"
+            eventName="click_sessioni_percorso"
+            bookingHref={links.calendlyPercorso}
+            bookingCta="Prenota la prima sessione"
+            bookingNote="Scegli su Calendly giorno e orario della prima sessione. La prenotazione è riservata a chi ha già effettuato il pagamento di 129 €."
+            bookingEventName="click_calendly_percorso_luce"
+          />
         </div>
       </section>
       <section className="section soft-section">
