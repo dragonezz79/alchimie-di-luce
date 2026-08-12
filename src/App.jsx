@@ -24,6 +24,7 @@ const links = {
   angelTherapy: 'https://paypal.me/AlchimieDiLuce/25',
   tarocchiPdf: 'https://paypal.me/AlchimieDiLuce/25',
   tarocchiTelefono: 'https://paypal.me/AlchimieDiLuce/30',
+  calendlyTarocchi: 'https://calendly.com/gogeta7921/consulto-telefonico-con-i-tarocchi',
   guarigione: 'https://paypal.me/AlchimieDiLuce/49',
   percorso: 'https://paypal.me/AlchimieDiLuce/129'
 };
@@ -371,7 +372,22 @@ function MapPage() {
 
 const Asset = ({ image, title, text }) => <article className="asset-card"><img src={image} alt={title} /><h3>{title}</h3><p>{text}</p></article>;
 
-const ServiceCard = ({ image, title, price, valuePrice, description, details, href, cta, eventName, badge }) => (
+const ServiceCard = ({
+  image,
+  title,
+  price,
+  valuePrice,
+  description,
+  details,
+  href,
+  cta,
+  eventName,
+  badge,
+  bookingHref,
+  bookingCta,
+  bookingNote,
+  bookingEventName
+}) => (
   <article className="service-card">
     <img src={image} alt={title} />
     <div className="service-card-body">
@@ -381,6 +397,14 @@ const ServiceCard = ({ image, title, price, valuePrice, description, details, hr
       <p className="service-details">{details}</p>
       <div className="service-price">{valuePrice && <del>{valuePrice}</del>}<strong>{price}</strong></div>
       <ExternalButton href={href} eventName={eventName}>{cta}</ExternalButton>
+      {bookingHref && (
+        <div className="booking-after-payment">
+          <p><strong>Hai già pagato?</strong> {bookingNote}</p>
+          <ExternalButton href={bookingHref} eventName={bookingEventName} className="btn-secondary">
+            {bookingCta}
+          </ExternalButton>
+        </div>
+      )}
     </div>
   </article>
 );
@@ -403,7 +427,22 @@ function ReadingsPage() {
           <div className="category-heading"><span className="eyebrow">Tarocchi</span><h2>PDF oppure consulto telefonico</h2></div>
           <div className="service-grid">
             <ServiceCard image={tarocchi} title="Tarocchi in PDF" valuePrice="50 €" price="25 €" badge="Consegna entro 48 ore" description="Una lettura scritta e personalizzata su una situazione che desideri chiarire." details="Ricevi un’analisi completa da salvare e rileggere quando vuoi." href={links.tarocchiPdf} cta="Paga 25 € con PayPal" eventName="click_letture_tarocchi_pdf" />
-            <ServiceCard image={tarocchi} title="Tarocchi al telefono" valuePrice="60 €" price="30 €" badge="30 minuti" description="Durante la chiamata puoi fare le domande che desideri nel tempo disponibile." details="Dopo il pagamento concordiamo insieme giorno e orario. La chiamata è telefonica, non video." href={links.tarocchiTelefono} cta="Paga 30 € con PayPal" eventName="click_letture_tarocchi_telefono" />
+            <ServiceCard
+              image={tarocchi}
+              title="Tarocchi al telefono"
+              valuePrice="60 €"
+              price="30 €"
+              badge="30 minuti"
+              description="Durante la chiamata puoi fare le domande che desideri nel tempo disponibile."
+              details="Prima effettui il pagamento, poi scegli direttamente su Calendly il giorno e l’orario disponibili. La chiamata è telefonica, non video."
+              href={links.tarocchiTelefono}
+              cta="Paga 30 € con PayPal"
+              eventName="click_letture_tarocchi_telefono"
+              bookingHref={links.calendlyTarocchi}
+              bookingCta="Scegli giorno e orario"
+              bookingNote="Scegli ora giorno e orario su Calendly. La prenotazione è riservata a chi ha già effettuato il pagamento di 30 €."
+              bookingEventName="click_calendly_tarocchi_telefono"
+            />
           </div>
         </div>
       </section>

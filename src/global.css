@@ -397,6 +397,15 @@ p { color: var(--muted); line-height: 1.72; }
 .service-price { display: flex; align-items: baseline; gap: 12px; margin: 22px 0; }
 .service-price del { color: #8e96a9; }
 .service-price strong { color: var(--gold-light); font-family: Georgia, serif; font-size: 36px; }
+.booking-after-payment {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.booking-after-payment p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.booking-after-payment strong { color: var(--gold-light); }
 
 .process-list { display: grid; gap: 15px; margin: 0; padding: 0; list-style: none; counter-reset: process; }
 .process-list li { position: relative; padding: 21px 22px 21px 72px; border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; background: var(--card); }
