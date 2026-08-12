@@ -239,8 +239,8 @@ function HomePage() {
   );
 }
 
-const ProductCard = ({ image, label, title, text, price, detailHref, buyHref, buyText, eventName }) => (
-  <article className="product-card">
+const ProductCard = ({ image, label, title, text, price, detailHref, buyHref, buyText, eventName, showFullImage = false }) => (
+  <article className={`product-card${showFullImage ? ' product-card--full-image' : ''}`}>
     <img src={image} alt={title} />
     <div className="product-card-body">
       <span className="eyebrow">{label}</span>
@@ -263,7 +263,7 @@ function ProductsPage() {
         <div className="container product-list">
           <ProductCard image={ritualiCover} label="PDF · 24 pagine" title="7 Rituali di Protezione e Luce" text="Pratiche guidate, decreti completi e formule finali per creare una routine simbolica semplice." price="4,90 €" detailHref="/prodotti/7-rituali-protezione-luce" buyHref={links.rituali} buyText="Acquista su Payhip" eventName="click_prodotti_rituali" />
           <ProductCard image={mappaCover} label="Kit digitale completo" title="Mappa di Luce Interattiva" text="Guida, diario, mappa e strumenti da usare per costruire un percorso spirituale personale." price="37 €" detailHref="/prodotti/mappa-di-luce" buyHref={links.mappa} buyText="Acquista su Payhip" eventName="click_prodotti_mappa" />
-          <ProductCard image={guidaSerenita} label="Risorsa gratuita" title="5 minuti al giorno per ritrovare serenità" text="Una guida breve per iniziare da una pratica quotidiana accessibile e senza pressione." price="Gratis" buyHref={links.serenita} buyText="Scarica gratis" eventName="click_prodotti_serenita" />
+          <ProductCard image={guidaSerenita} label="Risorsa gratuita" title="5 minuti al giorno per ritrovare serenità" text="Una guida breve per iniziare da una pratica quotidiana accessibile e senza pressione." price="Gratis" buyHref={links.serenita} buyText="Scarica gratis" eventName="click_prodotti_serenita" showFullImage />
         </div>
       </section>
     </Layout>
