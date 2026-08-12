@@ -26,6 +26,7 @@ const links = {
   tarocchiTelefono: 'https://paypal.me/AlchimieDiLuce/30',
   calendlyTarocchi: 'https://calendly.com/gogeta7921/consulto-telefonico-con-i-tarocchi',
   guarigione: 'https://paypal.me/AlchimieDiLuce/49',
+  calendlyGuarigione: 'https://calendly.com/gogeta7921/guarigione-angelica-a-distanza',
   percorso: 'https://paypal.me/AlchimieDiLuce/129'
 };
 
@@ -470,7 +471,21 @@ function SessionsPage() {
       <PageHero eyebrow="Sessioni individuali" title="Uno spazio personale di ascolto e centratura" text="Scegli una sessione singola oppure un percorso di tre incontri a distanza." />
       <section className="section">
         <div className="container service-grid">
-          <ServiceCard image={guarigioneAngelica} title="Guarigione Angelica" price="49 €" badge="45/60 minuti" description="Una sessione spirituale individuale a distanza per rallentare, ascoltarti e ritrovare centratura." details="Dopo il pagamento concordiamo insieme il momento della sessione e ricevi indicazioni semplici per prepararti." href={links.guarigione} cta="Paga 49 € con PayPal" eventName="click_sessioni_guarigione" />
+          <ServiceCard
+            image={guarigioneAngelica}
+            title="Guarigione Angelica"
+            price="49 €"
+            badge="60 minuti"
+            description="Una sessione spirituale individuale a distanza per rallentare, ascoltarti e ritrovare centratura."
+            details="Prima effettui il pagamento, poi scegli direttamente su Calendly il giorno e l’orario disponibili. La pratica si svolge a distanza e non richiede videochiamata."
+            href={links.guarigione}
+            cta="Paga 49 € con PayPal"
+            eventName="click_sessioni_guarigione"
+            bookingHref={links.calendlyGuarigione}
+            bookingCta="Scegli giorno e orario"
+            bookingNote="Scegli ora giorno e orario su Calendly. La prenotazione è riservata a chi ha già effettuato il pagamento di 49 €."
+            bookingEventName="click_calendly_guarigione_angelica"
+          />
           <ServiceCard image={percorsoLuce} title="Percorso Luce" price="129 €" badge="3 sessioni" description="Tre incontri per accompagnare con continuità un momento di cambiamento o una pratica personale." details="Il percorso consente di non fermarsi a un solo incontro e di osservare con più continuità ciò che emerge." href={links.percorso} cta="Paga 129 € con PayPal" eventName="click_sessioni_percorso" />
         </div>
       </section>
