@@ -311,6 +311,7 @@ p { color: var(--muted); line-height: 1.72; }
 .orientation-help span { color: var(--muted); line-height: 1.5; }
 
 .testimonials-section {
+  scroll-margin-top: 76px;
   border-block: 1px solid var(--line);
   background:
     radial-gradient(circle at 50% 0%, rgba(231, 198, 108, 0.1), transparent 38%),

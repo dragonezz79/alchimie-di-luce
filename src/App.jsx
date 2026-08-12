@@ -80,6 +80,7 @@ function Header() {
         <a href="/">Home</a>
         <a href="/prodotti">Prodotti digitali</a>
         <a href="/letture">Letture</a>
+        <a href="/letture#recensioni">Recensioni</a>
         <a href="/sessioni">Sessioni</a>
         <a href="/chi-sono">Chi sono</a>
       </nav>
@@ -609,7 +610,10 @@ export default function App() {
       '/chi-sono': 'Carmelo Nicita | Alchimie di Luce'
     };
     document.title = titles[path] || 'Alchimie di Luce';
-    window.scrollTo(0, 0);
+    const hash = window.location.hash;
+    const target = hash ? document.querySelector(hash) : null;
+    if (target) target.scrollIntoView({ block: 'start' });
+    else window.scrollTo(0, 0);
   }, [path]);
 
   return <Page />;
