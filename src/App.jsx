@@ -149,6 +149,37 @@ const PathCard = ({ label, title, text, bestFor, href, cta, icon }) => (
   </article>
 );
 
+const readingTestimonials = [
+  'Ho ricevuto una lettura dei Tarocchi da Alchimie di Luce e mi sono trovata molto bene. La lettura è stata chiara e mi ha aiutata a capire meglio la mia situazione. Grazie di cuore.',
+  'Una lettura che mi ha colpita profondamente. Ha visto aspetti della mia vita con grande precisione e ha detto la verità su molte situazioni. Grazie per la professionalità e la sensibilità.',
+  'Splendida lettura, hai centrato il bersaglio. Fantastico, seguirò i tuoi consigli. Grazie mille.',
+  'Ringrazio tanto Carmelo per la grande disponibilità. È davvero bravo e fa emergere tanti punti di riflessione. Tanti complimenti.',
+  'Mi è venuta davvero la pelle d’oca. Alcuni passaggi hanno rispecchiato situazioni realmente accadute.'
+];
+
+function Testimonials({ items = readingTestimonials, showCta = false }) {
+  return (
+    <section className="section testimonials-section" id="recensioni">
+      <div className="container">
+        <div className="section-heading center">
+          <span className="eyebrow">Esperienze reali</span>
+          <h2>Cosa racconta chi ha ricevuto una lettura</h2>
+          <p className="testimonials-intro">Feedback autentici ricevuti tramite WhatsApp e Instagram. Le identità sono protette per rispettare la riservatezza.</p>
+        </div>
+        <div className="testimonials-grid">
+          {items.map((quote, index) => (
+            <figure className="testimonial-card" key={index}>
+              <blockquote>“{quote}”</blockquote>
+              <figcaption>Feedback verificato <span>·</span> Identità protetta</figcaption>
+            </figure>
+          ))}
+        </div>
+        {showCta && <div className="testimonials-action"><a className="btn btn-primary" href="#letture-servizi">Scegli la tua lettura</a></div>}
+      </div>
+    </section>
+  );
+}
+
 function HomePage() {
   return (
     <Layout>
@@ -185,6 +216,8 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      <Testimonials items={readingTestimonials.slice(0, 3)} />
 
       <section className="section featured-section">
         <div className="container split-grid">
@@ -415,7 +448,8 @@ function ReadingsPage() {
   return (
     <Layout>
       <PageHero eyebrow="Letture personalizzate" title="Scegli il tipo di risposta che cerchi" text="Angeli per un orientamento spirituale; Tarocchi per approfondire una situazione concreta." />
-      <section className="section">
+      <Testimonials showCta />
+      <section className="section" id="letture-servizi">
         <div className="container">
           <div className="category-heading"><span className="eyebrow">Messaggi angelici</span><h2>Letture scritte in PDF</h2></div>
           <div className="service-grid">
