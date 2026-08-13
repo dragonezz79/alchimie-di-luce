@@ -15,6 +15,13 @@ import tarocchi from './tarocchi.webp';
 import guarigioneAngelica from './guarigione-angelica.webp';
 import percorsoLuce from './percorso-luce.webp';
 import ritualiCover from './kit-7-rituali-cover.webp';
+import ritualeMantello from './01-mantello-blu.webp';
+import ritualeFiamma from './02-fiamma-viola.webp';
+import ritualeSfera from './03-sfera-di-luce.webp';
+import ritualeCasa from './04-armonia-casa.webp';
+import ritualeRilascio from './05-rilascio-serale.webp';
+import ritualeRelazioni from './06-protezione-relazioni.webp';
+import ritualeCentratura from './07-centratura-sovranita.webp';
 
 const links = {
   rituali: 'https://payhip.com/b/DbHjv',
@@ -318,13 +325,49 @@ function PageHero({ eyebrow, title, text }) {
 
 function RitualsPage() {
   const chapters = [
-    'Mantello Blu dell’Arcangelo Michele',
-    'Fiamma Viola di Trasmutazione',
-    'Sfera di Luce Protettiva',
-    'Pulizia simbolica della casa',
-    'Rito serale di rilascio',
-    'Protezione prima di un incontro difficile',
-    'Centratura con respiro e luce'
+    {
+      title: 'Mantello Blu dell’Arcangelo Michele',
+      need: 'Quando senti il bisogno di protezione e confini più saldi.',
+      image: ritualeMantello
+    },
+    {
+      title: 'Fiamma Viola di Trasmutazione',
+      need: 'Quando vuoi lasciare andare pensieri e pesi accumulati.',
+      image: ritualeFiamma
+    },
+    {
+      title: 'Sfera di Luce Protettiva',
+      need: 'Quando desideri iniziare la giornata sentendoti più centrato.',
+      image: ritualeSfera
+    },
+    {
+      title: 'Pulizia simbolica della casa',
+      need: 'Quando l’ambiente ti sembra pesante, confuso o poco armonioso.',
+      image: ritualeCasa
+    },
+    {
+      title: 'Rito serale di rilascio',
+      need: 'Quando vuoi chiudere la giornata senza portarti tutto nel sonno.',
+      image: ritualeRilascio
+    },
+    {
+      title: 'Protezione prima di un incontro difficile',
+      need: 'Quando devi affrontare una persona o una situazione impegnativa.',
+      image: ritualeRelazioni
+    },
+    {
+      title: 'Centratura con respiro e luce',
+      need: 'Quando hai bisogno di fermarti e tornare al tuo centro.',
+      image: ritualeCentratura
+    }
+  ];
+
+  const suitedFor = [
+    'assorbi facilmente il clima emotivo di persone e ambienti',
+    'vuoi creare un piccolo spazio quotidiano di protezione e raccoglimento',
+    'senti il bisogno di lasciare andare tensioni e pensieri ripetitivi',
+    'cerchi una pratica spirituale semplice, senza un percorso complicato',
+    'preferisci procedere in autonomia, rispettando i tuoi tempi'
   ];
 
   return (
@@ -333,42 +376,90 @@ function RitualsPage() {
         <div className="container split-grid">
           <div className="product-visual glow-card"><img src={ritualiCover} alt="7 Rituali di Protezione e Luce" /></div>
           <div className="copy-block">
-            <span className="eyebrow">PDF digitale · Download immediato</span>
+            <span className="eyebrow">Percorso guidato di 7 giorni · PDF digitale</span>
             <h1>7 Rituali di Protezione e Luce</h1>
-            <p className="large-copy">Un percorso spirituale e simbolico in 24 pagine per ritrovare centratura e proteggere i propri confini interiori.</p>
+            <p className="large-copy">Sette pratiche spirituali simboliche per ritrovare centratura, rafforzare i tuoi confini interiori e concludere la giornata con maggiore serenità.</p>
             <div className="price-line"><strong>4,90 €</strong><span>prezzo permanente</span></div>
-            <ExternalButton href={links.rituali} eventName="click_detail_rituali">Acquista ora su Payhip</ExternalButton>
-            <p className="microcopy">Pagamento sicuro · PDF disponibile subito dopo l’acquisto</p>
+            <ExternalButton href={links.rituali} eventName="click_detail_rituali">Inizia il percorso – 4,90 €</ExternalButton>
+            <p className="microcopy">Pagamento sicuro su Payhip · Download immediato · Nessun abbonamento</p>
           </div>
+        </div>
+      </section>
+      <section className="section rituals-fit-section">
+        <div className="container split-grid align-start">
+          <div className="rituals-fit-copy">
+            <span className="eyebrow">Può accompagnarti se…</span>
+            <h2>Ti riconosci in uno di questi momenti?</h2>
+            <p className="large-copy">Non devi fare tutto insieme. Scegli il rituale più vicino a ciò che senti oppure segui il percorso nell’ordine proposto.</p>
+          </div>
+          <ul className="recognition-list">
+            {suitedFor.map((item) => <li key={item}>{item}</li>)}
+          </ul>
         </div>
       </section>
       <section className="section soft-section">
         <div className="container content-narrow">
-          <div className="section-heading center"><span className="eyebrow">Dentro il kit</span><h2>Una struttura chiara, senza ripetizioni</h2></div>
+          <div className="section-heading center"><span className="eyebrow">Cosa ricevi</span><h2>Un percorso completo, senza contenuti riempitivi</h2></div>
           <div className="feature-grid">
             <div><strong>7</strong><span>pratiche guidate</span></div>
             <div><strong>7</strong><span>decreti completi</span></div>
             <div><strong>7</strong><span>formule finali</span></div>
             <div><strong>7</strong><span>giorni di percorso</span></div>
           </div>
-          <p className="center large-copy">Per ogni capitolo esegui la pratica, leggi il decreto completo una volta e concludi ripetendo la formula finale tre volte.</p>
+          <div className="decree-note">
+            <strong>Come si usa ogni decreto?</strong>
+            <p>Leggi il decreto lungo una sola volta, lentamente e con presenza. La ripetizione per tre volte riguarda soltanto la breve formula finale indicata nel capitolo.</p>
+          </div>
         </div>
       </section>
       <section className="section">
-        <div className="container split-grid align-start">
-          <div>
-            <span className="eyebrow">I sette capitoli</span>
-            <h2>Scegli il rituale adatto al momento</h2>
+        <div className="container">
+          <div className="section-heading center">
+            <span className="eyebrow">I sette rituali</span>
+            <h2>Una pratica per ogni bisogno del momento</h2>
+            <p>Ogni capitolo contiene preparazione, pratica guidata, decreto completo e formula conclusiva.</p>
           </div>
-          <ol className="chapter-list">{chapters.map((chapter) => <li key={chapter}>{chapter}</li>)}</ol>
+          <div className="rituals-grid">
+            {chapters.map((chapter, index) => (
+              <article className="ritual-card" key={chapter.title}>
+                <img src={chapter.image} alt="" aria-hidden="true" />
+                <div className="ritual-card-copy">
+                  <span className="ritual-number">Rituale {index + 1}</span>
+                  <h3>{chapter.title}</h3>
+                  <p>{chapter.need}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section soft-section rituals-method-section">
+        <div className="container">
+          <div className="section-heading center">
+            <span className="eyebrow">Come iniziare</span>
+            <h2>Tre modi semplici per usarlo</h2>
+          </div>
+          <div className="steps-grid rituals-steps">
+            <div><span>1</span><h3>Un rituale al giorno</h3><p>Segui l’ordine proposto per completare il percorso in sette giorni.</p></div>
+            <div><span>2</span><h3>Solo quando serve</h3><p>Apri il capitolo collegato al momento che stai vivendo.</p></div>
+            <div><span>3</span><h3>Telefono o stampa</h3><p>Leggi il PDF dal tuo dispositivo oppure stampalo in formato A4.</p></div>
+          </div>
+        </div>
+      </section>
+      <section className="section rituals-trust-section">
+        <div className="container content-narrow center">
+          <span className="eyebrow">Sai esattamente cosa acquisti</span>
+          <h2>Niente promesse miracolose</h2>
+          <p className="large-copy">Ricevi pratiche simboliche e spirituali da integrare nella tua quotidianità. Il percorso non garantisce risultati specifici e non sostituisce cure, psicoterapia o consulenze professionali.</p>
         </div>
       </section>
       <section className="section cta-section">
         <div className="container center content-narrow">
-          <span className="eyebrow">Inizia quando vuoi</span>
-          <h2>Il kit completo costa 4,90 €</h2>
-          <p>Puoi leggerlo dal telefono, dal computer oppure stamparlo in formato A4.</p>
-          <ExternalButton href={links.rituali} eventName="click_detail_rituali_bottom">Vai all’acquisto su Payhip</ExternalButton>
+          <span className="eyebrow">Accesso immediato</span>
+          <h2>Inizia oggi il tuo percorso di 7 giorni</h2>
+          <p>Kit completo in PDF: 7 rituali, 7 decreti e indicazioni chiare per la pratica. Prezzo permanente 4,90 €.</p>
+          <ExternalButton href={links.rituali} eventName="click_detail_rituali_bottom">Inizia il percorso – 4,90 €</ExternalButton>
+          <p className="microcopy">Dopo l’acquisto ricevi subito il PDF da Payhip.</p>
         </div>
       </section>
     </Layout>
