@@ -49,7 +49,7 @@
     }
     if (
       href.includes('/AlchimieDiLuce/30') ||
-      href.includes('consulto-telefonico-con-i-tarocchi') ||
+      href.includes('consulto-tarocchi') ||
       text.includes('tarocchi al telefono') ||
       text.includes('consulto telefonico')
     ) {
@@ -101,10 +101,10 @@
         return;
       }
 
-      if (href.includes('calendly.com/')) {
+      if (href.includes('cal.com/')) {
         sendEvent('open_booking', {
-          service_name: 'tarocchi_telefono',
-          booking_platform: 'calendly',
+          service_name: serviceName,
+          booking_platform: 'cal',
           link_text: linkText
         });
         return;
