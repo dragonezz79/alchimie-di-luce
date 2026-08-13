@@ -31,11 +31,11 @@ const links = {
   angelTherapy: 'https://paypal.me/AlchimieDiLuce/25',
   tarocchiPdf: 'https://paypal.me/AlchimieDiLuce/25',
   tarocchiTelefono: 'https://paypal.me/AlchimieDiLuce/30',
-  calendlyTarocchi: 'https://calendly.com/gogeta7921/consulto-telefonico-con-i-tarocchi',
+  calTarocchi: 'https://cal.com/alchimie-di-luce/consulto-tarocchi',
   guarigione: 'https://paypal.me/AlchimieDiLuce/49',
-  calendlyGuarigione: 'https://calendly.com/gogeta7921/guarigione-angelica-a-distanza',
+  calGuarigione: 'https://cal.com/alchimie-di-luce/guarigione-angelica',
   percorso: 'https://paypal.me/AlchimieDiLuce/129',
-  calendlyPercorso: 'https://calendly.com/gogeta7921/percorso-luce-prima-sessione'
+  calPercorso: 'https://cal.com/alchimie-di-luce/percorso-luce-prima-sessione'
 };
 
 const whatsappNumber = '393492304412';
@@ -562,14 +562,14 @@ function ReadingsPage() {
               price="30 €"
               badge="30 minuti"
               description="Durante la chiamata puoi fare le domande che desideri nel tempo disponibile."
-              details="Prima effettui il pagamento, poi scegli direttamente su Calendly il giorno e l’orario disponibili. La chiamata è telefonica, non video."
+              details="Prima effettui il pagamento, poi scegli direttamente nel calendario online il giorno e l’orario disponibili. La chiamata è telefonica, non video."
               href={links.tarocchiTelefono}
               cta="Paga 30 € con PayPal"
               eventName="click_letture_tarocchi_telefono"
-              bookingHref={links.calendlyTarocchi}
+              bookingHref={links.calTarocchi}
               bookingCta="Scegli giorno e orario"
-              bookingNote="Scegli ora giorno e orario su Calendly. La prenotazione è riservata a chi ha già effettuato il pagamento di 30 €."
-              bookingEventName="click_calendly_tarocchi_telefono"
+              bookingNote="Scegli ora giorno e orario nel calendario online. La prenotazione è riservata a chi ha già effettuato il pagamento di 30 €."
+              bookingEventName="click_cal_tarocchi_telefono"
             />
           </div>
         </div>
@@ -604,14 +604,14 @@ function SessionsPage() {
             price="49 €"
             badge="60 minuti"
             description="Una sessione spirituale individuale a distanza per rallentare, ascoltarti e ritrovare centratura."
-            details="Prima effettui il pagamento, poi scegli direttamente su Calendly il giorno e l’orario disponibili. La pratica si svolge a distanza e non richiede videochiamata."
+            details="Prima effettui il pagamento, poi scegli direttamente nel calendario online il giorno e l’orario disponibili. La pratica si svolge a distanza e non richiede videochiamata."
             href={links.guarigione}
             cta="Paga 49 € con PayPal"
             eventName="click_sessioni_guarigione"
-            bookingHref={links.calendlyGuarigione}
+            bookingHref={links.calGuarigione}
             bookingCta="Scegli giorno e orario"
-            bookingNote="Scegli ora giorno e orario su Calendly. La prenotazione è riservata a chi ha già effettuato il pagamento di 49 €."
-            bookingEventName="click_calendly_guarigione_angelica"
+            bookingNote="Scegli ora giorno e orario nel calendario online. La prenotazione è riservata a chi ha già effettuato il pagamento di 49 €."
+            bookingEventName="click_cal_guarigione_angelica"
           />
           <ServiceCard
             image={percorsoLuce}
@@ -619,14 +619,14 @@ function SessionsPage() {
             price="129 €"
             badge="3 sessioni"
             description="Tre incontri per accompagnare con continuità un momento di cambiamento o una pratica personale."
-            details="Prima effettui il pagamento, poi scegli su Calendly il giorno e l’orario della prima sessione. Le altre due date saranno concordate insieme durante il percorso."
+            details="Prima effettui il pagamento, poi scegli nel calendario online il giorno e l’orario della prima sessione. Le altre due date saranno concordate insieme durante il percorso."
             href={links.percorso}
             cta="Paga 129 € con PayPal"
             eventName="click_sessioni_percorso"
-            bookingHref={links.calendlyPercorso}
+            bookingHref={links.calPercorso}
             bookingCta="Prenota la prima sessione"
-            bookingNote="Scegli su Calendly giorno e orario della prima sessione. La prenotazione è riservata a chi ha già effettuato il pagamento di 129 €."
-            bookingEventName="click_calendly_percorso_luce"
+            bookingNote="Scegli nel calendario online giorno e orario della prima sessione. La prenotazione è riservata a chi ha già effettuato il pagamento di 129 €."
+            bookingEventName="click_cal_percorso_luce"
           />
         </div>
       </section>
