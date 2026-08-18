@@ -118,8 +118,8 @@ const PathCard = ({ icon, label, title, text, href, cta }) => (
   </article>
 );
 
-const JourneyCard = ({ step, image, label, title, text, price, href, external, eventName, cta }) => (
-  <article className="product-card">
+const JourneyCard = ({ step, image, label, title, text, price, href, external, eventName, cta, fullImage = false }) => (
+  <article className={fullImage ? 'product-card product-card--full-image' : 'product-card'}>
     <img src={image} alt={title} />
     <div className="product-card-body">
       <span className="eyebrow">Passo {step} · {label}</span>
@@ -172,6 +172,7 @@ export default function HomeSalesPage() {
               step="1"
               image={guidaSerenita}
               label="Gratis"
+              fullImage
               title="5 minuti al giorno per ritrovare serenità"
               text="Una guida breve per iniziare con gratitudine, presenza e piccoli gesti quotidiani. È il modo più semplice per conoscere l'approccio di Alchimie di Luce senza alcun costo."
               price="Gratis"
