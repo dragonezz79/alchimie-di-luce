@@ -1,5 +1,6 @@
 import React from 'react';
 import './global.css';
+import './prima-luce.css';
 
 import risposteAngeli from './risposte-angeli.webp';
 import angelTherapy from './angel-therapy.webp';
@@ -183,27 +184,35 @@ export default function ReadingsSalesPage() {
         </div>
       </section>
 
-      <Testimonials />
-
-      <section className="section soft-section" id="prima-luce">
-        <div className="container content-narrow center">
-          <span className="eyebrow">Per chi non ha mai ricevuto una mia lettura</span>
-          <h2>Prima Luce — Mini lettura gratuita</h2>
-          <p className="large-copy"><strong>Una domanda · almeno 3 carte · un breve messaggio angelico</strong></p>
-          <p>
-            Una prima esperienza con il mio modo di leggere i Tarocchi. Non utilizzo uno schema fisso:
-            interpreto le carte che emergono in relazione alla tua domanda e alla situazione che mi presenti.
-          </p>
-          <ExternalButton
-            href={`https://wa.me/${whatsappNumber}?text=${whatsappPrimaLuce}`}
-            eventName="click_prima_luce_whatsapp"
-            className="btn-whatsapp"
-          >
-            Richiedi la tua Prima Luce
-          </ExternalButton>
-          <p className="microcopy">La mini lettura è gratuita e più sintetica rispetto a una lettura completa. Le richieste vengono accolte in base alla disponibilità.</p>
+      <section className="section prima-luce-section" id="prima-luce">
+        <div className="container">
+          <div className="prima-luce-card">
+            <span className="prima-luce-badge">✨ Mini lettura gratuita</span>
+            <h2 className="prima-luce-title">Prima Luce</h2>
+            <p className="prima-luce-subtitle">Scopri il mio modo di leggere i Tarocchi</p>
+            <div className="prima-luce-formula" aria-label="Cosa comprende Prima Luce">
+              <span>1 domanda</span>
+              <span>Almeno 3 carte</span>
+              <span>1 breve messaggio angelico</span>
+            </div>
+            <p className="prima-luce-copy">
+              Una prima esperienza gratuita, riservata a chi non ha mai ricevuto una mia lettura.
+              Non utilizzo uno schema fisso: interpreto liberamente le carte che emergono in relazione
+              alla tua domanda e alla situazione che mi presenti.
+            </p>
+            <ExternalButton
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappPrimaLuce}`}
+              eventName="click_prima_luce_whatsapp"
+              className="prima-luce-cta"
+            >
+              Richiedi la tua mini lettura gratuita
+            </ExternalButton>
+            <p className="prima-luce-note">La mini lettura è più sintetica rispetto a una lettura completa. Le richieste vengono accolte in base alla disponibilità.</p>
+          </div>
         </div>
       </section>
+
+      <Testimonials />
 
       <section className="section" id="letture-servizi">
         <div className="container">
