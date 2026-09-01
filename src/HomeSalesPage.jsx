@@ -1,5 +1,6 @@
 import React from 'react';
 import './global.css';
+import './prima-luce.css';
 
 import heroArcangeli from './hero-arcangeli.webp';
 import fotoCarmelo from './foto-carmelo.webp';
@@ -249,12 +250,13 @@ export default function HomeSalesPage() {
               cta="Guarda tutti i prodotti"
             />
           </div>
-          <div className="orientation-help">
-            <div>
-              <strong>Non hai mai ricevuto una mia lettura?</strong>
-              <span>Scopri Prima Luce: una mini lettura gratuita con una domanda, almeno 3 carte e un breve messaggio angelico.</span>
+          <div className="prima-luce-home">
+            <div className="prima-luce-home-copy">
+              <span className="prima-luce-badge">✨ Mini lettura gratuita</span>
+              <h3>Prima Luce</h3>
+              <p>Non hai mai ricevuto una mia lettura? Parti da una domanda, almeno 3 carte e un breve messaggio angelico per conoscere il mio modo di lavorare.</p>
             </div>
-            <a className="btn btn-primary" href="/letture#prima-luce" onClick={() => track('click_home_prima_luce')}>Scopri Prima Luce</a>
+            <a className="btn prima-luce-cta" href="/letture#prima-luce" onClick={() => track('click_home_prima_luce')}>Scopri Prima Luce</a>
           </div>
         </div>
       </section>
