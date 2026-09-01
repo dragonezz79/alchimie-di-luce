@@ -249,6 +249,13 @@ export default function HomeSalesPage() {
               cta="Guarda tutti i prodotti"
             />
           </div>
+          <div className="orientation-help">
+            <div>
+              <strong>Non hai mai ricevuto una mia lettura?</strong>
+              <span>Scopri Prima Luce: una mini lettura gratuita con una domanda, almeno 3 carte e un breve messaggio angelico.</span>
+            </div>
+            <a className="btn btn-primary" href="/letture#prima-luce" onClick={() => track('click_home_prima_luce')}>Scopri Prima Luce</a>
+          </div>
         </div>
       </section>
 
