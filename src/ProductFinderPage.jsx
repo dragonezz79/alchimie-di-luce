@@ -73,7 +73,7 @@ const questions = [
   {
     title: 'Come preferisci ricevere il supporto?',
     options: [
-      { label: 'Carmelo lavora sul mio caso a distanza, senza videochiamata', scores: { puntoZero: 5 } },
+      { label: 'Carmelo segue personalmente il mio caso a distanza', scores: { puntoZero: 5 } },
       { label: 'Parlare direttamente con Carmelo', scores: { tarotPhone: 6 } },
       { label: 'Ricevere una risposta personale per iscritto', scores: { tarotPdf: 6 } },
       { label: 'Procedere in autonomia con uno strumento guidato', scores: { map: 4, rituals: 4, serenity: 2 } }

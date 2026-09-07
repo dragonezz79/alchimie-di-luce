@@ -89,12 +89,12 @@ export default function PointZeroPage() {
           <div className="section-heading">
             <span className="eyebrow">Il percorso per il cliente</span>
             <h2>Cosa accade, concretamente</h2>
-            <p>Non devi conoscere il protocollo né collegarti durante il lavoro. Mi invii soltanto le informazioni essenziali; io seguo personalmente l’intervento a distanza e ti comunico quando il ciclo è concluso.</p>
+            <p>Mi invii soltanto le informazioni essenziali; io seguo personalmente l’intervento a distanza e ti comunico quando il ciclo è concluso.</p>
           </div>
           <div className="zero-steps">
             <Step number="01" title="Mi descrivi il tema">Su WhatsApp mi invii nome, data di nascita e una descrizione breve della situazione su cui desideri lavorare.</Step>
             <Step number="02" title="Verifico la richiesta">Prima di iniziare valuto che Punto Zero sia coerente con il tema espresso e che rispetti responsabilità personale e libero arbitrio.</Step>
-            <Step number="03" title="Svolgo l’intervento">Il lavoro viene svolto a distanza e seguito personalmente da me. Non sono richieste videochiamate o azioni complicate da parte tua.</Step>
+            <Step number="03" title="Svolgo l’intervento">Il lavoro viene svolto a distanza e seguito personalmente da me. Tu puoi continuare normalmente le tue giornate.</Step>
             <Step number="04" title="Ti comunico la chiusura">Al termine del ciclo ricevi la conferma della chiusura e il punto essenziale emerso durante il lavoro.</Step>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function PointZeroPage() {
         <div className="container faq-grid">
           <div><span className="eyebrow">Prima di scegliere</span><h2>Domande frequenti</h2></div>
           <div className="faq-list">
-            <details><summary>Devo collegarmi in video?</summary><p>No. Il lavoro si svolge a distanza. Ti chiedo soltanto i dati essenziali e una descrizione sintetica del tema.</p></details>
+            <details><summary>Cosa devo fare durante l’intervento?</summary><p>Puoi continuare normalmente le tue giornate. Il lavoro viene svolto a distanza; ti chiedo soltanto i dati essenziali e una descrizione sintetica del tema.</p></details>
             <details><summary>Riceverò la Tavola?</summary><p>No. Punto Zero è un intervento svolto da Carmelo attraverso la Tavola, non un prodotto digitale o fisico da spedire.</p></details>
             <details><summary>Quanto dura?</summary><p>Il ciclo viene stabilito sul singolo lavoro e può durare fino a sette giorni. La durata non è una misura del valore o della difficoltà del caso.</p></details>
             <details><summary>Posso richiederlo per un’altra persona?</summary><p>Il lavoro deve rispettare consenso, responsabilità personale e libero arbitrio. Scrivimi prima di acquistare se la richiesta riguarda qualcun altro.</p></details>
