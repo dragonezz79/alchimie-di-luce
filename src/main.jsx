@@ -5,10 +5,13 @@ import HomeSalesPage from './HomeSalesPage.jsx';
 import ReadingsSalesPage from './ReadingsSalesPage.jsx';
 import { MapSalesPage, ProductsSalesPage } from './SpecialPages.jsx';
 import PointZeroPage from './PointZeroPage.jsx';
+import ProductFinderPage from './ProductFinderPage.jsx';
 
 const path = window.location.pathname.replace(/\/$/, '') || '/';
 const RootPage = path === '/'
   ? HomeSalesPage
+  : path === '/trova-il-tuo-percorso'
+    ? ProductFinderPage
   : path === '/punto-zero' || path === '/sessioni'
     ? PointZeroPage
     : path === '/prodotti/mappa-di-luce'

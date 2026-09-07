@@ -43,6 +43,7 @@ function Header() {
       </button>
       <nav className={open ? 'nav nav-open' : 'nav'} aria-label="Navigazione principale">
         <a href="/punto-zero">Punto Zero</a>
+        <a href="/trova-il-tuo-percorso">Fai il test</a>
         <a href="/prodotti">Strumenti digitali</a>
         <a href="/letture">Tarocchi</a>
         <a href="/chi-sono">Chi sono</a>
@@ -64,6 +65,7 @@ function Footer() {
         <div>
           <strong>Esplora</strong>
           <a href="/punto-zero">Punto Zero</a>
+          <a href="/trova-il-tuo-percorso">Fai il test</a>
           <a href="/letture">Tarocchi</a>
           <a href="/prodotti">Strumenti digitali</a>
         </div>

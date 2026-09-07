@@ -5,7 +5,7 @@ import fotoCarmelo from './foto-carmelo.webp';
 import guidaSerenita from './guida-serenita.webp';
 import ritualiCover from './kit-7-rituali-cover.webp';
 import mappaCover from './mappa.webp';
-import puntoZero from './punto-zero-tavola.webp';
+import puntoZero from './punto-zero-simbolo.webp';
 
 const links = {
   serenita: 'https://payhip.com/buy?link=Ez8xs'
@@ -46,13 +46,13 @@ export default function HomeSalesPage() {
             </p>
             <div className="hero-actions hero-actions-left">
               <a className="btn btn-primary" href="/punto-zero">Scopri Punto Zero</a>
-              <a className="btn btn-secondary" href="#scegli">Trova il percorso giusto</a>
+              <a className="btn btn-secondary" href="/trova-il-tuo-percorso">Fai il test</a>
             </div>
             <p className="trust-line">Niente promesse miracolose · Prezzi chiari · Percorsi spiegati prima di iniziare</p>
           </div>
-          <div className="zero-symbol-card" aria-label="Tavola radionica Punto Zero">
+          <div className="zero-symbol-card" aria-label="Immagine evocativa del percorso Punto Zero">
             <div className="zero-orbit" />
-            <img src={puntoZero} alt="Geometria della Tavola radionica Punto Zero" />
+            <img src={puntoZero} alt="Un punto di luce dorata al centro per rappresentare Punto Zero" />
             <div className="zero-symbol-caption">
               <span>Intervento a distanza</span>
               <strong>Punto Zero</strong>
@@ -99,7 +99,7 @@ export default function HomeSalesPage() {
               number="01"
               need="Vuoi sciogliere un peso"
               title="Punto Zero"
-              text="Un intervento spirituale a distanza per lavorare simbolicamente su legami, schemi ricorrenti e fasi che senti ancora aperte."
+              text="Un intervento spirituale a distanza rivolto a legami, schemi ricorrenti e fasi che senti ancora aperte."
               price="149 €"
               href="/punto-zero"
               cta="Scopri l’intervento"
@@ -109,7 +109,7 @@ export default function HomeSalesPage() {
               need="Hai una domanda precisa"
               title="Tarocchi"
               text="Una lettura completa, scritta oppure telefonica, per vedere con più lucidità una situazione concreta."
-              price="Da 39 €"
+              price="Da 49 €"
               href="/letture"
               cta="Confronta le formule"
             />
@@ -123,6 +123,17 @@ export default function HomeSalesPage() {
               cta="Esplora gli strumenti"
             />
           </div>
+        </div>
+      </section>
+
+      <section className="section finder-invite-section">
+        <div className="container finder-invite">
+          <div>
+            <span className="eyebrow">Non sai da dove iniziare?</span>
+            <h2>Trova la proposta più adatta al tuo momento</h2>
+            <p>Rispondi a tre domande sul bisogno che senti, sul tipo di supporto che preferisci e sulla profondità del passo che vuoi compiere.</p>
+          </div>
+          <a className="btn btn-primary" href="/trova-il-tuo-percorso">Inizia il test</a>
         </div>
       </section>
 
@@ -153,7 +164,7 @@ export default function HomeSalesPage() {
             <span className="eyebrow">Chi c’è dietro il lavoro</span>
             <h2>Una guida reale, non un servizio anonimo</h2>
             <p className="large-copy">Sono Carmelo. Ogni lettura e ogni intervento personale vengono seguiti da me, con regole chiare, riservatezza e rispetto del libero arbitrio.</p>
-            <p>Il lavoro spirituale può offrire ascolto e una prospettiva simbolica. Non sostituisce decisioni, cure o professionisti qualificati.</p>
+            <p>Il lavoro spirituale può offrire ascolto e una prospettiva diversa. Non sostituisce decisioni, cure o professionisti qualificati.</p>
             <a className="text-link" href="/chi-sono">Conosci il mio approccio →</a>
           </div>
         </div>

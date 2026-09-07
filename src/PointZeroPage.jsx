@@ -1,6 +1,6 @@
 import React from 'react';
 import SiteLayout, { ExternalButton, whatsappLink } from './SiteChrome.jsx';
-import puntoZero from './punto-zero-tavola.webp';
+import puntoZero from './punto-zero-simbolo.webp';
 import fotoCarmelo from './foto-carmelo.webp';
 
 const requestLink = whatsappLink(
@@ -33,7 +33,7 @@ export default function PointZeroPage() {
             <h1>Punto Zero</h1>
             <p className="zero-promise">Recidere. Alleggerire. Riallineare.</p>
             <p className="hero-lead">
-              Un lavoro simbolico e spirituale seguito personalmente da Carmelo per accompagnarti quando un legame, uno schema o una fase del passato continua a occupare spazio dentro di te.
+              Per chi vive in un sovraccarico cognitivo, bombardato da interferenze, pensieri ricorsivi e stanchezza psichica. Punto Zero lavora come una lama di precisione geometrica che azzera il rumore di fondo e riporta alla lucidità.
             </p>
             <div className="price-stack price-stack-hero"><strong>149 €</strong><span>un intervento personale completo</span></div>
             <div className="hero-actions hero-actions-left">
@@ -44,7 +44,7 @@ export default function PointZeroPage() {
           </div>
           <div className="zero-product-visual">
             <div className="zero-product-frame">
-              <img src={puntoZero} alt="Geometria originale della Tavola radionica Punto Zero" />
+              <img src={puntoZero} alt="Centro luminoso dorato che rappresenta l’intervento Punto Zero" />
             </div>
             <p>La Tavola è lo strumento con cui viene svolto il lavoro. Non è il prodotto che ricevi.</p>
           </div>
@@ -61,8 +61,26 @@ export default function PointZeroPage() {
             <li>continui a tornare con la mente alla stessa persona o situazione</li>
             <li>riconosci uno schema che si ripete, nonostante i tuoi tentativi di cambiarlo</li>
             <li>senti stanchezza interiore, dispersione o difficoltà a ritrovare direzione</li>
-            <li>desideri chiudere simbolicamente una fase e ripartire con un’intenzione più chiara</li>
+            <li>desideri chiudere una fase e ripartire con un’intenzione più chiara</li>
           </ul>
+        </div>
+      </section>
+
+      <section className="section scope-section">
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">Il raggio d’azione</span>
+            <h2>Su quali situazioni si può lavorare</h2>
+            <p>La tavola serve a operare interventi di rescissione, bonifica e riallineamento energetico a distanza, agendo come un circuito radionico autosufficiente.</p>
+          </div>
+          <div className="scope-grid">
+            <article className="scope-card"><span>01</span><h3>Legami invisibili e tossici</h3><p>Ex partner, relazioni logoranti o vecchie storie del passato che continuano a togliere serenità e lucidità.</p></article>
+            <article className="scope-card"><span>02</span><h3>Situazioni che si ripetono</h3><p>Schemi bloccati sul lavoro, nelle relazioni o nella vita personale da cui non si riesce a uscire, nonostante gli sforzi.</p></article>
+            <article className="scope-card"><span>03</span><h3>Attaccamenti energetici</h3><p>Dipendenze sottili e agganci karmici che tengono una persona vincolata al passato o a dinamiche distruttive.</p></article>
+            <article className="scope-card"><span>04</span><h3>Nodi genealogici</h3><p>Nodi genealogici o schemi ripetitivi di autosabotaggio che il soggetto non riesce a superare con la sola forza di volontà.</p></article>
+            <article className="scope-card"><span>05</span><h3>Pesantezza emotiva</h3><p>Nubi emotive tossiche, forme-pensiero pesanti, pensieri negativi continui e dispersioni di vitalità.</p></article>
+            <article className="scope-card"><span>06</span><h3>Ripartenza</h3><p>Un azzeramento profondo per permettere alla persona di ricaricarsi e ripartire con il proprio equilibrio naturale.</p></article>
+          </div>
         </div>
       </section>
 
@@ -71,13 +89,13 @@ export default function PointZeroPage() {
           <div className="section-heading">
             <span className="eyebrow">Il metodo</span>
             <h2>Cosa accade, concretamente</h2>
-            <p>Il valore non è nella quantità di rituali. È nella precisione con cui il lavoro viene costruito sul tuo caso e poi lasciato agire senza continue sollecitazioni.</p>
+            <p>Tre passaggi chiari per l’attivazione. Nessun rituale sfiancante: chi richiede il lavoro vuole scaricare un peso, non assumersi un compito complicato.</p>
           </div>
           <div className="zero-steps">
-            <Step number="01" title="Raccolgo il tema">Mi invii nome, data di nascita e una descrizione breve della situazione o del legame su cui desideri lavorare.</Step>
-            <Step number="02" title="Definisco l’intenzione">Utilizzo strumenti oracolari e radiestesici come supporto simbolico per mettere a fuoco una formulazione essenziale, senza diagnosi né interpretazioni sanitarie.</Step>
-            <Step number="03" title="Attivo Punto Zero">Preparo il testimone, allineo la Tavola e avvio il circuito secondo il protocollo di rescissione, bonifica simbolica e riallineamento.</Step>
-            <Step number="04" title="Seguo il ciclo">Il lavoro resta attivo per il tempo stabilito, fino a un massimo indicativo di sette giorni, con verifica e chiusura finale.</Step>
+            <Step number="01" title="Preparazione del testimone">Nome, data di nascita e intento sintetico di rescissione e ripristino.</Step>
+            <Step number="02" title="Allineamento">La tavola viene orientata verso il Nord magnetico e il testimone viene collocato al centro del Punto Zero.</Step>
+            <Step number="03" title="Attivazione">Deposto il testimone al centro con sopra un cristallo di quarzo ialino e recitata la formula, occorre la resa totale.</Step>
+            <Step number="04" title="Distacco e ciclo">Distacco assoluto dall’esito, nessuna spinta personale: lasciare che sia la geometria radionica ad agire da sola per il tempo stabilito.</Step>
           </div>
         </div>
       </section>
@@ -86,17 +104,18 @@ export default function PointZeroPage() {
         <div className="container flagship-grid">
           <div className="included-copy">
             <span className="eyebrow">Cosa comprende il prezzo</span>
-            <h2>Non paghi un disegno.<br />Paghi un lavoro personale.</h2>
-            <p className="large-copy">La Tavola è il mezzo operativo. Il servizio comprende il tempo, la preparazione, la formulazione dell’intenzione e la gestione dell’intero ciclo.</p>
+            <h2>Cosa fa questo percorso energetico</h2>
+            <p className="large-copy">Non va presentato come un amuleto miracoloso passivo, bensì come uno strumento radionico e geometrico di disciplina, studio e riallineamento delle frequenze.</p>
           </div>
           <div className="value-ledger">
-            <div><span>01</span><p><strong>Analisi preliminare</strong> del tema espresso</p></div>
-            <div><span>02</span><p><strong>Impostazione personalizzata</strong> del testimone e dell’intento</p></div>
-            <div><span>03</span><p><strong>Attivazione a distanza</strong> con protocollo Punto Zero</p></div>
-            <div><span>04</span><p><strong>Monitoraggio e chiusura</strong> del ciclo</p></div>
-            <div><span>05</span><p><strong>Restituzione finale</strong> con il punto essenziale emerso</p></div>
+            <div><span>01</span><p><strong>Taglia i legami invisibili e tossici:</strong> aiuta a staccarsi da ex partner, relazioni logoranti o vecchie storie del passato.</p></div>
+            <div><span>02</span><p><strong>Sblocca le situazioni che si ripetono sempre uguali:</strong> sul lavoro, nelle relazioni o nella vita personale.</p></div>
+            <div><span>03</span><p><strong>Ripulisce la pesantezza emotiva:</strong> dissolve forme-pensiero pesanti, pensieri negativi continui e dispersioni di vitalità.</p></div>
+            <div><span>04</span><p><strong>Ripristina la vitalità e la forza interiore:</strong> permette alla persona di ricaricarsi e ripartire con il proprio equilibrio naturale.</p></div>
+            <div><span>05</span><p><strong>Agisce a distanza:</strong> la persona non deve fare sforzi fisici o collegarsi durante l’attivazione.</p></div>
           </div>
         </div>
+        <div className="container outcome-note"><p>Questi sono possibili effetti percepiti, non risultati garantiti: ogni esperienza è personale e il servizio non sostituisce azioni, decisioni o percorsi professionali necessari.</p></div>
       </section>
 
       <section className="section boundaries-section">

@@ -59,6 +59,7 @@ function Header() {
       <nav className={open ? 'nav nav-open' : 'nav'} aria-label="Navigazione principale">
         <a href="/">Home</a>
         <a href="/punto-zero">Punto Zero</a>
+        <a href="/trova-il-tuo-percorso">Fai il test</a>
         <a href="/prodotti">Strumenti digitali</a>
         <a href="/letture">Tarocchi</a>
         <a href="/chi-sono">Chi sono</a>
@@ -78,6 +79,7 @@ function Footer() {
         <div>
           <strong>Esplora</strong>
           <a href="/punto-zero">Punto Zero</a>
+          <a href="/trova-il-tuo-percorso">Fai il test</a>
           <a href="/prodotti">Strumenti digitali</a>
           <a href="/letture">Tarocchi</a>
         </div>
@@ -341,7 +343,7 @@ export function MapSalesPage() {
             <Asset image={guidaCompleta} title="Guida completa" text="Ti accompagna dalla preparazione alla consultazione e spiega come approfondire ogni simbolo che emerge." />
             <Asset image={mappaCover} title="Mappa A4 stampabile" text="Il cuore visivo del percorso: messaggi, Arcangeli, Numeri Sacri, chakra, Raggi e Cubo di Metatron in un’unica tavola." />
             <Asset image={diario} title="Diario di Attivazione Interiore" text="Uno spazio per annotare domande, simboli, intuizioni, sensazioni e soprattutto le scelte concrete che vuoi portare nella quotidianità." />
-            <Asset image={bigliettini} title="Bigliettini di Luce" text="Messaggi da estrarre come spunto simbolico di riflessione, da collegare alla guida e al diario." />
+            <Asset image={bigliettini} title="Bigliettini di Luce" text="Messaggi da estrarre come spunto di riflessione, da collegare alla guida e al diario." />
           </div>
         </div>
       </section>
@@ -351,7 +353,7 @@ export function MapSalesPage() {
           <span className="eyebrow">Libero arbitrio al centro</span>
           <h2>La Mappa non decide al posto tuo</h2>
           <p className="large-copy">
-            Non promette risposte automatiche e non sostituisce le tue decisioni. Ti offre uno spazio simbolico
+            Non promette risposte automatiche e non sostituisce le tue decisioni. Ti offre uno spazio personale
             attraverso cui fermarti, ascoltare e osservare una situazione da un’altra prospettiva. La scelta finale rimane sempre tua.
           </p>
         </div>

@@ -14,7 +14,7 @@ import ritualeCentratura from './07-centratura-sovranita.webp';
 const ritualiLink = 'https://payhip.com/b/DbHjv';
 
 const rituals = [
-  [ritualeMantello, 'Mantello Blu', 'Per iniziare il percorso stabilendo un confine simbolico chiaro.'],
+  [ritualeMantello, 'Mantello Blu', 'Per iniziare il percorso stabilendo un confine interiore chiaro.'],
   [ritualeFiamma, 'Fiamma Viola', 'Per accompagnare il rilascio di ciò che senti ormai concluso.'],
   [ritualeSfera, 'Sfera di Luce', 'Per creare uno spazio interiore protetto prima di affrontare la giornata.'],
   [ritualeCasa, 'Armonia della casa', 'Per dedicare attenzione e intenzione agli ambienti in cui vivi.'],
