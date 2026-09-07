@@ -6,7 +6,7 @@ const products = {
     name: 'Punto Zero',
     label: 'Intervento personale a distanza',
     price: '149 €',
-    description: 'Un intervento di guarigione spirituale a distanza per recidere ciò che ti trattiene, recuperare energia e ripartire.',
+    description: 'Un intervento di guarigione spirituale a distanza che parte dalla diagnosi energetica del blocco reale e prosegue fino al completamento della pulizia.',
     reason: 'Senti il bisogno di lasciare andare un legame, uno schema o una fase che continua a toglierti energia.',
     href: '/punto-zero',
     cta: 'Scopri come funziona Punto Zero'

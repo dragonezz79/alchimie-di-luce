@@ -70,16 +70,16 @@ export default function HomeSalesPage() {
               Punto Zero è un intervento di guarigione spirituale ed energetica a distanza. Ti accompagna a recidere ciò che ti trattiene, alleggerire il peso interiore e recuperare energia per ripartire.
             </p>
             <ul className="clean-checks">
-              <li>Lettura preliminare del tema che stai vivendo</li>
-              <li>Intenzione di lavoro formulata sul tuo caso</li>
+              <li>Diagnosi energetica preliminare per individuare il blocco reale</li>
+              <li>Lavoro formulato sulla persona e su ciò che emerge</li>
               <li>Attivazione e ciclo seguito personalmente da Carmelo</li>
-              <li>Chiusura del lavoro e restituzione finale</li>
+              <li>Durata personalizzata fino al completamento della pulizia energetica</li>
             </ul>
           </div>
           <aside className="flagship-offer">
             <span className="badge">Intervento premium</span>
             <h3>Punto Zero a distanza</h3>
-            <p>Affidi a Carmelo un lavoro personale costruito su ciò che stai vivendo e seguito a distanza fino alla chiusura del ciclo.</p>
+            <p>Prima individuo il blocco energetico reale, poi costruisco e seguo il lavoro a distanza fino al completamento della pulizia.</p>
             <div className="price-stack"><strong>149 €</strong><span>percorso personale</span></div>
             <a className="btn btn-primary" href="/punto-zero">Come funziona</a>
             <ExternalButton href={puntoZeroMessage} eventName="click_home_punto_zero_whatsapp" className="btn-secondary">Chiedi se è adatto a te</ExternalButton>
