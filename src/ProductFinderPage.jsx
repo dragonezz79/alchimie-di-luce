@@ -6,8 +6,8 @@ const products = {
     name: 'Punto Zero',
     label: 'Intervento personale a distanza',
     price: '149 €',
-    description: 'Per lavorare con Carmelo su un legame, uno schema ricorrente o una fase che senti ancora aperta.',
-    reason: 'Hai indicato il bisogno di un lavoro personale, seguito a distanza e costruito su una situazione precisa.',
+    description: 'Un intervento di guarigione spirituale a distanza per recidere ciò che ti trattiene, recuperare energia e ripartire.',
+    reason: 'Senti il bisogno di lasciare andare un legame, uno schema o una fase che continua a toglierti energia.',
     href: '/punto-zero',
     cta: 'Scopri come funziona Punto Zero'
   },
@@ -15,8 +15,8 @@ const products = {
     name: 'Tarocchi in diretta',
     label: 'Consulto telefonico di 30 minuti',
     price: '59 €',
-    description: 'Per portare una domanda concreta, dialogare con Carmelo e approfondire più aspetti nel tempo riservato.',
-    reason: 'Preferisci confrontarti a voce e poter fare domande durante il consulto.',
+    description: 'Un dialogo personale per comprendere ciò che stai vivendo, sciogliere la confusione e ritrovare chiarezza interiore.',
+    reason: 'La tua guarigione spirituale, adesso, passa dal bisogno di essere ascoltato e fare chiarezza parlando direttamente con Carmelo.',
     href: '/letture',
     cta: 'Scopri il consulto in diretta'
   },
@@ -24,8 +24,8 @@ const products = {
     name: 'Tarocchi in PDF',
     label: 'Lettura personale scritta',
     price: '49 €',
-    description: 'Per approfondire un tema preciso e ricevere una lettura personale da conservare e rileggere.',
-    reason: 'Cerchi chiarezza su una domanda concreta e preferisci ricevere tutto per iscritto.',
+    description: 'Una lettura personale da conservare, per capire cosa sta accadendo dentro di te e vedere la direzione successiva.',
+    reason: 'La tua guarigione interiore parte da una domanda precisa e dal bisogno di ricevere una risposta scritta da rileggere con calma.',
     href: '/letture',
     cta: 'Scopri la lettura scritta'
   },
@@ -33,8 +33,8 @@ const products = {
     name: 'Mappa di Luce Interattiva',
     label: 'Strumento digitale riutilizzabile',
     price: '59 €',
-    description: 'Per formulare domande, consultare messaggi e simboli e trasformare ciò che emerge in una scelta concreta.',
-    reason: 'Vuoi uno strumento completo da consultare in autonomia ogni volta che ne senti il bisogno.',
+    description: 'Uno strumento di ascolto e guarigione spirituale per ricevere orientamento e trasformarlo in una scelta concreta.',
+    reason: 'Vuoi sostenere la tua energia in autonomia con uno strumento completo a cui tornare ogni volta che ne senti il bisogno.',
     href: '/prodotti/mappa-di-luce',
     cta: 'Scopri la Mappa di Luce'
   },
@@ -42,8 +42,8 @@ const products = {
     name: '7 Rituali di Protezione e Luce',
     label: 'Percorso digitale di 7 giorni',
     price: '14,90 €',
-    description: 'Per creare una pratica quotidiana di protezione, centratura, rilascio e confini interiori.',
-    reason: 'Cerchi passaggi guidati e concreti da sperimentare subito, un giorno alla volta.',
+    description: 'Sette pratiche di guarigione energetica per proteggerti, lasciare andare il peso della giornata e tornare al tuo centro.',
+    reason: 'Hai bisogno di protezione, centratura e piccoli gesti concreti da compiere un giorno alla volta.',
     href: '/prodotti/7-rituali-protezione-luce',
     cta: 'Scopri i 7 Rituali'
   },
@@ -51,8 +51,8 @@ const products = {
     name: '5 Minuti per Ritrovare Serenità',
     label: 'Guida digitale gratuita',
     price: 'Gratis',
-    description: 'Per iniziare con una pratica semplice di presenza, gratitudine e piccoli passi quotidiani.',
-    reason: 'Vuoi conoscere l’approccio con un primo passo leggero e senza acquistare nulla.',
+    description: 'Il primo passo gratuito verso una guarigione spirituale fatta di presenza, gratitudine e serenità quotidiana.',
+    reason: 'Vuoi iniziare con dolcezza, dedicarti cinque minuti al giorno e ritrovare un po’ di serenità senza acquistare nulla.',
     href: 'https://payhip.com/buy?link=Ez8xs',
     cta: 'Scarica la guida gratuita',
     external: true
@@ -133,8 +133,8 @@ export default function ProductFinderPage() {
         <div className="container finder-shell">
           <div className="finder-intro">
             <span className="eyebrow">Orientamento gratuito · meno di un minuto</span>
-            <h1>Trova il percorso adatto a te</h1>
-            <p>Tre domande per distinguere tra intervento Punto Zero, Tarocchi e strumenti digitali.</p>
+            <h1>Di cosa ha bisogno la tua energia?</h1>
+            <p>Rispondi a tre domande e scopri quale percorso può accompagnare meglio la tua guarigione spirituale in questo momento.</p>
           </div>
 
           {!complete ? (
@@ -156,7 +156,7 @@ export default function ProductFinderPage() {
             </div>
           ) : (
             <div className="finder-result" aria-live="polite">
-              <span className="eyebrow">Il percorso più coerente con le tue risposte</span>
+              <span className="eyebrow">Il percorso di guarigione spirituale più vicino al tuo bisogno</span>
               <div className="finder-result-grid">
                 <div>
                   <span className="finder-result-label">{result.label}</span>
@@ -173,7 +173,7 @@ export default function ProductFinderPage() {
             </div>
           )}
 
-          <p className="finder-disclaimer">Il risultato è un orientamento informativo basato sulle tue risposte, non una diagnosi. Se hai dubbi puoi descrivere brevemente la situazione a Carmelo prima di acquistare.</p>
+          <p className="finder-disclaimer">Il risultato offre un orientamento spirituale basato sulle tue risposte, non una diagnosi. Per guarigione spirituale si intende un percorso personale di ascolto, rilascio e riequilibrio energetico.</p>
         </div>
       </section>
     </SiteLayout>

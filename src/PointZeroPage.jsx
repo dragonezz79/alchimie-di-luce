@@ -20,7 +20,7 @@ const Step = ({ number, title, children }) => (
 
 export default function PointZeroPage() {
   React.useEffect(() => {
-    document.title = 'Punto Zero | Intervento spirituale a distanza';
+    document.title = 'Punto Zero | Guarigione spirituale a distanza';
     window.scrollTo(0, 0);
   }, []);
 
@@ -29,11 +29,11 @@ export default function PointZeroPage() {
       <section className="point-zero-hero">
         <div className="container zero-hero-grid">
           <div className="zero-hero-copy">
-            <span className="eyebrow">Intervento spirituale personalizzato a distanza</span>
+            <span className="eyebrow">Guarigione spirituale ed energetica a distanza</span>
             <h1>Punto Zero</h1>
             <p className="zero-promise">Recidere. Alleggerire. Riallineare.</p>
             <p className="hero-lead">
-              Il cliente target di Punto Zero vive in un sovraccarico cognitivo, bombardato da interferenze, pensieri ricorsivi e stanchezza psichica. La tavola va posizionata come una lama di precisione geometrica che azzera il rumore di fondo e riporta alla lucidità.
+              Se continui a pensare alla stessa persona o situazione, una parte della tua energia è ancora lì. Punto Zero ti accompagna a recidere ciò che ti trattiene, ritrovare leggerezza e ripartire con più forza e chiarezza.
             </p>
             <div className="price-stack price-stack-hero"><strong>149 €</strong><span>un intervento personale completo</span></div>
             <div className="hero-actions hero-actions-left">
@@ -71,7 +71,7 @@ export default function PointZeroPage() {
           <div className="section-heading">
             <span className="eyebrow">Il raggio d’azione</span>
             <h2>Su quali situazioni si può lavorare</h2>
-            <p>La tavola serve a operare interventi di rescissione, bonifica e riallineamento energetico a distanza, agendo come un circuito radionico autosufficiente.</p>
+            <p>La Tavola sostiene un lavoro di guarigione spirituale a distanza: recide i legami che tolgono energia, libera dai pesi accumulati e favorisce un nuovo equilibrio interiore.</p>
           </div>
           <div className="scope-grid">
             <article className="scope-card"><span>01</span><h3>Legami invisibili e tossici</h3><p>Ex partner, relazioni logoranti o vecchie storie del passato che continuano a togliere serenità e lucidità.</p></article>
@@ -104,8 +104,8 @@ export default function PointZeroPage() {
         <div className="container flagship-grid">
           <div className="included-copy">
             <span className="eyebrow">Cosa comprende il prezzo</span>
-            <h2>Cosa fa questo percorso energetico</h2>
-            <p className="large-copy">Uno strumento radionico e geometrico di disciplina, studio e riallineamento delle frequenze, creato con cura artigianale per chi desidera risultati pratici e pulizia energetica tangibile.</p>
+            <h2>Cosa può cambiare dentro di te</h2>
+            <p className="large-copy">Guarire spiritualmente significa smettere di dare energia a ciò che ti trattiene e tornare a sentirti libero di andare avanti.</p>
           </div>
           <div className="value-ledger">
             <div><span>01</span><p><strong>Taglia i legami invisibili e tossici:</strong> aiuta a staccarsi da ex partner, relazioni logoranti o vecchie storie del passato.</p></div>
@@ -115,15 +115,15 @@ export default function PointZeroPage() {
             <div><span>05</span><p><strong>Agisce a distanza:</strong> la persona non deve fare sforzi fisici o collegarsi durante l’attivazione.</p></div>
           </div>
         </div>
-        <div className="container outcome-note"><p>Questi sono possibili effetti percepiti, non risultati garantiti: ogni esperienza è personale e il servizio non sostituisce azioni, decisioni o percorsi professionali necessari.</p></div>
+        <div className="container outcome-note"><p>Per guarigione spirituale si intende un percorso personale di rilascio, ascolto e riequilibrio energetico. Gli effetti percepiti sono soggettivi e il servizio non sostituisce azioni, decisioni o percorsi professionali necessari.</p></div>
       </section>
 
       <section className="section boundaries-section">
         <div className="container boundaries-grid">
           <div className="boundary-card boundary-card-positive">
-            <span className="eyebrow">Cosa può offrirti</span>
-            <h3>Uno spazio di passaggio</h3>
-            <p>Una pratica spirituale per dare forma a un’intenzione di distacco, osservare ciò che stai trattenendo e segnare un nuovo punto di partenza.</p>
+            <span className="eyebrow">La direzione del lavoro</span>
+            <h3>Lasciare andare per tornare a te</h3>
+            <p>Un percorso positivo di guarigione spirituale per sciogliere ciò che senti ancora aperto e creare lo spazio energetico necessario a un nuovo inizio.</p>
           </div>
           <div className="boundary-card">
             <span className="eyebrow">I confini del servizio</span>

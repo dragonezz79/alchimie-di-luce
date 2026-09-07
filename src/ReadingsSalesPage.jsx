@@ -50,9 +50,9 @@ export default function ReadingsSalesPage() {
       <section className="tarot-hero">
         <div className="container tarot-hero-grid">
           <div>
-            <span className="eyebrow">Consulto personale di Tarocchi</span>
-            <h1>Una domanda precisa.<br /><em>Una lettura completa.</em></h1>
-            <p className="hero-lead">Non una risposta veloce da consumare. Uno spazio riservato per leggere la situazione, riconoscere le dinamiche in gioco e vedere con più lucidità il passo successivo.</p>
+            <span className="eyebrow">Tarocchi e guarigione spirituale</span>
+            <h1>Comprendi ciò che vivi.<br /><em>Guarisci ciò che senti.</em></h1>
+            <p className="hero-lead">Porta luce sulla situazione, riconosci ciò che ti sta bloccando e ritrova la chiarezza necessaria per scegliere il passo successivo.</p>
           </div>
           <img src={tarocchi} alt="Consulto personale di Tarocchi con Carmelo" />
         </div>
@@ -61,7 +61,7 @@ export default function ReadingsSalesPage() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">Due formule, la stessa cura</span>
+            <span className="eyebrow">Due formule, la stessa intenzione</span>
             <h2>Scegli come vuoi ricevere la lettura</h2>
             <p>Il prezzo cambia per modalità e tempo dedicato, non per la serietà dell’interpretazione.</p>
           </div>
@@ -108,8 +108,8 @@ export default function ReadingsSalesPage() {
             <h2>Orientamento, non dipendenza</h2>
           </div>
           <div>
-            <p className="large-copy">Le carte non decidono al posto tuo e non vengono usate per alimentare paura o controllo.</p>
-            <p>La lettura serve a mettere a fuoco ciò che forse stai già sentendo, distinguere i fatti dalle aspettative e restituirti una prospettiva con cui scegliere in modo più consapevole.</p>
+            <p className="large-copy">La guarigione spirituale comincia quando riesci a vedere con chiarezza ciò che senti, ciò che temi e ciò che desideri davvero.</p>
+            <p>Le carte portano alla luce ciò che forse stai già percependo e ti aiutano a separare i fatti dalle aspettative. La scelta rimane sempre tua.</p>
           </div>
         </div>
       </section>

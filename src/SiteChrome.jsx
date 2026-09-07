@@ -60,7 +60,7 @@ function Footer() {
       <div className="footer-grid">
         <div>
           <div className="footer-brand">Alchimie di Luce</div>
-          <p>Un intervento spirituale di nicchia, consulti di Tarocchi e strumenti digitali selezionati.</p>
+          <p>Percorsi di guarigione spirituale ed energetica per lasciare andare, fare chiarezza e ritrovare il proprio centro.</p>
         </div>
         <div>
           <strong>Esplora</strong>
@@ -77,7 +77,7 @@ function Footer() {
           <a href="https://www.tiktok.com/@alchimiediluce" target="_blank" rel="noreferrer">TikTok</a>
         </div>
       </div>
-      <p className="disclaimer">Le proposte hanno finalità spirituali e introspettive. Non costituiscono diagnosi o trattamento e non sostituiscono cure mediche, supporto psicologico o indicazioni professionali. Gli esiti sono soggettivi e non garantiti.</p>
+      <p className="disclaimer">Per guarigione spirituale si intende un percorso personale di ascolto, rilascio e riequilibrio energetico. Non costituisce diagnosi o trattamento e non sostituisce cure mediche, supporto psicologico o indicazioni professionali. Gli esiti sono soggettivi.</p>
       <p className="copyright">© 2026 Alchimie di Luce · Carmelo Nicita</p>
     </footer>
   );

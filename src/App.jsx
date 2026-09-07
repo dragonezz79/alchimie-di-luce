@@ -37,7 +37,7 @@ function RitualsPage() {
           <div className="copy-block">
             <span className="eyebrow">Percorso digitale di 7 giorni</span>
             <h1>7 Rituali di Protezione e Luce</h1>
-            <p className="large-copy">Una pratica al giorno per protezione, centratura, rilascio e confini interiori.</p>
+            <p className="large-copy">Sette pratiche di guarigione spirituale ed energetica per proteggerti, lasciare andare e tornare al tuo centro.</p>
             <p>Non una raccolta casuale di formule: un percorso ordinato, con istruzioni, decreto e chiusura per ogni giornata.</p>
             <div className="price-stack"><strong>14,90 €</strong><span>PDF di 24 pagine · accesso immediato</span></div>
             <ExternalButton href={ritualiLink} eventName="click_rituali_1490">Inizia il percorso</ExternalButton>
@@ -51,7 +51,7 @@ function RitualsPage() {
           <div>
             <span className="eyebrow">Perché esiste</span>
             <h2>La protezione non è paura</h2>
-            <p className="large-copy">È la capacità di riconoscere ciò che ti appesantisce, creare un confine e tornare presente.</p>
+            <p className="large-copy">Proteggerti significa riconoscere ciò che ti appesantisce, creare un confine e riportare la tua energia verso di te.</p>
           </div>
           <ul className="recognition-list">
             <li>vuoi una pratica breve ma strutturata</li>
@@ -101,7 +101,7 @@ function RitualsPage() {
         <div className="container center content-narrow">
           <span className="eyebrow">Inizia quando vuoi</span>
           <h2>Sette pratiche da usare anche dopo i sette giorni</h2>
-          <p>Ricevi il PDF completo e torna al rituale più adatto ogni volta che ne senti il bisogno.</p>
+          <p>Ricevi il PDF completo e scegli ogni volta la pratica più adatta per sostenere la tua guarigione spirituale.</p>
           <ExternalButton href={ritualiLink} eventName="click_rituali_bottom_1490">Acquista a 14,90 €</ExternalButton>
         </div>
       </section>
@@ -124,9 +124,9 @@ function AboutPage() {
           <div className="copy-block">
             <span className="eyebrow">Il mio approccio</span>
             <h2>Pochi strumenti, usati con intenzione</h2>
-            <p className="large-copy">Ho creato Alchimie di Luce per offrire uno spazio spirituale comprensibile, riservato e lontano dalle promesse facili.</p>
+            <p className="large-copy">Ho creato Alchimie di Luce per accompagnarti in una guarigione spirituale positiva: lasciare andare ciò che pesa, ritrovare energia e tornare al tuo centro.</p>
             <p>Seguo personalmente ogni consulto e ogni intervento Punto Zero. Prima di iniziare sai cosa riceverai, quanto costa e quali sono i confini del lavoro.</p>
-            <p>Le mie proposte accompagnano l’ascolto e la riflessione personale. Non costituiscono diagnosi, terapia o garanzia di risultati specifici.</p>
+            <p>Per guarigione spirituale intendo ascolto, rilascio e riequilibrio energetico. Non costituisce diagnosi, terapia o garanzia di risultati specifici.</p>
             <a className="btn btn-primary" href="/punto-zero">Scopri il mio intervento principale</a>
           </div>
         </div>

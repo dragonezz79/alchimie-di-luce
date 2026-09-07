@@ -74,7 +74,7 @@ function Footer() {
       <div className="footer-grid">
         <div>
           <div className="footer-brand">Alchimie di Luce</div>
-          <p>Interventi spirituali a distanza, Tarocchi e strumenti digitali scelti con cura.</p>
+          <p>Percorsi di guarigione spirituale ed energetica per lasciare andare, fare chiarezza e ritrovare il proprio centro.</p>
         </div>
         <div>
           <strong>Esplora</strong>
@@ -92,8 +92,8 @@ function Footer() {
         </div>
       </div>
       <p className="disclaimer">
-        Le attività proposte hanno finalità spirituali e introspettive. Non sostituiscono cure mediche,
-        supporto psicologico, farmaci o indicazioni professionali.
+        Per guarigione spirituale si intende un percorso personale di ascolto, rilascio e riequilibrio energetico.
+        Non sostituisce cure mediche, supporto psicologico, farmaci o indicazioni professionali.
       </p>
       <p className="copyright">© 2026 Alchimie di Luce · Carmelo Nicita</p>
     </footer>
@@ -166,8 +166,8 @@ export function ProductsSalesPage() {
     <Layout>
       <PageHero
         eyebrow="Strumenti digitali"
-        title="Pochi strumenti, ognuno con una funzione precisa"
-        text="Per iniziare, creare una pratica oppure consultare una mappa completa. Senza prodotti duplicati e senza abbonamenti."
+        title="Scegli come prenderti cura della tua energia"
+        text="Tre strumenti di guarigione spirituale: per ritrovare serenità, proteggere la tua energia o ricevere orientamento quando ne hai bisogno."
       />
       <section className="section">
         <div className="container product-list">
@@ -175,7 +175,7 @@ export function ProductsSalesPage() {
             image={ritualiCover}
             label="Percorso di 7 giorni · PDF"
             title="7 Rituali di Protezione e Luce"
-            text="Sette pratiche guidate da usare in sette giorni — o ogni volta che senti bisogno di protezione, centratura, rilascio o confini più chiari."
+            text="Sette pratiche di guarigione energetica per proteggerti, lasciare andare il peso della giornata e tornare al tuo centro."
             price="14,90 €"
             detailHref="/prodotti/7-rituali-protezione-luce"
             buyHref={links.rituali}
@@ -186,7 +186,7 @@ export function ProductsSalesPage() {
             image={mappaCover}
             label="Kit digitale completo"
             title="Mappa di Luce Interattiva"
-            text="Uno strumento spirituale da consultare quando cerchi orientamento: formula una domanda, lascia emergere un simbolo o un messaggio e usa la guida per trasformarlo in una scelta concreta."
+            text="Uno strumento di ascolto e guarigione spirituale: formula una domanda, ricevi un messaggio e trasformalo in una scelta concreta."
             price="59 €"
             detailHref="/prodotti/mappa-di-luce"
             buyHref={links.mappa}
@@ -197,7 +197,7 @@ export function ProductsSalesPage() {
             image={guidaSerenita}
             label="Risorsa gratuita"
             title="5 minuti al giorno per ritrovare serenità"
-            text="Una guida breve per iniziare da una pratica quotidiana accessibile e senza pressione."
+            text="Il primo passo gratuito per ritrovare serenità e iniziare a prenderti cura della tua energia ogni giorno."
             price="Gratis"
             buyHref={links.serenita}
             buyText="Scarica gratis"
@@ -236,9 +236,8 @@ export function MapSalesPage() {
             <h1>Mappa di Luce Interattiva</h1>
             <p className="large-copy"><strong>Non è una Mappa da guardare. È una Mappa da consultare.</strong></p>
             <p>
-              Formula una domanda, entra in uno spazio di ascolto e lascia che un simbolo, un Numero Sacro,
-              un Arcangelo o un messaggio richiami la tua attenzione. Poi usa la guida per comprenderlo e
-              trasformarlo in una scelta concreta.
+              Uno strumento di guarigione spirituale da consultare quando hai bisogno di ascoltarti, ricevere
+              orientamento e trasformare ciò che emerge in una scelta concreta.
             </p>
             <p className="large-copy"><strong>Ascolta · Ricevi · Scegli · Trasforma</strong></p>
             <div className="price-line"><strong>59 €</strong><span>strumento digitale completo</span></div>
@@ -253,7 +252,7 @@ export function MapSalesPage() {
           <div className="section-heading center">
             <span className="eyebrow">Come funziona davvero</span>
             <h2>Da una domanda a una scelta concreta</h2>
-            <p>La Mappa non richiede di studiare tutto prima di iniziare. Parti dal momento che stai vivendo.</p>
+            <p>La tua guarigione spirituale parte dal momento che stai vivendo: non devi studiare tutto prima di iniziare.</p>
           </div>
           <div className="steps-grid">
             <div>
@@ -324,7 +323,7 @@ export function MapSalesPage() {
           <div className="rituals-fit-copy">
             <span className="eyebrow">Può accompagnarti se…</span>
             <h2>Cerchi più orientamento, non altre informazioni</h2>
-            <p className="large-copy">La Mappa è pensata per essere riutilizzata nel tempo e collegare ascolto spirituale e responsabilità personale.</p>
+            <p className="large-copy">La Mappa sostiene nel tempo la tua guarigione spirituale, collegando ascolto interiore e responsabilità personale.</p>
           </div>
           <ul className="recognition-list">
             {suitedFor.map((item) => <li key={item}>{item}</li>)}

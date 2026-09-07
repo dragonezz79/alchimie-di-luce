@@ -30,7 +30,7 @@ const ChoiceCard = ({ number, need, title, text, price, href, cta }) => (
 
 export default function HomeSalesPage() {
   React.useEffect(() => {
-    document.title = 'Alchimie di Luce | Punto Zero, Tarocchi e strumenti spirituali';
+    document.title = 'Alchimie di Luce | Guarigione spirituale ed energetica';
     window.scrollTo(0, 0);
   }, []);
 
@@ -40,15 +40,15 @@ export default function HomeSalesPage() {
         <div className="container zero-hero-grid">
           <div className="zero-hero-copy">
             <span className="eyebrow">Alchimie di Luce · Carmelo Nicita</span>
-            <h1>Fai chiarezza.<br /><em>Riparti dal tuo centro.</em></h1>
+            <h1>Lascia andare ciò che pesa.<br /><em>Torna a sentirti tu.</em></h1>
             <p className="hero-lead">
-              Interventi spirituali a distanza, consulti di Tarocchi e strumenti digitali per chi sente il bisogno di sciogliere un peso, comprendere una situazione e scegliere il passo successivo.
+              Percorsi di guarigione spirituale ed energetica per ritrovare leggerezza, chiarezza e forza interiore.
             </p>
             <div className="hero-actions hero-actions-left">
               <a className="btn btn-primary" href="/punto-zero">Scopri Punto Zero</a>
               <a className="btn btn-secondary" href="/trova-il-tuo-percorso">Fai il test</a>
             </div>
-            <p className="trust-line">Niente promesse miracolose · Prezzi chiari · Percorsi spiegati prima di iniziare</p>
+            <p className="trust-line">Percorsi chiari · Prezzi trasparenti · Rispetto del libero arbitrio</p>
           </div>
           <div className="zero-symbol-card" aria-label="Immagine evocativa del percorso Punto Zero">
             <div className="zero-orbit" />
@@ -67,7 +67,7 @@ export default function HomeSalesPage() {
             <span className="eyebrow">Il percorso centrale</span>
             <h2>Quando continuare a pensarci non basta</h2>
             <p className="large-copy">
-              Punto Zero è un intervento spirituale personalizzato a distanza, pensato per accompagnare una fase di distacco, alleggerimento e riallineamento interiore.
+              Punto Zero è un intervento di guarigione spirituale ed energetica a distanza. Ti accompagna a recidere ciò che ti trattiene, alleggerire il peso interiore e recuperare energia per ripartire.
             </p>
             <ul className="clean-checks">
               <li>Lettura preliminare del tema che stai vivendo</li>
@@ -79,7 +79,7 @@ export default function HomeSalesPage() {
           <aside className="flagship-offer">
             <span className="badge">Intervento premium</span>
             <h3>Punto Zero a distanza</h3>
-            <p>Non acquisti una tavola da usare da solo: affidi a Carmelo un lavoro spirituale costruito sulla tua intenzione.</p>
+            <p>Affidi a Carmelo un lavoro personale costruito su ciò che stai vivendo e seguito a distanza fino alla chiusura del ciclo.</p>
             <div className="price-stack"><strong>149 €</strong><span>percorso personale</span></div>
             <a className="btn btn-primary" href="/punto-zero">Come funziona</a>
             <ExternalButton href={puntoZeroMessage} eventName="click_home_punto_zero_whatsapp" className="btn-secondary">Chiedi se è adatto a te</ExternalButton>
@@ -99,7 +99,7 @@ export default function HomeSalesPage() {
               number="01"
               need="Vuoi sciogliere un peso"
               title="Punto Zero"
-              text="Un intervento spirituale a distanza rivolto a legami, schemi ricorrenti e fasi che senti ancora aperte."
+              text="Per lasciare andare legami, schemi e situazioni che continuano a toglierti energia."
               price="149 €"
               href="/punto-zero"
               cta="Scopri l’intervento"
@@ -108,7 +108,7 @@ export default function HomeSalesPage() {
               number="02"
               need="Hai una domanda precisa"
               title="Tarocchi"
-              text="Una lettura completa, scritta oppure telefonica, per vedere con più lucidità una situazione concreta."
+              text="Per capire cosa sta accadendo dentro di te e vedere con più chiarezza la scelta successiva."
               price="Da 49 €"
               href="/letture"
               cta="Confronta le formule"
@@ -117,7 +117,7 @@ export default function HomeSalesPage() {
               number="03"
               need="Vuoi procedere in autonomia"
               title="Strumenti digitali"
-              text="Pratiche e mappe da scaricare, consultare e utilizzare con i tuoi tempi, a partire da una guida gratuita."
+              text="Per proteggere la tua energia, ritrovare il centro e sostenere ogni giorno la tua guarigione spirituale."
               price="Da 0 €"
               href="/prodotti"
               cta="Esplora gli strumenti"
@@ -143,7 +143,7 @@ export default function HomeSalesPage() {
           <div>
             <span className="eyebrow">L’unico ingresso gratuito</span>
             <h2>Inizia con cinque minuti veri</h2>
-            <p className="large-copy">Una guida breve per conoscere l’approccio di Alchimie di Luce attraverso una pratica quotidiana semplice, senza acquistare nulla.</p>
+            <p className="large-copy">La guarigione spirituale può iniziare da cinque minuti: fermarti, respirare e tornare presente nella tua vita.</p>
             <ExternalButton href={links.serenita} eventName="click_home_serenita">Scarica la guida gratuita</ExternalButton>
           </div>
           <div className="entry-next">
@@ -163,8 +163,8 @@ export default function HomeSalesPage() {
           <div>
             <span className="eyebrow">Chi c’è dietro il lavoro</span>
             <h2>Una guida reale, non un servizio anonimo</h2>
-            <p className="large-copy">Sono Carmelo. Ogni lettura e ogni intervento personale vengono seguiti da me, con regole chiare, riservatezza e rispetto del libero arbitrio.</p>
-            <p>Il lavoro spirituale può offrire ascolto e una prospettiva diversa. Non sostituisce decisioni, cure o professionisti qualificati.</p>
+            <p className="large-copy">Sono Carmelo. Ti accompagno personalmente in un percorso di guarigione spirituale ed energetica, con riservatezza e rispetto del libero arbitrio.</p>
+            <p>Guarire spiritualmente significa lasciare andare ciò che pesa, ascoltare ciò che senti e ritrovare un rapporto più positivo con la tua energia.</p>
             <a className="text-link" href="/chi-sono">Conosci il mio approccio →</a>
           </div>
         </div>
