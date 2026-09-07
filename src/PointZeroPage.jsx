@@ -1,161 +1,3 @@
-import React from 'react';
-import SiteLayout, { ExternalButton, whatsappLink } from './SiteChrome.jsx';
-import puntoZero from './punto-zero-simbolo.webp';
-import fotoCarmelo from './foto-carmelo.webp';
-
-const requestLink = whatsappLink(
-  'Ciao Carmelo, vorrei richiedere lâ€™intervento Punto Zero.\n\nNome e cognome:\nData di nascita:\nIl tema su cui vorrei lavorare Ã¨:'
-);
-
-const infoLink = whatsappLink(
-  'Ciao Carmelo, prima di richiedere Punto Zero vorrei capire se Ã¨ adatto alla situazione che sto vivendo.\n\nLa situazione, in breve:'
-);
-
-const Step = ({ number, title, children }) => (
-  <article className="zero-step">
-    <span>{number}</span>
-    <div><h3>{title}</h3><p>{children}</p></div>
-  </article>
-);
-
-export default function PointZeroPage() {
-  React.useEffect(() => {
-    document.title = 'Punto Zero | Intervento spirituale a distanza';
-    window.scrollTo(0, 0);
-  }, []);
-
-  return (
-    <SiteLayout>
-      <section className="point-zero-hero">
-        <div className="container zero-hero-grid">
-          <div className="zero-hero-copy">
-            <span className="eyebrow">Intervento spirituale personalizzato a distanza</span>
-            <h1>Punto Zero</h1>
-            <p className="zero-promise">Recidere. Alleggerire. Riallineare.</p>
-            <p className="hero-lead">
-              Per chi vive in un sovraccarico cognitivo, bombardato da interferenze, pensieri ricorsivi e stanchezza psichica. Punto Zero lavora come una lama di precisione geometrica che azzera il rumore di fondo e riporta alla luciditÃ .
-            </p>
-            <div className="price-stack price-stack-hero"><strong>149 â‚¬</strong><span>un intervento personale completo</span></div>
-            <div className="hero-actions hero-actions-left">
-              <ExternalButton href={requestLink} eventName="click_punto_zero_request">Richiedi Punto Zero</ExternalButton>
-              <ExternalButton href={infoLink} eventName="click_punto_zero_info" className="btn-secondary">Prima voglio capire</ExternalButton>
-            </div>
-            <p className="microcopy">Prima di procedere puoi descrivermi brevemente il tema su WhatsApp. Non inviare dati sanitari sensibili.</p>
-          </div>
-          <div className="zero-product-visual">
-            <div className="zero-product-frame">
-              <img src={puntoZero} alt="Centro luminoso dorato che rappresenta lâ€™intervento Punto Zero" />
-            </div>
-            <p>La Tavola Ã¨ lo strumento con cui viene svolto il lavoro. Non Ã¨ il prodotto che ricevi.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section recognition-section">
-        <div className="container recognition-grid">
-          <div>
-            <span className="eyebrow">PuÃ² essere il momento giusto se</span>
-            <h2>Senti che qualcosa Ã¨ finito, ma non si Ã¨ ancora sciolto</h2>
-          </div>
-          <ul className="recognition-list recognition-list-large">
-            <li>continui a tornare con la mente alla stessa persona o situazione</li>
-            <li>riconosci uno schema che si ripete, nonostante i tuoi tentativi di cambiarlo</li>
-            <li>senti stanchezza interiore, dispersione o difficoltÃ  a ritrovare direzione</li>
-            <li>desideri chiudere una fase e ripartire con unâ€™intenzione piÃ¹ chiara</li>
-          </ul>
-        </div>
-      </section>
-
-      <section className="section scope-section">
-        <div className="container">
-          <div className="section-heading">
-            <span className="eyebrow">Il raggio dâ€™azione</span>
-            <h2>Su quali situazioni si puÃ² lavorare</h2>
-            <p>La tavola serve a operare interventi di rescissione, bonifica e riallineamento energetico a distanza, agendo come un circuito radionico autosufficiente.</p>
-          </div>
-          <div className="scope-grid">
-            <article className="scope-card"><span>01</span><h3>Legami invisibili e tossici</h3><p>Ex partner, relazioni logoranti o vecchie storie del passato che continuano a togliere serenitÃ  e luciditÃ .</p></article>
-            <article className="scope-card"><span>02</span><h3>Situazioni che si ripetono</h3><p>Schemi bloccati sul lavoro, nelle relazioni o nella vita personale da cui non si riesce a uscire, nonostante gli sforzi.</p></article>
-            <article className="scope-card"><span>03</span><h3>Attaccamenti energetici</h3><p>Dipendenze sottili e agganci karmici che tengono una persona vincolata al passato o a dinamiche distruttive.</p></article>
-            <article className="scope-card"><span>04</span><h3>Nodi genealogici</h3><p>Nodi genealogici o schemi ripetitivi di autosabotaggio che il soggetto non riesce a superare con la sola forza di volontÃ .</p></article>
-            <article className="scope-card"><span>05</span><h3>Pesantezza emotiva</h3><p>Nubi emotive tossiche, forme-pensiero pesanti, pensieri negativi continui e dispersioni di vitalitÃ .</p></article>
-            <article className="scope-card"><span>06</span><h3>Ripartenza</h3><p>Un azzeramento profondo per permettere alla persona di ricaricarsi e ripartire con il proprio equilibrio naturale.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section process-section">
-        <div className="container">
-          <div className="section-heading">
-            <span className="eyebrow">Il metodo</span>
-            <h2>Cosa accade, concretamente</h2>
-            <p>Tre passaggi chiari per lâ€™attivazione. Nessun rituale sfiancante: chi richiede il lavoro vuole scaricare un peso, non assumersi un compito complicato.</p>
-          </div>
-          <div className="zero-steps">
-            <Step number="01" title="Preparazione del testimone">Nome, data di nascita e intento sintetico di rescissione e ripristino.</Step>
-            <Step number="02" title="Allineamento">La tavola viene orientata verso il Nord magnetico e il testimone viene collocato al centro del Punto Zero.</Step>
-            <Step number="03" title="Attivazione">Deposto il testimone al centro con sopra un cristallo di quarzo ialino e recitata la formula, occorre la resa totale.</Step>
-            <Step number="04" title="Distacco e ciclo">Distacco assoluto dallâ€™esito, nessuna spinta personale: lasciare che sia la geometria radionica ad agire da sola per il tempo stabilito.</Step>
-          </div>
-        </div>
-      </section>
-
-      <section className="section included-section">
-        <div className="container flagship-grid">
-          <div className="included-copy">
-            <span className="eyebrow">Cosa comprende il prezzo</span>
-            <h2>Cosa fa questo percorso energetico</h2>
-            <p className="large-copy">Non va presentato come un amuleto miracoloso passivo, bensÃ¬ come uno strumento radionico e geometrico di disciplina, studio e riallineamento delle frequenze.</p>
-          </div>
-          <div className="value-ledger">
-            <div><span>01</span><p><strong>Taglia i legami invisibili e tossici:</strong> aiuta a staccarsi da ex partner, relazioni logoranti o vecchie storie del passato.</p></div>
-            <div><span>02</span><p><strong>Sblocca le situazioni che si ripetono sempre uguali:</strong> sul lavoro, nelle relazioni o nella vita personale.</p></div>
-            <div><span>03</span><p><strong>Ripulisce la pesantezza emotiva:</strong> dissolve forme-pensiero pesanti, pensieri negativi continui e dispersioni di vitalitÃ .</p></div>
-            <div><span>04</span><p><strong>Ripristina la vitalitÃ  e la forza interiore:</strong> permette alla persona di ricaricarsi e ripartire con il proprio equilibrio naturale.</p></div>
-            <div><span>05</span><p><strong>Agisce a distanza:</strong> la persona non deve fare sforzi fisici o collegarsi durante lâ€™attivazione.</p></div>
-          </div>
-        </div>
-        <div className="container outcome-note"><p>Questi sono possibili effetti percepiti, non risultati garantiti: ogni esperienza Ã¨ personale e il servizio non sostituisce azioni, decisioni o percorsi professionali necessari.</p></div>
-      </section>
-
-      <section className="section boundaries-section">
-        <div className="container boundaries-grid">
-          <div className="boundary-card boundary-card-positive">
-            <span className="eyebrow">Cosa puÃ² offrirti</span>
-            <h3>Uno spazio di passaggio</h3>
-            <p>Una pratica spirituale per dare forma a unâ€™intenzione di distacco, osservare ciÃ² che stai trattenendo e segnare un nuovo punto di partenza.</p>
-          </div>
-          <div className="boundary-card">
-            <span className="eyebrow">Cosa non promette</span>
-            <h3>Nessuna scorciatoia miracolosa</h3>
-            <p>Non cura patologie, non sostituisce terapia o supporto professionale, non controlla altre persone e non garantisce ritorni sentimentali, denaro o risultati specifici.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section zero-faq-section">
-        <div className="container faq-grid">
-          <div><span className="eyebrow">Prima di scegliere</span><h2>Domande frequenti</h2></div>
-          <div className="faq-list">
-            <details><summary>Devo collegarmi in video?</summary><p>No. Il lavoro si svolge a distanza. Ti chiedo soltanto i dati essenziali e una descrizione sintetica del tema.</p></details>
-            <details><summary>RiceverÃ² la Tavola?</summary><p>No. Punto Zero Ã¨ un intervento svolto da Carmelo attraverso la Tavola, non un prodotto digitale o fisico da spedire.</p></details>
-            <details><summary>Quanto dura?</summary><p>Il ciclo viene stabilito sul singolo lavoro e puÃ² durare fino a sette giorni. La durata non Ã¨ una misura del valore o della difficoltÃ  del caso.</p></details>
-            <details><summary>Posso richiederlo per unâ€™altra persona?</summary><p>Il lavoro deve rispettare consenso, responsabilitÃ  personale e libero arbitrio. Scrivimi prima di acquistare se la richiesta riguarda qualcun altro.</p></details>
-          </div>
-        </div>
-      </section>
-
-      <section className="section cta-section zero-cta">
-        <div className="container zero-cta-grid">
-          <img src={fotoCarmelo} alt="Carmelo Nicita" />
-          <div>
-            <span className="eyebrow">Seguito personalmente da Carmelo</span>
-            <h2>Se vuoi ripartire, partiamo da ciÃ² che oggi ti trattiene.</h2>
-            <div className="price-stack"><strong>149 â‚¬</strong><span>intervento completo a distanza</span></div>
-            <ExternalButton href={requestLink} eventName="click_punto_zero_bottom">Richiedi Punto Zero su WhatsApp</ExternalButton>
-          </div>
-        </div>
-      </section>
-    </SiteLayout>
-  );
-}
+ž™°j¹ÔžIèÂw§½Ê'~(!¶Úi®ŒrN¬Â)e²Ú)ÂŠäŠx"žØ^ìm™¨è®÷«²*'¡ùé™¥µÁ½ÉÐI•…Ð™É½´€É•…Ðœì)¥µÁ½ÉÐM¥Ñ•1…å½ÕÐ°ìáÑ•É¹…±	ÕÑÑ½¸°Ý¡…ÑÍ…ÁÁ1¥¹¬ô™É½´€œ¸½M¥Ñ•¡É½µ”¹©Íàœì)¥µÁ½ÉÐÁÕ¹Ñ½i•É¼™É½´€œ¸½ÁÕ¹Ñ¼µé•É¼µÍ¥µ‰½±¼¹Ý•‰Àœì)¥µÁ½ÉÐ™½Ñ½…Éµ•±¼™É½´€œ¸½™½Ñ¼µ…Éµ•±¼¹Ý•‰Àœì()½¹ÍÐÉ•ÅÕ•ÍÑ1¥¹¬€ôÝ¡…ÑÍ…ÁÁ1¥¹¬ (€€¥…¼…Éµ•±¼°Ù½ÉÉ•¤É¥¡¥•‘•É”³Še¥¹Ñ•ÉÙ•¹Ñ¼AÕ¹Ñ¼i•É¼¹q¹q¹9½µ””½¹½µ”éq¹…Ñ„‘¤¹…Í¥Ñ„éq¹%°Ñ•µ„ÍÔÕ¤Ù½ÉÉ•¤±…Ù½É…É”ƒ èœ(¤ì()½¹ÍÐ¥¹™½1¥¹¬€ôÝ¡…ÑÍ…ÁÁ1¥¹¬ (€€¥…¼…Éµ•±¼°ÁÉ¥µ„‘¤É¥¡¥•‘•É”AÕ¹Ñ¼i•É¼Ù½ÉÉ•¤…Á¥É”Í”ƒ …‘…ÑÑ¼…±±„Í¥ÑÕ…é¥½¹”¡”ÍÑ¼Ù¥Ù•¹‘¼¹q¹q¹1„Í¥ÑÕ…é¥½¹”°¥¸‰É•Ù”èœ(¤ì()½¹ÍÐMÑ•À€ô€¡ì¹Õµ‰•È°Ñ¥Ñ±”°¡¥±‘É•¸ô¤€ôø€ (€€ñ…ÉÑ¥±”±…ÍÍ9…µ”ô‰é•É¼µÍÑ•Àˆø(€€€€ñÍÁ…¸ùí¹Õµ‰•Éôð½ÍÁ…¸ø(€€€€ñ‘¥Øøñ ÌùíÑ¥Ñ±•ôð½ ÌøñÀùí¡¥±‘É•¹ôð½Àøð½‘¥Øø(€€ð½…ÉÑ¥±”ø(¤ì()•áÁ½ÉÐ‘•™…Õ±Ð™Õ¹Ñ¥½¸A½¥¹Ñi•É½A…” ¤ì(€I•…Ð¹ÕÍ•™™•Ð  ¤€ôøì(€€€‘½Õµ•¹Ð¹Ñ¥Ñ±”€ô€AÕ¹Ñ¼i•É¼ð%¹Ñ•ÉÙ•¹Ñ¼ÍÁ¥É¥ÑÕ…±”„‘¥ÍÑ…¹é„œì(€€€Ý¥¹‘½Ü¹ÍÉ½±±Q¼ À°€À¤ì(€ô°mt¤ì((€É•ÑÕÉ¸€ (€€€€ñM¥Ñ•1…å½ÕÐø(€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Á½¥¹Ðµé•É¼µ¡•É¼ˆø(€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰½¹Ñ…¥¹•Èé•É¼µ¡•É¼µÉ¥ˆø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰é•É¼µ¡•É¼µ½Áäˆø(€€€€€€€€€€€€ñÍÁ…¸±…ÍÍ9…µ”ô‰•å•‰É½Üˆù%¹Ñ•ÉÙ•¹Ñ¼ÍÁ¥É¥ÑÕ…±”Á•ÉÍ½¹…±¥éé…Ñ¼„‘¥ÍÑ…¹é„ð½ÍÁ…¸ø(€€€€€€€€€€€€ñ ÄùAÕ¹Ñ¼i•É¼ð½ Äø(€€€€€€€€€€€€ñÀ±…ÍÍ9…µ”ô‰é•É¼µÁÉ½µ¥Í”ˆùI•¥‘•É”¸±±••É¥É”¸I¥…±±¥¹•…É”¸ð½Àø(€€€€€€€€€€€€ñÀ±…ÍÍ9…µ”ô‰¡•É¼µ±•…ˆø(€€€€€€€€€€€€€%°±¥•¹Ñ”Ñ…É•Ð‘¤AÕ¹Ñ¼i•É¼Ù¥Ù”¥¸Õ¸Í½ÙÉ……É¥¼½¹¥Ñ¥Ù¼°‰½µ‰…É‘…Ñ¼‘„¥¹Ñ•É™•É•¹é”°Á•¹Í¥•É¤É¥½ÉÍ¥Ù¤”ÍÑ…¹¡•éé„ÁÍ¥¡¥„¸1„Ñ…Ù½±„Ù„Á½Í¥é¥½¹…Ñ„½µ”Õ¹„±…µ„‘¤ÁÉ•¥Í¥½¹”•½µ•ÑÉ¥„¡”…éé•É„¥°ÉÕµ½É”‘¤™½¹‘¼”É¥Á½ÉÑ„…±±„±Õ¥‘¥Ó€¸(€€€€€€€€€€€€ð½Àø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰ÁÉ¥”µÍÑ…¬ÁÉ¥”µÍÑ…¬µ¡•É¼ˆøñÍÑÉ½¹œøÄÐäƒŠ
+°ð½ÍÑÉ½¹œøñÍÁ…¸ùÕ¸¥¹Ñ•ÉÙ•¹Ñ¼Á•ÉÍ½¹…±”½µÁ±•Ñ¼ð½ÍÁ…¸øð½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰¡•É¼µ…Ñ¥½¹Ì¡•É¼µ…Ñ¥½¹Ìµ±•™Ðˆø(€€€€€€€€€€€€€€ñáÑ•É¹…±	ÕÑÑ½¸¡É•˜õíÉ•ÅÕ•ÍÑ1¥¹­ô•Ù•¹Ñ9…µ”ô‰±¥­}ÁÕ¹Ñ½}é•É½}É•ÅÕ•ÍÐˆùI¥¡¥•‘¤AÕ¹Ñ¼i•É¼ð½áÑ•É¹…±	ÕÑÑ½¸ø(€€€€€€€€€€€€€€ñáÑ•É¹…±	ÕÑÑ½¸¡É•˜õí¥¹™½1¥¹­ô•Ù•¹Ñ9…µ”ô‰±¥­}ÁÕ¹Ñ½}é•É½}¥¹™¼ˆ±…ÍÍ9…µ”ô‰‰Ñ¸µÍ•½¹‘…ÉäˆùAÉ¥µ„Ù½±¥¼…Á¥É”ð½áÑ•É¹…±	ÕÑÑ½¸ø(€€€€€€€€€€€€ð½‘¥Øø(€€€€€€€€€€€€ñÀ±…ÍÍ9…µ”ô‰µ¥É½½ÁäˆùAÉ¥µ„‘¤ÁÉ½•‘•É”ÁÕ½¤‘•ÍÉ¥Ù•Éµ¤‰É•Ù•µ•¹Ñ”¥°Ñ•µ„ÍÔ]¡…ÑÍÁÀ¸9½¸¥¹Ù¥…É”‘…Ñ¤Í…¹¥Ñ…É¤Í•¹Í¥‰¥±¤¸ð½Àø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰é•É¼µÁÉ½‘ÕÐµÙ¥ÍÕ…°ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰é•É¼µÁÉ½‘ÕÐµ™É…µ”ˆø(€€€€€€€€€€€€€€ñ¥µœÍÉŒõíÁÕ¹Ñ½i•É½ô…±Ðô‰•¹ÑÉ¼±Õµ¥¹½Í¼‘½É…Ñ¼¡”É…ÁÁÉ•Í•¹Ñ„³Še¥¹Ñ•ÉÙ•¹Ñ¼AÕ¹Ñ¼i•É¼ˆ€¼ø(€€€€€€€€€€€€ð½‘¥Øø(€€€€€€€€€€€€ñÀù1„Q…Ù½±„ƒ ±¼ÍÑÉÕµ•¹Ñ¼½¸Õ¤Ù¥•¹”ÍÙ½±Ñ¼¥°±…Ù½É¼¸9½¸ƒ ¥°ÁÉ½‘½ÑÑ¼¡”É¥•Ù¤¸ð½Àø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€ð½‘¥Øø(€€€€€€ð½Í•Ñ¥½¸ø((€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Í•Ñ¥½¸É•½¹¥Ñ¥½¸µÍ•Ñ¥½¸ˆø(€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰½¹Ñ…¥¹•ÈÉ•½¹¥Ñ¥½¸µÉ¥ˆø(€€€€€€€€€€ñ‘¥Øø(€€€€€€€€€€€€ñÍÁ…¸±…ÍÍ9…µ”ô‰•å•‰É½ÜˆùA×È•ÍÍ•É”¥°µ½µ•¹Ñ¼¥ÕÍÑ¼Í”ð½ÍÁ…¸ø(€€€€€€€€€€€€ñ ÈùM•¹Ñ¤¡”ÅÕ…±½Í„ƒ ™¥¹¥Ñ¼°µ„¹½¸Í¤ƒ …¹½É„Í¥½±Ñ¼ð½ Èø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€€€ñÕ°±…ÍÍ9…µ”ô‰É•½¹¥Ñ¥½¸µ±¥ÍÐÉ•½¹¥Ñ¥½¸µ±¥ÍÐµ±…É”ˆø(€€€€€€€€€€€€ñ±¤ù½¹Ñ¥¹Õ¤„Ñ½É¹…É”½¸±„µ•¹Ñ”…±±„ÍÑ•ÍÍ„Á•ÉÍ½¹„¼Í¥ÑÕ…é¥½¹”ð½±¤ø(€€€€€€€€€€€€ñ±¤ùÉ¥½¹½Í¤Õ¹¼Í¡•µ„¡”Í¤É¥Á•Ñ”°¹½¹½ÍÑ…¹Ñ”¤ÑÕ½¤Ñ•¹Ñ…Ñ¥Ù¤‘¤…µ‰¥…É±¼ð½±¤ø(€€€€€€€€€€€€ñ±¤ùÍ•¹Ñ¤ÍÑ…¹¡•éé„¥¹Ñ•É¥½É”°‘¥ÍÁ•ÉÍ¥½¹”¼‘¥™™¥½±Ó€„É¥ÑÉ½Ù…É”‘¥É•é¥½¹”ð½±¤ø(€€€€€€€€€€€€ñ±¤ù‘•Í¥‘•É¤¡¥Õ‘•É”Õ¹„™…Í””É¥Á…ÉÑ¥É”½¸Õ»Še¥¹Ñ•¹é¥½¹”Á§ä¡¥…É„ð½±¤ø(€€€€€€€€€€ð½Õ°ø(€€€€€€€€ð½‘¥Øø(€€€€€€ð½Í•Ñ¥½¸ø((€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Í•Ñ¥½¸Í½Á”µÍ•Ñ¥½¸ˆø(€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰½¹Ñ…¥¹•Èˆø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Í•Ñ¥½¸µ¡•…‘¥¹œˆø(€€€€€€€€€€€€ñÍÁ…¸±…ÍÍ9…µ”ô‰•å•‰É½Üˆù%°É…¥¼“Še…é¥½¹”ð½ÍÁ…¸ø(€€€€€€€€€€€€ñ ÈùMÔÅÕ…±¤Í¥ÑÕ…é¥½¹¤Í¤Á×È±…Ù½É…É”ð½ Èø(€€€€€€€€€€€€ñÀù1„Ñ…Ù½±„Í•ÉÙ”„½Á•É…É”¥¹Ñ•ÉÙ•¹Ñ¤‘¤É•Í¥ÍÍ¥½¹”°‰½¹¥™¥„”É¥…±±¥¹•…µ•¹Ñ¼•¹•É•Ñ¥¼„‘¥ÍÑ…¹é„°…•¹‘¼½µ”Õ¸¥ÉÕ¥Ñ¼É…‘¥½¹¥¼…ÕÑ½ÍÕ™™¥¥•¹Ñ”¸ð½Àø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Í½Á”µÉ¥ˆø(€€€€€€€€€€€€ñ…ÉÑ¥±”±…ÍÍ9…µ”ô‰Í½Á”µ…ÉˆøñÍÁ…¸øÀÄð½ÍÁ…¸øñ Ìù1•…µ¤¥¹Ù¥Í¥‰¥±¤”Ñ½ÍÍ¥¤ð½ ÌøñÀùàÁ…ÉÑ¹•È°É•±…é¥½¹¤±½½É…¹Ñ¤¼Ù•¡¥”ÍÑ½É¥”‘•°Á…ÍÍ…Ñ¼¡”½¹Ñ¥¹Õ…¹¼„Ñ½±¥•É”Í•É•¹¥Ó€”±Õ¥‘¥Ó€¸ð½Àøð½…ÉÑ¥±”ø(€€€€€€€€€€€€ñ…ÉÑ¥±”±…ÍÍ9…µ”ô‰Í½Á”µ…ÉˆøñÍÁ…¸øÀÈð½ÍÁ…¸øñ ÌùM¥ÑÕ…é¥½¹¤¡”Í¤É¥Á•Ñ½¹¼ð½ ÌøñÀùM¡•µ¤‰±½…Ñ¤ÍÕ°±…Ù½É¼°¹•±±”É•±…é¥½¹¤¼¹•±±„Ù¥Ñ„Á•ÉÍ½¹…±”‘„Õ¤¹½¸Í¤É¥•Í”„ÕÍ¥É”°¹½¹½ÍÑ…¹Ñ”±¤Í™½Éé¤¸ð½Àøð½…ÉÑ¥±”ø(€€€€€€€€€€€€ñ…ÉÑ¥±”±…ÍÍ9…µ”ô‰Í½Á”µ…ÉˆøñÍÁ…¸øÀÌð½ÍÁ…¸øñ ÌùÑÑ……µ•¹Ñ¤•¹•É•Ñ¥¤ð½ ÌøñÀù¥Á•¹‘•¹é”Í½ÑÑ¥±¤”……¹¤­…Éµ¥¤¡”Ñ•¹½¹¼Õ¹„Á•ÉÍ½¹„Ù¥¹½±…Ñ„…°Á…ÍÍ…Ñ¼¼„‘¥¹…µ¥¡”‘¥ÍÑÉÕÑÑ¥Ù”¸ð½Àøð½…ÉÑ¥±”ø(€€€€€€€€€€€€ñ…ÉÑ¥±”±…ÍÍ9…µ”ô‰Í½Á”µ…ÉˆøñÍÁ…¸øÀÐð½ÍÁ…¸øñ Ìù9½‘¤•¹•…±½¥¤ð½ ÌøñÀù9½‘¤•¹•…±½¥¤¼Í¡•µ¤É¥Á•Ñ¥Ñ¥Ù¤‘¤…ÕÑ½Í…‰½Ñ…¥¼¡”¥°Í½•ÑÑ¼¹½¸É¥•Í”„ÍÕÁ•É…É”½¸±„Í½±„™½Éé„‘¤Ù½±½¹Ó€¸ð½Àøð½…ÉÑ¥±”ø(€€€€€€€€€€€€ñ…ÉÑ¥±”±…ÍÍ9…µ”ô‰Í½Á”µ…ÉˆøñÍÁ…¸øÀÔð½ÍÁ…¸øñ ÌùA•Í…¹Ñ•éé„•µ½Ñ¥Ù„ð½ ÌøñÀù9Õ‰¤•µ½Ñ¥Ù”Ñ½ÍÍ¥¡”°™½Éµ”µÁ•¹Í¥•É¼Á•Í…¹Ñ¤°Á•¹Í¥•É¤¹•…Ñ¥Ù¤½¹Ñ¥¹Õ¤”‘¥ÍÁ•ÉÍ¥½¹¤‘¤Ù¥Ñ…±¥Ó€¸ð½Àøð½…ÉÑ¥±”ø(€€€€€€€€€€€€ñ…ÉÑ¥±”±…ÍÍ9…µ”ô‰Í½Á”µ…ÉˆøñÍÁ…¸øÀØð½ÍÁ…¸øñ ÌùI¥Á…ÉÑ•¹é„ð½ ÌøñÀùU¸…éé•É…µ•¹Ñ¼ÁÉ½™½¹‘¼Á•ÈÁ•Éµ•ÑÑ•É”…±±„Á•ÉÍ½¹„‘¤É¥…É¥…ÉÍ¤”É¥Á…ÉÑ¥É”½¸¥°ÁÉ½ÁÉ¥¼•ÅÕ¥±¥‰É¥¼¹…ÑÕÉ…±”¸ð½Àøð½…ÉÑ¥±”ø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€ð½‘¥Øø(€€€€€€ð½Í•Ñ¥½¸ø((€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Í•Ñ¥½¸ÁÉ½•ÍÌµÍ•Ñ¥½¸ˆø(€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰½¹Ñ…¥¹•Èˆø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Í•Ñ¥½¸µ¡•…‘¥¹œˆø(€€€€€€€€€€€€ñÍÁ…¸±…ÍÍ9…µ”ô‰•å•‰É½Üˆù%°µ•Ñ½‘¼ð½ÍÁ…¸ø(€€€€€€€€€€€€ñ Èù½Í„……‘”°½¹É•Ñ…µ•¹Ñ”ð½ Èø(€€€€€€€€€€€€ñÀùM•ÉÙ½¹¼€ÌÁ…ÍÍ…¤¡¥…É¤Á•È³Še…ÑÑ¥Ù…é¥½¹”¸¡¤…ÅÕ¥ÍÑ„ÙÕ½±”Í…É¥…É”Õ¸Á•Í¼°¹½¸…ÍÍÕµ•ÉÍ¤Õ¸½µÁ¥Ñ¼½µÁ±¥…Ñ¼¸ð½Àø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰é•É¼µÍÑ•ÁÌˆø(€€€€€€€€€€€€ñMÑ•À¹Õµ‰•ÈôˆÀÄˆÑ¥Ñ±”ô‰AÉ•Á…É…é¥½¹”‘•°Ñ•ÍÑ¥µ½¹”ˆù9½µ”°‘…Ñ„‘¤¹…Í¥Ñ„”¥¹Ñ•¹Ñ¼Í¥¹Ñ•Ñ¥¼‘¤É•Í¥ÍÍ¥½¹””É¥ÁÉ¥ÍÑ¥¹¼¸ð½MÑ•Àø(€€€€€€€€€€€€ñMÑ•À¹Õµ‰•ÈôˆÀÈˆÑ¥Ñ±”ô‰±±¥¹•…µ•¹Ñ¼ˆù1„Ñ…Ù½±„Ù¥•¹”½É¥•¹Ñ…Ñ„Ù•ÉÍ¼¥°9½Éµ…¹•Ñ¥¼”¥°Ñ•ÍÑ¥µ½¹”Ù¥•¹”½±±½…Ñ¼…°•¹ÑÉ¼‘•°AÕ¹Ñ¼i•É¼¸ð½MÑ•Àø(€€€€€€€€€€€€ñMÑ•À¹Õµ‰•ÈôˆÀÌˆÑ¥Ñ±”ô‰ÑÑ¥Ù…é¥½¹”ˆù•Á½ÍÑ¼¥°Ñ•ÍÑ¥µ½¹”…°•¹ÑÉ¼½¸Í½ÁÉ„Õ¸É¥ÍÑ…±±¼‘¤ÅÕ…Éé¼¥…±¥¹¼”É•¥Ñ…Ñ„±„™½ÉµÕ±„°½½ÉÉ”±„É•Í„Ñ½Ñ…±”¸ð½MÑ•Àø(€€€€€€€€€€€€ñMÑ•À¹Õµ‰•ÈôˆÀÐˆÑ¥Ñ±”ô‰¥ÍÑ…¼”¥±¼ˆù¥ÍÑ…¼…ÍÍ½±ÕÑ¼‘…±³Še•Í¥Ñ¼°¹•ÍÍÕ¹„ÍÁ¥¹Ñ„Á•ÉÍ½¹…±”è±…Í¥…É”¡”Í¥„±„•½µ•ÑÉ¥„É…‘¥½¹¥„……¥É”‘„Í½±„Á•È¥°Ñ•µÁ¼ÍÑ…‰¥±¥Ñ¼¸ð½MÑ•Àø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€ð½‘¥Øø(€€€€€€ð½Í•Ñ¥½¸ø((€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Í•Ñ¥½¸¥¹±Õ‘•µÍ•Ñ¥½¸ˆø(€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰½¹Ñ…¥¹•È™±…Í¡¥ÀµÉ¥ˆø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰¥¹±Õ‘•µ½Áäˆø(€€€€€€€€€€€€ñÍÁ…¸±…ÍÍ9…µ”ô‰•å•‰É½Üˆù½Í„½µÁÉ•¹‘”¥°ÁÉ•éé¼ð½ÍÁ…¸ø(€€€€€€€€€€€€ñ Èù½Í„™„ÅÕ•ÍÑ¼Á•É½ÉÍ¼•¹•É•Ñ¥¼ð½ Èø(€€€€€€€€€€€€ñÀ±…ÍÍ9…µ”ô‰±…É”µ½Áäˆù9½¸Ù„Ù•¹‘ÕÑ„½µ”Õ¸ƒŠq…µÕ±•Ñ¼µ¥É…½±½Í¼Á…ÍÍ¥Ù¿Št°‰•¹Ï°½µ”Õ¹¼ÍÑÉÕµ•¹Ñ¼É…‘¥½¹¥¼”•½µ•ÑÉ¥¼‘¤‘¥Í¥Á±¥¹„°ÍÑÕ‘¥¼”É¥…±±¥¹•…µ•¹Ñ¼‘•±±”™É•ÅÕ•¹é”°É•…Ñ¼½¸ÕÉ„…ÉÑ¥¥…¹…±”Á•È¡¤‘•Í¥‘•É„É¥ÍÕ±Ñ…Ñ¤ÁÉ…Ñ¥¤”ÁÕ±¥é¥„•¹•É•Ñ¥„Ñ…¹¥‰¥±”¸ð½Àø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Ù…±Õ”µ±•‘•Èˆø(€€€€€€€€€€€€ñ‘¥ØøñÍÁ…¸øÀÄð½ÍÁ…¸øñÀøñÍÑÉ½¹œùQ…±¥„¤±•…µ¤¥¹Ù¥Í¥‰¥±¤”Ñ½ÍÍ¥¤èð½ÍÑÉ½¹œø…¥ÕÑ„„ÍÑ……ÉÍ¤‘„•àÁ…ÉÑ¹•È°É•±…é¥½¹¤±½½É…¹Ñ¤¼Ù•¡¥”ÍÑ½É¥”‘•°Á…ÍÍ…Ñ¼¸ð½Àøð½‘¥Øø(€€€€€€€€€€€€ñ‘¥ØøñÍÁ…¸øÀÈð½ÍÁ…¸øñÀøñÍÑÉ½¹œùM‰±½„±”Í¥ÑÕ…é¥½¹¤¡”Í¤É¥Á•Ñ½¹¼Í•µÁÉ”ÕÕ…±¤èð½ÍÑÉ½¹œøÍÕ°±…Ù½É¼°¹•±±”É•±…é¥½¹¤¼¹•±±„Ù¥Ñ„Á•ÉÍ½¹…±”¸ð½Àøð½‘¥Øø(€€€€€€€€€€€€ñ‘¥ØøñÍÁ…¸øÀÌð½ÍÁ…¸øñÀøñÍÑÉ½¹œùI¥ÁÕ±¥Í”±„Á•Í…¹Ñ•éé„•µ½Ñ¥Ù„èð½ÍÑÉ½¹œø‘¥ÍÍ½±Ù”™½Éµ”µÁ•¹Í¥•É¼Á•Í…¹Ñ¤°Á•¹Í¥•É¤¹•…Ñ¥Ù¤½¹Ñ¥¹Õ¤”‘¥ÍÁ•ÉÍ¥½¹¤‘¤Ù¥Ñ…±¥Ó€¸ð½Àøð½‘¥Øø(€€€€€€€€€€€€ñ‘¥ØøñÍÁ…¸øÀÐð½ÍÁ…¸øñÀøñÍÑÉ½¹œùI¥ÁÉ¥ÍÑ¥¹„±„Ù¥Ñ…±¥Ó€”±„™½Éé„¥¹Ñ•É¥½É”èð½ÍÑÉ½¹œøÁ•Éµ•ÑÑ”…±±„Á•ÉÍ½¹„‘¤É¥…É¥…ÉÍ¤”É¥Á…ÉÑ¥É”½¸¥°ÁÉ½ÁÉ¥¼•ÅÕ¥±¥‰É¥¼¹…ÑÕÉ…±”¸ð½Àøð½‘¥Øø(€€€€€€€€€€€€ñ‘¥ØøñÍÁ…¸øÀÔð½ÍÁ…¸øñÀøñÍÑÉ½¹œù¥Í”„‘¥ÍÑ…¹é„èð½ÍÑÉ½¹œø±„Á•ÉÍ½¹„¹½¸‘•Ù”™…É”Í™½Éé¤™¥Í¥¤¼½±±•…ÉÍ¤‘ÕÉ…¹Ñ”³Še…ÑÑ¥Ù…é¥½¹”¸ð½Àøð½‘¥Øø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€ð½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰½¹Ñ…¥¹•È½ÕÑ½µ”µ¹½Ñ”ˆøñÀùEÕ•ÍÑ¤Í½¹¼Á½ÍÍ¥‰¥±¤•™™•ÑÑ¤Á•É•Á¥Ñ¤°¹½¸É¥ÍÕ±Ñ…Ñ¤…É…¹Ñ¥Ñ¤è½¹¤•ÍÁ•É¥•¹é„ƒ Á•ÉÍ½¹…±””¥°Í•ÉÙ¥é¥¼¹½¸Í½ÍÑ¥ÑÕ¥Í”…é¥½¹¤°‘•¥Í¥½¹¤¼Á•É½ÉÍ¤ÁÉ½™•ÍÍ¥½¹…±¤¹••ÍÍ…É¤¸ð½Àøð½‘¥Øø(€€€€€€ð½Í•Ñ¥½¸ø((€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Í•Ñ¥½¸‰½Õ¹‘…É¥•ÌµÍ•Ñ¥½¸ˆø(€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰½¹Ñ…¥¹•È‰½Õ¹‘…É¥•ÌµÉ¥ˆø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰‰½Õ¹‘…Éäµ…É‰½Õ¹‘…Éäµ…ÉµÁ½Í¥Ñ¥Ù”ˆø(€€€€€€€€€€€€ñÍÁ…¸±…ÍÍ9…µ”ô‰•å•‰É½Üˆù½Í„Á×È½™™É¥ÉÑ¤ð½ÍÁ…¸ø(€€€€€€€€€€€€ñ ÌùU¹¼ÍÁ…é¥¼‘¤Á…ÍÍ…¥¼ð½ Ìø(€€€€€€€€€€€€ñÀùU¹„ÁÉ…Ñ¥„ÍÁ¥É¥ÑÕ…±”Á•È‘…É”™½Éµ„„Õ»Še¥¹Ñ•¹é¥½¹”‘¤‘¥ÍÑ…¼°½ÍÍ•ÉÙ…É”§È¡”ÍÑ…¤ÑÉ…ÑÑ•¹•¹‘¼”Í•¹…É”Õ¸¹Õ½Ù¼ÁÕ¹Ñ¼‘¤Á…ÉÑ•¹é„¸ð½Àø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰‰½Õ¹‘…Éäµ…Éˆø(€€€€€€€€€€€€ñÍÁ…¸±…ÍÍ9…µ”ô‰•å•‰É½Üˆù½Í„¹½¸ÁÉ½µ•ÑÑ”ð½ÍÁ…¸ø(€€€€€€€€€€€€ñ Ìù9•ÍÍÕ¹„Í½É¥…Ñ½¥„µ¥É…½±½Í„ð½ Ìø(€€€€€€€€€€€€ñÀù9½¸ÕÉ„Á…Ñ½±½¥”°¹½¸Í½ÍÑ¥ÑÕ¥Í”Ñ•É…Á¥„¼ÍÕÁÁ½ÉÑ¼ÁÉ½™•ÍÍ¥½¹…±”°¹½¸½¹ÑÉ½±±„…±ÑÉ”Á•ÉÍ½¹””¹½¸…É…¹Ñ¥Í”É¥Ñ½É¹¤Í•¹Ñ¥µ•¹Ñ…±¤°‘•¹…É¼¼É¥ÍÕ±Ñ…Ñ¤ÍÁ•¥™¥¤¸ð½Àø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€ð½‘¥Øø(€€€€€€ð½Í•Ñ¥½¸ø((€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Í•Ñ¥½¸é•É¼µ™…ÄµÍ•Ñ¥½¸ˆø(€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰½¹Ñ…¥¹•È™…ÄµÉ¥ˆø(€€€€€€€€€€ñ‘¥ØøñÍÁ…¸±…ÍÍ9…µ”ô‰•å•‰É½ÜˆùAÉ¥µ„‘¤Í•±¥•É”ð½ÍÁ…¸øñ Èù½µ…¹‘”™É•ÅÕ•¹Ñ¤ð½ Èøð½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰™…Äµ±¥ÍÐˆø(€€€€€€€€€€€€ñ‘•Ñ…¥±ÌøñÍÕµµ…Éäù•Ù¼½±±•…Éµ¤¥¸Ù¥‘•¼üð½ÍÕµµ…ÉäøñÀù9¼¸%°±…Ù½É¼Í¤ÍÙ½±”„‘¥ÍÑ…¹é„¸Q¤¡¥•‘¼Í½±Ñ…¹Ñ¼¤‘…Ñ¤•ÍÍ•¹é¥…±¤”Õ¹„‘•ÍÉ¥é¥½¹”Í¥¹Ñ•Ñ¥„‘•°Ñ•µ„¸ð½Àøð½‘•Ñ…¥±Ìø(€€€€€€€€€€€€ñ‘•Ñ…¥±ÌøñÍÕµµ…ÉäùI¥•Ù•ËÈ±„Q…Ù½±„üð½ÍÕµµ…ÉäøñÀù9¼¸AÕ¹Ñ¼i•É¼ƒ Õ¸¥¹Ñ•ÉÙ•¹Ñ¼ÍÙ½±Ñ¼‘„…Éµ•±¼…ÑÑÉ…Ù•ÉÍ¼±„Q…Ù½±„°¹½¸Õ¸ÁÉ½‘½ÑÑ¼‘¥¥Ñ…±”¼™¥Í¥¼‘„ÍÁ•‘¥É”¸ð½Àøð½‘•Ñ…¥±Ìø(€€€€€€€€€€€€ñ‘•Ñ…¥±ÌøñÍÕµµ…ÉäùEÕ…¹Ñ¼‘ÕÉ„üð½ÍÕµµ…ÉäøñÀù%°¥±¼Ù¥•¹”ÍÑ…‰¥±¥Ñ¼ÍÕ°Í¥¹½±¼±…Ù½É¼”Á×È‘ÕÉ…É”™¥¹¼„Í•ÑÑ”¥½É¹¤¸1„‘ÕÉ…Ñ„¹½¸ƒ Õ¹„µ¥ÍÕÉ„‘•°Ù…±½É”¼‘•±±„‘¥™™¥½±Ó€‘•°…Í¼¸ð½Àøð½‘•Ñ…¥±Ìø(€€€€€€€€€€€€ñ‘•Ñ…¥±ÌøñÍÕµµ…ÉäùA½ÍÍ¼É¥¡¥•‘•É±¼Á•ÈÕ»Še…±ÑÉ„Á•ÉÍ½¹„üð½ÍÕµµ…ÉäøñÀù%°±…Ù½É¼‘•Ù”É¥ÍÁ•ÑÑ…É”½¹Í•¹Í¼°É•ÍÁ½¹Í…‰¥±¥Ó€Á•ÉÍ½¹…±””±¥‰•É¼…É‰¥ÑÉ¥¼¸MÉ¥Ù¥µ¤ÁÉ¥µ„‘¤…ÅÕ¥ÍÑ…É”Í”±„É¥¡¥•ÍÑ„É¥Õ…É‘„ÅÕ…±Õ¸…±ÑÉ¼¸ð½Àøð½‘•Ñ…¥±Ìø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€ð½‘¥Øø(€€€€€€ð½Í•Ñ¥½¸ø((€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Í•Ñ¥½¸Ñ„µÍ•Ñ¥½¸é•É¼µÑ„ˆø(€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰½¹Ñ…¥¹•Èé•É¼µÑ„µÉ¥ˆø(€€€€€€€€€€ñ¥µœÍÉŒõí™½Ñ½…Éµ•±½ô…±Ðô‰…Éµ•±¼9¥¥Ñ„ˆ€¼ø(€€€€€€€€€€ñ‘¥Øø(€€€€€€€€€€€€ñÍÁ…¸±…ÍÍ9…µ”ô‰•å•‰É½ÜˆùM•Õ¥Ñ¼Á•ÉÍ½¹…±µ•¹Ñ”‘„…Éµ•±¼ð½ÍÁ…¸ø(€€€€€€€€€€€€ñ ÈùM”ÙÕ½¤É¥Á…ÉÑ¥É”°Á…ÉÑ¥…µ¼‘„§È¡”½¤Ñ¤ÑÉ…ÑÑ¥•¹”¸ð½ Èø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰ÁÉ¥”µÍÑ…¬ˆøñÍÑÉ½¹œøÄÐäƒŠ
+°ð½ÍÑÉ½¹œøñÍÁ…¸ù¥¹Ñ•ÉÙ•¹Ñ¼½µÁ±•Ñ¼„‘¥ÍÑ…¹é„ð½ÍÁ…¸øð½‘¥Øø(€€€€€€€€€€€€ñáÑ•É¹…±	ÕÑÑ½¸¡É•˜õíÉ•ÅÕ•ÍÑ1¥¹­ô•Ù•¹Ñ9…µ”ô‰±¥­}ÁÕ¹Ñ½}é•É½}‰½ÑÑ½´ˆùI¥¡¥•‘¤AÕ¹Ñ¼i•É¼ÍÔ]¡…ÑÍÁÀð½áÑ•É¹…±	ÕÑÑ½¸ø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€ð½‘¥Øø(€€€€€€ð½Í•Ñ¥½¸ø(€€€€ð½M¥Ñ•1…å½ÕÐø(€€¤ì)ô(
