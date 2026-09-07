@@ -4,11 +4,14 @@ import App from './App.jsx';
 import HomeSalesPage from './HomeSalesPage.jsx';
 import ReadingsSalesPage from './ReadingsSalesPage.jsx';
 import { MapSalesPage, ProductsSalesPage } from './SpecialPages.jsx';
+import PointZeroPage from './PointZeroPage.jsx';
 
 const path = window.location.pathname.replace(/\/$/, '') || '/';
 const RootPage = path === '/'
   ? HomeSalesPage
-  : path === '/prodotti/mappa-di-luce'
+  : path === '/punto-zero' || path === '/sessioni'
+    ? PointZeroPage
+    : path === '/prodotti/mappa-di-luce'
     ? MapSalesPage
     : path === '/prodotti'
       ? ProductsSalesPage

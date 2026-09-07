@@ -58,10 +58,9 @@ function Header() {
       </button>
       <nav className={open ? 'nav nav-open' : 'nav'} aria-label="Navigazione principale">
         <a href="/">Home</a>
-        <a href="/prodotti">Prodotti digitali</a>
-        <a href="/letture">Letture</a>
-        <a href="/letture#recensioni">Recensioni</a>
-        <a href="/sessioni">Sessioni</a>
+        <a href="/punto-zero">Punto Zero</a>
+        <a href="/prodotti">Strumenti digitali</a>
+        <a href="/letture">Tarocchi</a>
         <a href="/chi-sono">Chi sono</a>
       </nav>
     </header>
@@ -74,13 +73,13 @@ function Footer() {
       <div className="footer-grid">
         <div>
           <div className="footer-brand">Alchimie di Luce</div>
-          <p>Percorsi spirituali, prodotti digitali e letture personalizzate.</p>
+          <p>Interventi spirituali a distanza, Tarocchi e strumenti digitali scelti con cura.</p>
         </div>
         <div>
           <strong>Esplora</strong>
-          <a href="/prodotti">Prodotti digitali</a>
-          <a href="/letture">Letture</a>
-          <a href="/sessioni">Sessioni</a>
+          <a href="/punto-zero">Punto Zero</a>
+          <a href="/prodotti">Strumenti digitali</a>
+          <a href="/letture">Tarocchi</a>
         </div>
         <div>
           <strong>Contatti</strong>
@@ -157,16 +156,16 @@ const Asset = ({ image, title, text }) => (
 
 export function ProductsSalesPage() {
   React.useEffect(() => {
-    document.title = 'Prodotti digitali | Alchimie di Luce';
+    document.title = 'Strumenti digitali | Alchimie di Luce';
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <Layout>
       <PageHero
-        eyebrow="Prodotti digitali"
-        title="Scegli, scarica e usa con i tuoi tempi"
-        text="Tre risorse diverse: un percorso pratico di 7 giorni, uno strumento di consultazione spirituale e una guida gratuita."
+        eyebrow="Strumenti digitali"
+        title="Pochi strumenti, ognuno con una funzione precisa"
+        text="Per iniziare, creare una pratica oppure consultare una mappa completa. Senza prodotti duplicati e senza abbonamenti."
       />
       <section className="section">
         <div className="container product-list">
@@ -175,7 +174,7 @@ export function ProductsSalesPage() {
             label="Percorso di 7 giorni · PDF"
             title="7 Rituali di Protezione e Luce"
             text="Sette pratiche guidate da usare in sette giorni — o ogni volta che senti bisogno di protezione, centratura, rilascio o confini più chiari."
-            price="4,90 €"
+            price="14,90 €"
             detailHref="/prodotti/7-rituali-protezione-luce"
             buyHref={links.rituali}
             buyText="Acquista su Payhip"
@@ -186,7 +185,7 @@ export function ProductsSalesPage() {
             label="Kit digitale completo"
             title="Mappa di Luce Interattiva"
             text="Uno strumento spirituale da consultare quando cerchi orientamento: formula una domanda, lascia emergere un simbolo o un messaggio e usa la guida per trasformarlo in una scelta concreta."
-            price="37 €"
+            price="59 €"
             detailHref="/prodotti/mappa-di-luce"
             buyHref={links.mappa}
             buyText="Acquista su Payhip"
@@ -240,8 +239,8 @@ export function MapSalesPage() {
               trasformarlo in una scelta concreta.
             </p>
             <p className="large-copy"><strong>Ascolta · Ricevi · Scegli · Trasforma</strong></p>
-            <div className="price-line"><strong>37 €</strong><span>download digitale immediato</span></div>
-            <ExternalButton href={links.mappa} eventName="click_detail_mappa">Scopri la tua Mappa di Luce – 37 €</ExternalButton>
+            <div className="price-line"><strong>59 €</strong><span>strumento digitale completo</span></div>
+            <ExternalButton href={links.mappa} eventName="click_detail_mappa">Acquista la Mappa di Luce – 59 €</ExternalButton>
             <p className="microcopy">Pagamento sicuro su Payhip · Kit digitale · Nessun abbonamento</p>
           </div>
         </div>
@@ -363,7 +362,7 @@ export function MapSalesPage() {
           <span className="eyebrow">Accesso immediato</span>
           <h2>Ascolta · Ricevi · Scegli · Trasforma</h2>
           <p>Ricevi il Kit digitale completo con Mappa A4, guida, diario e Bigliettini di Luce.</p>
-          <ExternalButton href={links.mappa} eventName="click_detail_mappa_bottom">Acquista la Mappa di Luce – 37 €</ExternalButton>
+          <ExternalButton href={links.mappa} eventName="click_detail_mappa_bottom">Acquista la Mappa di Luce – 59 €</ExternalButton>
           <p className="microcopy">Dopo l’acquisto ricevi i file digitali tramite Payhip.</p>
         </div>
       </section>

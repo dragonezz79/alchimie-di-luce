@@ -1,262 +1,145 @@
 import React from 'react';
-import './global.css';
-import './prima-luce.css';
-
-import risposteAngeli from './risposte-angeli.webp';
-import angelTherapy from './angel-therapy.webp';
+import SiteLayout, { ExternalButton, whatsappLink } from './SiteChrome.jsx';
 import tarocchi from './tarocchi.webp';
 
 const links = {
-  risposteAngeli: 'https://paypal.me/AlchimieDiLuce/20',
-  angelTherapy: 'https://paypal.me/AlchimieDiLuce/25',
-  tarocchiPdf: 'https://paypal.me/AlchimieDiLuce/25',
-  tarocchiTelefono: 'https://paypal.me/AlchimieDiLuce/30',
+  tarocchiPdf: 'https://paypal.me/AlchimieDiLuce/49',
+  tarocchiTelefono: 'https://paypal.me/AlchimieDiLuce/59',
   calTarocchi: 'https://cal.com/alchimie-di-luce/consulto-tarocchi'
 };
 
-const whatsappNumber = '393492304412';
-const whatsappMessage = encodeURIComponent(
-  'Ciao Carmelo, ho visitato Alchimie di Luce e vorrei informazioni su:'
+const afterPaymentLink = whatsappLink(
+  'Ciao Carmelo, ho effettuato il pagamento per una lettura di Tarocchi.\n\nNome:\nData di nascita:\nFormula scelta:\nSituazione o domanda:'
 );
-const whatsappAfterPayment = encodeURIComponent(
-  'Ciao Carmelo, ho effettuato il pagamento.\n\nNome:\nData di nascita:\nServizio scelto:\nArgomento o domande:'
-);
-const whatsappPrimaLuce = encodeURIComponent(
-  'Ciao Carmelo, vorrei richiedere Prima Luce.\n\nNome:\nData di nascita:\nLa mia domanda è:'
-);
-
-const track = (name) => {
-  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-    window.gtag('event', name);
-  }
-};
-
-const ExternalButton = ({ href, children, eventName, className = 'btn-primary' }) => (
-  <a
-    className={`btn ${className}`}
-    href={href}
-    target="_blank"
-    rel="noreferrer"
-    onClick={() => eventName && track(eventName)}
-  >
-    {children}
-  </a>
-);
-
-function Header() {
-  const [open, setOpen] = React.useState(false);
-  return (
-    <header className="header">
-      <a className="brand" href="/" aria-label="Alchimie di Luce, Home"><span>✦</span> Alchimie di Luce</a>
-      <button
-        className="menu-button"
-        type="button"
-        aria-label="Apri o chiudi il menu"
-        aria-expanded={open}
-        onClick={() => setOpen((value) => !value)}
-      >
-        <span /><span /><span />
-      </button>
-      <nav className={open ? 'nav nav-open' : 'nav'} aria-label="Navigazione principale">
-        <a href="/">Home</a>
-        <a href="/prodotti">Prodotti digitali</a>
-        <a href="/letture">Letture</a>
-        <a href="/letture#recensioni">Recensioni</a>
-        <a href="/sessioni">Sessioni</a>
-        <a href="/chi-sono">Chi sono</a>
-      </nav>
-    </header>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="footer">
-      <div className="footer-grid">
-        <div>
-          <div className="footer-brand">Alchimie di Luce</div>
-          <p>Percorsi spirituali, prodotti digitali e letture personalizzate.</p>
-        </div>
-        <div>
-          <strong>Esplora</strong>
-          <a href="/prodotti">Prodotti digitali</a>
-          <a href="/letture">Letture</a>
-          <a href="/sessioni">Sessioni</a>
-        </div>
-        <div>
-          <strong>Contatti</strong>
-          <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noreferrer">WhatsApp</a>
-          <a href="mailto:info@alchimiediluce.it">info@alchimiediluce.it</a>
-          <a href="https://www.instagram.com/alchimie_di_luce/" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://www.tiktok.com/@alchimiediluce" target="_blank" rel="noreferrer">TikTok</a>
-        </div>
-      </div>
-      <p className="disclaimer">Le attività proposte hanno finalità spirituali e introspettive. Non sostituiscono cure mediche, supporto psicologico, farmaci o indicazioni professionali.</p>
-      <p className="copyright">© 2026 Alchimie di Luce · Carmelo Nicita</p>
-    </footer>
-  );
-}
-
-function Layout({ children }) {
-  return (
-    <div className="site-shell">
-      <a className="skip-link" href="#contenuto">Vai al contenuto</a>
-      <Header />
-      <main id="contenuto">{children}</main>
-      <Footer />
-      <a
-        className="whatsapp-float"
-        href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Scrivi su WhatsApp"
-      >WhatsApp</a>
-    </div>
-  );
-}
 
 const readingTestimonials = [
-  'Ho ricevuto una lettura dei Tarocchi da Alchimie di Luce e mi sono trovata molto bene. La lettura è stata chiara e mi ha aiutata a capire meglio la mia situazione. Grazie di cuore.',
-  'Una lettura che mi ha colpita profondamente. Ha visto aspetti della mia vita con grande precisione e ha detto la verità su molte situazioni. Grazie per la professionalità e la sensibilità.',
-  'Splendida lettura, hai centrato il bersaglio. Fantastico, seguirò i tuoi consigli. Grazie mille.',
-  'Ringrazio tanto Carmelo per la grande disponibilità. È davvero bravo e fa emergere tanti punti di riflessione. Tanti complimenti.',
-  'Mi è venuta davvero la pelle d’oca. Alcuni passaggi hanno rispecchiato situazioni realmente accadute.'
+  'La lettura è stata chiara e mi ha aiutata a capire meglio la mia situazione.',
+  'Ha visto aspetti della mia vita con grande precisione e mi ha detto la verità su molte situazioni.',
+  'Hai centrato il bersaglio. Seguirò i tuoi consigli.',
+  'Carmelo fa emergere punti di riflessione che da sola non riuscivo a vedere.',
+  'Alcuni passaggi hanno rispecchiato situazioni realmente accadute.'
 ];
 
-function Testimonials() {
-  return (
-    <section className="section testimonials-section" id="recensioni">
-      <div className="container">
-        <div className="section-heading center">
-          <span className="eyebrow">Esperienze reali</span>
-          <h2>Cosa racconta chi ha ricevuto una lettura</h2>
-          <p className="testimonials-intro">Feedback autentici ricevuti tramite WhatsApp e Instagram. Le identità sono protette per rispettare la riservatezza.</p>
-        </div>
-        <div className="testimonials-grid">
-          {readingTestimonials.map((quote, index) => (
-            <figure className="testimonial-card" key={index}>
-              <blockquote>“{quote}”</blockquote>
-              <figcaption>Feedback verificato <span>·</span> Identità protetta</figcaption>
-            </figure>
-          ))}
-        </div>
+const ReadingCard = ({ format, title, price, lead, includes, href, cta, eventName, booking }) => (
+  <article className="premium-reading-card">
+    <span className="eyebrow">{format}</span>
+    <h2>{title}</h2>
+    <p className="large-copy">{lead}</p>
+    <ul className="clean-checks">
+      {includes.map((item) => <li key={item}>{item}</li>)}
+    </ul>
+    <div className="price-stack"><strong>{price}</strong><span>prezzo completo, nessun costo aggiuntivo</span></div>
+    <ExternalButton href={href} eventName={eventName}>{cta}</ExternalButton>
+    {booking && (
+      <div className="booking-after-payment">
+        <p><strong>Dopo il pagamento</strong> scegli giorno e orario nel calendario riservato.</p>
+        <ExternalButton href={links.calTarocchi} eventName="click_cal_tarocchi" className="btn-secondary">Apri il calendario</ExternalButton>
       </div>
-    </section>
-  );
-}
-
-const ServiceCard = ({ image, title, price, valuePrice, description, details, href, cta, eventName, badge, bookingHref, bookingCta, bookingNote, bookingEventName }) => (
-  <article className="service-card">
-    <img src={image} alt={title} />
-    <div className="service-card-body">
-      {badge && <span className="badge">{badge}</span>}
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <p className="service-details">{details}</p>
-      <div className="service-price">{valuePrice && <del>{valuePrice}</del>}<strong>{price}</strong></div>
-      <ExternalButton href={href} eventName={eventName}>{cta}</ExternalButton>
-      {bookingHref && (
-        <div className="booking-after-payment">
-          <p><strong>Hai già pagato?</strong> {bookingNote}</p>
-          <ExternalButton href={bookingHref} eventName={bookingEventName} className="btn-secondary">{bookingCta}</ExternalButton>
-        </div>
-      )}
-    </div>
+    )}
   </article>
 );
 
 export default function ReadingsSalesPage() {
   React.useEffect(() => {
-    document.title = 'Letture angeliche e Tarocchi | Alchimie di Luce';
-    const hash = window.location.hash;
-    const target = hash ? document.querySelector(hash) : null;
-    if (target) target.scrollIntoView({ block: 'start' });
-    else window.scrollTo(0, 0);
+    document.title = 'Consulto Tarocchi | Alchimie di Luce';
+    window.scrollTo(0, 0);
   }, []);
 
   return (
-    <Layout>
-      <section className="page-hero">
-        <div className="container center">
-          <span className="eyebrow">Letture personalizzate</span>
-          <h1>Scegli il tipo di risposta che cerchi</h1>
-          <p className="hero-lead">Angeli per un orientamento spirituale; Tarocchi per approfondire una situazione concreta.</p>
-        </div>
-      </section>
-
-      <section className="section prima-luce-section" id="prima-luce">
-        <div className="container">
-          <div className="prima-luce-card">
-            <span className="prima-luce-badge">✨ Mini lettura gratuita</span>
-            <h2 className="prima-luce-title">Prima Luce</h2>
-            <p className="prima-luce-subtitle">Scopri il mio modo di leggere i Tarocchi</p>
-            <div className="prima-luce-formula" aria-label="Cosa comprende Prima Luce">
-              <span>1 domanda</span>
-              <span>Almeno 3 carte</span>
-              <span>1 breve messaggio angelico</span>
-            </div>
-            <p className="prima-luce-copy">
-              Una prima esperienza gratuita, riservata a chi non ha mai ricevuto una mia lettura.
-              Non utilizzo uno schema fisso: interpreto liberamente le carte che emergono in relazione
-              alla tua domanda e alla situazione che mi presenti.
-            </p>
-            <ExternalButton
-              href={`https://wa.me/${whatsappNumber}?text=${whatsappPrimaLuce}`}
-              eventName="click_prima_luce_whatsapp"
-              className="prima-luce-cta"
-            >
-              Richiedi la tua mini lettura gratuita
-            </ExternalButton>
-            <p className="prima-luce-note">La mini lettura è più sintetica rispetto a una lettura completa. Le richieste vengono accolte in base alla disponibilità.</p>
+    <SiteLayout>
+      <section className="tarot-hero">
+        <div className="container tarot-hero-grid">
+          <div>
+            <span className="eyebrow">Consulto personale di Tarocchi</span>
+            <h1>Una domanda precisa.<br /><em>Una lettura completa.</em></h1>
+            <p className="hero-lead">Non una risposta veloce da consumare. Uno spazio riservato per leggere la situazione, riconoscere le dinamiche in gioco e vedere con più lucidità il passo successivo.</p>
           </div>
+          <img src={tarocchi} alt="Consulto personale di Tarocchi con Carmelo" />
         </div>
       </section>
 
-      <Testimonials />
-
-      <section className="section" id="letture-servizi">
+      <section className="section">
         <div className="container">
-          <div className="category-heading"><span className="eyebrow">Messaggi angelici</span><h2>Letture scritte in PDF</h2></div>
-          <div className="service-grid">
-            <ServiceCard image={risposteAngeli} title="Le Risposte degli Angeli" valuePrice="40 €" price="20 €" badge="5 domande" description="Cinque risposte brevi, chiare e personalizzate, anche su argomenti diversi." details="Dopo il pagamento mi invii nome, data di nascita e domande. Ricevi il PDF entro 48 ore." href={links.risposteAngeli} cta="Paga 20 € con PayPal" eventName="click_letture_risposte" />
-            <ServiceCard image={angelTherapy} title="Lettura Angel Therapy" valuePrice="50 €" price="25 €" badge="Percorso personalizzato" description="Consigli e linee guida spirituali sul momento che stai vivendo." details="Può includere messaggi angelici, pratiche quotidiane, protezione e armonizzazione. Ricevi il PDF entro 48 ore." href={links.angelTherapy} cta="Paga 25 € con PayPal" eventName="click_letture_angel_therapy" />
+          <div className="section-heading">
+            <span className="eyebrow">Due formule, la stessa cura</span>
+            <h2>Scegli come vuoi ricevere la lettura</h2>
+            <p>Il prezzo cambia per modalità e tempo dedicato, non per la serietà dell’interpretazione.</p>
           </div>
-        </div>
-      </section>
-
-      <section className="section soft-section">
-        <div className="container">
-          <div className="category-heading"><span className="eyebrow">Tarocchi</span><h2>PDF oppure consulto telefonico</h2></div>
-          <div className="service-grid">
-            <ServiceCard image={tarocchi} title="Tarocchi in PDF" valuePrice="50 €" price="25 €" badge="Consegna entro 48 ore" description="Una lettura scritta e personalizzata su una situazione che desideri chiarire." details="Ricevi un’analisi completa da salvare e rileggere quando vuoi." href={links.tarocchiPdf} cta="Paga 25 € con PayPal" eventName="click_letture_tarocchi_pdf" />
-            <ServiceCard
-              image={tarocchi}
-              title="Tarocchi al telefono"
-              valuePrice="60 €"
-              price="30 €"
-              badge="30 minuti"
-              description="Durante la chiamata puoi fare le domande che desideri nel tempo disponibile."
-              details="Prima effettui il pagamento, poi scegli direttamente nel calendario online il giorno e l’orario disponibili. La chiamata è telefonica, non video."
-              href={links.tarocchiTelefono}
-              cta="Paga 30 € con PayPal"
-              eventName="click_letture_tarocchi_telefono"
-              bookingHref={links.calTarocchi}
-              bookingCta="Scegli giorno e orario"
-              bookingNote="Scegli ora giorno e orario nel calendario online. La prenotazione è riservata a chi ha già effettuato il pagamento di 30 €."
-              bookingEventName="click_cal_tarocchi_telefono"
+          <div className="premium-reading-grid">
+            <ReadingCard
+              format="Lettura scritta · entro 48 ore"
+              title="Tarocchi in PDF"
+              price="49 €"
+              lead="Per approfondire un unico tema e conservare una lettura da rileggere con calma."
+              includes={[
+                'analisi personalizzata della situazione',
+                'dinamiche visibili e nodo centrale',
+                'possibile evoluzione e indicazione conclusiva',
+                'documento PDF personale da conservare'
+              ]}
+              href={links.tarocchiPdf}
+              cta="Acquista la lettura PDF"
+              eventName="click_tarocchi_pdf_49"
             />
+            <ReadingCard
+              format="Consulto telefonico · 30 minuti"
+              title="Tarocchi in diretta"
+              price="59 €"
+              lead="Per dialogare sulla situazione e fare più domande nel tempo riservato esclusivamente a te."
+              includes={[
+                '30 minuti di consulto telefonico privato',
+                'domande libere nel tempo disponibile',
+                'lettura costruita sul dialogo in diretta',
+                'prenotazione autonoma dal calendario'
+              ]}
+              href={links.tarocchiTelefono}
+              cta="Acquista il consulto"
+              eventName="click_tarocchi_phone_59"
+              booking
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section reading-boundaries">
+        <div className="container boundaries-grid">
+          <div>
+            <span className="eyebrow">Il mio modo di leggere</span>
+            <h2>Orientamento, non dipendenza</h2>
+          </div>
+          <div>
+            <p className="large-copy">Le carte non decidono al posto tuo e non vengono usate per alimentare paura o controllo.</p>
+            <p>La lettura serve a mettere a fuoco ciò che forse stai già sentendo, distinguere i fatti dalle aspettative e restituirti una prospettiva con cui scegliere in modo più consapevole.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section testimonials-section" id="recensioni">
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">Esperienze reali</span>
+            <h2>Cosa rimane dopo una lettura</h2>
+            <p>Estratti da feedback ricevuti tramite WhatsApp e Instagram. Le identità sono protette.</p>
+          </div>
+          <div className="testimonials-grid">
+            {readingTestimonials.map((quote, index) => (
+              <figure className="testimonial-card" key={index}>
+                <blockquote>“{quote}”</blockquote>
+                <figcaption>Feedback ricevuto <span>·</span> Identità protetta</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="section cta-section">
         <div className="container center content-narrow">
-          <span className="eyebrow">Dopo il pagamento</span>
-          <h2>Scrivimi i dati necessari su WhatsApp</h2>
-          <p>Indica nome, data di nascita, servizio scelto e argomento o domande. Non inviare dati sanitari sensibili.</p>
-          <ExternalButton href={`https://wa.me/${whatsappNumber}?text=${whatsappAfterPayment}`} eventName="click_whatsapp_after_payment" className="btn-whatsapp">Scrivi su WhatsApp</ExternalButton>
+          <span className="eyebrow">Hai già effettuato il pagamento?</span>
+          <h2>Inviami ciò che serve, senza raccontare tutto due volte</h2>
+          <p>Scrivi nome, data di nascita, formula scelta e una descrizione sintetica della situazione o della domanda. Non inviare dati sanitari sensibili.</p>
+          <ExternalButton href={afterPaymentLink} eventName="click_tarocchi_after_payment" className="btn-whatsapp">Invia i dati su WhatsApp</ExternalButton>
         </div>
       </section>
-    </Layout>
+    </SiteLayout>
   );
 }
