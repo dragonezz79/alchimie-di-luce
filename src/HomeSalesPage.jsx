@@ -1,5 +1,5 @@
 import React from 'react';
-import SiteLayout, { ExternalButton, whatsappLink } from './SiteChrome.jsx';
+import SiteLayout, { ExternalButton } from './SiteChrome.jsx';
 
 import fotoCarmelo from './foto-carmelo.webp';
 import guidaSerenita from './guida-serenita.webp';
@@ -11,9 +11,7 @@ const links = {
   serenita: 'https://payhip.com/buy?link=Ez8xs'
 };
 
-const puntoZeroMessage = whatsappLink(
-  'Ciao Carmelo, vorrei capire se l’intervento Punto Zero è adatto alla situazione che sto vivendo.\n\nIl tema su cui vorrei lavorare è:'
-);
+const puntoZeroPurchase = 'https://paypal.me/AlchimieDiLuce/149';
 
 const ChoiceCard = ({ number, need, title, text, price, href, cta }) => (
   <article className="choice-card">
@@ -81,8 +79,8 @@ export default function HomeSalesPage() {
             <h3>Punto Zero a distanza</h3>
             <p>Prima individuo il blocco energetico reale, poi costruisco e seguo il lavoro a distanza fino al completamento della pulizia.</p>
             <div className="price-stack"><strong>149 €</strong><span>percorso personale</span></div>
-            <a className="btn btn-primary" href="/punto-zero">Come funziona</a>
-            <ExternalButton href={puntoZeroMessage} eventName="click_home_punto_zero_whatsapp" className="btn-secondary">Chiedi se è adatto a te</ExternalButton>
+            <ExternalButton href={puntoZeroPurchase} eventName="click_home_punto_zero_paypal">Acquista Punto Zero – 149 €</ExternalButton>
+            <a className="btn btn-secondary" href="/punto-zero">Scopri prima come funziona</a>
           </aside>
         </div>
       </section>

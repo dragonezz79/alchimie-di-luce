@@ -3,8 +3,10 @@ import SiteLayout, { ExternalButton, whatsappLink } from './SiteChrome.jsx';
 import puntoZero from './punto-zero-simbolo.webp';
 import fotoCarmelo from './foto-carmelo.webp';
 
-const requestLink = whatsappLink(
-  'Ciao Carmelo, vorrei richiedere l’intervento Punto Zero.\n\nNome e cognome:\nData di nascita:\nIl tema su cui vorrei lavorare è:'
+const purchaseLink = 'https://paypal.me/AlchimieDiLuce/149';
+
+const afterPaymentLink = whatsappLink(
+  'Ciao Carmelo, ho effettuato il pagamento per Punto Zero.\n\nNome e cognome:\nData di nascita:\nIl tema su cui vorrei lavorare è:'
 );
 
 const infoLink = whatsappLink(
@@ -37,10 +39,10 @@ export default function PointZeroPage() {
             </p>
             <div className="price-stack price-stack-hero"><strong>149 €</strong><span>un intervento personale completo</span></div>
             <div className="hero-actions hero-actions-left">
-              <ExternalButton href={requestLink} eventName="click_punto_zero_request">Richiedi Punto Zero</ExternalButton>
+              <ExternalButton href={purchaseLink} eventName="click_punto_zero_paypal">Acquista Punto Zero – 149 €</ExternalButton>
               <ExternalButton href={infoLink} eventName="click_punto_zero_info" className="btn-secondary">Prima voglio capire</ExternalButton>
             </div>
-            <p className="microcopy">Prima di procedere puoi descrivermi brevemente il tema su WhatsApp. Non inviare dati sanitari sensibili.</p>
+            <p className="microcopy">Pagamento tramite PayPal. Dopo l’acquisto inviami su WhatsApp i dati necessari per la diagnosi energetica preliminare.</p>
           </div>
           <div className="zero-product-visual">
             <div className="zero-product-frame">
@@ -141,6 +143,7 @@ export default function PointZeroPage() {
             <details><summary>Riceverò la Tavola?</summary><p>No. Punto Zero è un intervento svolto da Carmelo attraverso la Tavola, non un prodotto digitale o fisico da spedire.</p></details>
             <details><summary>Quanto dura?</summary><p>Non esiste una durata uguale per tutti. Dipende dal soggetto, dalla natura del blocco e dalla risposta energetica durante il ciclo. Il lavoro termina quando la verifica finale indica che la pulizia energetica è completata.</p></details>
             <details><summary>Il prezzo cambia se il lavoro dura più a lungo?</summary><p>No. I 149 € comprendono la diagnosi energetica preliminare, l’intervento a distanza e il tempo necessario per arrivare alla chiusura del ciclo.</p></details>
+            <details><summary>Cosa faccio dopo il pagamento?</summary><p>Scrivimi su WhatsApp indicando nome, data di nascita e una breve descrizione del tema. Ti confermerò la presa in carico prima di iniziare.</p></details>
             <details><summary>Posso richiederlo per un’altra persona?</summary><p>Il lavoro deve rispettare consenso, responsabilità personale e libero arbitrio. Scrivimi prima di acquistare se la richiesta riguarda qualcun altro.</p></details>
           </div>
         </div>
@@ -153,7 +156,10 @@ export default function PointZeroPage() {
             <span className="eyebrow">Seguito personalmente da Carmelo</span>
             <h2>Se vuoi ripartire, partiamo da ciò che oggi ti trattiene.</h2>
             <div className="price-stack"><strong>149 €</strong><span>intervento completo a distanza</span></div>
-            <ExternalButton href={requestLink} eventName="click_punto_zero_bottom">Richiedi Punto Zero su WhatsApp</ExternalButton>
+            <div className="hero-actions hero-actions-left">
+              <ExternalButton href={purchaseLink} eventName="click_punto_zero_bottom_paypal">Acquista con PayPal</ExternalButton>
+              <ExternalButton href={afterPaymentLink} eventName="click_punto_zero_after_payment" className="btn-secondary">Ho già acquistato: invio i dati</ExternalButton>
+            </div>
           </div>
         </div>
       </section>
