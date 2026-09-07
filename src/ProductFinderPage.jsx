@@ -7,7 +7,7 @@ const products = {
     label: 'Intervento personale a distanza',
     price: '149 €',
     description: 'Un intervento di guarigione spirituale a distanza che parte dalla diagnosi energetica del blocco reale e prosegue fino al completamento della pulizia.',
-    reason: 'Senti il bisogno di lasciare andare un legame, uno schema o una fase che continua a toglierti energia.',
+    reason: 'Senti il bisogno di lasciare andare un legame, sciogliere un blocco o liberarti da una pesantezza attraverso una pulizia energetica profonda.',
     href: '/punto-zero',
     cta: 'Scopri come funziona Punto Zero'
   },
@@ -64,6 +64,7 @@ const questions = [
     title: 'Qual è il bisogno più presente in questo momento?',
     options: [
       { label: 'Lasciare andare una persona, una situazione o una fase', scores: { puntoZero: 6 } },
+      { label: 'Liberarmi da una pesantezza e ricevere una pulizia energetica', scores: { puntoZero: 6 } },
       { label: 'Capire meglio una domanda o una scelta precisa', scores: { tarotPhone: 4, tarotPdf: 4 } },
       { label: 'Proteggermi, centrarmi e creare confini più chiari', scores: { rituals: 6 } },
       { label: 'Avere uno strumento che mi orienti nel tempo', scores: { map: 6 } },
@@ -82,7 +83,7 @@ const questions = [
   {
     title: 'Che tipo di passo desideri compiere?',
     options: [
-      { label: 'Un intervento personale e profondo su un tema preciso', scores: { puntoZero: 5 } },
+      { label: 'Un intervento personale con pulizia energetica profonda', scores: { puntoZero: 5 } },
       { label: 'Un chiarimento mirato per decidere con più lucidità', scores: { tarotPhone: 3, tarotPdf: 3 } },
       { label: 'Una pratica strutturata da seguire per sette giorni', scores: { rituals: 5 } },
       { label: 'Uno strumento completo da riutilizzare nel tempo', scores: { map: 5 } },
