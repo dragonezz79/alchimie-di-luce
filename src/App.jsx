@@ -39,8 +39,8 @@ function RitualsPage() {
             <h1>7 Rituali di Protezione e Luce</h1>
             <p className="large-copy">Sette pratiche di guarigione spirituale ed energetica per proteggerti, lasciare andare e tornare al tuo centro.</p>
             <p>Non una raccolta casuale di formule: un percorso ordinato, con istruzioni, decreto e chiusura per ogni giornata.</p>
-            <div className="price-stack"><strong>14,90 €</strong><span>PDF di 24 pagine · accesso immediato</span></div>
-            <ExternalButton href={ritualiLink} eventName="click_rituali_1490">Inizia il percorso</ExternalButton>
+            <div className="price-stack"><strong>19 €</strong><span>PDF di 24 pagine · accesso immediato</span></div>
+            <ExternalButton href={ritualiLink} eventName="click_rituali_1900">Inizia il percorso</ExternalButton>
             <p className="microcopy">Pagamento sicuro su Payhip · Nessun abbonamento</p>
           </div>
         </div>
@@ -102,7 +102,7 @@ function RitualsPage() {
           <span className="eyebrow">Inizia quando vuoi</span>
           <h2>Sette pratiche da usare anche dopo i sette giorni</h2>
           <p>Ricevi il PDF completo e scegli ogni volta la pratica più adatta per sostenere la tua guarigione spirituale.</p>
-          <ExternalButton href={ritualiLink} eventName="click_rituali_bottom_1490">Acquista a 14,90 €</ExternalButton>
+          <ExternalButton href={ritualiLink} eventName="click_rituali_bottom_1900">Acquista a 19 €</ExternalButton>
         </div>
       </section>
     </SiteLayout>

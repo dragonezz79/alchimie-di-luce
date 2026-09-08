@@ -22,7 +22,7 @@
     { name: 'punto_zero', value: 149, href: ['paypal.me/alchimiediluce/149'], text: ['punto zero'] },
     { name: 'tarocchi_pdf', value: 49, href: ['paypal.me/alchimiediluce/49'], text: ['tarocchi in pdf', 'lettura pdf'] },
     { name: 'tarocchi_telefono', value: 59, href: ['paypal.me/alchimiediluce/59', 'consulto-tarocchi'], text: ['tarocchi in diretta', 'consulto telefonico'] },
-    { name: 'sette_rituali', value: 14.9, href: ['payhip.com/b/dbhjv'], text: ['7 rituali', 'sette rituali'] },
+    { name: 'sette_rituali', value: 19, href: ['payhip.com/b/dbhjv'], text: ['7 rituali', 'sette rituali'] },
     { name: 'mappa_di_luce', value: 59, href: ['payhip.com/b/3mycg'], text: ['mappa di luce'] },
     { name: 'guida_serenita', value: 0, href: ['payhip.com/buy?link=ez8xs'], text: ['5 minuti', 'guida serenita', 'guida alla serenita'] }
   ];

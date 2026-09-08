@@ -146,7 +146,7 @@ export default function HomeSalesPage() {
           </div>
           <div className="entry-next">
             <img src={ritualiCover} alt="7 Rituali di Protezione e Luce" />
-            <div><span>Passo successivo</span><strong>7 Rituali · 14,90 €</strong></div>
+            <div><span>Passo successivo</span><strong>7 Rituali · 19 €</strong></div>
           </div>
           <div className="entry-next">
             <img src={mappaCover} alt="Mappa di Luce Interattiva" />

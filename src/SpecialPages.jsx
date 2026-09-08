@@ -176,7 +176,7 @@ export function ProductsSalesPage() {
             label="Percorso di 7 giorni · PDF"
             title="7 Rituali di Protezione e Luce"
             text="Sette pratiche di guarigione energetica per proteggerti, lasciare andare il peso della giornata e tornare al tuo centro."
-            price="14,90 €"
+            price="19 €"
             detailHref="/prodotti/7-rituali-protezione-luce"
             buyHref={links.rituali}
             buyText="Acquista su Payhip"

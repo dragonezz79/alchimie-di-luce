@@ -41,7 +41,7 @@ const products = {
   rituals: {
     name: '7 Rituali di Protezione e Luce',
     label: 'Percorso digitale di 7 giorni',
-    price: '14,90 €',
+    price: '19 €',
     description: 'Sette pratiche di guarigione energetica per proteggerti, lasciare andare il peso della giornata e tornare al tuo centro.',
     reason: 'Hai bisogno di protezione, centratura e piccoli gesti concreti da compiere un giorno alla volta.',
     href: '/prodotti/7-rituali-protezione-luce',
