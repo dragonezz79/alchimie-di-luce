@@ -349,6 +349,7 @@ p { color: var(--muted); line-height: 1.72; }
 .testimonial-card blockquote { position: relative; z-index: 1; margin: 0 0 26px; color: #f5f2e9; font-family: Georgia, serif; font-size: 19px; line-height: 1.62; }
 .testimonial-card figcaption { color: var(--gold-light); font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
 .testimonial-card figcaption span { margin-inline: 5px; color: var(--muted); }
+.testimonial-disclaimer { max-width: 760px; margin: 28px auto 0; color: var(--muted); font-size: 14px; line-height: 1.7; text-align: center; }
 .testimonials-action { display: flex; justify-content: center; margin-top: 30px; }
 
 .split-grid, .about-preview, .certificate-grid {

@@ -13,6 +13,24 @@ const infoLink = whatsappLink(
   'Ciao Carmelo, prima di richiedere Punto Zero vorrei capire se è adatto alla situazione che sto vivendo.\n\nLa situazione, in breve:'
 );
 
+const pointZeroTestimonials = [
+  {
+    name: 'Laura M.',
+    theme: 'Lasciare andare un legame',
+    quote: 'Da quando abbiamo chiuso il ciclo, ci penso ancora a volte, ma è un ricordo neutro: non mi toglie più energia. Ho ripreso in mano le mie cose e mi sento finalmente padrona della mia testa.'
+  },
+  {
+    name: 'Elena R.',
+    theme: 'Protezione sul lavoro',
+    quote: 'Le dinamiche sul lavoro sono le stesse, ma non mi faccio più travolgere. Finisco il turno lucida e la sera ho ancora voglia di uscire e vivere.'
+  },
+  {
+    name: 'Marco T.',
+    theme: 'Chiarezza e ripartenza',
+    quote: 'Negli ultimi giorni del ciclo ho iniziato a sentire una chiarezza mentale che non ricordavo da anni. Ho sbloccato due decisioni che rimandavo da una vita.'
+  }
+];
+
 const Step = ({ number, title, children }) => (
   <article className="zero-step">
     <span>{number}</span>
@@ -118,6 +136,25 @@ export default function PointZeroPage() {
           </div>
         </div>
         <div className="container outcome-note"><p>Per guarigione spirituale si intende un percorso personale di rilascio, ascolto e riequilibrio energetico. Gli effetti percepiti sono soggettivi e il servizio non sostituisce azioni, decisioni o percorsi professionali necessari.</p></div>
+      </section>
+
+      <section className="section testimonials-section" id="riscontri-punto-zero">
+        <div className="container">
+          <div className="section-heading testimonials-intro">
+            <span className="eyebrow">Esperienze con Punto Zero</span>
+            <h2>Cosa hanno percepito dopo il percorso</h2>
+            <p>Estratti da testimonianze autentiche condivise dai clienti. I nomi sono indicati con la sola iniziale del cognome per tutelarne la riservatezza.</p>
+          </div>
+          <div className="testimonials-grid">
+            {pointZeroTestimonials.map((testimonial) => (
+              <figure className="testimonial-card" key={testimonial.name}>
+                <blockquote>“{testimonial.quote}”</blockquote>
+                <figcaption>{testimonial.name} <span>·</span> {testimonial.theme}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="testimonial-disclaimer">Ogni esperienza è personale. Le percezioni e i risultati possono variare da persona a persona.</p>
+        </div>
       </section>
 
       <section className="section boundaries-section">
