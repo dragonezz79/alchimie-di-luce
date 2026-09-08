@@ -78,7 +78,8 @@ const questions = [
       { label: 'Parlare direttamente con Carmelo', scores: { tarotPhone: 6 } },
       { label: 'Ricevere una risposta personale per iscritto', scores: { tarotPdf: 6 } },
       { label: 'Seguire un rituale guidato al giorno per 7 giorni', scores: { rituals: 6 } },
-      { label: 'Usare in autonomia uno strumento da consultare nel tempo', scores: { map: 5, serenity: 2 } }
+      { label: 'Usare in autonomia uno strumento da consultare nel tempo', scores: { map: 5 } },
+      { label: 'Iniziare gratuitamente con una guida di 5 minuti al giorno', scores: { serenity: 6 } }
     ]
   },
   {
@@ -88,7 +89,7 @@ const questions = [
       { label: 'Un chiarimento mirato per decidere con più lucidità', scores: { tarotPhone: 3, tarotPdf: 3 } },
       { label: 'Una pratica strutturata da seguire per sette giorni', scores: { rituals: 5 } },
       { label: 'Uno strumento completo da riutilizzare nel tempo', scores: { map: 5 } },
-      { label: 'Un primo esercizio semplice e accessibile', scores: { serenity: 5 } }
+      { label: 'Un primo percorso gratuito di 5 minuti al giorno', scores: { serenity: 6 } }
     ]
   }
 ];
