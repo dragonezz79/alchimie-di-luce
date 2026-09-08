@@ -58,9 +58,9 @@ export default function PointZeroPage() {
             <div className="price-stack price-stack-hero"><strong>149 €</strong><span>un intervento personale completo</span></div>
             <div className="hero-actions hero-actions-left">
               <ExternalButton href={purchaseLink} eventName="click_punto_zero_paypal">Acquista Punto Zero – 149 €</ExternalButton>
-              <ExternalButton href={infoLink} eventName="click_punto_zero_info" className="btn-secondary">Prima voglio capire</ExternalButton>
+              <ExternalButton href={infoLink} eventName="click_punto_zero_info" className="btn-secondary">Verifica se Punto Zero è adatto a te</ExternalButton>
             </div>
-            <p className="microcopy">Pagamento tramite PayPal. Dopo l’acquisto inviami su WhatsApp i dati necessari per la diagnosi energetica preliminare.</p>
+            <p className="microcopy">Pagamento tramite PayPal. Dopo l’acquisto inviami su WhatsApp i dati necessari per la valutazione energetica preliminare.</p>
           </div>
           <div className="zero-product-visual">
             <div className="zero-product-frame">
@@ -109,11 +109,11 @@ export default function PointZeroPage() {
           <div className="section-heading">
             <span className="eyebrow">Il percorso per il cliente</span>
             <h2>Cosa accade, concretamente</h2>
-            <p>Prima di operare con la Tavola svolgo una diagnosi energetica preliminare per individuare il blocco reale. Solo dopo imposto il lavoro più adatto alla persona.</p>
+            <p>Prima di operare con la Tavola svolgo una valutazione energetica preliminare per individuare il blocco reale. Solo dopo imposto il lavoro più adatto alla persona.</p>
           </div>
           <div className="zero-steps">
             <Step number="01" title="Mi descrivi il tema">Su WhatsApp mi invii nome, data di nascita e una descrizione breve della situazione su cui desideri lavorare.</Step>
-            <Step number="02" title="Individuo il blocco reale">Eseguo una diagnosi energetica preliminare per comprendere cosa sta agendo in profondità e quale lavoro impostare. Non è una diagnosi medica o psicologica.</Step>
+            <Step number="02" title="Individuo il blocco reale">Eseguo una valutazione energetica preliminare per comprendere cosa sta agendo in profondità e quale lavoro impostare. Non è una diagnosi medica o psicologica.</Step>
             <Step number="03" title="Svolgo l’intervento">Il lavoro viene svolto a distanza, costruito su ciò che è emerso e seguito personalmente da me. Tu puoi continuare normalmente le tue giornate.</Step>
             <Step number="04" title="Verifico e concludo">La durata dipende dal soggetto e dalla natura del blocco. Concludo il lavoro quando la verifica finale indica che la pulizia energetica è completata.</Step>
           </div>
@@ -179,7 +179,7 @@ export default function PointZeroPage() {
             <details><summary>Cosa devo fare durante l’intervento?</summary><p>Puoi continuare normalmente le tue giornate. Il lavoro viene svolto a distanza; ti chiedo soltanto i dati essenziali e una descrizione sintetica del tema.</p></details>
             <details><summary>Riceverò la Tavola?</summary><p>No. Punto Zero è un intervento svolto da Carmelo attraverso la Tavola, non un prodotto digitale o fisico da spedire.</p></details>
             <details><summary>Quanto dura?</summary><p>Non esiste una durata uguale per tutti. Dipende dal soggetto, dalla natura del blocco e dalla risposta energetica durante il ciclo. Il lavoro termina quando la verifica finale indica che la pulizia energetica è completata.</p></details>
-            <details><summary>Il prezzo cambia se il lavoro dura più a lungo?</summary><p>No. I 149 € comprendono la diagnosi energetica preliminare, l’intervento a distanza e il tempo necessario per arrivare alla chiusura del ciclo.</p></details>
+            <details><summary>Il prezzo cambia se il lavoro dura più a lungo?</summary><p>No. I 149 € comprendono la valutazione energetica preliminare, l’intervento a distanza e il tempo necessario per arrivare alla chiusura del ciclo.</p></details>
             <details><summary>Cosa faccio dopo il pagamento?</summary><p>Scrivimi su WhatsApp indicando nome, data di nascita e una breve descrizione del tema. Ti confermerò la presa in carico prima di iniziare.</p></details>
             <details><summary>Posso richiederlo per un’altra persona?</summary><p>Il lavoro deve rispettare consenso, responsabilità personale e libero arbitrio. Scrivimi prima di acquistare se la richiesta riguarda qualcun altro.</p></details>
           </div>

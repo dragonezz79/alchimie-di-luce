@@ -6,7 +6,7 @@ const products = {
     name: 'Punto Zero',
     label: 'Intervento personale a distanza',
     price: '149 €',
-    description: 'Un intervento di guarigione spirituale a distanza che parte dalla diagnosi energetica del blocco reale e prosegue fino al completamento della pulizia.',
+    description: 'Un intervento energetico personale a distanza che parte dalla valutazione preliminare del blocco reale e prosegue fino al completamento della pulizia.',
     reason: 'Senti il bisogno di lasciare andare un legame, sciogliere un blocco o liberarti da una pesantezza attraverso una pulizia energetica profonda.',
     href: '/punto-zero',
     cta: 'Scopri come funziona Punto Zero'
@@ -16,7 +16,7 @@ const products = {
     label: 'Consulto telefonico di 30 minuti',
     price: '59 €',
     description: 'Un dialogo personale per comprendere ciò che stai vivendo, sciogliere la confusione e ritrovare chiarezza interiore.',
-    reason: 'La tua guarigione spirituale, adesso, passa dal bisogno di essere ascoltato e fare chiarezza parlando direttamente con Carmelo.',
+    reason: 'In questo momento hai bisogno di essere ascoltato e di fare chiarezza parlando direttamente con Carmelo.',
     href: '/letture',
     cta: 'Scopri il consulto in diretta'
   },
@@ -33,7 +33,7 @@ const products = {
     name: 'Mappa di Luce Interattiva',
     label: 'Strumento digitale riutilizzabile',
     price: '59 €',
-    description: 'Uno strumento di ascolto e guarigione spirituale per ricevere orientamento e trasformarlo in una scelta concreta.',
+    description: 'Uno strumento di ascolto personale per ricevere orientamento e trasformarlo in una scelta concreta.',
     reason: 'Vuoi sostenere la tua energia in autonomia con uno strumento completo a cui tornare ogni volta che ne senti il bisogno.',
     href: '/prodotti/mappa-di-luce',
     cta: 'Scopri la Mappa di Luce'
@@ -51,7 +51,7 @@ const products = {
     name: '5 Minuti per Ritrovare Serenità',
     label: 'Guida digitale gratuita',
     price: 'Gratis',
-    description: 'Il primo passo gratuito verso una guarigione spirituale fatta di presenza, gratitudine e serenità quotidiana.',
+    description: 'Il primo passo gratuito per creare più presenza, gratitudine e serenità nella quotidianità.',
     reason: 'Vuoi iniziare con dolcezza, dedicarti cinque minuti al giorno e ritrovare un po’ di serenità senza acquistare nulla.',
     href: 'https://payhip.com/buy?link=Ez8xs',
     cta: 'Scarica la guida gratuita',
@@ -156,7 +156,7 @@ export default function ProductFinderPage() {
           <div className="finder-intro">
             <span className="eyebrow">Orientamento gratuito · meno di un minuto</span>
             <h1>Di cosa ha bisogno la tua energia?</h1>
-            <p>Rispondi a tre domande e scopri quale percorso può accompagnare meglio la tua guarigione spirituale in questo momento.</p>
+            <p>Rispondi a tre domande e scopri quale proposta può accompagnarti meglio in questo momento.</p>
           </div>
 
           {!complete ? (
@@ -178,7 +178,7 @@ export default function ProductFinderPage() {
             </div>
           ) : (
             <div className="finder-result" aria-live="polite">
-              <span className="eyebrow">Il percorso di guarigione spirituale più vicino al tuo bisogno</span>
+              <span className="eyebrow">La proposta più vicina al tuo bisogno</span>
               <div className="finder-result-grid">
                 <div>
                   <span className="finder-result-label">{result.label}</span>
@@ -189,6 +189,17 @@ export default function ProductFinderPage() {
                 <aside>
                   <div className="price-stack"><strong>{result.price}</strong><span>prezzo chiaro prima di iniziare</span></div>
                   <a className="btn btn-primary" href={result.href} onClick={() => track('select_quiz_result', { quiz_name: 'trova_il_tuo_percorso', recommended_product: resultKey })} {...(result.external ? { target: '_blank', rel: 'noreferrer' } : {})}>{result.cta}</a>
+                  {resultKey !== 'serenity' && (
+                    <a
+                      className="finder-fallback"
+                      href="https://payhip.com/buy?link=Ez8xs"
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={() => track('select_quiz_fallback', { quiz_name: 'trova_il_tuo_percorso', recommended_product: resultKey, fallback_product: 'guida_serenita' })}
+                    >
+                      Non sei pronto? Inizia gratis con 5 minuti al giorno
+                    </a>
+                  )}
                   <button className="finder-restart" type="button" onClick={() => { track('quiz_restart', { quiz_name: 'trova_il_tuo_percorso', previous_result: resultKey }); restart(); }}>Rifai il test</button>
                 </aside>
               </div>

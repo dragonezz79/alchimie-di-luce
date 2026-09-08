@@ -377,6 +377,23 @@ p { color: var(--muted); line-height: 1.72; }
 .steps-grid > div { padding: 28px; border-radius: 24px; background: var(--card); }
 .steps-grid span { display: inline-grid; width: 42px; height: 42px; margin-bottom: 16px; place-items: center; border-radius: 50%; background: var(--gold); color: var(--navy); font-weight: 900; }
 
+.map-example {
+  margin-top: 42px;
+  padding: clamp(26px, 5vw, 46px);
+  border: 1px solid rgba(231,198,108,0.28);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(22,35,64,0.96), rgba(9,16,31,0.96));
+  box-shadow: 0 26px 60px rgba(0,0,0,0.24);
+}
+.map-example-heading { max-width: 760px; margin-bottom: 26px; }
+.map-example-heading h3 { margin: 10px 0 0; color: var(--gold-light); font-size: clamp(26px, 4vw, 38px); }
+.map-example-grid { display: grid; grid-template-columns: repeat(4, 1fr); overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--line); gap: 1px; }
+.map-example-step { padding: 24px 20px; background: #111a30; }
+.map-example-step > span { display: grid; width: 32px; height: 32px; margin-bottom: 14px; place-items: center; border-radius: 50%; background: var(--gold); color: var(--navy); font-size: 13px; font-weight: 900; }
+.map-example-step strong { display: block; margin-bottom: 9px; color: #fff; }
+.map-example-step p { margin: 0; font-size: 16px; line-height: 1.65; }
+.map-example-note { max-width: 780px; margin: 24px 0 0; color: var(--gold-light); font-size: 16px; font-weight: 700; line-height: 1.65; }
+
 .about-preview { max-width: 920px; }
 .about-preview img, .portrait-card img { width: 100%; max-width: 370px; margin-inline: auto; border-radius: 34px; box-shadow: 0 24px 60px rgba(0,0,0,0.42); }
 
@@ -972,6 +989,7 @@ p { color: var(--muted); line-height: 1.72; }
 .finder-result aside { padding: 8px 0 0; }
 .finder-result .price-stack { margin-top: 0; }
 .finder-result .btn { width: 100%; }
+.finder-fallback { display: block; margin-top: 14px; color: var(--gold-light); font-size: 14px; font-weight: 800; line-height: 1.5; text-align: center; text-decoration: underline; text-underline-offset: 4px; }
 .finder-disclaimer { max-width: 800px; margin: 24px auto 0; color: #8f99ac; font-size: 12px; text-align: center; }
 
 @media (max-width: 940px) {
@@ -988,6 +1006,7 @@ p { color: var(--muted); line-height: 1.72; }
   .choice-number { margin-bottom: 28px; }
   .entry-grid { grid-template-columns: minmax(220px, 0.6fr) 1fr; }
   .scope-grid { grid-template-columns: repeat(2, 1fr); }
+  .map-example-grid { grid-template-columns: repeat(2, 1fr); }
   .finder-result-grid { grid-template-columns: 1fr; }
 }
 
@@ -1011,6 +1030,7 @@ p { color: var(--muted); line-height: 1.72; }
   .premium-reading-card .large-copy { min-height: 0; }
   .scope-grid,
   .finder-invite { grid-template-columns: 1fr; }
+  .map-example-grid { grid-template-columns: 1fr; }
   .scope-card { min-height: 0; }
   .finder-page { padding: 112px 0 68px; }
   .finder-card,

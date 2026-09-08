@@ -65,10 +65,10 @@ export default function HomeSalesPage() {
             <span className="eyebrow">Il percorso centrale</span>
             <h2>Quando continuare a pensarci non basta</h2>
             <p className="large-copy">
-              Punto Zero è un intervento di guarigione spirituale ed energetica a distanza. Ti accompagna a recidere ciò che ti trattiene, alleggerire il peso interiore e recuperare energia per ripartire.
+              Punto Zero è un intervento energetico personale a distanza. Ti accompagna a recidere ciò che ti trattiene, alleggerire il peso interiore e recuperare energia per ripartire.
             </p>
             <ul className="clean-checks">
-              <li>Diagnosi energetica preliminare per individuare il blocco reale</li>
+              <li>Valutazione energetica preliminare per individuare il blocco reale</li>
               <li>Lavoro formulato sulla persona e su ciò che emerge</li>
               <li>Attivazione e ciclo seguito personalmente da Carmelo</li>
               <li>Durata personalizzata fino al completamento della pulizia energetica</li>
@@ -115,7 +115,7 @@ export default function HomeSalesPage() {
               number="03"
               need="Vuoi procedere in autonomia"
               title="Strumenti digitali"
-              text="Per proteggere la tua energia, ritrovare il centro e sostenere ogni giorno la tua guarigione spirituale."
+              text="Per proteggere la tua energia, ritrovare il centro e creare una pratica quotidiana."
               price="Da 0 €"
               href="/prodotti"
               cta="Esplora gli strumenti"
@@ -141,7 +141,7 @@ export default function HomeSalesPage() {
           <div>
             <span className="eyebrow">L’unico ingresso gratuito</span>
             <h2>Inizia con cinque minuti veri</h2>
-            <p className="large-copy">La guarigione spirituale può iniziare da cinque minuti: fermarti, respirare e tornare presente nella tua vita.</p>
+            <p className="large-copy">Il cambiamento può iniziare da cinque minuti: fermarti, respirare e tornare presente nella tua vita.</p>
             <ExternalButton href={links.serenita} eventName="click_home_serenita">Scarica la guida gratuita</ExternalButton>
           </div>
           <div className="entry-next">

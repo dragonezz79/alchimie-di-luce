@@ -236,7 +236,7 @@ export function MapSalesPage() {
             <h1>Mappa di Luce Interattiva</h1>
             <p className="large-copy"><strong>Non è una Mappa da guardare. È una Mappa da consultare.</strong></p>
             <p>
-              Uno strumento di guarigione spirituale da consultare quando hai bisogno di ascoltarti, ricevere
+              Uno strumento da consultare quando hai bisogno di ascoltarti, ricevere
               orientamento e trasformare ciò che emerge in una scelta concreta.
             </p>
             <p className="large-copy"><strong>Ascolta · Ricevi · Scegli · Trasforma</strong></p>
@@ -252,7 +252,7 @@ export function MapSalesPage() {
           <div className="section-heading center">
             <span className="eyebrow">Come funziona davvero</span>
             <h2>Da una domanda a una scelta concreta</h2>
-            <p>La tua guarigione spirituale parte dal momento che stai vivendo: non devi studiare tutto prima di iniziare.</p>
+            <p>Parti dal momento che stai vivendo: non devi studiare tutto prima di iniziare.</p>
           </div>
           <div className="steps-grid">
             <div>
@@ -270,6 +270,19 @@ export function MapSalesPage() {
               <h3>Trasforma il messaggio</h3>
               <p>Approfondisci nella guida, annota ciò che emerge nel diario e scegli un piccolo passo concreto.</p>
             </div>
+          </div>
+          <div className="map-example">
+            <div className="map-example-heading">
+              <span className="eyebrow">Un esempio concreto</span>
+              <h3>“Devo contattare questa persona adesso?”</h3>
+            </div>
+            <div className="map-example-grid">
+              <div className="map-example-step"><span>1</span><strong>Formuli la domanda</strong><p>Porti alla Mappa ciò che in questo momento ti crea dubbio o agitazione.</p></div>
+              <div className="map-example-step"><span>2</span><strong>Ricevi un segnale</strong><p>Il messaggio “ATTENDI” richiama la tua attenzione.</p></div>
+              <div className="map-example-step"><span>3</span><strong>Approfondisci</strong><p>Consultando la guida, osservi cosa ti sta spingendo a forzare i tempi.</p></div>
+              <div className="map-example-step"><span>4</span><strong>Scegli concretamente</strong><p>Annoti ciò che emerge e decidi di aspettare 24 ore prima di agire.</p></div>
+            </div>
+            <p className="map-example-note">La Mappa non decide al posto tuo: ti aiuta a trasformare un’intuizione in una scelta più consapevole.</p>
           </div>
         </div>
       </section>
