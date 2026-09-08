@@ -66,7 +66,7 @@ const questions = [
       { label: 'Lasciare andare una persona, una situazione o una fase', scores: { puntoZero: 6 } },
       { label: 'Liberarmi da una pesantezza e ricevere una pulizia energetica', scores: { puntoZero: 6 } },
       { label: 'Capire meglio una domanda o una scelta precisa', scores: { tarotPhone: 4, tarotPdf: 4 } },
-      { label: 'Proteggermi, centrarmi e creare confini più chiari', scores: { rituals: 6 } },
+      { label: 'Proteggermi e seguire una pratica quotidiana per 7 giorni', scores: { rituals: 7 } },
       { label: 'Avere uno strumento che mi orienti nel tempo', scores: { map: 6 } },
       { label: 'Iniziare con calma, senza spendere', scores: { serenity: 7 } }
     ]
@@ -77,7 +77,8 @@ const questions = [
       { label: 'Carmelo segue personalmente il mio caso a distanza', scores: { puntoZero: 5 } },
       { label: 'Parlare direttamente con Carmelo', scores: { tarotPhone: 6 } },
       { label: 'Ricevere una risposta personale per iscritto', scores: { tarotPdf: 6 } },
-      { label: 'Procedere in autonomia con uno strumento guidato', scores: { map: 4, rituals: 4, serenity: 2 } }
+      { label: 'Seguire un rituale guidato al giorno per 7 giorni', scores: { rituals: 6 } },
+      { label: 'Usare in autonomia uno strumento da consultare nel tempo', scores: { map: 5, serenity: 2 } }
     ]
   },
   {
