@@ -1,5 +1,5 @@
 import React from 'react';
-import SiteLayout from './SiteChrome.jsx';
+import SiteLayout, { track } from './SiteChrome.jsx';
 
 const products = {
   puntoZero: {
@@ -119,6 +119,25 @@ export default function ProductFinderPage() {
   const choose = (optionIndex) => {
     const next = [...answers];
     next[step] = optionIndex;
+    const selectedOption = questions[step].options[optionIndex];
+
+    if (step === 0) {
+      track('quiz_start', { quiz_name: 'trova_il_tuo_percorso' });
+    }
+
+    track('quiz_answer', {
+      quiz_name: 'trova_il_tuo_percorso',
+      question_number: step + 1,
+      answer_text: selectedOption.label
+    });
+
+    if (step === questions.length - 1) {
+      track('quiz_complete', {
+        quiz_name: 'trova_il_tuo_percorso',
+        recommended_product: calculateResult(next)
+      });
+    }
+
     setAnswers(next);
     setStep(step + 1);
   };
@@ -167,8 +186,8 @@ export default function ProductFinderPage() {
                 </div>
                 <aside>
                   <div className="price-stack"><strong>{result.price}</strong><span>prezzo chiaro prima di iniziare</span></div>
-                  <a className="btn btn-primary" href={result.href} {...(result.external ? { target: '_blank', rel: 'noreferrer' } : {})}>{result.cta}</a>
-                  <button className="finder-restart" type="button" onClick={restart}>Rifai il test</button>
+                  <a className="btn btn-primary" href={result.href} onClick={() => track('select_quiz_result', { quiz_name: 'trova_il_tuo_percorso', recommended_product: resultKey })} {...(result.external ? { target: '_blank', rel: 'noreferrer' } : {})}>{result.cta}</a>
+                  <button className="finder-restart" type="button" onClick={() => { track('quiz_restart', { quiz_name: 'trova_il_tuo_percorso', previous_result: resultKey }); restart(); }}>Rifai il test</button>
                 </aside>
               </div>
             </div>

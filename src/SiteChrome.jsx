@@ -6,9 +6,9 @@ export const whatsappNumber = '393492304412';
 export const whatsappLink = (message) =>
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-export const track = (name) => {
+export const track = (name, parameters = {}) => {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-    window.gtag('event', name);
+    window.gtag('event', name, parameters);
   }
 };
 
