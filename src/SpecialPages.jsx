@@ -89,6 +89,7 @@ function Footer() {
           <a href="mailto:info@alchimiediluce.it">info@alchimiediluce.it</a>
           <a href="https://www.instagram.com/alchimie_di_luce/" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://www.tiktok.com/@alchimiediluce" target="_blank" rel="noreferrer">TikTok</a>
+          <a href="https://it.pinterest.com/alchimie_di_luce/" target="_blank" rel="noreferrer">Pinterest</a>
         </div>
       </div>
       <p className="disclaimer">
