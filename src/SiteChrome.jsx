@@ -75,6 +75,7 @@ function Footer() {
           <a href="mailto:info@alchimiediluce.it">info@alchimiediluce.it</a>
           <a href="https://www.instagram.com/alchimie_di_luce/" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://www.tiktok.com/@alchimiediluce" target="_blank" rel="noreferrer">TikTok</a>
+          <a href="https://it.pinterest.com/alchimie_di_luce/" target="_blank" rel="noreferrer">Pinterest</a>
         </div>
       </div>
       <p className="disclaimer">Per guarigione spirituale si intende un percorso personale di ascolto, rilascio e riequilibrio energetico. Non costituisce diagnosi o trattamento e non sostituisce cure mediche, supporto psicologico o indicazioni professionali. Gli esiti sono soggettivi.</p>
