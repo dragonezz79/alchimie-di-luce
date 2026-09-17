@@ -5,7 +5,6 @@ import fotoCarmelo from './foto-carmelo.webp';
 import guidaSerenita from './guida-serenita.webp';
 import ritualiCover from './kit-7-rituali-cover.webp';
 import mappaCover from './mappa.webp';
-import puntoZero from './punto-zero-simbolo.webp';
 
 const links = {
   serenita: 'https://payhip.com/buy?link=Ez8xs'
@@ -37,24 +36,56 @@ export default function HomeSalesPage() {
       <section className="new-home-hero">
         <div className="container zero-hero-grid">
           <div className="zero-hero-copy">
-            <span className="eyebrow">Alchimie di Luce · Carmelo Nicita</span>
-            <h1>Lascia andare ciò che pesa.<br /><em>Torna a sentirti tu.</em></h1>
+            <span className="eyebrow">Carmelo Nicita · Lettura intuitiva e lavoro energetico</span>
+            <h1>Vedo il nodo che continua a ripetersi.<br /><em>Ti aiuto a cambiare direzione.</em></h1>
             <p className="hero-lead">
-              Percorsi di guarigione spirituale ed energetica per ritrovare leggerezza, chiarezza e forza interiore.
+              Il mio dono è riconoscere il filo nascosto tra ciò che vivi oggi e la possibile radice emotiva, familiare, energetica o karmica che continua ad alimentarlo. Non mi fermo all’interpretazione: quando il percorso è adatto, lavoro sul nodo e ti restituisco una direzione concreta da cui ripartire.
             </p>
             <div className="hero-actions hero-actions-left">
-              <a className="btn btn-primary" href="/punto-zero">Scopri Punto Zero</a>
+              <a className="btn btn-primary" href="#metodo">Scopri come lavoro</a>
               <a className="btn btn-secondary" href="/trova-il-tuo-percorso">Fai il test</a>
             </div>
-            <p className="trust-line">Percorsi chiari · Prezzi trasparenti · Rispetto del libero arbitrio</p>
+            <p className="trust-line">Presenza personale · Discernimento · Rispetto del libero arbitrio</p>
           </div>
-          <div className="zero-symbol-card" aria-label="Immagine evocativa del percorso Punto Zero">
-            <div className="zero-orbit" />
-            <img src={puntoZero} alt="Un punto di luce dorata al centro per rappresentare Punto Zero" />
+          <div className="zero-symbol-card carmelo-hero-card" aria-label="Carmelo Nicita, fondatore di Alchimie di Luce">
+            <img src={fotoCarmelo} alt="Carmelo Nicita" />
             <div className="zero-symbol-caption">
-              <span>Intervento a distanza</span>
-              <strong>Punto Zero</strong>
+              <span>Ogni percorso è seguito personalmente</span>
+              <strong>Carmelo Nicita</strong>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section signature-section" id="metodo">
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">Il metodo Alchimie di Luce</span>
+            <h2>Comprendere l’origine. Sciogliere il nodo. Riprendere la propria direzione.</h2>
+            <p className="large-copy">Dove gli altri vedono episodi separati, io cerco il filo che li tiene uniti. Una relazione, una paura o una situazione possono cambiare forma e continuare a produrre lo stesso risultato.</p>
+          </div>
+          <div className="signature-grid">
+            <article><span>01</span><h3>Riconosco il filo</h3><p>Ascolto il tema e individuo lo schema che collega situazioni apparentemente diverse, senza alimentare paura o confusione.</p></article>
+            <article><span>02</span><h3>Lavoro sul nodo</h3><p>Quando il percorso è adatto, intervengo sul piano energetico con un lavoro personale, focalizzato e rispettoso del libero arbitrio.</p></article>
+            <article><span>03</span><h3>Riporto alla realtà</h3><p>Ciò che emerge non resta astratto: la persona riceve una direzione chiara da trasformare in una scelta concreta.</p></article>
+          </div>
+          <p className="method-boundary">Non considero automaticamente ogni problema un nodo karmico. Prima ascolto, valuto il tema e verifico se il mio lavoro è realmente adatto alla situazione.</p>
+        </div>
+      </section>
+
+      <section className="section origins-preview-section">
+        <div className="container origins-preview-grid">
+          <div>
+            <span className="eyebrow">Perché alcune storie si ripetono</span>
+            <h2>Il problema può essere più profondo dell’ultimo episodio</h2>
+            <p className="large-copy">In una lettura spirituale, uno schema può avere radici emotive, familiari, energetiche o karmiche. Il nodo non è una condanna: indica il punto in cui qualcosa è rimasto irrisolto e continua a chiedere attenzione.</p>
+            <a className="btn btn-secondary" href="/nodi-karmici">Comprendi cosa sono i nodi karmici</a>
+          </div>
+          <div className="origin-signals">
+            <div><strong>La situazione cambia</strong><span>ma ritorna la stessa sofferenza</span></div>
+            <div><strong>La relazione finisce</strong><span>ma il legame continua a togliere energia</span></div>
+            <div><strong>Conosci già il problema</strong><span>ma non riesci a compiere il passo successivo</span></div>
+            <div><strong>Provi a reagire</strong><span>ma qualcosa ti riporta sempre al punto di partenza</span></div>
           </div>
         </div>
       </section>
@@ -128,8 +159,8 @@ export default function HomeSalesPage() {
         <div className="container finder-invite">
           <div>
             <span className="eyebrow">Non sai da dove iniziare?</span>
-            <h2>Trova la proposta più adatta al tuo momento</h2>
-            <p>Rispondi a tre domande sul bisogno che senti, sul tipo di supporto che preferisci e sulla profondità del passo che vuoi compiere.</p>
+            <h2>Riconosci di quale tipo di aiuto hai bisogno adesso</h2>
+            <p>Rispondi a quattro domande: il test ti aiuterà a distinguere se hai bisogno di calma, comprensione, protezione, scioglimento di un nodo o orientamento nel tempo.</p>
           </div>
           <a className="btn btn-primary" href="/trova-il-tuo-percorso">Inizia il test</a>
         </div>
@@ -159,10 +190,10 @@ export default function HomeSalesPage() {
         <div className="container about-preview">
           <img src={fotoCarmelo} alt="Carmelo Nicita, fondatore di Alchimie di Luce" />
           <div>
-            <span className="eyebrow">Chi c’è dietro il lavoro</span>
-            <h2>Una guida reale, non un servizio anonimo</h2>
-            <p className="large-copy">Sono Carmelo. Ti accompagno personalmente in un percorso di guarigione spirituale ed energetica, con riservatezza e rispetto del libero arbitrio.</p>
-            <p>Guarire spiritualmente significa lasciare andare ciò che pesa, ascoltare ciò che senti e ritrovare un rapporto più positivo con la tua energia.</p>
+            <span className="eyebrow">La presenza dietro il metodo</span>
+            <h2>Non delego la persona a un sistema automatico</h2>
+            <p className="large-copy">Sono Carmelo. Il mio lavoro unisce percezione intuitiva, lettura dei cicli, discernimento e intervento energetico.</p>
+            <p>Mi occupo soprattutto delle situazioni in cui la persona ha già riflettuto, provato a cambiare o chiuso apparentemente un capitolo, ma continua a sentirne il peso. Ogni consulto e ogni intervento Punto Zero viene seguito personalmente da me.</p>
             <a className="text-link" href="/chi-sono">Conosci il mio approccio →</a>
           </div>
         </div>

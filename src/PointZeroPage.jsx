@@ -53,7 +53,7 @@ export default function PointZeroPage() {
             <h1>Punto Zero</h1>
             <p className="zero-promise">Recidere. Alleggerire. Riallineare.</p>
             <p className="hero-lead">
-              Se continui a pensare alla stessa persona o situazione, una parte della tua energia è ancora lì. Punto Zero ti accompagna a recidere ciò che ti trattiene, ritrovare leggerezza e ripartire con più forza e chiarezza.
+              Se la situazione è cambiata ma continui a vivere lo stesso peso, il nodo può essere più profondo dell’ultimo episodio. Punto Zero è il mio intervento personale per lavorare sul piano energetico e accompagnarti verso una nuova direzione.
             </p>
             <div className="price-stack price-stack-hero"><strong>149 €</strong><span>un intervento personale completo</span></div>
             <div className="hero-actions hero-actions-left">
@@ -75,7 +75,7 @@ export default function PointZeroPage() {
         <div className="container recognition-grid">
           <div>
             <span className="eyebrow">Può essere il momento giusto se</span>
-            <h2>Senti che qualcosa è finito, ma non si è ancora sciolto</h2>
+            <h2>Hai capito cosa accade, ma qualcosa continua a trattenerti</h2>
           </div>
           <ul className="recognition-list recognition-list-large">
             <li>continui a tornare con la mente alla stessa persona o situazione</li>
@@ -89,17 +89,18 @@ export default function PointZeroPage() {
       <section className="section scope-section">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">Il raggio d’azione</span>
-            <h2>Su quali situazioni si può lavorare</h2>
-            <p>La Tavola sostiene un lavoro di guarigione spirituale a distanza: recide i legami che tolgono energia, libera dai pesi accumulati e favorisce un nuovo equilibrio interiore.</p>
+            <span className="eyebrow">Le possibili origini del nodo</span>
+            <h2>Su cosa può portare attenzione il lavoro</h2>
+            <p>Uno schema può avere radici relazionali, emotive, familiari, energetiche o karmiche. La valutazione preliminare serve a comprendere su quale livello impostare il lavoro, senza attribuire automaticamente ogni difficoltà al karma.</p>
+            <a className="text-link" href="/nodi-karmici">Scopri cosa sono i nodi karmici →</a>
           </div>
           <div className="scope-grid">
-            <article className="scope-card"><span>01</span><h3>Legami invisibili e tossici</h3><p>Ex partner, relazioni logoranti o vecchie storie del passato che continuano a togliere serenità e lucidità.</p></article>
-            <article className="scope-card"><span>02</span><h3>Situazioni che si ripetono</h3><p>Schemi bloccati sul lavoro, nelle relazioni o nella vita personale da cui non si riesce a uscire, nonostante gli sforzi.</p></article>
-            <article className="scope-card"><span>03</span><h3>Attaccamenti energetici</h3><p>Dipendenze sottili e agganci karmici che tengono una persona vincolata al passato o a dinamiche distruttive.</p></article>
-            <article className="scope-card"><span>04</span><h3>Nodi genealogici</h3><p>Nodi genealogici o schemi ripetitivi di autosabotaggio che il soggetto non riesce a superare con la sola forza di volontà.</p></article>
-            <article className="scope-card"><span>05</span><h3>Pesantezza emotiva</h3><p>Nubi emotive tossiche, forme-pensiero pesanti, pensieri negativi continui e dispersioni di vitalità.</p></article>
-            <article className="scope-card"><span>06</span><h3>Ripartenza</h3><p>Un azzeramento profondo per permettere alla persona di ricaricarsi e ripartire con il proprio equilibrio naturale.</p></article>
+            <article className="scope-card"><span>01</span><h3>Legami non conclusi</h3><p>Ex partner, relazioni logoranti o vecchie storie che sono terminate nella realtà, ma continuano a occupare pensieri ed energia.</p></article>
+            <article className="scope-card"><span>02</span><h3>Schemi che si ripetono</h3><p>Situazioni simili nel lavoro, nelle relazioni o nella vita personale che ritornano nonostante i tentativi di cambiarle.</p></article>
+            <article className="scope-card"><span>03</span><h3>Attaccamenti energetici</h3><p>Legami sottili e possibili agganci karmici che mantengono la persona vincolata al passato o a dinamiche che la logorano.</p></article>
+            <article className="scope-card"><span>04</span><h3>Nodi familiari</h3><p>Paure, ruoli di sacrificio o schemi di autosabotaggio che sembrano attraversare più generazioni.</p></article>
+            <article className="scope-card"><span>05</span><h3>Memorie emotive</h3><p>Ferite di abbandono, tradimento, rifiuto o umiliazione che continuano a riattivarsi anche in situazioni nuove.</p></article>
+            <article className="scope-card"><span>06</span><h3>Paure profonde</h3><p>Timore del giudizio, della perdita o del cambiamento che appare più intenso rispetto a ciò che sta accadendo nel presente.</p></article>
           </div>
         </div>
       </section>
@@ -113,7 +114,7 @@ export default function PointZeroPage() {
           </div>
           <div className="zero-steps">
             <Step number="01" title="Mi descrivi il tema">Su WhatsApp mi invii nome, data di nascita e una descrizione breve della situazione su cui desideri lavorare.</Step>
-            <Step number="02" title="Individuo il blocco reale">Eseguo una valutazione energetica preliminare per comprendere cosa sta agendo in profondità e quale lavoro impostare. Non è una diagnosi medica o psicologica.</Step>
+            <Step number="02" title="Valuto la natura del nodo">Cerco di comprendere se il tema appare soprattutto relazionale, emotivo, familiare, energetico o karmico e quale lavoro impostare. Non è una diagnosi medica o psicologica.</Step>
             <Step number="03" title="Svolgo l’intervento">Il lavoro viene svolto a distanza, costruito su ciò che è emerso e seguito personalmente da me. Tu puoi continuare normalmente le tue giornate.</Step>
             <Step number="04" title="Verifico e concludo">La durata dipende dal soggetto e dalla natura del blocco. Concludo il lavoro quando la verifica finale indica che la pulizia energetica è completata.</Step>
           </div>

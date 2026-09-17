@@ -42,6 +42,7 @@ function Header() {
         <span /><span /><span />
       </button>
       <nav className={open ? 'nav nav-open' : 'nav'} aria-label="Navigazione principale">
+        <a href="/nodi-karmici">Nodi karmici</a>
         <a href="/punto-zero">Punto Zero</a>
         <a href="/trova-il-tuo-percorso">Fai il test</a>
         <a href="/prodotti">Strumenti digitali</a>
@@ -60,10 +61,11 @@ function Footer() {
       <div className="footer-grid">
         <div>
           <div className="footer-brand">Alchimie di Luce</div>
-          <p>Percorsi di guarigione spirituale ed energetica per lasciare andare, fare chiarezza e ritrovare il proprio centro.</p>
+          <p>Lettura dei cicli, nodi karmici e lavoro energetico per riconoscere ciò che si ripete, alleggerire il peso e ritrovare una direzione.</p>
         </div>
         <div>
           <strong>Esplora</strong>
+          <a href="/nodi-karmici">Nodi karmici</a>
           <a href="/punto-zero">Punto Zero</a>
           <a href="/trova-il-tuo-percorso">Fai il test</a>
           <a href="/letture">Tarocchi</a>

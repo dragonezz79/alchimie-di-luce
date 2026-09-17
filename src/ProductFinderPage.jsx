@@ -6,8 +6,8 @@ const products = {
     name: 'Punto Zero',
     label: 'Intervento personale a distanza',
     price: '149 €',
-    description: 'Un intervento energetico personale a distanza che parte dalla valutazione preliminare del blocco reale e prosegue fino al completamento della pulizia.',
-    reason: 'Senti il bisogno di lasciare andare un legame, sciogliere un blocco o liberarti da una pesantezza attraverso una pulizia energetica profonda.',
+    description: 'Un intervento energetico personale a distanza che parte dalla valutazione del nodo e prosegue secondo i tempi necessari al completamento del lavoro.',
+    reason: 'Le tue risposte indicano che non cerchi soltanto una spiegazione: senti che un legame, uno schema o una pesantezza continua a trattenerti nonostante tu abbia già provato a comprenderla.',
     href: '/punto-zero',
     cta: 'Scopri come funziona Punto Zero'
   },
@@ -16,7 +16,7 @@ const products = {
     label: 'Consulto telefonico di 30 minuti',
     price: '59 €',
     description: 'Un dialogo personale per comprendere ciò che stai vivendo, sciogliere la confusione e ritrovare chiarezza interiore.',
-    reason: 'In questo momento hai bisogno di essere ascoltato e di fare chiarezza parlando direttamente con Carmelo.',
+    reason: 'Le tue risposte indicano che hai bisogno di mettere ordine in una situazione presente, essere ascoltato e ricevere un confronto diretto con Carmelo.',
     href: '/letture',
     cta: 'Scopri il consulto in diretta'
   },
@@ -25,7 +25,7 @@ const products = {
     label: 'Lettura personale scritta',
     price: '49 €',
     description: 'Una lettura personale da conservare, per capire cosa sta accadendo dentro di te e vedere la direzione successiva.',
-    reason: 'La tua guarigione interiore parte da una domanda precisa e dal bisogno di ricevere una risposta scritta da rileggere con calma.',
+    reason: 'Le tue risposte indicano che hai una domanda precisa e preferisci ricevere una lettura personale scritta da conservare e rileggere con calma.',
     href: '/letture',
     cta: 'Scopri la lettura scritta'
   },
@@ -34,7 +34,7 @@ const products = {
     label: 'Strumento digitale riutilizzabile',
     price: '59 €',
     description: 'Uno strumento di ascolto personale per ricevere orientamento e trasformarlo in una scelta concreta.',
-    reason: 'Vuoi sostenere la tua energia in autonomia con uno strumento completo a cui tornare ogni volta che ne senti il bisogno.',
+    reason: 'Le tue risposte indicano che desideri ascoltarti e orientarti in autonomia con uno strumento completo a cui tornare nel tempo.',
     href: '/prodotti/mappa-di-luce',
     cta: 'Scopri la Mappa di Luce'
   },
@@ -43,7 +43,7 @@ const products = {
     label: 'Percorso digitale di 7 giorni',
     price: '19 €',
     description: 'Sette pratiche di guarigione energetica per proteggerti, lasciare andare il peso della giornata e tornare al tuo centro.',
-    reason: 'Hai bisogno di protezione, centratura e piccoli gesti concreti da compiere un giorno alla volta.',
+    reason: 'Le tue risposte indicano che hai soprattutto bisogno di protezione, centratura e piccoli gesti concreti da compiere un giorno alla volta.',
     href: '/prodotti/7-rituali-protezione-luce',
     cta: 'Scopri i 7 Rituali'
   },
@@ -52,7 +52,7 @@ const products = {
     label: 'Guida digitale gratuita',
     price: 'Gratis',
     description: 'Il primo passo gratuito per creare più presenza, gratitudine e serenità nella quotidianità.',
-    reason: 'Vuoi iniziare con dolcezza, dedicarti cinque minuti al giorno e ritrovare un po’ di serenità senza acquistare nulla.',
+    reason: 'Le tue risposte indicano che il primo bisogno è rallentare, recuperare presenza e iniziare con dolcezza, senza affrontare subito un percorso più profondo.',
     href: 'https://payhip.com/buy?link=Ez8xs',
     cta: 'Scarica la guida gratuita',
     external: true
@@ -61,14 +61,25 @@ const products = {
 
 const questions = [
   {
-    title: 'Qual è il bisogno più presente in questo momento?',
+    title: 'Quale situazione riconosci maggiormente?',
     options: [
-      { label: 'Lasciare andare una persona, una situazione o una fase', scores: { puntoZero: 6 } },
-      { label: 'Liberarmi da una pesantezza e ricevere una pulizia energetica', scores: { puntoZero: 6 } },
-      { label: 'Capire meglio una domanda o una scelta precisa', scores: { tarotPhone: 4, tarotPdf: 4 } },
-      { label: 'Proteggermi e seguire una pratica quotidiana per 7 giorni', scores: { rituals: 7 } },
-      { label: 'Avere uno strumento che mi orienti nel tempo', scores: { map: 6 } },
-      { label: 'Iniziare con calma, senza spendere', scores: { serenity: 7 } }
+      { label: 'Una persona o una situazione è finita, ma continuo a sentirne il peso', scores: { puntoZero: 7 } },
+      { label: 'Cambiano le persone o i contesti, ma rivivo sempre lo stesso schema', scores: { puntoZero: 6, tarotPhone: 2, tarotPdf: 2 } },
+      { label: 'Ho una domanda o una scelta precisa e mi serve chiarezza', scores: { tarotPhone: 5, tarotPdf: 5 } },
+      { label: 'Assorbo troppo ciò che mi circonda e ho bisogno di protezione', scores: { rituals: 7 } },
+      { label: 'Voglio uno strumento che mi aiuti ad ascoltarmi nel tempo', scores: { map: 6 } },
+      { label: 'Sono sovraccarico e devo prima ritrovare calma e presenza', scores: { serenity: 7 } }
+    ]
+  },
+  {
+    title: 'Dove senti maggiormente il blocco?',
+    options: [
+      { label: 'In un legame che non riesco a chiudere davvero', scores: { puntoZero: 6 } },
+      { label: 'In uno schema personale o familiare che continua a ripetersi', scores: { puntoZero: 5 } },
+      { label: 'In una decisione attuale che non riesco a vedere con chiarezza', scores: { tarotPhone: 4, tarotPdf: 4 } },
+      { label: 'Nei confini: mi sento facilmente appesantito dagli altri', scores: { rituals: 6 } },
+      { label: 'Nel rapporto con la mia intuizione e le mie scelte', scores: { map: 5 } },
+      { label: 'Nella mente: ho bisogno di rallentare e respirare', scores: { serenity: 6 } }
     ]
   },
   {
@@ -154,9 +165,9 @@ export default function ProductFinderPage() {
       <section className="finder-page">
         <div className="container finder-shell">
           <div className="finder-intro">
-            <span className="eyebrow">Orientamento gratuito · meno di un minuto</span>
-            <h1>Di cosa ha bisogno la tua energia?</h1>
-            <p>Rispondi a tre domande e scopri quale proposta può accompagnarti meglio in questo momento.</p>
+            <span className="eyebrow">Orientamento gratuito · circa un minuto</span>
+            <h1>Che cosa continua a chiedere attenzione?</h1>
+            <p>Rispondi a quattro domande. Il test non stabilisce diagnosi né certezze karmiche: ti aiuta a capire quale tipo di supporto può essere più coerente con ciò che stai vivendo.</p>
           </div>
 
           {!complete ? (
@@ -178,7 +189,7 @@ export default function ProductFinderPage() {
             </div>
           ) : (
             <div className="finder-result" aria-live="polite">
-              <span className="eyebrow">La proposta più vicina al tuo bisogno</span>
+              <span className="eyebrow">Il percorso più coerente con le tue risposte</span>
               <div className="finder-result-grid">
                 <div>
                   <span className="finder-result-label">{result.label}</span>
