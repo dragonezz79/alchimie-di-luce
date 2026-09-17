@@ -775,11 +775,11 @@ p { color: var(--muted); line-height: 1.72; }
 
 .carmelo-hero-card {
   padding: 18px 18px 0;
-  border-radius: 220px 220px 34px 34px;
+  border-radius: 30px;
 }
 .carmelo-hero-card img {
   aspect-ratio: 4 / 5;
-  border-radius: 210px 210px 24px 24px;
+  border-radius: 20px;
   object-position: center top;
   filter: saturate(0.88) contrast(1.04);
 }
