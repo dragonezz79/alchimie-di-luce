@@ -146,8 +146,8 @@ export default function HomeSalesPage() {
             <h3>Punto Zero a distanza</h3>
             <p>Prima individuo il blocco energetico reale, poi costruisco e seguo il lavoro a distanza fino al completamento della pulizia.</p>
             <div className="price-stack"><strong>149 €</strong><span>percorso personale</span></div>
-            <ExternalButton href={puntoZeroPurchase} eventName="click_home_punto_zero_paypal">Acquista Punto Zero – 149 €</ExternalButton>
-            <a className="btn btn-secondary" href="/punto-zero">Scopri prima come funziona</a>
+            <a className="btn btn-primary" href="/punto-zero">Scopri se Punto Zero fa per te</a>
+            <ExternalButton href={puntoZeroPurchase} eventName="click_home_punto_zero_paypal" className="btn-secondary">Acquista Punto Zero – 149 €</ExternalButton>
           </aside>
         </div>
       </section>

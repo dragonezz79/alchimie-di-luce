@@ -1,5 +1,5 @@
 import React from 'react';
-import SiteLayout, { ExternalButton, whatsappLink } from './SiteChrome.jsx';
+import SiteLayout, { ExternalButton, track, whatsappLink } from './SiteChrome.jsx';
 import puntoZero from './punto-zero-simbolo.webp';
 import fotoCarmelo from './foto-carmelo.webp';
 
@@ -57,10 +57,10 @@ export default function PointZeroPage() {
             </p>
             <div className="price-stack price-stack-hero"><strong>149 €</strong><span>un intervento personale completo</span></div>
             <div className="hero-actions hero-actions-left">
-              <ExternalButton href={purchaseLink} eventName="click_punto_zero_paypal">Acquista Punto Zero – 149 €</ExternalButton>
-              <ExternalButton href={infoLink} eventName="click_punto_zero_info" className="btn-secondary">Verifica se Punto Zero è adatto a te</ExternalButton>
+              <ExternalButton href={infoLink} eventName="click_punto_zero_info">Verifica se Punto Zero è adatto a te</ExternalButton>
+              <ExternalButton href={purchaseLink} eventName="click_punto_zero_paypal" className="btn-secondary">Acquista Punto Zero – 149 €</ExternalButton>
             </div>
-            <p className="microcopy">Pagamento tramite PayPal. Dopo l’acquisto inviami su WhatsApp i dati necessari per la valutazione energetica preliminare.</p>
+            <p className="microcopy">Scrivimi prima di acquistare per capire se il percorso può essere adatto alla tua situazione. Se decidi di procedere, paghi con PayPal; poi mi invii i dati necessari per la valutazione energetica preliminare.</p>
           </div>
           <div className="zero-product-visual">
             <div className="zero-product-frame">
@@ -195,9 +195,10 @@ export default function PointZeroPage() {
             <h2>Se vuoi ripartire, partiamo da ciò che oggi ti trattiene.</h2>
             <div className="price-stack"><strong>149 €</strong><span>intervento completo a distanza</span></div>
             <div className="hero-actions hero-actions-left">
-              <ExternalButton href={purchaseLink} eventName="click_punto_zero_bottom_paypal">Acquista con PayPal</ExternalButton>
-              <ExternalButton href={afterPaymentLink} eventName="click_punto_zero_after_payment" className="btn-secondary">Ho già acquistato: invio i dati</ExternalButton>
+              <ExternalButton href={infoLink} eventName="click_punto_zero_bottom_info">Verifica se fa per te</ExternalButton>
+              <ExternalButton href={purchaseLink} eventName="click_punto_zero_bottom_paypal" className="btn-secondary">Acquista con PayPal</ExternalButton>
             </div>
+            <p className="microcopy"><a className="text-link" href={afterPaymentLink} target="_blank" rel="noreferrer" onClick={() => track('click_punto_zero_after_payment')}>Hai già acquistato? Invia i dati su WhatsApp</a></p>
           </div>
         </div>
       </section>

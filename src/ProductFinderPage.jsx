@@ -1,5 +1,5 @@
 import React from 'react';
-import SiteLayout, { track } from './SiteChrome.jsx';
+import SiteLayout, { track, whatsappLink } from './SiteChrome.jsx';
 
 const products = {
   puntoZero: {
@@ -8,8 +8,9 @@ const products = {
     price: '149 €',
     description: 'Un intervento energetico personale a distanza che parte dalla valutazione del nodo e prosegue secondo i tempi necessari al completamento del lavoro.',
     reason: 'Le tue risposte indicano che non cerchi soltanto una spiegazione: senti che un legame, uno schema o una pesantezza continua a trattenerti nonostante tu abbia già provato a comprenderla.',
-    href: '/punto-zero',
-    cta: 'Scopri come funziona Punto Zero'
+    href: whatsappLink('Ciao Carmelo, ho completato il test sul sito e mi è stato suggerito Punto Zero. Vorrei capire se è adatto alla situazione che sto vivendo.\n\nLa situazione, in breve:'),
+    cta: 'Verifica con Carmelo se fa per te',
+    external: true
   },
   tarotPhone: {
     name: 'Tarocchi in diretta',
@@ -200,6 +201,7 @@ export default function ProductFinderPage() {
                 <aside>
                   <div className="price-stack"><strong>{result.price}</strong><span>prezzo chiaro prima di iniziare</span></div>
                   <a className="btn btn-primary" href={result.href} onClick={() => track('select_quiz_result', { quiz_name: 'trova_il_tuo_percorso', recommended_product: resultKey })} {...(result.external ? { target: '_blank', rel: 'noreferrer' } : {})}>{result.cta}</a>
+                  {resultKey === 'puntoZero' && <a className="finder-fallback" href="/punto-zero">Leggi prima come funziona Punto Zero</a>}
                   {resultKey !== 'serenity' && (
                     <a
                       className="finder-fallback"
