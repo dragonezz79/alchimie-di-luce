@@ -1,5 +1,5 @@
 import React from 'react';
-import SiteLayout, { ExternalButton, track } from './SiteChrome.jsx';
+import SiteLayout, { ExternalButton, telegramLink, track } from './SiteChrome.jsx';
 
 import fotoCarmelo from './foto-carmelo.webp';
 import guidaSerenita from './guida-serenita.webp';
@@ -219,6 +219,21 @@ export default function HomeSalesPage() {
             <img src={mappaCover} alt="Mappa di Luce Interattiva" />
             <div><span>Strumento completo</span><strong>Mappa di Luce · 59 €</strong></div>
           </div>
+        </div>
+      </section>
+
+      <section className="section telegram-section" aria-labelledby="telegram-heading">
+        <div className="container telegram-panel">
+          <div className="telegram-mark" aria-hidden="true">✦</div>
+          <div>
+            <span className="eyebrow">Uno spazio gratuito, oltre il sito</span>
+            <h2 id="telegram-heading">Entra nello Spazio di Chiarezza</h2>
+            <p className="large-copy">Nel canale Telegram trovi pratiche brevi, riflessioni e aggiornamenti di Alchimie di Luce per alleggerire il rumore e tornare al punto essenziale.</p>
+            <p className="telegram-note">Canale pubblico · Nessun gruppo e nessun messaggio privato obbligatorio</p>
+          </div>
+          <ExternalButton href={telegramLink} eventName="click_home_telegram" className="btn-telegram">
+            Entra nello Spazio di Chiarezza su Telegram
+          </ExternalButton>
         </div>
       </section>
 
