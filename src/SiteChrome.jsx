@@ -3,6 +3,8 @@ import './global.css';
 
 export const whatsappNumber = '393492304412';
 
+export const telegramLink = 'https://t.me/alchimiediluce';
+
 export const whatsappLink = (message) =>
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
@@ -78,6 +80,7 @@ function Footer() {
           <a href="https://www.instagram.com/alchimie_di_luce/" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://www.tiktok.com/@alchimiediluce" target="_blank" rel="noreferrer">TikTok</a>
           <a href="https://it.pinterest.com/alchimie_di_luce/" target="_blank" rel="noreferrer">Pinterest</a>
+          <a href={telegramLink} target="_blank" rel="noreferrer" onClick={() => track('click_footer_telegram')}>Telegram · Spazio di Chiarezza</a>
         </div>
       </div>
       <p className="disclaimer">Per guarigione spirituale si intende un percorso personale di ascolto, rilascio e riequilibrio energetico. Non costituisce diagnosi o trattamento e non sostituisce cure mediche, supporto psicologico o indicazioni professionali. Gli esiti sono soggettivi.</p>
