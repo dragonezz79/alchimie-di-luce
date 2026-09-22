@@ -1,5 +1,6 @@
 import React from 'react';
 import './global.css';
+import { telegramUrl } from './SiteChrome.jsx';
 
 import mappaCover from './mappa.webp';
 import guidaCompleta from './guida-completa.webp';
@@ -58,9 +59,10 @@ function Header() {
       </button>
       <nav className={open ? 'nav nav-open' : 'nav'} aria-label="Navigazione principale">
         <a href="/">Home</a>
+        <a href="/approfondimenti">Approfondimenti</a>
+        {telegramUrl && <a href={telegramUrl} target="_blank" rel="noreferrer">Telegram</a>}
         <a href="/punto-zero">Punto Zero</a>
         <a href="/trova-il-tuo-percorso">Fai il test</a>
-        <a href="/prodotti">Strumenti digitali</a>
         <a href="/letture">Tarocchi</a>
         <a href="/chi-sono">Chi sono</a>
       </nav>
@@ -74,10 +76,11 @@ function Footer() {
       <div className="footer-grid">
         <div>
           <div className="footer-brand">Alchimie di Luce</div>
-          <p>Percorsi di guarigione spirituale ed energetica per lasciare andare, fare chiarezza e ritrovare il proprio centro.</p>
+          <p>Pulizia energetica della persona e della casa, percorsi di chiarezza e strumenti pratici per ritrovare equilibrio.</p>
         </div>
         <div>
           <strong>Esplora</strong>
+          <a href="/approfondimenti">Approfondimenti</a>
           <a href="/punto-zero">Punto Zero</a>
           <a href="/trova-il-tuo-percorso">Fai il test</a>
           <a href="/prodotti">Strumenti digitali</a>
@@ -87,9 +90,7 @@ function Footer() {
           <strong>Contatti</strong>
           <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="mailto:info@alchimiediluce.it">info@alchimiediluce.it</a>
-          <a href="https://www.instagram.com/alchimie_di_luce/" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://www.tiktok.com/@alchimiediluce" target="_blank" rel="noreferrer">TikTok</a>
-          <a href="https://it.pinterest.com/alchimie_di_luce/" target="_blank" rel="noreferrer">Pinterest</a>
+          {telegramUrl ? <a href={telegramUrl} target="_blank" rel="noreferrer">Canale Telegram riservato</a> : <span className="footer-pending">Canale Telegram in apertura</span>}
         </div>
       </div>
       <p className="disclaimer">

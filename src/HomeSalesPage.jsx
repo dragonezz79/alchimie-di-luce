@@ -1,10 +1,12 @@
 import React from 'react';
-import SiteLayout, { ExternalButton, telegramLink, track } from './SiteChrome.jsx';
+import SiteLayout, { ExternalButton, telegramUrl, track } from './SiteChrome.jsx';
 
 import fotoCarmelo from './foto-carmelo.webp';
 import guidaSerenita from './guida-serenita.webp';
 import ritualiCover from './kit-7-rituali-cover.webp';
 import mappaCover from './mappa.webp';
+import casaSerenaHero from './casa-serena-hero.webp';
+import { articles } from './BlogPages.jsx';
 
 const links = {
   serenita: 'https://payhip.com/buy?link=Ez8xs'
@@ -27,7 +29,7 @@ const ChoiceCard = ({ number, need, title, text, price, href, cta }) => (
 
 export default function HomeSalesPage() {
   React.useEffect(() => {
-    document.title = 'Alchimie di Luce | Guarigione spirituale ed energetica';
+    document.title = 'Alchimie di Luce | Pulizia energetica della persona e della casa';
     window.scrollTo(0, 0);
   }, []);
 
@@ -36,22 +38,22 @@ export default function HomeSalesPage() {
       <section className="new-home-hero">
         <div className="container zero-hero-grid">
           <div className="zero-hero-copy">
-            <span className="eyebrow">Carmelo Nicita · Lettura intuitiva e lavoro energetico</span>
-            <h1>Vedo il nodo che continua a ripetersi.<br /><em>Ti aiuto a cambiare direzione.</em></h1>
+            <span className="eyebrow">Pulizia energetica della persona e della casa · Carmelo Nicita</span>
+            <h1>Riporta pace, chiarezza e protezione <em>dentro di te e nella tua casa.</em></h1>
             <p className="hero-lead">
-              Il mio dono è riconoscere il filo nascosto tra ciò che vivi oggi e la possibile radice emotiva, familiare, energetica o karmica che continua ad alimentarlo. Non mi fermo all’interpretazione: quando il percorso è adatto, lavoro sul nodo e ti restituisco una direzione concreta da cui ripartire.
+              Punto Zero lavora sulla persona e sullo spazio che abita: aiuta a sciogliere legami, schemi e pesantezze interiori e a liberare la casa da tensioni, congestioni e stasi persistenti, nel pieno rispetto del libero arbitrio.
             </p>
             <div className="hero-actions hero-actions-left">
-              <a className="btn btn-primary" href="#metodo">Scopri come lavoro</a>
-              <a className="btn btn-secondary" href="/trova-il-tuo-percorso">Fai il test</a>
+              <a className="btn btn-primary" href="/punto-zero">Scopri il percorso Punto Zero</a>
+              <ExternalButton href={links.serenita} eventName="click_hero_serenita" className="btn-secondary">Scarica la guida gratuita</ExternalButton>
             </div>
-            <p className="trust-line">Presenza personale · Discernimento · Rispetto del libero arbitrio</p>
+            <p className="trust-line">Ordine · Respiro · Discernimento · Nessuna promessa miracolistica</p>
           </div>
-          <div className="zero-symbol-card carmelo-hero-card" aria-label="Carmelo Nicita, fondatore di Alchimie di Luce">
-            <img src={fotoCarmelo} alt="Carmelo Nicita" />
+          <div className="zero-symbol-card home-hero-card" aria-label="Una casa luminosa, ordinata e serena">
+            <img src={casaSerenaHero} alt="Soggiorno luminoso e ordinato con finestre aperte e luce naturale" />
             <div className="zero-symbol-caption">
-              <span>Ogni percorso è seguito personalmente</span>
-              <strong>Carmelo Nicita</strong>
+              <span>La trasformazione che cerchiamo</span>
+              <strong>Tu e la tua casa tornate a respirare</strong>
             </div>
           </div>
         </div>
@@ -130,24 +132,24 @@ export default function HomeSalesPage() {
         <div className="container flagship-grid">
           <div className="flagship-copy">
             <span className="eyebrow">Il percorso centrale</span>
-            <h2>Quando continuare a pensarci non basta</h2>
+            <h2>Quando il peso resta dentro di te e nello spazio che abiti</h2>
             <p className="large-copy">
-              Punto Zero è un intervento energetico personale a distanza. Ti accompagna a recidere ciò che ti trattiene, alleggerire il peso interiore e recuperare energia per ripartire.
+              Punto Zero è un intervento energetico svolto interamente a distanza sulla persona e sulla casa. Il lavoro affronta sia il nodo che continua a trattenerti sia le tensioni che restano nell’ambiente quotidiano.
             </p>
             <ul className="clean-checks">
-              <li>Valutazione energetica preliminare per individuare il blocco reale</li>
-              <li>Lavoro formulato sulla persona e su ciò che emerge</li>
-              <li>Attivazione e ciclo seguito personalmente da Carmelo</li>
-              <li>Durata personalizzata fino al completamento della pulizia energetica</li>
+              <li>Valutazione preliminare della persona e della situazione</li>
+              <li>Pulizia energetica personale su legami, schemi e pesantezze</li>
+              <li>Armonizzazione della casa e delle tensioni accumulate nello spazio</li>
+              <li>Nessuna forzatura di sentimenti, relazioni o decisioni altrui</li>
             </ul>
           </div>
           <aside className="flagship-offer">
             <span className="badge">Intervento premium</span>
-            <h3>Punto Zero a distanza</h3>
-            <p>Prima individuo il blocco energetico reale, poi costruisco e seguo il lavoro a distanza fino al completamento della pulizia.</p>
-            <div className="price-stack"><strong>149 €</strong><span>percorso personale</span></div>
-            <a className="btn btn-primary" href="/punto-zero">Scopri se Punto Zero fa per te</a>
-            <ExternalButton href={puntoZeroPurchase} eventName="click_home_punto_zero_paypal" className="btn-secondary">Acquista Punto Zero – 149 €</ExternalButton>
+            <h3>Punto Zero · Persona e ambiente</h3>
+            <p>Un percorso integrato seguito da Carmelo: pulizia energetica personale e armonizzazione della casa, entrambe svolte a distanza attraverso la Tavola.</p>
+            <div className="price-stack"><strong>149 €</strong><span>percorso integrato</span></div>
+            <a className="btn btn-primary" href="/punto-zero">Scopri come funziona</a>
+            <ExternalButton href={puntoZeroPurchase} eventName="click_home_punto_zero_paypal" className="btn-secondary">Richiedi Punto Zero – 149 €</ExternalButton>
           </aside>
         </div>
       </section>
@@ -162,12 +164,12 @@ export default function HomeSalesPage() {
           <div className="choice-grid">
             <ChoiceCard
               number="01"
-              need="Vuoi sciogliere un peso"
+              need="Vuoi alleggerire te e la tua casa"
               title="Punto Zero"
-              text="Per lasciare andare legami, schemi e situazioni che continuano a toglierti energia."
+              text="Per sciogliere ciò che ti trattiene e armonizzare un ambiente percepito come teso, pesante o incapace di offrire riposo."
               price="149 €"
               href="/punto-zero"
-              cta="Scopri l’intervento"
+              cta="Scopri il percorso"
             />
             <ChoiceCard
               number="02"
@@ -202,13 +204,34 @@ export default function HomeSalesPage() {
         </div>
       </section>
 
+      <section className="section insights-preview-section" aria-labelledby="insights-heading">
+        <div className="container">
+          <div className="section-heading insights-heading">
+            <span className="eyebrow">Approfondimenti</span>
+            <h2 id="insights-heading">Uno spazio per capire prima di scegliere</h2>
+            <p className="large-copy">Guide pratiche e misurate per orientarti nei momenti di stasi, alleggerire gli ambienti e distinguere ciò che senti senza alimentare paura o confusione.</p>
+          </div>
+          <div className="insights-grid">
+            {articles.map((article) => (
+              <article className="insight-card" key={article.slug}>
+                <span className="insight-meta">{article.category} · {article.readingTime}</span>
+                <h3>{article.title}</h3>
+                <p>{article.excerpt}</p>
+                <a className="text-link" href={`/approfondimenti/${article.slug}`}>Leggi la guida →</a>
+              </article>
+            ))}
+          </div>
+          <a className="btn btn-secondary insights-all" href="/approfondimenti">Tutti gli approfondimenti</a>
+        </div>
+      </section>
+
       <section className="section entry-section">
         <div className="container entry-grid">
           <img src={guidaSerenita} alt="Copertina della guida 5 minuti al giorno per ritrovare serenità" />
           <div>
             <span className="eyebrow">L’unico ingresso gratuito</span>
             <h2>Inizia con cinque minuti veri</h2>
-            <p className="large-copy">Il cambiamento può iniziare da cinque minuti: fermarti, respirare e tornare presente nella tua vita.</p>
+            <p className="large-copy">Il primo passo per riconoscere il sovraccarico, ritrovare centratura e osservare come l’ambiente incide sul tuo equilibrio quotidiano.</p>
             <ExternalButton href={links.serenita} eventName="click_home_serenita">Scarica la guida gratuita</ExternalButton>
           </div>
           <div className="entry-next">
@@ -231,7 +254,7 @@ export default function HomeSalesPage() {
             <p className="large-copy">Nel canale Telegram trovi pratiche brevi, riflessioni e aggiornamenti di Alchimie di Luce per alleggerire il rumore e tornare al punto essenziale.</p>
             <p className="telegram-note">Canale pubblico · Nessun gruppo e nessun messaggio privato obbligatorio</p>
           </div>
-          <ExternalButton href={telegramLink} eventName="click_home_telegram" className="btn-telegram">
+          <ExternalButton href={telegramUrl} eventName="click_home_telegram" className="btn-telegram">
             Entra nello Spazio di Chiarezza su Telegram
           </ExternalButton>
         </div>

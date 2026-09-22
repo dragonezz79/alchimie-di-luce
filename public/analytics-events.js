@@ -84,6 +84,13 @@
         return;
       }
 
+      if (href.includes('t.me/')) {
+        sendEvent('join_telegram', {
+          link_text: linkText
+        });
+        return;
+      }
+
       if (href.includes('cal.com/')) {
         sendEvent('open_booking', {
           service_name: service.name,

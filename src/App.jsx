@@ -84,6 +84,22 @@ function RitualsPage() {
       </section>
 
       <section className="section soft-section">
+        <div className="container boundaries-grid ritual-vs-zero">
+          <div className="boundary-card boundary-card-positive">
+            <span className="eyebrow">7 Rituali · Pratica autonoma</span>
+            <h3>Per la cura energetica quotidiana</h3>
+            <p>Il Giorno 4, “Armonia della casa”, ti guida in una pratica che puoi svolgere personalmente per dedicare attenzione e intenzione agli ambienti in cui vivi.</p>
+          </div>
+          <div className="boundary-card">
+            <span className="eyebrow">Punto Zero · Intervento personalizzato</span>
+            <h3>Quando il peso continua a tornare</h3>
+            <p>Carmelo svolge a distanza un lavoro più profondo e mirato sulla persona e sulla casa, dopo una valutazione preliminare della situazione.</p>
+            <a className="text-link" href="/punto-zero">Scopri Punto Zero →</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="section soft-section rituals-how-section">
         <div className="container">
           <div className="section-heading center">
             <span className="eyebrow">Ogni giorno</span>

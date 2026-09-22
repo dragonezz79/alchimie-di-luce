@@ -6,9 +6,14 @@ import ReadingsSalesPage from './ReadingsSalesPage.jsx';
 import { MapSalesPage, ProductsSalesPage } from './SpecialPages.jsx';
 import PointZeroPage from './PointZeroPage.jsx';
 import ProductFinderPage from './ProductFinderPage.jsx';
+import { ArticlePage, InsightsPage } from './BlogPages.jsx';
 
 const path = window.location.pathname.replace(/\/$/, '') || '/';
-const RootPage = path === '/'
+const RootPage = path.startsWith('/approfondimenti/')
+  ? ArticlePage
+  : path === '/approfondimenti'
+    ? InsightsPage
+  : path === '/'
   ? HomeSalesPage
   : path === '/trova-il-tuo-percorso'
     ? ProductFinderPage

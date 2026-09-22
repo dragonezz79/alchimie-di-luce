@@ -2,8 +2,7 @@ import React from 'react';
 import './global.css';
 
 export const whatsappNumber = '393492304412';
-
-export const telegramLink = 'https://t.me/alchimiediluce';
+export const telegramUrl = 'https://t.me/alchimiediluce';
 
 export const whatsappLink = (message) =>
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -44,10 +43,11 @@ function Header() {
         <span /><span /><span />
       </button>
       <nav className={open ? 'nav nav-open' : 'nav'} aria-label="Navigazione principale">
+        <a href="/approfondimenti">Approfondimenti</a>
+        {telegramUrl && <a href={telegramUrl} target="_blank" rel="noreferrer">Telegram</a>}
         <a href="/nodi-karmici">Nodi karmici</a>
         <a href="/punto-zero">Punto Zero</a>
         <a href="/trova-il-tuo-percorso">Fai il test</a>
-        <a href="/prodotti">Strumenti digitali</a>
         <a href="/letture">Tarocchi</a>
         <a href="/chi-sono">Chi sono</a>
       </nav>
@@ -63,10 +63,11 @@ function Footer() {
       <div className="footer-grid">
         <div>
           <div className="footer-brand">Alchimie di Luce</div>
-          <p>Lettura dei cicli, nodi karmici e lavoro energetico per riconoscere ciò che si ripete, alleggerire il peso e ritrovare una direzione.</p>
+          <p>Pulizia energetica della persona e della casa, lettura dei cicli e lavoro sui nodi che continuano a ripetersi, con un approccio sobrio e rispettoso del libero arbitrio.</p>
         </div>
         <div>
           <strong>Esplora</strong>
+          <a href="/approfondimenti">Approfondimenti</a>
           <a href="/nodi-karmici">Nodi karmici</a>
           <a href="/punto-zero">Punto Zero</a>
           <a href="/trova-il-tuo-percorso">Fai il test</a>
@@ -77,10 +78,7 @@ function Footer() {
           <strong>Contatti</strong>
           <a href={whatsappLink(genericMessage)} target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="mailto:info@alchimiediluce.it">info@alchimiediluce.it</a>
-          <a href="https://www.instagram.com/alchimie_di_luce/" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://www.tiktok.com/@alchimiediluce" target="_blank" rel="noreferrer">TikTok</a>
-          <a href="https://it.pinterest.com/alchimie_di_luce/" target="_blank" rel="noreferrer">Pinterest</a>
-          <a href={telegramLink} target="_blank" rel="noreferrer" onClick={() => track('click_footer_telegram')}>Telegram · Spazio di Chiarezza</a>
+          <a href={telegramUrl} target="_blank" rel="noreferrer" onClick={() => track('click_footer_telegram')}>Telegram · Spazio di Chiarezza</a>
         </div>
       </div>
       <p className="disclaimer">Per guarigione spirituale si intende un percorso personale di ascolto, rilascio e riequilibrio energetico. Non costituisce diagnosi o trattamento e non sostituisce cure mediche, supporto psicologico o indicazioni professionali. Gli esiti sono soggettivi.</p>

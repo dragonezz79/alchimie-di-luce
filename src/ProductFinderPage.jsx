@@ -4,11 +4,11 @@ import SiteLayout, { track, whatsappLink } from './SiteChrome.jsx';
 const products = {
   puntoZero: {
     name: 'Punto Zero',
-    label: 'Intervento personale a distanza',
+    label: 'Percorso integrato persona e ambiente',
     price: '149 €',
-    description: 'Un intervento energetico personale a distanza che parte dalla valutazione del nodo e prosegue secondo i tempi necessari al completamento del lavoro.',
-    reason: 'Le tue risposte indicano che non cerchi soltanto una spiegazione: senti che un legame, uno schema o una pesantezza continua a trattenerti nonostante tu abbia già provato a comprenderla.',
-    href: whatsappLink('Ciao Carmelo, ho completato il test sul sito e mi è stato suggerito Punto Zero. Vorrei capire se è adatto alla situazione che sto vivendo.\n\nLa situazione, in breve:'),
+    description: 'Un percorso che unisce la pulizia energetica personale a distanza all’armonizzazione radionica della casa, con valutazione preliminare e indicazioni chiare.',
+    reason: 'Le tue risposte indicano che un legame, uno schema o una pesantezza continua a trattenerti e può riflettersi anche nello spazio che abiti.',
+    href: whatsappLink('Ciao Carmelo, ho completato il test sul sito e mi è stato suggerito Punto Zero. Vorrei capire se è adatto alla mia situazione e alla casa.\n\nTema personale:\nSituazione dell’ambiente:'),
     cta: 'Verifica con Carmelo se fa per te',
     external: true
   },
@@ -65,6 +65,7 @@ const questions = [
     title: 'Quale situazione riconosci maggiormente?',
     options: [
       { label: 'Una persona o una situazione è finita, ma continuo a sentirne il peso', scores: { puntoZero: 7 } },
+      { label: 'In casa avverto tensione, pesantezza o un clima che non mi fa riposare', scores: { puntoZero: 7 } },
       { label: 'Cambiano le persone o i contesti, ma rivivo sempre lo stesso schema', scores: { puntoZero: 6, tarotPhone: 2, tarotPdf: 2 } },
       { label: 'Ho una domanda o una scelta precisa e mi serve chiarezza', scores: { tarotPhone: 5, tarotPdf: 5 } },
       { label: 'Assorbo troppo ciò che mi circonda e ho bisogno di protezione', scores: { rituals: 7 } },
@@ -77,6 +78,7 @@ const questions = [
     options: [
       { label: 'In un legame che non riesco a chiudere davvero', scores: { puntoZero: 6 } },
       { label: 'In uno schema personale o familiare che continua a ripetersi', scores: { puntoZero: 5 } },
+      { label: 'Nell’ambiente domestico, che sembra trattenere nervosismo e stanchezza', scores: { puntoZero: 6 } },
       { label: 'In una decisione attuale che non riesco a vedere con chiarezza', scores: { tarotPhone: 4, tarotPdf: 4 } },
       { label: 'Nei confini: mi sento facilmente appesantito dagli altri', scores: { rituals: 6 } },
       { label: 'Nel rapporto con la mia intuizione e le mie scelte', scores: { map: 5 } },
@@ -86,7 +88,7 @@ const questions = [
   {
     title: 'Come preferisci ricevere il supporto?',
     options: [
-      { label: 'Carmelo segue personalmente il mio caso a distanza', scores: { puntoZero: 5 } },
+      { label: 'Carmelo segue il mio caso e armonizza anche l’ambiente', scores: { puntoZero: 5 } },
       { label: 'Parlare direttamente con Carmelo', scores: { tarotPhone: 6 } },
       { label: 'Ricevere una risposta personale per iscritto', scores: { tarotPdf: 6 } },
       { label: 'Seguire un rituale guidato al giorno per 7 giorni', scores: { rituals: 6 } },
@@ -97,7 +99,7 @@ const questions = [
   {
     title: 'Che tipo di passo desideri compiere?',
     options: [
-      { label: 'Un intervento personale con pulizia energetica profonda', scores: { puntoZero: 5 } },
+      { label: 'Una pulizia energetica profonda della persona e della casa', scores: { puntoZero: 5 } },
       { label: 'Un chiarimento mirato per decidere con più lucidità', scores: { tarotPhone: 3, tarotPdf: 3 } },
       { label: 'Una pratica strutturata da seguire per sette giorni', scores: { rituals: 5 } },
       { label: 'Uno strumento completo da riutilizzare nel tempo', scores: { map: 5 } },
