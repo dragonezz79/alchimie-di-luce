@@ -131,10 +131,10 @@ export default function PointZeroPage() {
             <p className="large-copy">Il percorso lavora sul peso personale e sullo spazio quotidiano, perché è difficile recuperare energia quando uno dei due continua a riattivare l’altro.</p>
           </div>
           <div className="value-ledger">
-            <div><span>01</span><p><strong>Taglia i legami invisibili e tossici:</strong> aiuta a staccarsi da ex partner, relazioni logoranti o vecchie storie del passato.</p></div>
-            <div><span>02</span><p><strong>Sblocca le situazioni che si ripetono sempre uguali:</strong> sul lavoro, nelle relazioni o nella vita personale.</p></div>
-            <div><span>03</span><p><strong>Ripulisce la pesantezza emotiva:</strong> dissolve forme-pensiero pesanti, pensieri negativi continui e dispersioni di vitalità.</p></div>
-            <div><span>04</span><p><strong>Ripristina la vitalità e la forza interiore:</strong> permette alla persona di ricaricarsi e ripartire con il proprio equilibrio naturale.</p></div>
+            <div><span>01</span><p><strong>Lavora sul rilascio dei legami che continuano a pesare:</strong> ex partner, relazioni logoranti o vecchie storie che restano emotivamente presenti.</p></div>
+            <div><span>02</span><p><strong>Aiuta a riconoscere e interrompere schemi ricorrenti:</strong> nel lavoro, nelle relazioni o nella vita personale.</p></div>
+            <div><span>03</span><p><strong>Sostiene il rilascio della pesantezza percepita:</strong> pensieri ricorrenti, tensione interiore e dispersione di energia.</p></div>
+            <div><span>04</span><p><strong>Favorisce il ritorno alla centratura:</strong> per recuperare presenza, direzione e una percezione più stabile delle proprie energie.</p></div>
             <div><span>05</span><p><strong>Armonizza lo spazio:</strong> sostiene il rilascio delle tensioni ambientali e una percezione più ordinata e respirabile della casa.</p></div>
             <div><span>06</span><p><strong>Comprende il lavoro sulla casa:</strong> la componente ambientale viene trattata a distanza insieme alla pulizia personale.</p></div>
           </div>
