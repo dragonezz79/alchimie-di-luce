@@ -7,6 +7,7 @@ import { MapSalesPage, ProductsSalesPage } from './SpecialPages.jsx';
 import PointZeroPage from './PointZeroPage.jsx';
 import ProductFinderPage from './ProductFinderPage.jsx';
 import { ArticlePage, InsightsPage, articles } from './BlogPages.jsx';
+import { CookiePolicyPage, PrivacyPage } from './PrivacyPages.jsx';
 
 const path = window.location.pathname.replace(/\/$/, '') || '/';
 const siteUrl = 'https://alchimiediluce.it';
@@ -88,6 +89,16 @@ const routeMeta = {
   '/chi-sono': {
     title: 'Carmelo Nicita | Alchimie di Luce',
     description: 'Approccio, metodo e principi di Carmelo Nicita: discernimento, lettura dei cicli e lavoro energetico con confini chiari e rispetto del libero arbitrio.'
+  },
+  '/privacy': {
+    title: 'Privacy Policy | Alchimie di Luce',
+    description: 'Informativa sul trattamento dei dati personali del sito Alchimie di Luce.',
+    index: false
+  },
+  '/cookie-policy': {
+    title: 'Cookie Policy | Alchimie di Luce',
+    description: 'Informazioni sui cookie tecnici, sulle preferenze e su Google Analytics 4.',
+    index: false
   }
 };
 
@@ -132,7 +143,11 @@ const RootPage = path.startsWith('/approfondimenti/')
       ? ProductsSalesPage
       : path === '/letture'
         ? ReadingsSalesPage
-        : App;
+        : path === '/privacy'
+          ? PrivacyPage
+          : path === '/cookie-policy'
+            ? CookiePolicyPage
+            : App;
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
