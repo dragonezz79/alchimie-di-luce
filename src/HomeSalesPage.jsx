@@ -12,7 +12,6 @@ const links = {
   serenita: 'https://payhip.com/buy?link=Ez8xs'
 };
 
-const puntoZeroPurchase = 'https://paypal.me/AlchimieDiLuce/149';
 
 const ChoiceCard = ({ number, need, title, text, price, href, cta }) => (
   <article className="choice-card">
@@ -148,8 +147,7 @@ export default function HomeSalesPage() {
             <h3>Punto Zero · Persona e ambiente</h3>
             <p>Un percorso integrato seguito da Carmelo: pulizia energetica personale e armonizzazione della casa, entrambe svolte a distanza attraverso la Tavola.</p>
             <div className="price-stack"><strong>149 €</strong><span>percorso integrato</span></div>
-            <a className="btn btn-primary" href="/punto-zero">Scopri come funziona</a>
-            <ExternalButton href={puntoZeroPurchase} eventName="click_home_punto_zero_paypal" className="btn-secondary">Richiedi Punto Zero – 149 €</ExternalButton>
+            <a className="btn btn-primary" href="/punto-zero">Verifica se Punto Zero è adatto a te</a>
           </aside>
         </div>
       </section>
