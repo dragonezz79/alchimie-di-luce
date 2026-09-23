@@ -4,7 +4,6 @@ import SiteLayout, { ExternalButton, telegramUrl, track } from './SiteChrome.jsx
 import fotoCarmelo from './foto-carmelo.webp';
 import guidaSerenita from './guida-serenita.webp';
 import ritualiCover from './kit-7-rituali-cover.webp';
-import mappaCover from './mappa.webp';
 import casaSerenaHero from './casa-serena-hero.webp';
 import { articles } from './BlogPages.jsx';
 
@@ -237,8 +236,8 @@ export default function HomeSalesPage() {
             <div><span>Passo successivo</span><strong>7 Rituali · 19 €</strong></div>
           </div>
           <div className="entry-next">
-            <img src={mappaCover} alt="Mappa di Luce Interattiva" />
-            <div><span>Strumento completo</span><strong>Mappa di Luce · 59 €</strong></div>
+            <img src={casaSerenaHero} alt="Casa luminosa, simbolo del percorso Punto Zero" />
+            <div><span>Se il peso continua</span><strong>Punto Zero · verifica preliminare</strong></div>
           </div>
         </div>
       </section>
