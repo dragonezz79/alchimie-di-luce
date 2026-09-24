@@ -174,12 +174,12 @@ function Header() {
       </button>
       <nav className={open ? 'nav nav-open' : 'nav'} aria-label="Navigazione principale">
         <a href="/approfondimenti">Approfondimenti</a>
-        {telegramUrl && <a href={telegramUrl} target="_blank" rel="noreferrer">Telegram</a>}
-        <a href="/nodi-karmici">Nodi karmici</a>
         <a href="/punto-zero">Punto Zero</a>
         <a href="/trova-il-tuo-percorso">Fai il test</a>
         <a href="/letture">Tarocchi</a>
+        <a href="/prodotti">Strumenti digitali</a>
         <a href="/chi-sono">Chi sono</a>
+        {telegramUrl && <a href={telegramUrl} target="_blank" rel="noreferrer">Telegram</a>}
       </nav>
     </header>
   );
