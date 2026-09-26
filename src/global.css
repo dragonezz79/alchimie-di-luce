@@ -813,6 +813,15 @@ p { color: var(--muted); line-height: 1.72; }
 }
 .home-hero-card .zero-symbol-caption strong { font-size: clamp(25px,3vw,33px); }
 
+.new-home-hero .home-hero-card .zero-symbol-caption span {
+  color: #5e4a26;
+}
+
+.new-home-hero .home-hero-card .zero-symbol-caption strong {
+  color: #3a2d17;
+  font-weight: 600;
+}
+
 .voice-section {
   background:
     radial-gradient(circle at 16% 20%, rgba(42, 98, 171, 0.18), transparent 32%),
