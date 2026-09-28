@@ -3,7 +3,6 @@ import SiteLayout, { ExternalButton, track, whatsappLink } from './SiteChrome.js
 
 import fotoCarmelo from './foto-carmelo.webp';
 import guidaSerenita from './guida-serenita.webp';
-import ritualiCover from './kit-7-rituali-cover.webp';
 import casaSerenaHero from './casa-serena-hero.webp';
 
 const links = {
@@ -15,8 +14,8 @@ const firstContactLink = whatsappLink(
 );
 
 
-const ChoiceCard = ({ number, need, title, text, price, href, cta }) => (
-  <article className="choice-card">
+const ChoiceCard = ({ number, need, title, text, price, href, cta, featured = false }) => (
+  <article className={`choice-card${featured ? ' choice-card-featured' : ''}`}>
     <span className="choice-number">{number}</span>
     <span className="eyebrow">{need}</span>
     <h3>{title}</h3>
@@ -39,17 +38,17 @@ export default function HomeSalesPage() {
       <section className="new-home-hero">
         <div className="container zero-hero-grid">
           <div className="zero-hero-copy">
-            <span className="eyebrow">Pulizia energetica della persona e della casa · Carmelo Nicita</span>
-            <h1>Riporta pace, chiarezza e protezione <em>dentro di te e nella tua casa.</em></h1>
+            <span className="eyebrow">Un primo passo umano e concreto · Carmelo Nicita</span>
+            <h1>Quando qualcosa ti toglie serenità, <em>iniziamo dal capire che cosa sta succedendo.</em></h1>
             <p className="hero-lead">
-              Se continui a sentirti appesantito, vivi tensioni che ritornano o la casa non ti offre più riposo, non devi scegliere da solo cosa acquistare. Raccontami brevemente cosa stai vivendo: ti indicherò se il mio lavoro è pertinente alla situazione.
+              Ti senti senza energie appena entri in casa? Continui a rivivere lo stesso dolore in una relazione? Oppure un pensiero non ti lascia riposare? Un consulto mirato può aiutarti a mettere a fuoco la situazione prima di scegliere qualsiasi percorso.
             </p>
             <div className="hero-actions hero-actions-left">
-              <ExternalButton href={firstContactLink} eventName="click_home_first_contact">
-                Raccontami cosa stai vivendo
-              </ExternalButton>
+              <a className="btn btn-primary" href="/letture" onClick={() => track('click_home_primary_consultation')}>
+                Scopri il consulto mirato
+              </a>
             </div>
-            <p className="trust-line">Primo riscontro breve per capire da dove iniziare · Nessuna promessa miracolistica</p>
+            <p className="trust-line">Consulto individuale da 49 € · Nessuna promessa miracolistica</p>
           </div>
           <div className="zero-symbol-card home-hero-card" aria-label="Una casa luminosa, ordinata e serena">
             <img src={casaSerenaHero} alt="Soggiorno luminoso e ordinato con finestre aperte e luce naturale" />
@@ -65,10 +64,8 @@ export default function HomeSalesPage() {
         <div className="container voice-grid">
           <div className="voice-copy">
             <span className="eyebrow">Ascolta Carmelo</span>
-            <h2 id="voice-heading">Prima del percorso, voglio parlarti con chiarezza.</h2>
-            <p className="large-copy">
-              In meno di un minuto ti spiego perché non propongo la stessa soluzione a tutti e come valuto il punto da cui iniziare.
-            </p>
+            <h2 id="voice-heading">Prima di proporti qualcosa, voglio ascoltare la situazione.</h2>
+            <p className="large-copy">In meno di un minuto ti spiego perché non propongo la stessa soluzione a tutti e come individuiamo il punto da cui iniziare.</p>
             <p className="voice-note">Il primo messaggio serve soltanto a orientarti. Non sostituisce una lettura o una valutazione completa.</p>
           </div>
           <div className="voice-video-card">
@@ -115,9 +112,9 @@ export default function HomeSalesPage() {
       <section className="section origins-preview-section">
         <div className="container origins-preview-grid">
           <div>
-            <span className="eyebrow">Perché alcune storie si ripetono</span>
-            <h2>Capisci il problema, ma il peso continua a tornare</h2>
-            <p className="large-copy">A volte sai già che cosa non funziona, eppure non riesci a sentirti davvero libero. È in quel punto che serve distinguere se hai bisogno di comprensione, di un intervento energetico o semplicemente di ritrovare il tuo centro.</p>
+            <span className="eyebrow">Quando chiedere un confronto</span>
+            <h2>Hai già provato a reagire, ma il peso continua a tornare</h2>
+            <p className="large-copy">Non serve conoscere termini tecnici. Partiamo da quello che accade davvero nella tua vita: una relazione che continua a ferire, una casa in cui non riesci a stare bene, un senso di vuoto o pensieri che non danno tregua.</p>
           </div>
           <div className="origin-signals">
             <div><strong>La situazione cambia</strong><span>ma ritorna la stessa sofferenza</span></div>
@@ -131,9 +128,9 @@ export default function HomeSalesPage() {
       <section className="section choice-section" id="percorsi">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">Due bisogni, due percorsi distinti</span>
-            <h2>Capire prima di agire, oppure lavorare sul peso che continua</h2>
-            <p>Non devi acquistare entrambi e non devi decidere da solo. Il primo contatto serve proprio a comprendere quale strada è più pertinente.</p>
+            <span className="eyebrow">Il primo passo consigliato</span>
+            <h2>Prima fai chiarezza. Solo se serve, valuti un intervento più ampio.</h2>
+            <p>Per chi arriva per la prima volta, il consulto è il modo più semplice per inquadrare il problema senza acquistare al buio un percorso a distanza.</p>
           </div>
           <div className="choice-grid choice-grid-two">
             <ChoiceCard
@@ -144,6 +141,7 @@ export default function HomeSalesPage() {
               price="Da 49 €"
               href="/letture"
               cta="Scopri le letture"
+              featured
             />
             <ChoiceCard
               number="02"
@@ -156,9 +154,9 @@ export default function HomeSalesPage() {
             />
           </div>
           <div className="home-guidance-cta">
-            <p><strong>Non sai quale dei due riguarda il tuo caso?</strong> Scrivimi poche righe: ti darò soltanto un’indicazione iniziale, senza trasformare il messaggio in una consulenza completa.</p>
+            <p><strong>Preferisci parlarmi prima della situazione?</strong> Mandami su WhatsApp un breve messaggio scritto o vocale. Ti dirò se il consulto o Punto Zero può essere pertinente, senza trasformare il primo contatto in una consulenza completa.</p>
             <ExternalButton href={firstContactLink} eventName="click_home_paths_contact">
-              Chiedimi da dove iniziare
+              Scrivimi su WhatsApp
             </ExternalButton>
           </div>
         </div>
@@ -172,14 +170,6 @@ export default function HomeSalesPage() {
             <h2>Inizia con cinque minuti veri</h2>
             <p className="large-copy">Il primo passo per riconoscere il sovraccarico, ritrovare centratura e osservare come l’ambiente incide sul tuo equilibrio quotidiano.</p>
             <ExternalButton href={links.serenita} eventName="click_home_serenita">Scarica la guida gratuita</ExternalButton>
-          </div>
-          <div className="entry-next">
-            <img src={ritualiCover} alt="7 Rituali di Protezione e Luce" />
-            <div><span>Passo successivo</span><strong>7 Rituali · 19 €</strong></div>
-          </div>
-          <div className="entry-next">
-            <img src={casaSerenaHero} alt="Casa luminosa, simbolo del percorso Punto Zero" />
-            <div><span>Se il peso continua</span><strong>Punto Zero · verifica preliminare</strong></div>
           </div>
         </div>
       </section>

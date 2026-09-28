@@ -982,6 +982,13 @@ p { color: var(--muted); line-height: 1.72; }
   background: #0b1121;
 }
 
+.choice-card-featured {
+  background:
+    radial-gradient(circle at 82% 12%, rgba(231,198,108,0.12), transparent 34%),
+    #10182a;
+  box-shadow: inset 0 3px 0 rgba(231,198,108,0.78);
+}
+
 .choice-number { margin-bottom: 58px; color: rgba(231,198,108,0.56); font-family: Georgia, serif; font-size: 18px; }
 .choice-card p { flex: 1; }
 .choice-footer { display: grid; gap: 13px; margin-top: 24px; }
