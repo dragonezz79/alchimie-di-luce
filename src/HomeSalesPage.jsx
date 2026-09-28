@@ -1,15 +1,18 @@
 import React from 'react';
-import SiteLayout, { ExternalButton, telegramUrl, track } from './SiteChrome.jsx';
+import SiteLayout, { ExternalButton, track, whatsappLink } from './SiteChrome.jsx';
 
 import fotoCarmelo from './foto-carmelo.webp';
 import guidaSerenita from './guida-serenita.webp';
 import ritualiCover from './kit-7-rituali-cover.webp';
 import casaSerenaHero from './casa-serena-hero.webp';
-import { articles } from './BlogPages.jsx';
 
 const links = {
   serenita: 'https://payhip.com/buy?link=Ez8xs'
 };
+
+const firstContactLink = whatsappLink(
+  'Ciao Carmelo, ho visitato il sito e vorrei capire da dove iniziare.\n\nIn poche righe, ciò che sto vivendo è:'
+);
 
 
 const ChoiceCard = ({ number, need, title, text, price, href, cta }) => (
@@ -39,13 +42,14 @@ export default function HomeSalesPage() {
             <span className="eyebrow">Pulizia energetica della persona e della casa · Carmelo Nicita</span>
             <h1>Riporta pace, chiarezza e protezione <em>dentro di te e nella tua casa.</em></h1>
             <p className="hero-lead">
-              Punto Zero lavora sulla persona e sullo spazio che abita: aiuta a sciogliere legami, schemi e pesantezze interiori e a liberare la casa da tensioni, congestioni e stasi persistenti, nel pieno rispetto del libero arbitrio.
+              Se continui a sentirti appesantito, vivi tensioni che ritornano o la casa non ti offre più riposo, non devi scegliere da solo cosa acquistare. Raccontami brevemente cosa stai vivendo: ti indicherò se il mio lavoro è pertinente alla situazione.
             </p>
             <div className="hero-actions hero-actions-left">
-              <a className="btn btn-primary" href="/punto-zero">Scopri il percorso Punto Zero</a>
-              <ExternalButton href={links.serenita} eventName="click_hero_serenita" className="btn-secondary">Scarica la guida gratuita</ExternalButton>
+              <ExternalButton href={firstContactLink} eventName="click_home_first_contact">
+                Raccontami cosa stai vivendo
+              </ExternalButton>
             </div>
-            <p className="trust-line">Ordine · Respiro · Discernimento · Nessuna promessa miracolistica</p>
+            <p className="trust-line">Primo riscontro breve per capire da dove iniziare · Nessuna promessa miracolistica</p>
           </div>
           <div className="zero-symbol-card home-hero-card" aria-label="Una casa luminosa, ordinata e serena">
             <img src={casaSerenaHero} alt="Soggiorno luminoso e ordinato con finestre aperte e luce naturale" />
@@ -63,10 +67,9 @@ export default function HomeSalesPage() {
             <span className="eyebrow">Ascolta Carmelo</span>
             <h2 id="voice-heading">Prima del percorso, voglio parlarti con chiarezza.</h2>
             <p className="large-copy">
-              In meno di un minuto ti spiego cosa osservo quando una situazione continua a ripetersi, perché non propongo la stessa soluzione a tutti e da dove puoi iniziare.
+              In meno di un minuto ti spiego perché non propongo la stessa soluzione a tutti e come valuto il punto da cui iniziare.
             </p>
-            <p className="voice-note">Ogni situazione viene ascoltata e valutata prima di indicare il percorso più adatto.</p>
-            <a className="btn btn-primary" href="/trova-il-tuo-percorso">Fai il test gratuito</a>
+            <p className="voice-note">Il primo messaggio serve soltanto a orientarti. Non sostituisce una lettura o una valutazione completa.</p>
           </div>
           <div className="voice-video-card">
             <video
@@ -97,15 +100,15 @@ export default function HomeSalesPage() {
         <div className="container">
           <div className="section-heading">
             <span className="eyebrow">Il metodo Alchimie di Luce</span>
-            <h2>Comprendere l’origine. Sciogliere il nodo. Riprendere la propria direzione.</h2>
-            <p className="large-copy">Dove gli altri vedono episodi separati, io cerco il filo che li tiene uniti. Una relazione, una paura o una situazione possono cambiare forma e continuare a produrre lo stesso risultato.</p>
+            <h2>Prima ascolto. Poi distinguo. Solo dopo indico il percorso.</h2>
+            <p className="large-copy">Una relazione, una paura o una tensione in casa possono sembrare problemi separati. Prima di proporti qualcosa, cerco di capire che cosa continua davvero a toglierti serenità.</p>
           </div>
           <div className="signature-grid">
-            <article><span>01</span><h3>Riconosco il filo</h3><p>Ascolto il tema e individuo lo schema che collega situazioni apparentemente diverse, senza alimentare paura o confusione.</p></article>
-            <article><span>02</span><h3>Lavoro sul nodo</h3><p>Quando il percorso è adatto, intervengo sul piano energetico con un lavoro personale, focalizzato e rispettoso del libero arbitrio.</p></article>
-            <article><span>03</span><h3>Riporto alla realtà</h3><p>Ciò che emerge non resta astratto: la persona riceve una direzione chiara da trasformare in una scelta concreta.</p></article>
+            <article><span>01</span><h3>Ascolto la situazione</h3><p>Parto da ciò che senti oggi: il peso, le tensioni, i pensieri ricorrenti e ciò che accade nello spazio in cui vivi.</p></article>
+            <article><span>02</span><h3>Distinguo il bisogno</h3><p>Capisco se hai bisogno di fare chiarezza, di lavorare sul piano energetico oppure di iniziare con una pratica autonoma.</p></article>
+            <article><span>03</span><h3>Ti indico il passo</h3><p>Ricevi una direzione comprensibile, senza pressioni e senza acquistare percorsi che non sono adatti al tuo caso.</p></article>
           </div>
-          <p className="method-boundary">Non considero automaticamente ogni problema un nodo karmico. Prima ascolto, valuto il tema e verifico se il mio lavoro è realmente adatto alla situazione.</p>
+          <p className="method-boundary">Non considero automaticamente ogni difficoltà un problema energetico o karmico. Verifico prima se il mio lavoro è realmente pertinente alla situazione.</p>
         </div>
       </section>
 
@@ -113,9 +116,8 @@ export default function HomeSalesPage() {
         <div className="container origins-preview-grid">
           <div>
             <span className="eyebrow">Perché alcune storie si ripetono</span>
-            <h2>Il problema può essere più profondo dell’ultimo episodio</h2>
-            <p className="large-copy">In una lettura spirituale, uno schema può avere radici emotive, familiari, energetiche o karmiche. Il nodo non è una condanna: indica il punto in cui qualcosa è rimasto irrisolto e continua a chiedere attenzione.</p>
-            <a className="btn btn-secondary" href="/nodi-karmici">Comprendi cosa sono i nodi karmici</a>
+            <h2>Capisci il problema, ma il peso continua a tornare</h2>
+            <p className="large-copy">A volte sai già che cosa non funziona, eppure non riesci a sentirti davvero libero. È in quel punto che serve distinguere se hai bisogno di comprensione, di un intervento energetico o semplicemente di ritrovare il tuo centro.</p>
           </div>
           <div className="origin-signals">
             <div><strong>La situazione cambia</strong><span>ma ritorna la stessa sofferenza</span></div>
@@ -126,99 +128,39 @@ export default function HomeSalesPage() {
         </div>
       </section>
 
-      <section className="section flagship-section">
-        <div className="container flagship-grid">
-          <div className="flagship-copy">
-            <span className="eyebrow">Il percorso centrale</span>
-            <h2>Quando il peso resta dentro di te e nello spazio che abiti</h2>
-            <p className="large-copy">
-              Punto Zero è un intervento energetico svolto interamente a distanza sulla persona e sulla casa. Il lavoro affronta sia il nodo che continua a trattenerti sia le tensioni che restano nell’ambiente quotidiano.
-            </p>
-            <ul className="clean-checks">
-              <li>Valutazione preliminare della persona e della situazione</li>
-              <li>Pulizia energetica personale su legami, schemi e pesantezze</li>
-              <li>Armonizzazione della casa e delle tensioni accumulate nello spazio</li>
-              <li>Nessuna forzatura di sentimenti, relazioni o decisioni altrui</li>
-            </ul>
-          </div>
-          <aside className="flagship-offer">
-            <span className="badge">Intervento premium</span>
-            <h3>Punto Zero · Persona e ambiente</h3>
-            <p>Un percorso integrato seguito da Carmelo: pulizia energetica personale e armonizzazione della casa, entrambe svolte a distanza attraverso la Tavola.</p>
-            <div className="price-stack"><strong>149 €</strong><span>percorso integrato</span></div>
-            <a className="btn btn-primary" href="/punto-zero">Verifica se Punto Zero è adatto a te</a>
-          </aside>
-        </div>
-      </section>
-
-      <section className="section choice-section" id="scegli">
+      <section className="section choice-section" id="percorsi">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">Scegli dal bisogno, non dal nome</span>
-            <h2>Cosa stai cercando adesso?</h2>
-            <p>Tre strade diverse. Non devi acquistare tutto e non devi indovinare da solo quale servizio scegliere.</p>
+            <span className="eyebrow">Due bisogni, due percorsi distinti</span>
+            <h2>Capire prima di agire, oppure lavorare sul peso che continua</h2>
+            <p>Non devi acquistare entrambi e non devi decidere da solo. Il primo contatto serve proprio a comprendere quale strada è più pertinente.</p>
           </div>
-          <div className="choice-grid">
+          <div className="choice-grid choice-grid-two">
             <ChoiceCard
               number="01"
-              need="Vuoi alleggerire te e la tua casa"
+              need="Vuoi comprendere ciò che stai vivendo"
+              title="Tarocchi"
+              text="Per mettere a fuoco una situazione, riconoscere ciò che ti sta bloccando e vedere con maggiore chiarezza il passo successivo."
+              price="Da 49 €"
+              href="/letture"
+              cta="Scopri le letture"
+            />
+            <ChoiceCard
+              number="02"
+              need="Il peso coinvolge te e la tua casa"
               title="Punto Zero"
-              text="Per sciogliere ciò che ti trattiene e armonizzare un ambiente percepito come teso, pesante o incapace di offrire riposo."
+              text="Un intervento energetico svolto interamente a distanza sulla persona e sull’ambiente, dopo una valutazione preliminare della situazione."
               price="149 €"
               href="/punto-zero"
               cta="Scopri il percorso"
             />
-            <ChoiceCard
-              number="02"
-              need="Hai una domanda precisa"
-              title="Tarocchi"
-              text="Per capire cosa sta accadendo dentro di te e vedere con più chiarezza la scelta successiva."
-              price="Da 49 €"
-              href="/letture"
-              cta="Confronta le formule"
-            />
-            <ChoiceCard
-              number="03"
-              need="Vuoi procedere in autonomia"
-              title="Strumenti digitali"
-              text="Per proteggere la tua energia, ritrovare il centro e creare una pratica quotidiana."
-              price="Da 0 €"
-              href="/prodotti"
-              cta="Esplora gli strumenti"
-            />
           </div>
-        </div>
-      </section>
-
-      <section className="section finder-invite-section">
-        <div className="container finder-invite">
-          <div>
-            <span className="eyebrow">Non sai da dove iniziare?</span>
-            <h2>Riconosci di quale tipo di aiuto hai bisogno adesso</h2>
-            <p>Rispondi a quattro domande: il test ti aiuterà a distinguere se hai bisogno di calma, comprensione, protezione, scioglimento di un nodo o orientamento nel tempo.</p>
+          <div className="home-guidance-cta">
+            <p><strong>Non sai quale dei due riguarda il tuo caso?</strong> Scrivimi poche righe: ti darò soltanto un’indicazione iniziale, senza trasformare il messaggio in una consulenza completa.</p>
+            <ExternalButton href={firstContactLink} eventName="click_home_paths_contact">
+              Chiedimi da dove iniziare
+            </ExternalButton>
           </div>
-          <a className="btn btn-primary" href="/trova-il-tuo-percorso">Inizia il test</a>
-        </div>
-      </section>
-
-      <section className="section insights-preview-section" aria-labelledby="insights-heading">
-        <div className="container">
-          <div className="section-heading insights-heading">
-            <span className="eyebrow">Approfondimenti</span>
-            <h2 id="insights-heading">Uno spazio per capire prima di scegliere</h2>
-            <p className="large-copy">Guide pratiche e misurate per orientarti nei momenti di stasi, alleggerire gli ambienti e distinguere ciò che senti senza alimentare paura o confusione.</p>
-          </div>
-          <div className="insights-grid">
-            {articles.map((article) => (
-              <article className="insight-card" key={article.slug}>
-                <span className="insight-meta">{article.category} · {article.readingTime}</span>
-                <h3>{article.title}</h3>
-                <p>{article.excerpt}</p>
-                <a className="text-link" href={`/approfondimenti/${article.slug}`}>Leggi la guida →</a>
-              </article>
-            ))}
-          </div>
-          <a className="btn btn-secondary insights-all" href="/approfondimenti">Tutti gli approfondimenti</a>
         </div>
       </section>
 
@@ -239,21 +181,6 @@ export default function HomeSalesPage() {
             <img src={casaSerenaHero} alt="Casa luminosa, simbolo del percorso Punto Zero" />
             <div><span>Se il peso continua</span><strong>Punto Zero · verifica preliminare</strong></div>
           </div>
-        </div>
-      </section>
-
-      <section className="section telegram-section" aria-labelledby="telegram-heading">
-        <div className="container telegram-panel">
-          <div className="telegram-mark" aria-hidden="true">✦</div>
-          <div>
-            <span className="eyebrow">Uno spazio gratuito, oltre il sito</span>
-            <h2 id="telegram-heading">Entra nello Spazio di Chiarezza</h2>
-            <p className="large-copy">Nel canale Telegram trovi pratiche brevi, riflessioni e aggiornamenti di Alchimie di Luce per alleggerire il rumore e tornare al punto essenziale.</p>
-            <p className="telegram-note">Canale pubblico · Nessun gruppo e nessun messaggio privato obbligatorio</p>
-          </div>
-          <ExternalButton href={telegramUrl} eventName="click_home_telegram" className="btn-telegram">
-            Entra nello Spazio di Chiarezza su Telegram
-          </ExternalButton>
         </div>
       </section>
 

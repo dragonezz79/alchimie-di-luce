@@ -971,6 +971,7 @@ p { color: var(--muted); line-height: 1.72; }
 .choice-section { background: #060a15; }
 .choice-section .section-heading { margin-inline: 0; }
 .choice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: var(--line); }
+.choice-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 .choice-card {
   position: relative;
@@ -985,6 +986,20 @@ p { color: var(--muted); line-height: 1.72; }
 .choice-card p { flex: 1; }
 .choice-footer { display: grid; gap: 13px; margin-top: 24px; }
 .choice-footer strong { color: #fff; font-family: Georgia, serif; font-size: 29px; font-weight: 500; }
+
+.home-guidance-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+  margin-top: 26px;
+  padding: 24px 26px;
+  border: 1px solid rgba(231,198,108,0.24);
+  border-radius: 22px;
+  background: rgba(231,198,108,0.06);
+}
+.home-guidance-cta p { max-width: 740px; margin: 0; }
+.home-guidance-cta strong { color: #fff; }
 
 .entry-section { border-block: 1px solid rgba(255,255,255,0.08); background: linear-gradient(150deg, #0d1830, #0a1020); }
 .entry-grid { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 26px 54px; align-items: center; }
@@ -1295,6 +1310,7 @@ p { color: var(--muted); line-height: 1.72; }
   .choice-card { min-height: 0; }
   .choice-number { margin-bottom: 28px; }
   .entry-grid { grid-template-columns: minmax(220px, 0.6fr) 1fr; }
+  .home-guidance-cta { grid-template-columns: 1fr; }
   .scope-grid { grid-template-columns: repeat(2, 1fr); }
   .signature-grid,
   .karmic-origin-grid { grid-template-columns: repeat(2, 1fr); }
